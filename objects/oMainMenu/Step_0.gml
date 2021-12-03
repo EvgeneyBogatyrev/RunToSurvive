@@ -120,3 +120,12 @@
 	if (_OK)                              audio_play_sound(soConfirm, 1, false);
 		
 #endregion
+
+
+#region Window center
+center_timer--;
+if (center_timer == 0) 
+{
+	window_center();
+}
+#endregion

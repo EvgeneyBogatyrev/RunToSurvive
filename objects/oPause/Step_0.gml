@@ -100,7 +100,7 @@ if (paused)
 					view_set_visible(0, true);
 					audio_stop_sound(oAudioControl.bgm);
 					oAudioControl.music_set = false;
-					SaveGame();
+					//SaveGame();
 					global.show_title = false;
 					room_goto(rMenu);
 					break;

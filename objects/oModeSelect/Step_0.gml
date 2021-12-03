@@ -46,6 +46,10 @@
 				button = [];
 				_length = 0;
 				instance_change(oMainMenu, true);
+				with (oMainMenu) 
+				{
+					center_timer = -1;		
+				}
 				break;
 		}
 	}

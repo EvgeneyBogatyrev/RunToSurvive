@@ -49,3 +49,5 @@ if (!global.show_title)
 	instance_change(oModeSelect, true);	
 }
 
+center_timer = 5;
+

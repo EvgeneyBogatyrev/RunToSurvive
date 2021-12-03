@@ -132,6 +132,10 @@ if (need_to_center)
 				_cursor_length = 0;
 				_switcher_length = 0;
 				instance_change(oMainMenu, true);
+				with (oMainMenu) 
+				{
+					center_timer = -1;		
+				}
 				SaveGame();
 				break;
 		}

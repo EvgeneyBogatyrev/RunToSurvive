@@ -145,7 +145,13 @@ switch (state)
 					}
 				}
 				
-				dir = sign(player.x - x);
+				dir_update--;
+				if (dir_update <= 0) 
+				{
+					dir_update = dir_update_max;
+					dir = sign(player.x - x);
+				}
+				
 				for (var _row = 0; _row < 3; ++_row)
 				{
 					if (CheckCollisions(x, oGenerator.ground[_row] - sprite_height/2, player, _row))
@@ -154,12 +160,22 @@ switch (state)
 					}
 					else
 					{
-						x = lerp(x, player.x + sign(player.x - x) * offset * player.scale, acceleration / 10);
+						if (flying_forward || player.x - x > offset * 3) 
+						{
+							x += insect_speed * abs(player.scale) * dir;
+							flying_forward = true;
+						}
+						else
+						{
+							x = lerp(x, oCamera.left + CAMERA_BOUNDS / 3, acceleration / 10);
+							flying_forward = false;
+						}
 					}
 				}
 			}
 			else
 			{
+				flying_forward = false;
 				x = lerp(x, oCamera.right - CAMERA_BOUNDS / 3, acceleration);
 				y = lerp(y, ystart, acceleration);
 				dir = -1;

@@ -30,9 +30,12 @@ zap = noone;
 
 //Insect
 player = noone;
-insect_speed = 4;
+insect_speed = 2.5;
 desired_row = 0;
 offset = 100;
 rest_timer_max = 12 * 60;
 rest_timer = rest_timer_max;
 stop_time = 2 * 60;
+flying_forward = false;
+dir_update_max = 30;
+dir_update = dir_update_max;
