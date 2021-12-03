@@ -1,21 +1,19 @@
 /// @description Initialization.
 
 //set cursor position
-cursor_position = 1;
+cursor_position = 0;
 
 //set default buttons
-dbutton[0] = "NEW GAME";
-dbutton[1] = "CONTINUE";
-dbutton[2] = "OPTIONS";
-dbutton[3] = "EXIT";
+dbutton[0] = "PLAY";
+dbutton[1] = "OPTIONS";
+dbutton[2] = "EXIT";
 
 //set drawing buttons
 button[0] = dbutton[0];
 button[1] = dbutton[1];
 button[2] = dbutton[2];
-button[3] = dbutton[3];
 
-_length = array_length_1d(button);
+_length = array_length(button);
 
 //animation
 x0 = room_width/2;

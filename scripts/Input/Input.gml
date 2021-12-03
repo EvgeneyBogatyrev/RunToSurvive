@@ -52,8 +52,8 @@ function Input(argument0) {
 			if (abs(gamepad_axis_value(_device, gp_axislh)) < 0.3)  allowed_to_move_hor = true;
 		
 	
-			_up = (((gamepad_axis_value(_device, gp_axislv) < -0.7) and allowed_to_move)||(gamepad_button_check_pressed(_device, gp_padu)));
-			_down = (((gamepad_axis_value(_device, gp_axislv) > 0.7) and allowed_to_move)||(gamepad_button_check_pressed(_device, gp_padd)));
+			_up = (((gamepad_axis_value(_device, gp_axislv) < -0.7) && allowed_to_move)||(gamepad_button_check_pressed(_device, gp_padu)));
+			_down = (((gamepad_axis_value(_device, gp_axislv) > 0.7) && allowed_to_move)||(gamepad_button_check_pressed(_device, gp_padd)));
 			_left = (((gamepad_axis_value(_device, gp_axislh) < -0.7))||(gamepad_button_check(_device, gp_padl)));
 			_right = (((gamepad_axis_value(_device, gp_axislh) > 0.7))||(gamepad_button_check(_device, gp_padr)));
 			_jump = gamepad_button_check_pressed(_device, gp_face1);

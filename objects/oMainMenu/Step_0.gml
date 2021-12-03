@@ -62,30 +62,31 @@
 		switch(cursor_position)
 		{
 			
-			case 0:
-			//Erase all data
-		
-				if (file_exists(global.filename))  file_delete(global.filename);	
 			
-				var _w = global.display_width;
-				var _h = global.display_height;
+			//case 0:
+			////Erase all data
+		
+			//	if (file_exists(global.filename))  file_delete(global.filename);	
+			
+			//	var _w = global.display_width;
+			//	var _h = global.display_height;
 				
-				LoadGame();
+			//	LoadGame();
 
-				global.display_width = _w;
-				global.display_height = _h;
+			//	global.display_width = _w;
+			//	global.display_height = _h;
 				
-				SaveGame();	
+			//	SaveGame();	
 				
-				button = [];
-				dbutton = [];
-				_length = 0;
+			//	button = [];
+			//	dbutton = [];
+			//	_length = 0;
 				
-				instance_change(oModeSelect, true);
-				break;	
+			//	instance_change(oModeSelect, true);
+			//	break;	
 			
 		
-			case 1: 
+			case 0: 
 			//go to Mode Select
 				button = [];
 				dbutton = [];
@@ -93,7 +94,7 @@
 				instance_change(oModeSelect, true);
 				break;
 		
-			case 2: 
+			case 1: 
 			//Go to Options
 				button = [];
 				dbutton = [];
@@ -101,7 +102,7 @@
 				instance_change(oOptions, true);
 				break;
 		
-			case 3:
+			case 2:
 			//Shut the game down
 				game_end();
 				break;

@@ -28,24 +28,19 @@
 		{
 			case 0:
 			//Go to Level selection
-				instance_change(oPlayerSelect, true);
+				//instance_change(oPlayerSelect, true);
+				number_of_players = 1;
+				names[0] = "Kyron"; // FIX!
+				input_type[0] = InputTypes.KEYBOARD; // FIX!
+				room_goto(rPlay);
 				break;
 			
 			case 1:
 			//Infinity mode
 				instance_change(oPlayerSelect, true);
 				break;
-			
+						
 			case 2:
-			//Go to collection
-				//dbutton = [];
-				//button = [];
-				//_length = 0;
-				//room_to_go = oModeSelect;
-				//instance_change(oCollectionControl, true);
-				break;
-			
-			case 3:
 			//Go to main menu
 				dbutton = [];
 				button = [];

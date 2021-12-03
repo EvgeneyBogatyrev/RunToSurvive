@@ -2,12 +2,11 @@
 cursor_position = 0;
 
 //Set default buttons
-dbutton[0] = "STORYMODE";
-dbutton[1] = "INFINITY MODE";
-dbutton[2] = "COLLECTION";
-dbutton[3] = "BACK";
+dbutton[0] = "SINGLEPLAYER";
+dbutton[1] = "MULTIPLAYER";
+dbutton[2] = "BACK";
 
-_length = array_length_1d(dbutton);
+_length = array_length(dbutton);
 
 //Set gamepad
 allowed_array = [];
