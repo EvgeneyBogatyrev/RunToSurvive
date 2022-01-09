@@ -8,6 +8,7 @@ switch (state)
 		xspeed = -0.001;
 		
 		hp = mage_hp;
+		cum_hp = cum_hp_max;
 		
 		intro_timer--;
 		if (intro_timer == 0)
@@ -99,6 +100,7 @@ switch (state)
 			y = ystart + sin((get_timer() - phase) / 250000) * magnitude;
 			x = lerp(x, oCamera.right - CAMERA_BOUNDS / 3, acceleration);
 			xspeed = -0.001;
+			cum_hp = insect_hp;
 			
 			if (AnimationEnd())
 			{

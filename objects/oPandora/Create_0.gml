@@ -15,6 +15,9 @@ box_hp = 10;
 gauntlet_hp = 20;
 eye_hp = 10;
 
+cum_hp = box_hp + gauntlet_hp + eye_hp;
+cum_hp_max = cum_hp;
+
 state = UniversalStates.INTRO;
 sprite_index = sPandoraBoxBlink;
 

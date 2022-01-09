@@ -8,6 +8,7 @@ switch (state)
 		
 		maxhp = box_hp;
 		hp = maxhp;
+		cum_hp = cum_hp_max;
 		
 		intro_timer--;
 		if (intro_timer == 0)   
@@ -148,6 +149,9 @@ switch (state)
 			}
 			
 			alive_timer--;
+			hp -= 1 / alive_timer_max * eye_hp;			
+			cum_hp -= 1 / alive_timer_max * eye_hp;
+
 		}
 		
 		if (hp <= 0 || alive_timer == 0)

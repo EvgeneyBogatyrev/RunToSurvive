@@ -13,6 +13,9 @@ state = UniversalStates.INTRO;
 mage_hp = 20;
 insect_hp = 40;
 
+cum_hp = mage_hp + insect_hp;
+cum_hp_max = cum_hp;
+
 maxhp = mage_hp;
 hp = maxhp;
 
