@@ -67,6 +67,12 @@ if (need_to_center)
 		if (_right) sound_position ++;
 	}
 	
+	if (cursor_position == 4)
+	{
+		if (_left)  character_position --;
+		if (_right) character_position ++;
+	}
+	
 	if (cursor_position >= _cursor_length)      cursor_position = 0;
 	if (cursor_position < 0)                    cursor_position = _cursor_length - 1;
 	
@@ -79,8 +85,27 @@ if (need_to_center)
 	if (sound_position > 10)  sound_position = 10;
 	if (sound_position< 0)    sound_position = 0;
 	
+	if (character_position > 3)  character_position = 0;
+	if (character_position < 0)  character_position = 3;
+	
 	global.music_gain = music_position / 10;
 	global.sound_gain = sound_position / 10;
+	
+	switch (character_position)
+	{
+		case 0:
+			global.character = "Kyron";
+			break;
+		case 1:
+			global.character = "LongHair";
+			break;
+		case 2:
+			global.character = "SteamPunk";
+			break;
+		case 3:
+			global.character = "Robo";
+			break;
+	}
 
 #endregion
 
@@ -90,7 +115,8 @@ if (need_to_center)
 	dbutton[1] = string(resolutionW[switcher_position]) + "X" + string(resolutionH[switcher_position]);
 	dbutton[2] = "MUSIC VOLUME: " + string(100 * global.music_gain) + "%";
 	dbutton[3] = "SOUND VOLUME: " + string(100 * global.sound_gain) + "%";
-	dbutton[4] = "BACK";
+	dbutton[4] = "Character: " + global.character;
+	dbutton[5] = "BACK";
 
 
 	for(var i = 0; i < _cursor_length; i++)
@@ -123,9 +149,10 @@ if (need_to_center)
 				
 			case 2:
 			case 3:
+			case 4:
 			break;			
 		
-			case 4 : 
+			case 5 : 
 			//Go back to menu
 				button = [];
 				dbutton = [];

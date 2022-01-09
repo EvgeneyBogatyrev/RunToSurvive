@@ -1,6 +1,6 @@
 /// @description
 
-if (_input_type != InputTypes.KEYBOARD)
+if (_input_type != InputTypes.KEYBOARD and _input_type != InputTypes.ANY)
 {
 	if (!gamepad_is_connected(SelectGamepad(_input_type - InputTypes.GAMEPAD0)))  
 	{

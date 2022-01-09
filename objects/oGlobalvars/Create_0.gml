@@ -25,6 +25,7 @@ global.display_height = 768;
 global.filename = "file.name";
 
 globalvar save_map;
+global.character = "Kyron";
 LoadGame();
 
 	

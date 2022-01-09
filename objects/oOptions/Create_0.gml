@@ -7,6 +7,23 @@ switcher_position = 0;
 music_position = global.music_gain * 10;
 sound_position = global.sound_gain * 10;
 
+character_position = 0;
+switch (global.character)
+	{
+		case "Kyron":
+			character_position = 0;
+			break;
+		case "LongHair":
+			character_position = 1;
+			break;
+		case "SteamPunk":
+			character_position = 2;
+			break;
+		case "Robo":
+			character_position = 3;
+			break;
+	}
+
 switch(global.display_width)
 {
 	
@@ -32,7 +49,8 @@ dbutton[0] = "SCREEN RESOLUTION:"
 dbutton[1] = string(global.display_width) + "X" + string(global.display_height);
 dbutton[2] = "MUSIC VOLUME: " + string(100 * global.music_gain) + "%";
 dbutton[3] = "SOUND VOLUME: " + string(100 * global.sound_gain) + "%";
-dbutton[4] = "BACK";
+dbutton[4] = "Character: " + global.character;
+dbutton[5] = "BACK";
 
 //Set drawing buttons
 button[0] = dbutton[0];
@@ -40,9 +58,10 @@ button[1] = dbutton[1];
 button[2] = dbutton[2];
 button[3] = dbutton[3];
 button[4] = dbutton[4];
+button[5] = dbutton[5];
 
-_cursor_length = array_length_1d(button);
-_switcher_length = array_length_1d(resolutionW);
+_cursor_length = array_length(button);
+_switcher_length = array_length(resolutionW);
 
 //Set drawing
 x0 = room_width / 2;

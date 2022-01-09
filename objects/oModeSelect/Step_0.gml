@@ -28,10 +28,9 @@
 		{
 			case 0:
 			//Go to Level selection
-				//instance_change(oPlayerSelect, true);
 				number_of_players = 1;
-				names[0] = "Kyron"; // FIX!
-				input_type[0] = InputTypes.KEYBOARD; // FIX!
+				names[0] = global.character;
+				input_type[0] = InputTypes.ANY; // FIX!
 				room_goto(rPlay);
 				break;
 			

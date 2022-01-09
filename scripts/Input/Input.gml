@@ -98,8 +98,33 @@ function Input(argument0) {
 			}
 		
 			return [_left, _right, _up, _down, _jump, _pause];
-			break;
 	
+
+		case InputTypes.ANY: 
+		
+			var _array = [];
+		
+			for (var i = 0; i < 5; ++i)
+			{
+				allowed_to_move = allowed_array[i];
+				allowed_to_move_hor = allowed_hor_array[i];
+				_array[i] = Input(i + InputTypes.KEYBOARD);			
+				allowed_array[i] = allowed_to_move;
+				allowed_hor_array[i] = allowed_to_move_hor;
+			}
+		
+			var _return_array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		
+			for (var i = 0; i < 5; ++i)
+			{
+				for (var j = 0; j < array_length(_array[i]); ++j)
+				{
+					_return_array[j] |= _array[i][j]
+				}
+			}
+		
+			return _return_array;
+				
 	
 		default : 
 			Raise("Input type is undefined\n");

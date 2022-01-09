@@ -8,7 +8,8 @@ function Enumerator() {
 		GAMEPAD1,
 		GAMEPAD2,
 		GAMEPAD3,
-		MENU
+		MENU,
+		ANY
 	};
 
 	enum UniversalStates

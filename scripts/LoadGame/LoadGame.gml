@@ -6,6 +6,7 @@ function LoadGame() {
 		ds_map_add(save_map, "Resolution_height", 768);
 		ds_map_add(save_map, "Music gain", global.music_gain);
 		ds_map_add(save_map, "Sound gain", global.sound_gain);
+		ds_map_add(save_map, "Character", global.character);
 		//ds_map_add(save_map, "Player1_pocket", 1);
 		//ds_map_add(save_map, "Player2_pocket", 1);
 
@@ -31,6 +32,12 @@ function LoadGame() {
 		global.display_height = ds_map_find_value(save_map, "Resolution_height");
 		global.music_gain = ds_map_find_value(save_map, "Music gain");
 		global.sound_gain = ds_map_find_value(save_map, "Sound gain");
+		global.character = ds_map_find_value(save_map, "Character");
+		
+		if (global.character == undefined) 
+		{
+			global.character = "Kyron";	
+		}
 		//var p1 = ds_map_find_value(save_map, "Player1_pocket");
 		//var p2 = ds_map_find_value(save_map, "Player2_pocket");
 	
