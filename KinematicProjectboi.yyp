@@ -188,6 +188,7 @@
     {"id":{"name":"sFontOutline","path":"sprites/sFontOutline/sFontOutline.yy",},},
     {"id":{"name":"sDamageIndicator","path":"sprites/sDamageIndicator/sDamageIndicator.yy",},},
     {"id":{"name":"soSelect","path":"sounds/soSelect/soSelect.yy",},},
+    {"id":{"name":"sDelverInsectAttack","path":"sprites/sDelverInsectAttack/sDelverInsectAttack.yy",},},
     {"id":{"name":"AimProjectileChooseTarget","path":"scripts/AimProjectileChooseTarget/AimProjectileChooseTarget.yy",},},
     {"id":{"name":"soConfirm","path":"sounds/soConfirm/soConfirm.yy",},},
     {"id":{"name":"soShoot","path":"sounds/soShoot/soShoot.yy",},},

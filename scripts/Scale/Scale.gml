@@ -20,6 +20,7 @@ function Scale() {
 		case sDelverTransform:
 		case sDelverZap:
 		case sDelverInsect:
+		case sDelverInsectAttack:
 		case sDelverDying:
 			_scale -= 0.2;
 			break;

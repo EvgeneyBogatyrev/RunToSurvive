@@ -98,6 +98,7 @@
     {"name":"sItemTimer","order":2,"path":"sprites/sItemTimer/sItemTimer.yy",},
     {"name":"sFontOutline","order":1,"path":"sprites/sFontOutline/sFontOutline.yy",},
     {"name":"sDamageIndicator","order":2,"path":"sprites/sDamageIndicator/sDamageIndicator.yy",},
+    {"name":"sDelverInsectAttack","order":8,"path":"sprites/sDelverInsectAttack/sDelverInsectAttack.yy",},
     {"name":"AimProjectileChooseTarget","order":5,"path":"scripts/AimProjectileChooseTarget/AimProjectileChooseTarget.yy",},
     {"name":"soConfirm","order":1,"path":"sounds/soConfirm/soConfirm.yy",},
     {"name":"soShoot","order":2,"path":"sounds/soShoot/soShoot.yy",},

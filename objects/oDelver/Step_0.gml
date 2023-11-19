@@ -176,10 +176,19 @@ switch (state)
 				
 				// Damaging player
 				
-				if (sprite_index != attack_sprite && distance_to_object(player) < player_distance_threshold * scale)
+				var _is_near_player = distance_to_object(player) < player_distance_threshold * scale;
+				
+				if (!_is_near_player)
 				{
-					sprite_index = attack_sprite; // TODO
+					insect_attack_cooldown = 0;
+				}
+				
+				if (insect_attack_cooldown <= 0 && sprite_index != attack_sprite && _is_near_player)
+				{
+					sprite_index = attack_sprite;
 					image_index = 0;
+					
+					insect_attack_cooldown = insect_attack_cooldown_max;
 				}
 				else if (sprite_index == attack_sprite && AnimationEnd())
 				{
@@ -211,6 +220,9 @@ switch (state)
 			{
 				rest_timer = rest_timer_max;	
 			}
+			
+			if (insect_attack_cooldown > 0) insect_attack_cooldown--;
+			
 			
 			if (hp <= 0)
 			{
