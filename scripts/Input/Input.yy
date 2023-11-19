@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Input",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Functional",
     "path": "folders/Scripts/Functional.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "Input",
-  "tags": [],
-  "resourceType": "GMScript",
 }

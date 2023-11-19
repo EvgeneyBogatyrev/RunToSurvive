@@ -57,7 +57,7 @@ function PlayerCheckDying() {
 		{
 			for (var j = 0; j < revival_number; ++j)
 			{
-				with (Create(x + sprite_get_width(oEssence) * (j + 1), y, oEssence, row))
+				with (Create(x + sprite_get_width(sEssence) * (j + 1), y, oEssence, row))
 				{
 					depth -= 2;
 					player_id = other.revival[j];

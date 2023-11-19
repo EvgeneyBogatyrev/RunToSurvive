@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "AnimationEnd",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Calculative",
     "path": "folders/Scripts/Calculative.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "AnimationEnd",
-  "tags": [],
-  "resourceType": "GMScript",
 }

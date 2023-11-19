@@ -16,7 +16,8 @@ function DrawNineSlice(argument0, argument1, argument2, argument3, argument4) {
 	var _h = _y2 - _y1;
 	var _columns = _w div _size;
 	var _rows = _h div _size;
-
+	
+	
 	//CORNERS
 	//top left
 	draw_sprite_part(_sprite, 0, 0, 0, _size, _size, _x1, _y1);

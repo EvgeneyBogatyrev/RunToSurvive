@@ -17,7 +17,7 @@ if (oRoomControl.room_properties[? "BackgroundFront"] != cur_front_layer)
 	var _back_from = layer_background_get_id(cur_front_layer);
 	var _back_to = layer_background_get_id(oRoomControl.room_properties[? "BackgroundFront"]);
 	
-	layer_exists(_back_from)  layer_x(cur_front_layer, position);
+	if layer_exists(cur_front_layer)  layer_x(cur_front_layer, position);
 	layer_background_alpha(_back_from, layer_background_get_alpha(_back_from) - 0.01);
 	layer_background_alpha(_back_to, layer_background_get_alpha(_back_to) + 0.01);
 	
@@ -28,7 +28,7 @@ if (oRoomControl.room_properties[? "BackgroundBack"] != cur_back_layer)
 	var _back_from = layer_background_get_id(cur_back_layer);
 	var _back_to = layer_background_get_id(oRoomControl.room_properties[? "BackgroundBack"]);
 	
-	layer_exists(_back_from)  layer_x(cur_back_layer, position/2);
+	if layer_exists(cur_back_layer)  layer_x(cur_back_layer, position/2);
 	layer_background_alpha(_back_from, layer_background_get_alpha(_back_from) - 0.01);
 	layer_background_alpha(_back_to, layer_background_get_alpha(_back_to) + 0.01);
 	
