@@ -11,7 +11,9 @@ function SaveGame() {
 	ds_map_replace(save_map, "Sound gain", global.sound_gain);
 	ds_map_replace(save_map, "Resolution_width", global.display_width);
 	ds_map_replace(save_map, "Resolution_height", global.display_height);
-	ds_map_replace(save_map, "Character", global.character);
+	ds_map_replace(save_map, "Character", global.character);	
+	ds_map_replace(save_map, "Highscore", global.highscore);
+
 
 	//var p1 = player1_pocket[0] + 10 * player1_pocket[1] + 100 * player1_pocket[2];
 	//var p2 = player2_pocket[0] + 10 * player2_pocket[1] + 100 * player2_pocket[2];

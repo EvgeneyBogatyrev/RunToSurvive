@@ -94,13 +94,27 @@ switch(current_gun)
 				for (var i = 0; i < _amount; ++i)
 				{
 					var _enemy = _colliding_enemies[| i];
-					if (_enemy.row != row && _enemy.object_index != oDelver && _enemy.state != DelverStates.INSECT)  continue;
+					
+					if (_enemy.object_index == oDelver)
+					{
+						if (_enemy.state != DelverStates.INSECT)
+						{
+							continue;	
+						}
+					}
+					else if (_enemy.row != row)  continue;
 					
 					if (ds_list_find_index(hit_by_attack, _enemy) == -1 && _enemy.active && _enemy.hp > 0)
 					{
 						ds_list_add(hit_by_attack, _enemy);	
 						_enemy.hp -= damage;
 						_enemy.hit_flash = 3;
+						
+						
+						if (object_is_ancestor(_enemy.object_index, oBossParent))
+						{
+							_enemy.cum_hp -= damage;
+						}
 						
 						if (object_is_ancestor(_enemy.object_index, oHalfBossParent))
 						{
@@ -220,6 +234,29 @@ switch(current_gun)
 			Shoot(oAimProjectile, sRocket, _damage, 20, 8);
 			launcher_timer = launcher_timer_max;
 		}
+		
+		break;
+		
+	case Gun.LIFESTEAL_GUN:
+		sprite_index = sLifestealGun;
+		if (image_index == 0)  image_speed = 0;
+		else                   image_speed = 1;
+			
+		cost = GetCost(current_gun);
+		var _damage = 8;
+		
+		if (shoot && !recall && host.bullets >= cost)
+		{
+			ShakeScreen(3, 5);
+			Shoot(oProjectile, sBulletBeam, _damage, 40, 8);
+			if (instance_exists(host))
+			{
+				host.hp += 1;	
+			}
+			
+		}
+		shoot = false;
+		shoot_hold = false;
 		
 		break;
 		

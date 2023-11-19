@@ -27,15 +27,7 @@ function Shoot(argument0, argument1, argument2, argument3, argument4) {
 	
 		if (object_index == oAimProjectile)
 		{
-			for (var i = 0; i < instance_number(oEnemyParent); ++i)
-			{
-				var _enemy = instance_find(oEnemyParent, i);
-	
-				if (row == _enemy.row || (_enemy.object_index == oDelver && _enemy.state == DelverStates.INSECT))
-				{	
-					if (target == noone || distance_to_object(target) > distance_to_object(_enemy))   target = _enemy;
-				}
-			}	
+			target = AimProjectileChooseTarget(row);
 		
 			remain_speed = host.xspeed;
 			absolute_speed = sqrt(xspeed * xspeed + yspeed * yspeed);

@@ -205,6 +205,7 @@ switch (state)
 	case UniversalStates.DEAD:
 		if (AnimationEnd())
 		{
+			global.score += 100;
 			oRoomControl.gamestate = GameState.NORMAL;
 			GetStandartRoomProperties();
 			instance_destroy();			

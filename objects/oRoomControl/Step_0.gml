@@ -6,7 +6,7 @@ if (keyboard_check_pressed(ord("R")))
 	room_restart();
 
 	
-if (roomspeed != 0 && abs(roomspeed) < 5)  roomspeed -= acc;
+if (roomspeed != 0 && abs(roomspeed) < 6)  roomspeed -= acc;
 	
 	
 if (gamestate == GameState.BATTLE)
@@ -18,6 +18,17 @@ if (gamestate == GameState.BATTLE)
 			blocked = true;
 		}
 	}
-}	
+}
 
-
+if (gamestate == PlayerStates.NORMAL)
+{
+	if (score_timer <= 0)
+	{
+		score_timer = room_speed;
+		global.score += 1;
+	}
+	else
+	{
+		score_timer -= 1;	
+	}
+}

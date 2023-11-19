@@ -1,3 +1,8 @@
+if (target == noone || !instance_exists(target))
+{
+	target = AimProjectileChooseTarget(row);	
+}
+
 if (target != noone && instance_exists(target) && target.state != UniversalStates.DEAD && (target.row == row || (target.object_index == oDelver && target.state == DelverStates.INSECT)))
 {
 	var _target_direction = point_direction(x, y, (target.bbox_right + target.bbox_left)/2, target.bbox_top);
@@ -19,7 +24,10 @@ if (CheckCollisions(x, y, oEnemyParent, row))
 		_victim.hp -= damage;
 		display = true;
 		_victim.hit_flash = 3;
-	
+		if object_is_ancestor(_victim.object_index, oBossParent)
+		{
+			_victim.cum_hp -= damage;	
+		}
 		if (object_is_ancestor(_victim.object_index, oHalfBossParent) && _victim.state != UniversalStates.DEAD)  StartBattle(row, host, _victim);
 		instance_destroy();	
 	}
@@ -34,6 +42,7 @@ if (place_meeting(x, y, oDelver) && oDelver.state == DelverStates.INSECT)
 {
 	oDelver.hp -= damage;
 	oDelver.hit_flash = 3;
+	oDelver.cum_hp -= damage;
 	display = true;
 	instance_destroy();	
 }

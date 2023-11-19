@@ -156,6 +156,7 @@ switch (state)
 		
 		if (hp <= 0 || alive_timer == 0)
 		{
+			global.score += 80;
 			state = UniversalStates.DEAD;
 			with (oFloatingEye) 
 			{
@@ -169,8 +170,8 @@ switch (state)
 		break;
 		
 	case UniversalStates.DEAD:
-		//Add Animation
-		oRoomControl.gamestate = GameState.NORMAL;
+		//Add Animation FIX!
+ 		oRoomControl.gamestate = GameState.NORMAL;
 		GetStandartRoomProperties();
 		instance_destroy();		
 		break;

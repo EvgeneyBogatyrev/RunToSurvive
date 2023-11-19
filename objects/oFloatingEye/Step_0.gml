@@ -5,6 +5,7 @@ charged_speed = 4 - oRoomControl.roomspeed;
 
 if (hp <= 0 && state != UniversalStates.DEAD)
 {
+	global.score += 10;
 	state = UniversalStates.DEAD;
 	sprite_index = sFloatingEyeDie;
 	image_index = 0;
@@ -24,7 +25,7 @@ switch (state)
 			charge_counter = charge_counter_max;
 			direction = 45 * irandom_range(0, 7);
 			
-			speed = 3 * charged_speed * scale;
+			speed = 2 * charged_speed * scale;
 		}
 		
 		with (oPlayer) 

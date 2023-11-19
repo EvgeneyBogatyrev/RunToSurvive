@@ -10,12 +10,29 @@ enum ChasingStumpState
 };
 
 
-maxhp = 50;
+maxhp = 500;
 hp = maxhp;
 
-walkspeed = 6;
+slowspeed = 3;
+walkspeed = 7;
+fastspeed = 8.5;
 jumpspeed = 12;
 
+fast_timer_max = 240;
+fast_timer = 0;
+
+current_speed = walkspeed;
+
 state = UniversalStates.INTRO;
-intro_timer_max = 1.3 * 60;
+intro_timer_max = 5 * 60;
 intro_timer = intro_timer_max;
+
+first_phase_timer = 30 * 60;
+first_phase_timer_max = 30 * 60;
+
+shown_hp = 0;
+healthbar_alpha = 0;
+
+not_give_score = false;
+
+image_blend = c_green;

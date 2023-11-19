@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.85,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/BackGroundMusic",
   },
   "soundFile": "musForestRush",
-  "duration": 29.94856,
+  "duration": 29.94356,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

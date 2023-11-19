@@ -13,6 +13,10 @@ battle_row = -1;
 opponent = noone;
 
 saved_speed = 0;
+global.score = 0;
+
+score_timer_max = 60;
+score_timer = room_speed;
 
 room_properties = ds_map_create();
 GetStandartRoomProperties();

@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sKyronStand","path":"sprites/sKyronStand/sKyronStand.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "sKyronStand",
     "tags": [],
     "resourceType": "GMSequence",
   },

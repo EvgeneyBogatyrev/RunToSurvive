@@ -7,7 +7,7 @@ if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
 	var _new_boss;
 	do
 	{
-		_new_boss = choose("Pandora", "Delver");//, "ChasingStump");
+		_new_boss = choose("Pandora", "Delver", "ChasingStump");//, 
 	} until (_new_boss != last_boss);
 	
 	switch (_new_boss)

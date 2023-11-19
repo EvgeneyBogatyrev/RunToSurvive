@@ -13,6 +13,14 @@ if (hp <= 0 && state != UniversalStates.DEAD && state != HalfBossStates.INACTIVE
 	StopBattle();
 	state = UniversalStates.DEAD;
 	image_index = 0;
+	if (!not_give_score)
+	{
+		global.score += 25;
+		if (notice_player == ReturnNoone)
+		{
+			global.score += 10;	
+		}
+	}
 	
 	with (Create(x, y, oItemDrop, row))
 	{

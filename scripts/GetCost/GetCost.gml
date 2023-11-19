@@ -18,6 +18,9 @@ function GetCost(argument0) {
 	
 		case Gun.ROCKET_LAUNCHER:
 			return 3;
+			
+		case Gun.LIFESTEAL_GUN:
+			return 5;
 	
 		default:
 			Raise("Invalid gun\n");

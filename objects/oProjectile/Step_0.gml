@@ -3,6 +3,7 @@ if (abs(x - oCamera.x) > oCamera.view_w_half * 3)  instance_destroy();
 if (CheckCollisions(x + xspeed, y, oEnemyParent, row))
 {
 	var _victim = GetCollider(x + xspeed, y, oEnemyParent, row);
+
 	if (_victim.state != UniversalStates.DEAD && _victim.state != HalfBossStates.INACTIVE && _victim.hp > 0) 
 	{
 		_victim.hp -= damage;

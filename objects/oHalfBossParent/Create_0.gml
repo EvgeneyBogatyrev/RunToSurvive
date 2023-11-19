@@ -16,3 +16,4 @@ shown_hp = 0;
 maxhp = 0;
 
 healthbar_alpha = 0;
+not_give_score = false;

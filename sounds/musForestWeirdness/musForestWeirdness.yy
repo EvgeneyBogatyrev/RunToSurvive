@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.75,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/BackGroundMusic",
   },
   "soundFile": "musForestWeirdness",
-  "duration": 33.8458824,
+  "duration": 33.8408852,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

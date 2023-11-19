@@ -21,6 +21,8 @@ global.sound_gain = 0.5;
 global.display_width = 1024;
 global.display_height = 768;
 
+global.score = 0;
+global.highscore = 0;
 
 global.filename = "file.name";
 

@@ -9,7 +9,7 @@ audio_group_set_gain(SoundEffects, global.sound_gain/2, 1);
 if (!audio_group_is_loaded(SoundEffects) || !audio_group_is_loaded(BackGroundMusic))  music_set = false;
 
 
-if (room == rPlay && !instance_exists(oBossParent) && audio_is_playing(musBossIntro))
+if (room == rPlay && !instance_exists(oBossParent) && audio_is_playing(musBossIntro) && !instance_exists(oChasingStump))
 {
 	audio_stop_sound(musBossIntro);
 	music_set = false;
