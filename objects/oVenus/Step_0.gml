@@ -7,7 +7,7 @@ switch (state)
 		{
 			state = VenusStates.CATCH;
 			target = GetCollider(x, y, oPlayer, row);
-			DamagePlayer(25, 0);
+			ContactDamage(25, 0);
 		}
 		break
 	case VenusStates.CATCH:

@@ -10,7 +10,7 @@ enum DelverStates
 
 state = UniversalStates.INTRO;
 
-mage_hp = 20;
+mage_hp = 1//20;
 insect_hp = 40;
 
 cum_hp = mage_hp + insect_hp;
@@ -20,7 +20,7 @@ maxhp = mage_hp;
 hp = maxhp;
 
 //Intro
-intro_timer_max = 6 * 60;
+intro_timer_max = 1//6 * 60;
 intro_timer = intro_timer_max;
 phase = get_timer();
 magnitude = 30;
@@ -42,3 +42,14 @@ stop_time = 2 * 60;
 flying_forward = false;
 dir_update_max = 30;
 dir_update = dir_update_max;
+
+// Insect attack
+player_distance_threshold = 50; // attack activation distance
+attack_sprite = sDelverAttack; // attack sprite
+attack_image_index = 5;  // when to deal damage
+attack_x_shift = 50; // damage circle shift relative to local x
+attack_radius = 40; // damage circle radius
+
+
+// Debug
+visualise_circle = false;

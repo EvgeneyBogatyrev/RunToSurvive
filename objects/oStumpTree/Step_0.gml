@@ -18,7 +18,7 @@ switch (state)
 			}
 		}
 		
-		DamagePlayer(30, 0);
+		ContactDamage(30, 0);
 		
 		break;
 		
@@ -51,7 +51,7 @@ switch (state)
 			image_index = 0;
 		}
 		
-		DamagePlayer(30, 0);
+		ContactDamage(30, 0);
 		
 		break;
 	

@@ -60,7 +60,7 @@ switch(state)
 		break;
 }
 
-if (state != UniversalStates.DEAD && state != HalfBossStates.INACTIVE && DamagePlayer(20, 0))
+if (state != UniversalStates.DEAD && state != HalfBossStates.INACTIVE && ContactDamage(20, 0))
 {
 	StartBattle(row, player, id);
 	retrieve = true;

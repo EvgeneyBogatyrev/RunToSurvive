@@ -116,7 +116,6 @@ switch (state)
 			yspeed = 0;
 			if (rest_timer > stop_time)
 			{
-				DamagePlayer(20, 0);
 				player = GetPlayer(PlayerPreferences.LOWEST_HEALTH);
 			
 				if (player == noone)
@@ -174,9 +173,31 @@ switch (state)
 						}
 					}
 				}
+				
+				// Damaging player
+				
+				if (sprite_index != attack_sprite && distance_to_object(player) < player_distance_threshold * scale)
+				{
+					sprite_index = attack_sprite; // TODO
+					image_index = 0;
+				}
+				else if (sprite_index == attack_sprite && AnimationEnd())
+				{
+					image_index = 0;
+					sprite_index = sDelverInsect;
+					visualise_circle = false;
+				}
+				else if (sprite_index == attack_sprite && image_index >= attack_image_index)
+				{
+					CircleDamage(20, 0, x + dir * attack_x_shift * scale, y, attack_radius * scale);
+					ShakeScreen(3, 10);
+					visualise_circle = true;
+				}
+				
 			}
 			else
 			{
+				sprite_index = sDelverInsect;
 				flying_forward = false;
 				x = lerp(x, oCamera.right - CAMERA_BOUNDS / 3, acceleration);
 				y = lerp(y, ystart, acceleration);

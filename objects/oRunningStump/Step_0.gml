@@ -3,7 +3,7 @@
 
 if (hp > 0)
 {
-	DamagePlayer(25, 0);
+	ContactDamage(25, 0);
 
 	if (sprite_index == sStumpAppear)
 	{

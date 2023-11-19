@@ -23,7 +23,7 @@ if (start)
 	}
 }
 
-DamagePlayer(20, 0);
+ContactDamage(20, 0);
 
 image_xscale *= -1;
 

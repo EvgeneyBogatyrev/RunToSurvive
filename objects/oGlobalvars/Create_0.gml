@@ -1,5 +1,7 @@
 /// @description Initialize global variables.
 
+global.DEBUG = true;
+
 global.multiplayer = false;
 	
 globalvar input_type, names;
