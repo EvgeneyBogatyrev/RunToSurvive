@@ -57,7 +57,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4cee413a-fac7-42c6-bd0d-7e950d068df0","path":"sprites/sGrassBlockRoundedRight/sGrassBlockRoundedRight.yy",},},},"Disabled":false,"id":"6df9583f-cc32-4628-99a9-cf98c3d5fe50","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 17,
     "yorigin": 0,

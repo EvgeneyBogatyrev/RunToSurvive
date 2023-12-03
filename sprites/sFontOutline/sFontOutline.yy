@@ -245,7 +245,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f486a637-ab46-4c52-8083-4a276f004c25","path":"sprites/sFontOutline/sFontOutline.yy",},},},"Disabled":false,"id":"de8085c7-9586-483e-adf1-68a7806e6adc","IsCreationKey":false,"Key":94.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 0,
     "yorigin": 0,

@@ -229,6 +229,13 @@ switch (state)
 				state = UniversalStates.DEAD;
 				sprite_index = sDelverDying;
 				image_index = 0;
+				
+				with (Create(x, y, oBossLoot, row))
+				{
+					depth -= 2;
+					index = DELVER_LOOT_INUMBER;
+				}
+				
 				ShakeScreen(10, 60);
 			}
 			

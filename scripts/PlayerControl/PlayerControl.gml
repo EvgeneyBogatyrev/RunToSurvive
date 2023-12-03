@@ -13,6 +13,7 @@ function PlayerControl() {
 	_jump  = _keys[4];
 	_shoot = _keys[5];
 	_shoot_hold = _keys[6];
+	_show_inv = _keys[10];
 	//_left_gun = _keys[7];
 	//_right_gun = _keys[8];
 

@@ -26,6 +26,7 @@ gpu_set_tex_filter(false);
 shader_reset();
 
 draw_surface(application_surface, 0, 0);
+
 //gpu_set_blendmode(bm_add);
 //draw_surface(surf_ping, 0, 0);
 //gpu_set_blendmode(bm_normal);
@@ -111,6 +112,18 @@ for (var i = 0; i < ds_list_size(list_of_players); i++)
 	}	
 	
 	
+	if (_pl._show_inv)
+	{
+		var _inventory_x = x + 380; // not correct, please look into
+		for (var j = 0; j < ds_list_size(_pl.inventory); j++)
+		{
+		
+			var _item_index = ds_list_find_value(_pl.inventory, j);
+		
+			draw_sprite_ext(sPassiveItems, _item_index, _inventory_x + sprite_get_width(sPassiveItems)/4 + j * sprite_get_width(sPassiveItems)/2, cur_y + sprite_get_height(sPassiveItems)/4, 0.5, 0.5, 0, c_white, draw_get_alpha());
+		
+		}
+	}
 
 	cur_y -= 2;
 	cur_y += (rectangle_size - offset)/2;

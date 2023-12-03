@@ -4,7 +4,7 @@ if (oRoomControl.gamestate == GameState.NORMAL)  timer = ApproachTo(timer, 0);
 
 if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
 {
-	var _new_boss;
+	var _new_boss = "ChasingStump";
 	do
 	{
 		_new_boss = choose("Pandora", "Delver", "ChasingStump");//, 

@@ -79,7 +79,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"336342c4-7bae-449e-8736-d022fb9a5c10","path":"sprites/sCloningStation/sCloningStation.yy",},},},"Disabled":false,"id":"a3baec40-4c77-4fbf-adf3-2ca19ae94c18","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 48,
     "yorigin": 143,

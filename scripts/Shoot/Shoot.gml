@@ -23,7 +23,7 @@ function Shoot(argument0, argument1, argument2, argument3, argument4) {
 		scale = other.scale;
 		depth = other.depth - 1;
 		dir = host.dir;
-	
+		hit_events = host.onHitEvent;
 	
 		if (object_index == oAimProjectile)
 		{

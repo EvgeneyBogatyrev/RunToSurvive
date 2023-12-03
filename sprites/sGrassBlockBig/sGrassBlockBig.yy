@@ -57,7 +57,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"699d7efa-e27a-4e75-9167-d5a714ee5af8","path":"sprites/sGrassBlockBig/sGrassBlockBig.yy",},},},"Disabled":false,"id":"a5c8afa8-a36f-423e-89fa-c845a12b903f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 52,
     "yorigin": 0,

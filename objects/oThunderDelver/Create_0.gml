@@ -7,3 +7,4 @@ start = false;
 exist_timer = 20;
 
 offset = 0;
+

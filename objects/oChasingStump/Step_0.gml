@@ -66,8 +66,7 @@ switch (state)
 		if (abs(target.x - x) < 20 && abs(target.y - y) < 30)
 			xspeed = -current_speed * sign(target.x - x);
 		
-		first_phase_timer--;
-		if (first_phase_timer < 0)	first_phase_timer = -1;
+		
 		break;
 		
 	case ChasingStumpState.VICTORY:
@@ -89,7 +88,8 @@ switch (state)
 	default:
 		instance_destroy();
 }
-
+first_phase_timer--;
+if (first_phase_timer < 0)	first_phase_timer = -1;
 if (state != ChasingStumpState.VICTORY && state != UniversalStates.INTRO && state != UniversalStates.DEAD)
 {
 	if ((CheckCollisions(x + xspeed * sign(scale), y, oBlock, row)  || row != target.row) && CheckCollisions(x, y + 1, oBlock, row))
@@ -121,6 +121,7 @@ if (state != ChasingStumpState.VICTORY && state != UniversalStates.INTRO && stat
 		if (!not_give_score) global.score += 200;
 		sprite_index = sStumpDying;
 		state = UniversalStates.DEAD;
+		first_phase_timer = 0;
 		with (Create(x, y, oItemDrop, row))
 		{
 			depth -= 2;
@@ -158,7 +159,7 @@ if (first_phase_timer == first_phase_timer_max / 2)
 	Create(x, y, oWildvineController, 0);
 }
 
-if (first_phase_timer == 0 || (first_phase_timer > 0 && hp <= 0))
+if (first_phase_timer == 0/* || (first_phase_timer > 0 && hp <= 0)*/)
 {
 	with (Create(oCamera.right + CAMERA_BOUNDS, oGenerator.ground[1], oStumpTree, 1))  
 	{

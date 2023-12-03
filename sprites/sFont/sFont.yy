@@ -245,7 +245,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"89421a98-1c0e-4c6d-a94a-ae03ae17e594","path":"sprites/sFont/sFont.yy",},},},"Disabled":false,"id":"911dde4d-9d87-4aa4-a3f3-ab204ae3f062","IsCreationKey":false,"Key":94.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 0,
     "yorigin": 0,

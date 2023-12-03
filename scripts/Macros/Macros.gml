@@ -7,7 +7,7 @@ function Macros() {
 #macro BLOCKSIZE 35
 #macro INACTIVE_ALPHA 0.3
 
-	//Items
+    //Items
 #macro DRILL_INUMBER			0
 #macro STDGUN_INUMBER			DRILL_INUMBER + 1
 #macro SHOTGUN_INUMBER			STDGUN_INUMBER + 1
@@ -20,6 +20,9 @@ function Macros() {
 #macro BATTERY_INUMBER          ENERGYFIST_INUMBER + 1
 #macro HEARTH_INUMBER           BATTERY_INUMBER + 1
 #macro ESSENCE_INUMBER          HEARTH_INUMBER + 1
+
+	//Boss Loots
+#macro DELVER_LOOT_INUMBER		0
 
 	//Screen
 #macro HIGH_DEFINITION_WIDTH   1920

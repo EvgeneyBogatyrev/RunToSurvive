@@ -53,7 +53,8 @@ _up = false;
 _down = false;
 _jump = false;
 _shoot = false;
-	
+_show_inv = false;
+
 gun = Create(x, y, oGun, 0);
 with(gun)	host = other.id;
 	
@@ -69,6 +70,8 @@ revival_number = 0;
 pocket = [0, 0, 0, 0, 0];
 pocket[0] = STDGUN_INUMBER;
 
+inventory = ds_list_create();
+
 active_pocket_index = 0;
 
 allowed_to_move = true;
@@ -83,4 +86,11 @@ for (var i = 0; i < 5; ++i)
 }
 
 protected = false;
+
+//Events
+
+onHitEvent = []; //our damage!!!!! to monsters
+onHurtEvent = [];
+onJumpEvent = [];
+
 

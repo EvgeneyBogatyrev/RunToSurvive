@@ -34,7 +34,7 @@ function Input(argument0) {
 			_accept = keyboard_check_pressed(ord("A"));
 			_cancel = keyboard_check_pressed(ord("S"));
 			_pause = keyboard_check_pressed(vk_escape);
-			_show_inv = keyboard_check_pressed(vk_control);
+			_show_inv = keyboard_check(vk_tab);
 			_left_press = keyboard_check_pressed(vk_left);
 			_right_press = keyboard_check_pressed(vk_right);
 		
@@ -62,7 +62,7 @@ function Input(argument0) {
 			_accept = gamepad_button_check_pressed(_device, gp_face4);
 			_cancel = gamepad_button_check_pressed(_device, gp_face2);
 			_pause = gamepad_button_check_pressed(_device, gp_start);
-			_show_inv = gamepad_button_check_pressed(_device, gp_shoulderrb);
+			_show_inv = gamepad_button_check(_device, gp_shoulderlb);
 			_left_press = (((gamepad_axis_value(_device, gp_axislh) < -0.7) && allowed_to_move_hor)||(gamepad_button_check_pressed(_device, gp_padl)));
 			_right_press = (((gamepad_axis_value(_device, gp_axislh) > 0.7) && allowed_to_move_hor)||(gamepad_button_check_pressed(_device, gp_padr)));
 		

@@ -110,6 +110,11 @@ switch(current_gun)
 						_enemy.hp -= damage;
 						_enemy.hit_flash = 3;
 						
+						for (var i = 0; i < array_length(host.onHitEvent); i++)
+						{
+							host.onHitEvent[i]();
+						}
+
 						
 						if (object_is_ancestor(_enemy.object_index, oBossParent))
 						{
