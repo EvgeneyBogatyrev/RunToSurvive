@@ -49,6 +49,10 @@ switch (state)
 			state = UniversalStates.DEAD;
 			sprite_index = sStumpTreeDefeat;
 			image_index = 0;
+			with (oWildvineController)
+			{
+				instance_destroy();	
+			}
 		}
 		
 		ContactDamage(30, 0);

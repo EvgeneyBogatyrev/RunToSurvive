@@ -152,6 +152,12 @@ if (CheckCollisions(x, y + yspeed * scale, oBlock, row))
 	yspeed = 0;
 }
 
+
+if (first_phase_timer == first_phase_timer_max / 2)
+{
+	Create(x, y, oWildvineController, 0);
+}
+
 if (first_phase_timer == 0 || (first_phase_timer > 0 && hp <= 0))
 {
 	with (Create(oCamera.right + CAMERA_BOUNDS, oGenerator.ground[1], oStumpTree, 1))  

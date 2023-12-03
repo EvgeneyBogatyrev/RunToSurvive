@@ -10,15 +10,15 @@ enum ChasingStumpState
 };
 
 
-maxhp = 500;
+maxhp = 100;
 hp = maxhp;
 
 slowspeed = 3;
 walkspeed = 7;
-fastspeed = 8.5;
+fastspeed = 8;
 jumpspeed = 12;
 
-fast_timer_max = 240;
+fast_timer_max = 200;
 fast_timer = 0;
 
 current_speed = walkspeed;
@@ -36,3 +36,4 @@ healthbar_alpha = 0;
 not_give_score = false;
 
 image_blend = c_green;
+

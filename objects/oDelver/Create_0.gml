@@ -10,7 +10,7 @@ enum DelverStates
 
 state = UniversalStates.INTRO;
 
-mage_hp = 1//20;
+mage_hp = 20;
 insect_hp = 40;
 
 cum_hp = mage_hp + insect_hp;
@@ -20,7 +20,7 @@ maxhp = mage_hp;
 hp = maxhp;
 
 //Intro
-intro_timer_max = 1//6 * 60;
+intro_timer_max = 6 * 60;
 intro_timer = intro_timer_max;
 phase = get_timer();
 magnitude = 30;

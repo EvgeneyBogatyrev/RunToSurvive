@@ -1,7 +1,7 @@
 /// @description 
 event_inherited();
 
-hp = irandom_range(15, 25);
+hp = irandom_range(8, 15);
 maxhp = hp;
 shown_hp = hp;
 

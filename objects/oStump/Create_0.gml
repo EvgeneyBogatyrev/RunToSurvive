@@ -10,7 +10,7 @@ retrieve = false;
 retrieve_counter = 0;
 retrieve_counter_max = 60;
 
-hp = irandom_range(8, 12);
+hp = irandom_range(5, 10);
 maxhp = hp;
 shown_hp = hp;
 
