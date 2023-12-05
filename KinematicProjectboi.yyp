@@ -194,6 +194,7 @@
     {"id":{"name":"soConfirm","path":"sounds/soConfirm/soConfirm.yy",},},
     {"id":{"name":"soShoot","path":"sounds/soShoot/soShoot.yy",},},
     {"id":{"name":"soExplosion","path":"sounds/soExplosion/soExplosion.yy",},},
+    {"id":{"name":"oDifficultyController","path":"objects/oDifficultyController/oDifficultyController.yy",},},
     {"id":{"name":"soRocketShoot","path":"sounds/soRocketShoot/soRocketShoot.yy",},},
     {"id":{"name":"musTension","path":"sounds/musTension/musTension.yy",},},
     {"id":{"name":"musEyeForAnEye","path":"sounds/musEyeForAnEye/musEyeForAnEye.yy",},},

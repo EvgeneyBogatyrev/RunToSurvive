@@ -10,12 +10,12 @@ enum ChasingStumpState
 };
 
 
-maxhp = 100;
+maxhp = 100 + 5 * oDifficultyController.bosses_defeated;
 hp = maxhp;
 
 slowspeed = 3;
-walkspeed = 7;
-fastspeed = 8;
+walkspeed = 6;
+fastspeed = 7;
 jumpspeed = 12;
 
 fast_timer_max = 200;

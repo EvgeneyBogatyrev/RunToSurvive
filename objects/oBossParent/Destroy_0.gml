@@ -1,0 +1,1 @@
+oDifficultyController.bosses_defeated += 1;

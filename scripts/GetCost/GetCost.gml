@@ -20,7 +20,7 @@ function GetCost(argument0) {
 			return 3;
 			
 		case Gun.LIFESTEAL_GUN:
-			return 5;
+			return 2;
 	
 		default:
 			Raise("Invalid gun\n");

@@ -188,11 +188,11 @@ switch(current_gun)
 				temp_bullets += 1;
 				if (temp_bullets >= 100)  increase = false;
 			}
-			else
-			{
-				temp_bullets -= 1;
-				if (temp_bullets < 1)  increase = true;	
-			}
+			//else
+			//{
+			//	temp_bullets -= 1;
+			//	if (temp_bullets < 1)  increase = true;	
+			//}
 		}
 			
 		if (!shoot_hold && temp_bullets > 0) 
@@ -248,7 +248,7 @@ switch(current_gun)
 		else                   image_speed = 1;
 			
 		cost = GetCost(current_gun);
-		var _damage = 8;
+		var _damage = 3;
 		
 		if (shoot && !recall && host.bullets >= cost)
 		{

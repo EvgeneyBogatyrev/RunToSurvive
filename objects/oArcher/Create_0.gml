@@ -11,7 +11,7 @@ action_timer_max = 40;
 arrow_speed = 17;
 shoot_index = 5;
 
-hp = irandom_range(5, 8);
+hp = irandom_range(5, 8) + floor(oDifficultyController.minibosses_defeated / 5);
 maxhp = hp;
 shown_hp = hp;
 

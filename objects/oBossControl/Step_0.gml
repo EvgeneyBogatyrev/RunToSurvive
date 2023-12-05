@@ -2,7 +2,7 @@
 
 if (oRoomControl.gamestate == GameState.NORMAL)  timer = ApproachTo(timer, 0);
 
-if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
+if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL && !instance_exists(oBossLoot))
 {
 	var _new_boss = "ChasingStump";
 	do

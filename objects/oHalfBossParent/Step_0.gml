@@ -21,6 +21,7 @@ if (hp <= 0 && state != UniversalStates.DEAD && state != HalfBossStates.INACTIVE
 			global.score += 10;	
 		}
 	}
+	oDifficultyController.minibosses_defeated += 1;
 	
 	with (Create(x, y, oItemDrop, row))
 	{

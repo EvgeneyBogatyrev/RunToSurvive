@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 2;
+hp = 1 + floor(oDifficultyController.bosses_defeated / 2);
 
 draw_alpha = 1;
 

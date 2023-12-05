@@ -33,7 +33,7 @@ switch (state)
 		
 	case ChasingStumpState.CHASE:
 		
-		if (CheckCollisions(x, y + 1, oBlock, row))  ContactDamage(30, 0);
+		if (CheckCollisions(x, y + 1, oBlock, row))  ContactDamage(15, 0);
 		
 		target = GetPlayer(PlayerPreferences.CLOSEST);
 		
@@ -121,7 +121,7 @@ if (state != ChasingStumpState.VICTORY && state != UniversalStates.INTRO && stat
 		if (!not_give_score) global.score += 200;
 		sprite_index = sStumpDying;
 		state = UniversalStates.DEAD;
-		first_phase_timer = 0;
+		if (first_phase_timer > 0) first_phase_timer = 0;
 		with (Create(x, y, oItemDrop, row))
 		{
 			depth -= 2;

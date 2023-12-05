@@ -12,7 +12,7 @@ enum StumpTreeStates
 };
 
 
-max_hp = 60;
+max_hp = 60 + 2 * oDifficultyController.bosses_defeated;
 hp = max_hp;
 cum_hp_max = max_hp;
 cum_hp = cum_hp_max;

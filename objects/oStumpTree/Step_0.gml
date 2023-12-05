@@ -18,7 +18,7 @@ switch (state)
 			}
 		}
 		
-		ContactDamage(30, 0);
+		ContactDamage(20, 0);
 		
 		break;
 		
@@ -55,7 +55,7 @@ switch (state)
 			}
 		}
 		
-		ContactDamage(30, 0);
+		ContactDamage(20, 0);
 		
 		break;
 	
