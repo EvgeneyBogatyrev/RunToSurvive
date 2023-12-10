@@ -58,7 +58,7 @@
   "origin": 7,
   "parent": {
     "name": "Tree",
-    "path": "folders/Sprites/Emenies/Tree.yy",
+    "path": "folders/Sprites/Enemies/Tree.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

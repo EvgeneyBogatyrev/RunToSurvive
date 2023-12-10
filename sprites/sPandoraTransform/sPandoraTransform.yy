@@ -42,7 +42,7 @@
   "origin": 9,
   "parent": {
     "name": "Pandora",
-    "path": "folders/Sprites/Emenies/Pandora.yy",
+    "path": "folders/Sprites/Enemies/Pandora.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

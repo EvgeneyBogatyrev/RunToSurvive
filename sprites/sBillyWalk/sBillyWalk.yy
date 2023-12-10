@@ -31,7 +31,7 @@
   "origin": 9,
   "parent": {
     "name": "Billy",
-    "path": "folders/Sprites/Emenies/Billy.yy",
+    "path": "folders/Sprites/Enemies/Billy.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

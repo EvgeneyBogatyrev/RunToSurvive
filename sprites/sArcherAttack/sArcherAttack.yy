@@ -32,7 +32,7 @@
   "origin": 9,
   "parent": {
     "name": "Archer",
-    "path": "folders/Sprites/Emenies/Archer.yy",
+    "path": "folders/Sprites/Enemies/Archer.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

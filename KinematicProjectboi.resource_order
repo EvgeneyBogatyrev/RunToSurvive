@@ -1,5 +1,7 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Robots","order":6,"path":"folders/Sprites/Enemies/Robots.yy",},
+  ],
   "ResourceOrderSettings": [
     {"name":"sTree","order":1,"path":"sprites/sTree/sTree.yy",},
     {"name":"sChargeStation","order":2,"path":"sprites/sChargeStation/sChargeStation.yy",},
@@ -35,6 +37,7 @@
     {"name":"sSteampunkIdle","order":1,"path":"sprites/sSteampunkIdle/sSteampunkIdle.yy",},
     {"name":"sSteampunkJump","order":2,"path":"sprites/sSteampunkJump/sSteampunkJump.yy",},
     {"name":"sSteampunkRun","order":3,"path":"sprites/sSteampunkRun/sSteampunkRun.yy",},
+    {"name":"sMissile","order":4,"path":"sprites/sMissile/sMissile.yy",},
     {"name":"sSteampunkHands","order":4,"path":"sprites/sSteampunkHands/sSteampunkHands.yy",},
     {"name":"sSteampunkDying","order":5,"path":"sprites/sSteampunkDying/sSteampunkDying.yy",},
     {"name":"sSteampunkIcon","order":6,"path":"sprites/sSteampunkIcon/sSteampunkIcon.yy",},
@@ -45,6 +48,7 @@
     {"name":"sPowerGun","order":3,"path":"sprites/sPowerGun/sPowerGun.yy",},
     {"name":"sRocketLauncher","order":4,"path":"sprites/sRocketLauncher/sRocketLauncher.yy",},
     {"name":"sBullet","order":5,"path":"sprites/sBullet/sBullet.yy",},
+    {"name":"sShootingRobot","order":1,"path":"sprites/sShootingRobot/sShootingRobot.yy",},
     {"name":"sSparkle","order":6,"path":"sprites/sSparkle/sSparkle.yy",},
     {"name":"sBulletBeam","order":7,"path":"sprites/sBulletBeam/sBulletBeam.yy",},
     {"name":"sSparkleBeam","order":8,"path":"sprites/sSparkleBeam/sSparkleBeam.yy",},
@@ -169,6 +173,7 @@
     {"name":"SummonDelver","order":1,"path":"scripts/SummonDelver/SummonDelver.yy",},
     {"name":"SummonChasingStump","order":2,"path":"scripts/SummonChasingStump/SummonChasingStump.yy",},
     {"name":"shdHit","order":1,"path":"shaders/shdHit/shdHit.yy",},
+    {"name":"sMissileLauncher","order":3,"path":"sprites/sMissileLauncher/sMissileLauncher.yy",},
     {"name":"shdOutline","order":2,"path":"shaders/shdOutline/shdOutline.yy",},
     {"name":"shdBloom","order":3,"path":"shaders/shdBloom/shdBloom.yy",},
     {"name":"shdExtra","order":4,"path":"shaders/shdExtra/shdExtra.yy",},
@@ -217,6 +222,7 @@
     {"name":"oArcher","order":4,"path":"objects/oArcher/oArcher.yy",},
     {"name":"oArrow","order":5,"path":"objects/oArrow/oArrow.yy",},
     {"name":"oBilly","order":6,"path":"objects/oBilly/oBilly.yy",},
+    {"name":"sFlyingRobot","order":2,"path":"sprites/sFlyingRobot/sFlyingRobot.yy",},
     {"name":"oAlertSign","order":7,"path":"objects/oAlertSign/oAlertSign.yy",},
     {"name":"oFloatingEye","order":1,"path":"objects/oFloatingEye/oFloatingEye.yy",},
     {"name":"oDelverZap","order":1,"path":"objects/oDelverZap/oDelverZap.yy",},

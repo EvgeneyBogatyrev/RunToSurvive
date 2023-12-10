@@ -28,7 +28,7 @@
   "origin": 9,
   "parent": {
     "name": "Stump",
-    "path": "folders/Sprites/Emenies/Stump.yy",
+    "path": "folders/Sprites/Enemies/Stump.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

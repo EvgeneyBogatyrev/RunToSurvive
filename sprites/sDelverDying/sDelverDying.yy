@@ -31,7 +31,7 @@
   "origin": 9,
   "parent": {
     "name": "Delver",
-    "path": "folders/Sprites/Emenies/Delver.yy",
+    "path": "folders/Sprites/Enemies/Delver.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
