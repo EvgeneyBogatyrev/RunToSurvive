@@ -4,7 +4,7 @@ function SaveGame() {
 	//	ds_list_add(_list, global.collection[i]);
 	//}
 	
-	//var _string = ds_list_write(_list)
+	//var _string = ds_list_write(_list)	
 
 	//ds_map_replace(save_map, "Collection", _string);
 	ds_map_replace(save_map, "Music gain", global.music_gain);
@@ -19,7 +19,7 @@ function SaveGame() {
 	//var p2 = player2_pocket[0] + 10 * player2_pocket[1] + 100 * player2_pocket[2];
 
 	//ds_map_replace(save_map, "Player1_pocket", p1);
-	//ds_map_replace(save_map, "Player2_pocket", p2);
+  	//ds_map_replace(save_map, "Player2_pocket", p2);
 
 	ds_map_secure_save(save_map, global.filename);
 

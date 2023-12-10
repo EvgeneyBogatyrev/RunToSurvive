@@ -20,8 +20,8 @@ if (_pause)
 	_pause = false;
 	if (!paused)
 	{
-		screen_save("screen.png");
-		background = sprite_add("screen.png", 0, false, false, 0, 0);
+		screen_save(working_directory + "screen.png");
+		background = sprite_add(working_directory + "screen.png", 0, false, false, 0, 0);
 		paused = true;
 		layer_set_visible("Pause", true);
 		oCamera.cam = view_camera[1];

@@ -47,6 +47,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Billy","folderPath":"folders/Sprites/Enemies/Billy.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Delver","folderPath":"folders/Sprites/Enemies/Delver.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Pandora","folderPath":"folders/Sprites/Enemies/Pandora.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Robots","folderPath":"folders/Sprites/Enemies/Robots.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Stump","folderPath":"folders/Sprites/Enemies/Stump.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tree","folderPath":"folders/Sprites/Enemies/Tree.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Sprites/Fonts.yy",},
@@ -63,13 +64,12 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Prototypes","folderPath":"folders/Sprites/Prototypes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Textures","folderPath":"folders/Sprites/Textures.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Dark","folderPath":"folders/Sprites/Textures/Dark.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Robots","folderPath":"folders/Sprites/Enemies/Robots.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.2.108",
+    "IDEVersion": "2023.11.0.121",
   },
   "resources": [
     {"id":{"name":"sStone","path":"sprites/sStone/sStone.yy",},},
