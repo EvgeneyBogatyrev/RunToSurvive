@@ -19,17 +19,17 @@ function GetObstacleCombination(argument0, argument1) {
 		CHARGE_STATION = 5,
 	};
 
-	var _chance_of_occurance = [6, 11, 12, 10, 6, 2];
+	var _chance_of_occurance = [6, 11, 12, 10, 6, 4];
 
 
 	var _pool;
 	var _counter = 0;
 	for (var i = 0; i < 6; ++i)
 	{
-		if (!_forbidden[i]) 
-		{
-			for (var j = 0; j < _chance_of_occurance[i]; ++j)   _pool[_counter++] = i;
-		}
+		//if (!_forbidden[i]) 
+		//{
+		for (var j = 0; j < _chance_of_occurance[i]; ++j)   _pool[_counter++] = i;
+		//}
 	}
 
 	if (_counter == 1)  return array_create(3, Obstacles.EMPTY);
@@ -63,6 +63,16 @@ function GetObstacleCombination(argument0, argument1) {
 			} until (_result[i] != _previous[i]);
 		}
 	}
+	
+	// Remove forbidden obstacles
+	for (var i = 0; i < 3; ++i)
+	{
+		if (_forbidden[_result[i]])
+		{
+			_result[i] = 0;	
+		}
+	}
+
 	return _result;
 
 
