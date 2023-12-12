@@ -22,6 +22,7 @@ function Scale() {
 		case sDelverInsect:
 		case sDelverInsectAttack:
 		case sDelverDying:
+		case sShootingRobot:
 			_scale -= 0.2;
 			break;
 	}

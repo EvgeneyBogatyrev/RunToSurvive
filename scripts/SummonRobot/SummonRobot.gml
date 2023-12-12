@@ -7,6 +7,15 @@ function SummonRobot() {
 
 	with (Create(oCamera.right - 120, oGenerator.ground[0] - 150, oRobotSpawner, 0))  depth -= 2;
 
+	with (oStructureBlock)
+	{
+		instance_destroy();	
+	}
+	
+	with (oChest)
+	{
+		instance_destroy();	
+	}
 
 	audio_stop_sound(oAudioControl.bgm);
 	audio_play_sound(musBossIntro, 1, false);
