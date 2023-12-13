@@ -29,6 +29,7 @@ view_h_half = camera_get_view_height(cam) * 0.5;
 
 left = x - view_w_half;
 right = x + view_w_half;
+center = (left + right) / 2;
 
 //Screen shake
 y = clamp(y, view_h_half + buff, room_height - view_h_half - buff);

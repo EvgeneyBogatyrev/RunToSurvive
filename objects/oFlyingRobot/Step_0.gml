@@ -18,8 +18,9 @@ switch (state)
 		
 	case FlyingRobotStates.ATTACK:
 		x = (oCamera.right + oCamera.left)/2;
-		y = lerp(y, oGenerator.ground[row] - 250 * GetScale(row), 0.05);
+		y = lerp(y, oGenerator.ground[row] - 210 * GetScale(row), 0.05);
 		scale = lerp(scale, GetScale(row, true), 0.05);
+		depth -= 2;
 		attack_timer--;
 		if (attack_timer <= 0)
 		{

@@ -6,6 +6,11 @@ if (spawn_timer <= 0)
 	var _row = irandom_range(0, 2);
 	var _robot = choose(oTallRobot, oShootingRobot, oFlyingRobot);
 	
+	if (random(100) < 10)
+	{
+		_robot = oMissileLauncher;	
+	}
+	
 	if (_robot == oFlyingRobot)
 	{
 		if (instance_exists(oFlyingRobot))
@@ -22,7 +27,7 @@ if (spawn_timer <= 0)
 	{
 		if (_robot == oFlyingRobot)
 		{
-			y -= 250 * GetScale(_row);	
+			y -= 210 * GetScale(_row);	
 		}
 		depth -= 2;
 	}
