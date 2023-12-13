@@ -8,9 +8,9 @@ function AimProjectileChooseTarget(_row){
 	{
 		_choose_array[array_length(_choose_array)] = instance_find(oEnemyParent, i);
 	}
-	//Print("Before", _choose_array);
+
 	array_shuffle_ext(_choose_array);
-	//Print("Before", _choose_array);
+
 
 	for (var i = 0; i < array_length(_choose_array); ++i)
 	{

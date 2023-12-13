@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oRobot",
+  "name": "oShootingRobot",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -13,14 +13,14 @@
     "path": "folders/Objects/Emenies/Robots.yy",
   },
   "parentObjectId": {
-    "name": "oBossParent",
-    "path": "objects/oBossParent/oBossParent.yy",
+    "name": "oEnemyParent",
+    "path": "objects/oEnemyParent/oEnemyParent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
   "physicsFriction": 0.2,
-  "physicsGroup": 0,
+  "physicsGroup": 1,
   "physicsKinematic": false,
   "physicsLinearDamping": 0.1,
   "physicsObject": false,
@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sDelverStand",
-    "path": "sprites/sDelverStand/sDelverStand.yy",
+    "name": "sShootingRobot",
+    "path": "sprites/sShootingRobot/sShootingRobot.yy",
   },
   "spriteMaskId": null,
   "visible": true,

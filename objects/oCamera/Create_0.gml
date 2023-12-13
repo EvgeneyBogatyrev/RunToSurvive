@@ -29,6 +29,7 @@ y_to = y;
 
 left = x - view_w_half;
 right = x + view_w_half;
+center = (left + right) / 2;
 
 follow = oPlayer;
 
