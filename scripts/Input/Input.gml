@@ -6,7 +6,7 @@ function Input(argument0) {
 
 	var _input_type = argument0;
 	var
-	_left = 0, 
+	_left = 0,
 	_right = 0, 
 	_up = 0, 
 	_down = 0, 

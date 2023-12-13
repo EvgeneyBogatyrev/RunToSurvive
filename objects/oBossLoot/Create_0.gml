@@ -4,7 +4,7 @@ event_inherited();
 phase = get_timer();
 state = ItemDropStates.SPIN;
 
-index = 0;
+profile = undefined;
 
 player_id = noone;
 

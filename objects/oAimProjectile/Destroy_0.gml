@@ -14,5 +14,5 @@ if (display) with(Create(x, y, oDamageNumber, row))
 
 for (var i = 0; i < array_length(hit_events); i++)
 {
-	hit_events[i]();
+	hit_events[i](id);
 }

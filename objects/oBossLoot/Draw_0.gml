@@ -9,4 +9,4 @@ draw_circle(x, y - 50 * _scale, 50 * _scale, false);
 
 draw_set_alpha(1);
 
-draw_sprite_ext(sPassiveItems, index, x, y - 50 * _scale, _scale * sin((get_timer() - phase) / 500000), _scale, 0, c_white, 1);
+draw_sprite_ext(sPassiveItems, profile.icon_index, x, y - 50 * _scale, _scale * sin((get_timer() - phase) / 500000), _scale, 0, c_white, 1);

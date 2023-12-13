@@ -72,6 +72,7 @@ pocket[0] = STDGUN_INUMBER;
 
 inventory = ds_list_create();
 
+
 active_pocket_index = 0;
 
 allowed_to_move = true;

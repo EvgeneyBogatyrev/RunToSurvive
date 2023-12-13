@@ -28,8 +28,8 @@ if (state == ItemDropStates.SPIN)
 	
 	if (_player != noone && _player.state != UniversalStates.DEAD) 
 	{
-		ds_list_add(_player.inventory, index);
-		switch (index) 
+		ds_list_add(_player.inventory, profile);
+		/*switch (index) 
 		{
 			case DELVER_LOOT_INUMBER:
 			
@@ -42,7 +42,7 @@ if (state == ItemDropStates.SPIN)
 				break;
 			
 		
-		}
+		}*/
 		
 		instance_destroy();
 	}

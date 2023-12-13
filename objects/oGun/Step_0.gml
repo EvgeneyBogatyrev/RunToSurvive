@@ -110,10 +110,17 @@ switch(current_gun)
 						_enemy.hp -= damage;
 						_enemy.hit_flash = 3;
 						
-						for (var i = 0; i < array_length(host.onHitEvent); i++)
+						hit_events = [];
+						for (var _i = 0; _i < ds_list_size(host.inventory); _i++)
 						{
-							host.onHitEvent[i]();
+							var _item = ds_list_find_value(host.inventory, _i);
+							var hit_event = struct_exists(_item, "on_hit") ? struct_get(_item, "on_hit") : undefined;
+							if (hit_event != undefined)
+							{
+								hit_event(id, 82 * sign(image_xscale));
+							}
 						}
+						
 
 						
 						if (object_is_ancestor(_enemy.object_index, oBossParent))

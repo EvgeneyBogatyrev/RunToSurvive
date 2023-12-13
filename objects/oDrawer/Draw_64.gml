@@ -114,13 +114,21 @@ for (var i = 0; i < ds_list_size(list_of_players); i++)
 	
 	if (_pl._show_inv)
 	{
-		var _inventory_x = x + 380; // not correct, please look into
+		var _inventory_x = x + 370; // not correct, please look into
 		for (var j = 0; j < ds_list_size(_pl.inventory); j++)
 		{
 		
 			var _item_index = ds_list_find_value(_pl.inventory, j);
-		
-			draw_sprite_ext(sPassiveItems, _item_index, _inventory_x + sprite_get_width(sPassiveItems)/4 + j * sprite_get_width(sPassiveItems)/2, cur_y + sprite_get_height(sPassiveItems)/4, 0.5, 0.5, 0, c_white, draw_get_alpha());
+			var _sprite_width = sprite_get_width(sPassiveItems);
+			var _sprite_height = sprite_get_height(sPassiveItems);
+			draw_set_alpha(0.5);
+			draw_set_color(#133769);
+			draw_circle(_inventory_x + _sprite_width/4 + j * (_sprite_width/2 + 4), cur_y + _sprite_height/4, _sprite_width / 4, false);
+			draw_set_alpha(1);
+			draw_circle(_inventory_x + _sprite_width/4 + j * (_sprite_width/2 + 4), cur_y + _sprite_height/4, _sprite_width / 4, true);
+			
+			draw_set_color(c_white);
+			draw_sprite_ext(sPassiveItems, _item_index, _inventory_x + _sprite_width/4 + j * (_sprite_width/2 + 4), cur_y + _sprite_height/4, 0.5, 0.5, 0, c_white, draw_get_alpha());
 		
 		}
 	}
