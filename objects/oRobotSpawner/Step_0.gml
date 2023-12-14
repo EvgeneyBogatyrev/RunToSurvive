@@ -1,21 +1,42 @@
+var _robot_pool;
+
 spawn_timer--;
 if (spawn_timer <= 0)
 {
 	
 	spawn_timer = spawn_timer_max;
-	var _row = irandom_range(0, 2);
-	var _robot = choose(oTallRobot, oShootingRobot, oFlyingRobot);
 	
-	if (random(100) < 10)
+	if (instance_exists(oRobotBoss))
 	{
-		_robot = oMissileLauncher;	
+		if (oRobotBoss.state == RobotBossStates.ROBOT)
+		{
+			var _row = irandom_range(0, 2);
+			_robot_pool = [oShootingRobot, oFlyingRobot];
+			var _robot = choose(oShootingRobot, oFlyingRobot);
+		}
+		else
+		{
+			var _row = irandom_range(0, 2);
+			_robot_pool = [oTallRobot, oShootingRobot, oFlyingRobot];
+			var _robot = choose(oTallRobot, oShootingRobot, oFlyingRobot);
+			
+			if (random(100) < 10)
+			{
+				_robot = oMissileLauncher;	
+			}
+		}
 	}
+	else
+	{
+		exit;
+	}
+	
 	
 	if (_robot == oFlyingRobot)
 	{
 		if (instance_exists(oFlyingRobot))
 		{
-			_robot = choose(oTallRobot, oShootingRobot);
+			_robot = _robot_pool[irandom_range(0, array_length(_robot_pool) - 2)]; // Without oFlyingRobot
 		}
 		else
 		{

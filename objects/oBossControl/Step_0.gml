@@ -9,7 +9,7 @@ if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL && !instance_exists
 	{
 		_new_boss = choose("Robot", "Pandora", "Delver", "ChasingStump");//, 
 	} until (_new_boss != last_boss);
-	//_new_boss = "Robot";
+	_new_boss = "Robot";
 	switch (_new_boss)
 	{
 		case "Pandora":
