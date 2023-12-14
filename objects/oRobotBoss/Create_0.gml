@@ -10,7 +10,7 @@ enum RobotBossStates
 
 state = UniversalStates.INTRO;
 
-air_hp = 1 + 1 * oDifficultyController.bosses_defeated;
+air_hp = 10 + 1 * oDifficultyController.bosses_defeated;
 robot_hp = 20 + 2 * oDifficultyController.bosses_defeated;
 
 hp = air_hp; 
@@ -33,6 +33,6 @@ chosen_robot = undefined;
 
 
 //Robot
-change_speed_timer_max = 3 * 60;
+change_speed_timer_max = 1 * 60;
 change_speed_timer = 0;
 walkspeed = 12;

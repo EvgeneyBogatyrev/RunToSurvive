@@ -27,11 +27,7 @@ switch (state)
 		
 		if (hp <= 0)
 		{
-			//global.score += 100;
-			//oRoomControl.gamestate = GameState.NORMAL;
-			//GetStandartRoomProperties();
-			//instance_destroy(oRobotSpawner);	
-			//instance_destroy();
+			ShakeScreen(5, 30);
 			hp = robot_hp;
 			state = RobotBossStates.WAIT_FOR_ROBOT;
 		}
@@ -50,8 +46,8 @@ switch (state)
 		if (chosen_robot != undefined)
 		{
 			chosen_robot.xspeed = 0;
-			x = lerp(x, chosen_robot.x, 0.1);			
-			y = lerp(y, chosen_robot.y, 0.1);
+			x = lerp(x, chosen_robot.x, 0.05);			
+			y = lerp(y, chosen_robot.y, 0.05);
 			
 			if (CheckCollisions(x, y, chosen_robot, chosen_robot.row))
 			{
@@ -76,10 +72,20 @@ switch (state)
 		break;
 		
 	case RobotBossStates.ROBOT:
+	
+		ContactDamageKnockback(25, 2);
+	
 		if (change_speed_timer <= 0)
 		{
-			change_speed_timer = change_speed_timer_max + random_range(-1, 1) * 60;
-			xspeed = choose(0, walkspeed, -walkspeed);
+			change_speed_timer = change_speed_timer_max + random_range(-0.5, 0.5) * 60;
+			if (xspeed == 0)
+			{
+				xspeed = choose(walkspeed, -walkspeed);
+			}
+			else
+			{
+				xspeed = 0;	
+			}
 		}
 		change_speed_timer--;
 		
@@ -89,7 +95,7 @@ switch (state)
 		{
 			x = oCamera.left - CAMERA_OFFSET + walkspeed * scale;
 			xspeed = walkspeed;
-			change_speed_timer = change_speed_timer_max;
+			change_speed_timer = change_speed_timer_max * 5;
 			row = choose(0, 1, 2);
 			scale = GetScale(row);
 			depth -= 2;
@@ -100,11 +106,34 @@ switch (state)
 		{
 			x = oCamera.right + CAMERA_OFFSET;
 			xspeed = -walkspeed;
-			change_speed_timer = change_speed_timer_max;
+			change_speed_timer = change_speed_timer_max * 5;
 			row = choose(0, 1, 2);
 			scale = GetScale(row);
 			depth -= 2;
 			y = oGenerator.ground[row];
+		}
+		
+		if (hp <= 0)
+		{
+			ShakeScreen(10, 60);
+			global.score += 100;
+			oRoomControl.gamestate = GameState.NORMAL;
+			GetStandartRoomProperties();
+			instance_destroy(oRobotSpawner);	
+			state = UniversalStates.DEAD;
+		}	
+		
+		break;
+		
+	case UniversalStates.DEAD:
+		xspeed = 0;
+		if (AnimationEnd())
+		{
+			image_speed = 0;	
+		}
+		if (x < oCamera.left - CAMERA_BOUNDS)
+		{
+			instance_destroy();	
 		}
 		break;
 	
