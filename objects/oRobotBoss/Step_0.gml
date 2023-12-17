@@ -37,6 +37,7 @@ switch (state)
 	case RobotBossStates.WAIT_FOR_ROBOT:
 		xspeed = 0.001;
 		hp = robot_hp;
+		cum_hp = robot_hp + ship_hp;
 		
 		if (chosen_robot == undefined && instance_exists(oTallRobot) && oTallRobot.x < oCamera.right - CAMERA_OFFSET/3 && oTallRobot.x > oCamera.left + CAMERA_OFFSET/3)
 		{
@@ -115,14 +116,50 @@ switch (state)
 		
 		if (hp <= 0)
 		{
+			hp = ship_hp;
+			state = RobotBossStates.SHIP;
+		}	
+		
+		break;
+		
+	case RobotBossStates.SHIP:
+		image_angle = 0;
+		if (sprite_index != sShip)
+		{
+			hp = ship_hp;
+			cum_hp = ship_hp;
+			xspeed = 0;
+			
+			if (x < oCamera.left - CAMERA_OFFSET)
+			{
+				sprite_index = sShip;
+				row = 1;
+				scale = GetScale(row);
+				depth -= 2;
+				y = oGenerator.ground[row];
+				saved_roomspeed = oRoomControl.roomspeed;
+			}
+		}
+		else
+		{
+			while (oRoomControl.roomspeed > saved_roomspeed - roomspeed_acc)
+			{
+				oRoomControl.roomspeed -= 0.01;	
+			}
+			x = lerp(x, oCamera.left - 5, 0.1);
+			ContactDamage(20, 0);
+		}
+		
+		if (hp <= 0)
+		{
 			ShakeScreen(10, 60);
 			global.score += 100;
 			oRoomControl.gamestate = GameState.NORMAL;
+			oRoomControl.roomspeed += roomspeed_acc;
 			GetStandartRoomProperties();
 			instance_destroy(oRobotSpawner);	
 			state = UniversalStates.DEAD;
-		}	
-		
+		}
 		break;
 		
 	case UniversalStates.DEAD:

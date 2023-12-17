@@ -6,6 +6,18 @@ instance_create_layer(0, 0, "Controllers", oBossControl);
 instance_create_layer(0, 0, "Controllers", oPause);
 instance_create_layer(0, 0, "Controllers", oDifficultyController);
 
+// Particles
+global.particle_systems = [];
+for (var _i = 0; _i < 3; ++_i)
+{
+	var _p = part_system_create_layer("Instances", true);
+	part_system_depth(_p, -100 * _i);
+	global.particle_systems[_i] = _p;
+}
+
+// Bullets
+
+
 global.level_started = true;
 
 gap = 120;

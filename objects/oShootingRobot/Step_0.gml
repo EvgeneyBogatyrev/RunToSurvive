@@ -5,11 +5,11 @@ switch (state)
 {
 	case ShootingRobotStates.ENTER:
 		xspeed = -walkspeed;
-		if (x < oCamera.right - shooting_threshold)
+		if (x + xspeed < oCamera.right - shooting_threshold * scale)
 		{
 			state = ShootingRobotStates.SHOOT;
 			image_angle = -30;
-			with (Create(x - shooting_offset_x * scale, y - shooting_offset_y * scale, oMissileHorizontal, row))
+			with (Create(x + shooting_offset_x * scale, y - shooting_offset_y * scale, oShootingRobotBullet, row))
 			{
 					
 			}
@@ -32,8 +32,6 @@ switch (state)
 		break;
 }
 
-image_xscale = -abs(image_xscale) * 0.7;
-image_yscale = scale * 0.5; // FIX THIS!
 
 if (x < oCamera.left - CAMERA_BOUNDS || (state == ShootingRobotStates.BACK && x > oCamera.right + CAMERA_OFFSET))
 {

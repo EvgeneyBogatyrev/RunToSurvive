@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oMissileHorizontal",
+  "name": "oShootingRobotBullet",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sMissile",
-    "path": "sprites/sMissile/sMissile.yy",
+    "name": "sShootingRobotBullet",
+    "path": "sprites/sShootingRobotBullet/sShootingRobotBullet.yy",
   },
   "spriteMaskId": null,
   "visible": true,
