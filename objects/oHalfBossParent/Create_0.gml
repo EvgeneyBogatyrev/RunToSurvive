@@ -2,10 +2,10 @@ event_inherited();
 
 enum HalfBossStates
 {
-	IDLE,
-	TRIGGERED,
-	BATTLE,
-	INACTIVE
+	IDLE = -382913,
+	TRIGGERED = -819421,
+	BATTLE = -48932,
+	INACTIVE = -12345
 };
 
 notice_player = Create;

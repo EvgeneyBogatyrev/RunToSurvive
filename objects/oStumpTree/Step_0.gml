@@ -68,6 +68,7 @@ switch (state)
 		{
 			instance_destroy();	
 		}
+		break;
 }
 
 event_inherited();
