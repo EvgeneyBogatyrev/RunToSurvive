@@ -28,7 +28,7 @@ if (state == ItemDropStates.SPIN)
 	
 	if (_player != noone && _player.state != UniversalStates.DEAD) 
 	{
-		ds_list_add(_player.inventory, profile);
+		GiveItemToPlayer(_player, profile);
 		/*switch (index) 
 		{
 			case DELVER_LOOT_INUMBER:

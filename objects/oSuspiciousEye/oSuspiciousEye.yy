@@ -1,21 +1,21 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oFlyingRobot",
+  "name": "oSuspiciousEye",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Robots",
-    "path": "folders/Objects/Emenies/Robots.yy",
+    "name": "Player&Stuff",
+    "path": "folders/Objects/Player&Stuff.yy",
   },
   "parentObjectId": {
-    "name": "oEnemyParent",
-    "path": "objects/oEnemyParent/oEnemyParent.yy",
+    "name": "oOrbital",
+    "path": "objects/oOrbital/oOrbital.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sFlyingRobot",
-    "path": "sprites/sFlyingRobot/sFlyingRobot.yy",
+    "name": "sEyeball",
+    "path": "sprites/sEyeball/sEyeball.yy",
   },
   "spriteMaskId": null,
   "visible": true,

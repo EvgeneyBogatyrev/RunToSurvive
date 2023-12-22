@@ -8,6 +8,29 @@ function Shit()
 	Print("shit");
 }
 
+function GiveItemToPlayer(_player, _item)
+{
+	ds_list_add(_player.inventory, _item);
+	_player.item_picked_up = true;
+}
+
+function GetItemActions(_host, _event)
+{
+	var _actions = [];
+	for (var _i = 0; _i < ds_list_size(_host.inventory); _i++)
+	{
+		var _item = ds_list_find_value(_host.inventory, _i);
+		var hit_event = struct_exists(_item, _event) ? struct_get(_item, _event) : undefined;
+		
+		if (hit_event != undefined)
+		{
+			_actions[array_length(_actions)] = hit_event;
+		}
+	}
+	
+	return _actions;
+}
+
 globalvar passive_items_profiles;
 passive_items_profiles = 
 [
@@ -32,15 +55,7 @@ passive_items_profiles =
 		icon_index : 1,
 		on_hurt : function(_host)
 		{
-			var _amount = irandom_range(2, 4);
-			
-			for (var _i = 0; _i < _amount; _i++)
-			{
-				with(Create(_host.x, _host.y,  oFloatingEye, _host.row))
-				{
-					
-				}
-			}
+			CreateOrbital(_host, 3, 32, oSuspiciousEye);
 		}
 	}
 ]

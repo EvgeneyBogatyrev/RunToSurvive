@@ -118,7 +118,7 @@ for (var i = 0; i < ds_list_size(list_of_players); i++)
 		for (var j = 0; j < ds_list_size(_pl.inventory); j++)
 		{
 		
-			var _item_index = ds_list_find_value(_pl.inventory, j);
+			var _item_index = ds_list_find_value(_pl.inventory, j).icon_index;
 			var _sprite_width = sprite_get_width(sPassiveItems);
 			var _sprite_height = sprite_get_height(sPassiveItems);
 			draw_set_alpha(0.5);

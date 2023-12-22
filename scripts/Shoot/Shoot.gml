@@ -23,16 +23,7 @@ function Shoot(argument0, argument1, argument2, argument3, argument4) {
 		scale = other.scale;
 		depth = other.depth - 1;
 		dir = host.dir;
-		hit_events = [];
-		for (var _i = 0; _i < ds_list_size(host.inventory); _i++)
-		{
-			var _item = ds_list_find_value(host.inventory, _i);
-			var hit_event = struct_exists(_item, "on_hit") ? struct_get(_item, "on_hit") : undefined;
-			if (hit_event != undefined)
-			{
-				hit_events[array_length(hit_events)] = hit_event;
-			}
-		}
+		hit_events = GetItemActions(host, "on_hit")
 	
 		if (object_index == oAimProjectile)
 		{

@@ -4,7 +4,7 @@ if (x < oCamera.left - CAMERA_BOUNDS * scale)  x = oCamera.left - CAMERA_BOUNDS 
 event_inherited();
 
 
-if (host == noone) instance_destroy();
+if (host == noone || !instance_exists(host)) instance_destroy();
 
 angle += rotation_speed;
 x = host.x + lengthdir_x(distance_to_host * scale, angle);

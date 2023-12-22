@@ -35,6 +35,7 @@ idlecounter = 60;
 maxhp = 100;
 shown_hp = maxhp;
 hp = maxhp;
+prev_hp = hp;
 
 maxbullets = 20;
 shown_bullets = maxbullets;
@@ -70,8 +71,12 @@ revival_number = 0;
 pocket = [0, 0, 0, 0, 0];
 pocket[0] = STDGUN_INUMBER;
 
+
+item_picked_up = false;
 inventory = ds_list_create();
 
+connected_orbitals = [];
+should_update_orbitals = false;
 
 active_pocket_index = 0;
 
