@@ -8,7 +8,13 @@ if (!instance_exists(_target))
 	exit;
 }
 
-angle = point_direction(x, y, _target.x, _target.y);
+var desired_angle = point_direction(x, y, _target.x, _target.y);
+
+var _rotation_speed = 15;
+var _dumpimg = 0.3;
+
+angle -= clamp(angle_difference(angle, desired_angle) * _dumpimg, -_rotation_speed, _rotation_speed);
+
 
 image_angle = angle;
 

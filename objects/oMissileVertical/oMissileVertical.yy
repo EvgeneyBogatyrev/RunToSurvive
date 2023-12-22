@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sMissile",
-    "path": "sprites/sMissile/sMissile.yy",
+    "name": "sRocket",
+    "path": "sprites/sRocket/sRocket.yy",
   },
   "spriteMaskId": null,
   "visible": true,

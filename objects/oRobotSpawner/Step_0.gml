@@ -13,13 +13,13 @@ if (spawn_timer <= 0)
 			var _row = irandom_range(0, 2);
 			_robot_pool = [oShootingRobot, oFlyingRobot];
 			var _robot = choose(oShootingRobot, oFlyingRobot);
-			spawn_timer_max = 1.2 * 60;
+			spawn_timer_max = 1.5 * 60;
 		}
 		else if (oRobotBoss.state == RobotBossStates.SHIP)
 		{
 			var _row = 1;
 			var _robot = oShootingRobot;
-			spawn_timer_max = 3 * 60;
+			spawn_timer_max = 3.5 * 60;
 		}
 		else if (oRobotBoss.state != UniversalStates.DEAD)
 		{
