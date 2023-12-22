@@ -59,7 +59,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0490bee8-1bbb-4da8-826a-734c55ae4ab4","path":"sprites/sKyronJump/sKyronJump.yy",},},},"Disabled":false,"id":"ac7e7a9f-a01b-4bd6-a0ca-5ebc51dfd795","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 31,
     "yorigin": 59,

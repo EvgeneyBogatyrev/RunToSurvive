@@ -69,7 +69,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.0.121",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"sStone","path":"sprites/sStone/sStone.yy",},},
@@ -136,6 +136,7 @@
     {"id":{"name":"sAlertSign","path":"sprites/sAlertSign/sAlertSign.yy",},},
     {"id":{"name":"sNineSliceBox","path":"sprites/sNineSliceBox/sNineSliceBox.yy",},},
     {"id":{"name":"sInventory","path":"sprites/sInventory/sInventory.yy",},},
+    {"id":{"name":"oOrbital","path":"objects/oOrbital/oOrbital.yy",},},
     {"id":{"name":"sStumpRun","path":"sprites/sStumpRun/sStumpRun.yy",},},
     {"id":{"name":"sStumpDying","path":"sprites/sStumpDying/sStumpDying.yy",},},
     {"id":{"name":"sArcherStand","path":"sprites/sArcherStand/sArcherStand.yy",},},
@@ -238,6 +239,7 @@
     {"id":{"name":"CheckCollisions","path":"scripts/CheckCollisions/CheckCollisions.yy",},},
     {"id":{"name":"GetAngleFromTheVector","path":"scripts/GetAngleFromTheVector/GetAngleFromTheVector.yy",},},
     {"id":{"name":"Increase","path":"scripts/Increase/Increase.yy",},},
+    {"id":{"name":"CreateOrbital","path":"scripts/CreateOrbital/CreateOrbital.yy",},},
     {"id":{"name":"KinematicCollisions","path":"scripts/KinematicCollisions/KinematicCollisions.yy",},},
     {"id":{"name":"sStumpTree","path":"sprites/sStumpTree/sStumpTree.yy",},},
     {"id":{"name":"OutsideRoom","path":"scripts/OutsideRoom/OutsideRoom.yy",},},

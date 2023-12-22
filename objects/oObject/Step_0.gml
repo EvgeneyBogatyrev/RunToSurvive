@@ -13,5 +13,3 @@ if (!active)
 	image_alpha = max(_alpha, image_alpha - 0.1);	
 }
 else  image_alpha = min(1, image_alpha + 0.1);	
-
-

@@ -119,6 +119,6 @@ if (state == UniversalStates.DEAD && name == "Robo")  image_alpha = 0;
 
 if (keyboard_check_pressed(ord("G")))
 {
-	ds_list_add(inventory, passive_items_profiles[0]);
-
+	//ds_list_add(inventory, passive_items_profiles[0]);
+	CreateOrbital(id, 3, 32);
 }
