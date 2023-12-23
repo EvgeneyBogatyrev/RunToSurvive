@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Pandora",
-    "path": "folders/Objects/Emenies/Pandora.yy",
+    "path": "folders/Objects/Enemies/Pandora.yy",
   },
   "parentObjectId": {
     "name": "oEnemyParent",

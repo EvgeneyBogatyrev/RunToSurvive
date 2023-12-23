@@ -7,6 +7,7 @@ enum GameState
 
 roomspeed = -2;
 acc = 0.000125;
+roomspeed_limit = 6;
 gamestate = GameState.NORMAL;
 
 battle_row = -1;

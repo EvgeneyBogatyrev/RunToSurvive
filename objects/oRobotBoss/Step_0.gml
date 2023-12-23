@@ -90,12 +90,12 @@ switch (state)
 		}
 		change_speed_timer--;
 		
-		image_angle = -30 * sign(xspeed);
+		var _desired_image_angle = -30 * sign(xspeed);
 		
 		if (x < oCamera.left - CAMERA_OFFSET)
 		{
 			x = oCamera.left - CAMERA_OFFSET + walkspeed * scale;
-			xspeed = walkspeed;
+			xspeed = walkspeed - oRoomControl.roomspeed;
 			change_speed_timer = change_speed_timer_max * 5;
 			row = choose(0, 1, 2);
 			scale = GetScale(row);
@@ -119,6 +119,8 @@ switch (state)
 			hp = ship_hp;
 			state = RobotBossStates.SHIP;
 		}	
+		
+		image_angle += sign(_desired_image_angle - image_angle);
 		
 		break;
 		
@@ -144,9 +146,9 @@ switch (state)
 		{
 			while (oRoomControl.roomspeed > saved_roomspeed - roomspeed_acc)
 			{
-				oRoomControl.roomspeed -= 0.01;	
+				oRoomControl.roomspeed -= 0.001;	
 			}
-			x = lerp(x, oCamera.left - 5, 0.1);
+			x = lerp(x, oCamera.left - 1, 0.15);
 			ContactDamage(20, 0);
 		}
 		

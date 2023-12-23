@@ -6,8 +6,8 @@
     {"name":"Robots","order":7,"path":"folders/Sprites/Enemies/Robots.yy",},
     {"name":"Stump","order":4,"path":"folders/Sprites/Enemies/Stump.yy",},
     {"name":"Tree","order":5,"path":"folders/Sprites/Enemies/Tree.yy",},
-    {"name":"Dark","order":1,"path":"folders/Sprites/Textures/Dark.yy",},
     {"name":"Orbitals","order":10,"path":"folders/Sprites/Orbitals.yy",},
+    {"name":"Dark","order":1,"path":"folders/Sprites/Textures/Dark.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sTree","order":1,"path":"sprites/sTree/sTree.yy",},

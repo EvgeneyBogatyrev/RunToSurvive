@@ -64,18 +64,32 @@ if (spawn_timer <= 0)
 
 if (instance_exists(oRobotBoss) && oRobotBoss.state == RobotBossStates.SHIP)
 {
-	spawn_launcher_timer--;
-	if (spawn_launcher_timer <= 0)
+	if (last_spawn_launcher[0] == undefined)
 	{
-		spawn_launcher_timer = spawn_launcher_timer_max;
-		with (Create(oCamera.right + CAMERA_BOUNDS, oGenerator.ground[0], oMissileLauncher, 0)) 
+		for (var _row = 0; _row < 3; ++_row)
 		{
-			depth -= 2;
-		}
-		
-		with (Create(oCamera.right + CAMERA_BOUNDS, oGenerator.ground[2], oMissileLauncher, 2)) 
-		{
-			depth -= 2;
+			if (_row == 1)	continue;
+			var _launcher = Create(oCamera.right + CAMERA_OFFSET, oGenerator.ground[_row], oMissileLauncher, _row);
+			_launcher.depth -= 2;
+			last_spawn_launcher[_row] = _launcher;
 		}
 	}
+	if (last_spawn_launcher[2].x < oCamera.right + CAMERA_OFFSET)
+	{
+		for (var _i = 0; _i < 5; ++_i)
+		{
+			for (var _row = 0; _row < 3; ++_row)
+			{
+				if (_row == 1)	continue;
+				var _tmp_launcher = Create(last_spawn_launcher[_row].x + spawn_x_diff * GetScale(_row), oGenerator.ground[_row], oMissileLauncher, _row);
+				_tmp_launcher.depth -= 2;
+				last_spawn_launcher[_row] = _tmp_launcher;
+			}
+		}
+	}
+	
+}
+else
+{
+	last_spawn_launcher = [undefined, 0, 0];	
 }

@@ -6,19 +6,6 @@ switch (state)
 	case FlyingRobotStates.MOVE:
 		xspeed = -walkspeed;
 		
-		/*
-		attack_timer--;
-		if (attack_timer <= 0)
-		{
-			with (Create(x, y, oMissileVertical, row))
-			{
-				angle = 90;
-			}
-			
-			attack_timer = attack_timer_max_move;
-		}
-		*/
-		
 		if (x < (oCamera.right + oCamera.left)/2 && attack_timer > 0)
 		{
 			state = FlyingRobotStates.ATTACK;
@@ -27,7 +14,7 @@ switch (state)
 			{
 				row = _player.row;	
 			}
-			attack_timer = attack_timer_max_attack;
+			attack_timer = attack_timer_max;
 		}
 		break;
 		

@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Delver",
-    "path": "folders/Objects/Emenies/Delver.yy",
+    "path": "folders/Objects/Enemies/Delver.yy",
   },
   "parentObjectId": null,
   "persistent": false,

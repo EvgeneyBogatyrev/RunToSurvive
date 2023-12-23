@@ -6,7 +6,8 @@ if (keyboard_check_pressed(ord("R")))
 	room_restart();
 
 	
-if (roomspeed != 0 && abs(roomspeed) < 6)  roomspeed -= acc;
+if (roomspeed != 0 && abs(roomspeed) < roomspeed_limit)  roomspeed -= acc;
+if (roomspeed < -roomspeed_limit)						 roomspeed = -roomspeed_limit;
 	
 	
 if (gamestate == GameState.BATTLE)

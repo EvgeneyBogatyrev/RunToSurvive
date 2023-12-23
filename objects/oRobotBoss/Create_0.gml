@@ -35,7 +35,7 @@ chosen_robot = undefined;
 
 
 //Robot
-change_speed_timer_max = 1 * 60;
+change_speed_timer_max = 0.5 * 60;
 change_speed_timer = 0;
 walkspeed = 12;
 

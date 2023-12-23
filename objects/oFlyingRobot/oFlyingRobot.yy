@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Robots",
-    "path": "folders/Objects/Emenies/Robots.yy",
+    "path": "folders/Objects/Enemies/Robots.yy",
   },
   "parentObjectId": {
     "name": "oEnemyParent",

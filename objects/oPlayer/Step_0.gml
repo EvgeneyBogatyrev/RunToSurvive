@@ -117,8 +117,8 @@ event_inherited();
 
 if (state == UniversalStates.DEAD && name == "Robo")  image_alpha = 0;
 
-if (keyboard_check_pressed(ord("G")))
-{
-	GiveItemToPlayer(id, passive_items_profiles[1]);
+//if (keyboard_check_pressed(ord("G")))
+//{
+	//GiveItemToPlayer(id, passive_items_profiles[1]);
 	//CreateOrbital(id, 3, 32, oSuspiciousEye);
-}
+//}

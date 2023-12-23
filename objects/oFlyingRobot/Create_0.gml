@@ -12,9 +12,9 @@ state = FlyingRobotStates.MOVE;
 hp = 100;
 walkspeed = 5;
 
-attack_timer = 120;
-attack_timer_max_move = 30;
-attack_timer_max_attack = 120;
+attack_timer_max = 120;
+attack_timer = attack_timer_max;
+
 
 
 start_angle = 15;
