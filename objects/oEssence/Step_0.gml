@@ -32,4 +32,10 @@ else
 
 	y = y0 + magnitude * sin((get_timer() - phase) / 200000) * scale;
 }
+if (x < oCamera.left)
+{ 
+	x += oCamera.view_w_half * 2 + CAMERA_OFFSET;
+	y -= 200;
+	start = false;
+}
 event_inherited();
