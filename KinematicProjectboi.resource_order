@@ -97,6 +97,7 @@
     {"name":"sGrassBlockRoundedLeft","order":3,"path":"sprites/sGrassBlockRoundedLeft/sGrassBlockRoundedLeft.yy",},
     {"name":"sGrassBlockRoundedRight","order":4,"path":"sprites/sGrassBlockRoundedRight/sGrassBlockRoundedRight.yy",},
     {"name":"sGrassBlockRoundedLeftAndRight","order":5,"path":"sprites/sGrassBlockRoundedLeftAndRight/sGrassBlockRoundedLeftAndRight.yy",},
+    {"name":"sRobotBossScreenImages","order":8,"path":"sprites/sRobotBossScreenImages/sRobotBossScreenImages.yy",},
     {"name":"sGrassBlockBig","order":6,"path":"sprites/sGrassBlockBig/sGrassBlockBig.yy",},
     {"name":"sGrassBlock1","order":1,"path":"sprites/sGrassBlock1/sGrassBlock1.yy",},
     {"name":"oFlyingRobot","order":5,"path":"objects/oFlyingRobot/oFlyingRobot.yy",},
