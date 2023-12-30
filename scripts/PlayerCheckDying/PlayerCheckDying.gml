@@ -1,8 +1,18 @@
 ///@desc Check if player`s lost
 function PlayerCheckDying() {
 
-	if (x < oCamera.left - CAMERA_BOUNDS) 
+	if (state != UniversalStates.DEAD && x < oCamera.left - CAMERA_BOUNDS) 
 	{ 
+		state = UniversalStates.DEAD;
+		if (global.multiplayer) 
+		{
+			with (Create(x, y, oEssence, row))
+			{
+					depth -= 2;
+					player_id = other.player_index;
+			}
+		}
+		
 		if (instance_number(object_index) > 1)  instance_destroy(); 
 		else                                    LevelEnd(); 
 	} 

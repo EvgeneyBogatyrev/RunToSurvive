@@ -10,8 +10,9 @@ function CreateOrbital(_host, _speed, _dist, _type){
 	}
 	
 	var _orbital_count = array_length(_host.connected_orbitals);
-	_host.connected_orbitals[_orbital_count++] = _new_orbital;
+	_host.connected_orbitals[_orbital_count] = _new_orbital;
 	
+	_orbital_count += 1;
 	
 	var _angle_between = 360 / _orbital_count;
 	

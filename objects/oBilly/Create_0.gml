@@ -1,7 +1,7 @@
 /// @description 
 event_inherited();
 
-hp = irandom_range(8, 15) + floor(oDifficultyController.minibosses_defeated / 5);;
+hp = min(40, irandom_range(8, 15) + floor(oDifficultyController.minibosses_defeated / 5));
 maxhp = hp;
 shown_hp = hp;
 

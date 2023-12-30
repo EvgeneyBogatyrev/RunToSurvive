@@ -66,6 +66,7 @@ switch (state)
 		{
 			maxhp = gauntlet_hp;
 			hp = maxhp;
+			cum_hp = gauntlet_hp + eye_hp;
 			state = PandoraStates.GAUNTLET;
 			xspeed = 0;
 			designation = -1;
@@ -125,6 +126,7 @@ switch (state)
 			scale = GetScale(row, true);
 			maxhp = eye_hp;
 			hp = maxhp;
+			cum_hp = eye_hp;
 		}
 		
 		break;

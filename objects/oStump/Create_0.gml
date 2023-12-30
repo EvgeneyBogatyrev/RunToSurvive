@@ -10,7 +10,7 @@ retrieve = false;
 retrieve_counter = 0;
 retrieve_counter_max = 60;
 
-hp = irandom_range(5, 10) + floor(oDifficultyController.minibosses_defeated / 5);
+hp = min(40, irandom_range(5, 10) + floor(oDifficultyController.minibosses_defeated / 5));
 maxhp = hp;
 shown_hp = hp;
 

@@ -4,6 +4,11 @@
 // Inherit the parent event
 event_inherited();
 
+if (host == noone || !instance_exists(host))
+{
+	exit;
+}
+
 if (!host.damaged)
 {
 

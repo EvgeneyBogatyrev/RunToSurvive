@@ -16,6 +16,12 @@ enum DrillStates
 
 //Overall
 current_gun = Gun.STANDART_GUN;
+
+if (global.DEBUG)
+{
+	current_gun = Gun.POWERGUN;
+}
+
 last_gun = Gun.DRILL;
 recall = 0;
 shoot = false;

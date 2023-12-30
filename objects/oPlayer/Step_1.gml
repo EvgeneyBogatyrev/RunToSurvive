@@ -13,8 +13,3 @@ if (_input_type != InputTypes.KEYBOARD and _input_type != InputTypes.ANY)
 	}
 }
 
-if (should_update_orbitals)
-{
-	UpdateOrbitals(id);
-	should_update_orbitals = false;
-}
