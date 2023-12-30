@@ -176,6 +176,7 @@
     {"id":{"name":"sGrassBlockRoundedLeft","path":"sprites/sGrassBlockRoundedLeft/sGrassBlockRoundedLeft.yy",},},
     {"id":{"name":"sGrassBlockRoundedRight","path":"sprites/sGrassBlockRoundedRight/sGrassBlockRoundedRight.yy",},},
     {"id":{"name":"sGrassBlockRoundedLeftAndRight","path":"sprites/sGrassBlockRoundedLeftAndRight/sGrassBlockRoundedLeftAndRight.yy",},},
+    {"id":{"name":"sRobotBossScreenImages","path":"sprites/sRobotBossScreenImages/sRobotBossScreenImages.yy",},},
     {"id":{"name":"sGrassBlockBig","path":"sprites/sGrassBlockBig/sGrassBlockBig.yy",},},
     {"id":{"name":"sGrassBlockEmpty1","path":"sprites/sGrassBlockEmpty1/sGrassBlockEmpty1.yy",},},
     {"id":{"name":"sGrassBlock1","path":"sprites/sGrassBlock1/sGrassBlock1.yy",},},
