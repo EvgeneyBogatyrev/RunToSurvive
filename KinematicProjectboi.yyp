@@ -361,6 +361,7 @@
     {"id":{"name":"oChargeStation","path":"objects/oChargeStation/oChargeStation.yy",},},
     {"id":{"name":"oItemDrop","path":"objects/oItemDrop/oItemDrop.yy",},},
     {"id":{"name":"oChest","path":"objects/oChest/oChest.yy",},},
+    {"id":{"name":"oShipRemains","path":"objects/oShipRemains/oShipRemains.yy",},},
     {"id":{"name":"oChargeHolo","path":"objects/oChargeHolo/oChargeHolo.yy",},},
     {"id":{"name":"oItemIcon","path":"objects/oItemIcon/oItemIcon.yy",},},
     {"id":{"name":"oCloningStation","path":"objects/oCloningStation/oCloningStation.yy",},},

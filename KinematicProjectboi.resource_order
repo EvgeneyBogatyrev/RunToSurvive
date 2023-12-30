@@ -254,6 +254,7 @@
     {"name":"oChargeStation","order":5,"path":"objects/oChargeStation/oChargeStation.yy",},
     {"name":"oItemDrop","order":6,"path":"objects/oItemDrop/oItemDrop.yy",},
     {"name":"oChest","order":7,"path":"objects/oChest/oChest.yy",},
+    {"name":"oShipRemains","order":9,"path":"objects/oShipRemains/oShipRemains.yy",},
     {"name":"oChargeHolo","order":8,"path":"objects/oChargeHolo/oChargeHolo.yy",},
     {"name":"oItemIcon","order":9,"path":"objects/oItemIcon/oItemIcon.yy",},
     {"name":"oCloningStation","order":10,"path":"objects/oCloningStation/oCloningStation.yy",},

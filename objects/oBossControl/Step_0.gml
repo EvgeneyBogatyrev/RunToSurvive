@@ -11,7 +11,7 @@ if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL && !instance_exists
 	} until (_new_boss != last_boss);
 	if (global.DEBUG)
 	{
-		_new_boss = "Pandora";
+		_new_boss = "Robot";
 	}
 	switch (_new_boss)
 	{

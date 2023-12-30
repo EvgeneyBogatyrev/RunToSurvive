@@ -3,10 +3,8 @@ event_inherited();
 
 ContactDamage(10, 0);
 
-if (hp <= 0 && shot_counter < shot_limit)
+if (hp <= 0 && shot_counter < shot_limit && instance_exists(oRobotBoss) && oRobotBoss.state == RobotBossStates.SHIP)
 {
-	
-	
 	if (t_offset <= 0)
 	{
 		image_index++;

@@ -1,5 +1,19 @@
 /// @description
 
+if (trail == undefined)
+{
+	trail = part_type_create();
+	part_type_shape(trail, pt_shape_smoke);
+	part_type_size(trail, 0.5 * GetScale(row), 1 * GetScale(row), 0.05, 0);
+	part_type_color1(trail, c_gray);
+	part_type_alpha1(trail, 0.1);
+	part_type_speed(trail, 5, 7, -0.10, 0);
+	part_type_direction(trail, 130, 150, 0, 20);
+	part_type_life(trail, 10, 20);	
+}
+
+
+
 switch (state)
 {
 	case UniversalStates.INTRO:
@@ -35,6 +49,8 @@ switch (state)
 		break;
 	
 	case RobotBossStates.WAIT_FOR_ROBOT:
+		part_particles_create(global.particle_systems[row], x, y, trail, 1);
+
 		xspeed = 0.001;
 		hp = robot_hp;
 		cum_hp = robot_hp + ship_hp;
@@ -46,18 +62,30 @@ switch (state)
 		
 		if (chosen_robot != undefined)
 		{
+			draw_screen = false;
 			chosen_robot.xspeed = 0;
+			row = chosen_robot.row;
+			scale = chosen_robot.scale;
+			depth = chosen_robot.depth;
 			x = lerp(x, chosen_robot.x, 0.05);			
 			y = lerp(y, chosen_robot.y, 0.05);
+			image_angle = lerp(image_angle, -45, 0.05);
 			
-			if (CheckCollisions(x, y, chosen_robot, chosen_robot.row))
+			if (CheckCollisions(x, y, oGroundBlock, chosen_robot.row))
 			{
+				ShakeScreen(20, 50);
+				// Create ship remains
+				with (Create(x, y, oShipRemains, row))
+				{
+					scale = other.scale;
+					depth = other.depth;
+					image_angle = other.image_angle;
+				}
+				
+				// Turn into robot
 				sprite_index = chosen_robot.sprite_index;
 				x = chosen_robot.x;
 				y = chosen_robot.y;
-				row = chosen_robot.row;
-				scale = chosen_robot.scale;
-				depth = chosen_robot.depth;
 				image_angle = chosen_robot.image_angle;
 				instance_destroy(chosen_robot);
 				state = RobotBossStates.ROBOT;
@@ -76,50 +104,57 @@ switch (state)
 	
 		ContactDamageKnockback(25, 2);
 	
-		if (change_speed_timer <= 0)
+		if (!walk_from_behind)
 		{
-			change_speed_timer = change_speed_timer_max + random_range(-0.5, 0.5) * 60;
-			if (xspeed == 0)
+	
+			if (change_speed_timer <= 0)
 			{
-				xspeed = choose(walkspeed, -walkspeed);
+				change_speed_timer = change_speed_timer_max + random_range(-0.5, 0.5) * 60;
+				if (xspeed == 0)
+				{
+					if (x > oCamera.right + CAMERA_OFFSET)
+					{
+						xspeed = choose(-walkspeed, -walkspeed, walkspeed);
+					}
+					else
+					{
+						xspeed = choose(walkspeed, -walkspeed);
+					}
+				}
+				else
+				{
+					xspeed = 0;	
+				}
 			}
-			else
+			change_speed_timer--;
+			
+			if (x < oCamera.left - CAMERA_OFFSET)
 			{
-				xspeed = 0;	
+				xspeed = walkspeed - oRoomControl.roomspeed;
+				row = choose(0, 1, 2);
+				scale = GetScale(row);
+				depth -= 2;
+				y = oGenerator.ground[row];
+				walk_from_behind = true;
 			}
 		}
-		change_speed_timer--;
-		
-		var _desired_image_angle = -30 * sign(xspeed);
-		
-		if (x < oCamera.left - CAMERA_OFFSET)
+		else
 		{
-			x = oCamera.left - CAMERA_OFFSET + walkspeed * scale;
-			xspeed = walkspeed - oRoomControl.roomspeed;
-			change_speed_timer = change_speed_timer_max * 5;
-			row = choose(0, 1, 2);
-			scale = GetScale(row);
-			depth -= 2;
-			y = oGenerator.ground[row];
+			if (x > oCamera.x)
+			{
+				walk_from_behind = false;	
+			}
 		}
 		
-		if (x > oCamera.right + CAMERA_OFFSET)
-		{
-			x = oCamera.right + CAMERA_OFFSET;
-			xspeed = -walkspeed;
-			change_speed_timer = change_speed_timer_max * 5;
-			row = choose(0, 1, 2);
-			scale = GetScale(row);
-			depth -= 2;
-			y = oGenerator.ground[row];
-		}
 		
 		if (hp <= 0)
 		{
+			ShakeScreen(20, 50);
 			hp = ship_hp;
 			state = RobotBossStates.SHIP;
 		}	
 		
+		var _desired_image_angle = -30 * sign(xspeed);
 		image_angle += sign(_desired_image_angle - image_angle);
 		
 		break;
@@ -128,6 +163,7 @@ switch (state)
 		image_angle = 0;
 		if (sprite_index != sShip)
 		{
+			part_particles_create(global.particle_systems[row], x, y - 150 * scale, trail, 5);
 			hp = ship_hp;
 			cum_hp = ship_hp;
 			xspeed = 0;
@@ -140,6 +176,8 @@ switch (state)
 				depth -= 2;
 				y = oGenerator.ground[row];
 				saved_roomspeed = oRoomControl.roomspeed;
+				image_xscale = abs(image_xscale);
+				dir = 1;
 			}
 		}
 		else
@@ -161,6 +199,14 @@ switch (state)
 			GetStandartRoomProperties();
 			instance_destroy(oRobotSpawner);	
 			state = UniversalStates.DEAD;
+			
+			with (oMissileLauncher)
+			{
+				if (x > oCamera.right + 10 * scale)
+				{
+					instance_destroy();	
+				}
+			}
 		}
 		break;
 		
