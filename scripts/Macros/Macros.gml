@@ -24,6 +24,7 @@ function Macros() {
 	//Boss Loots
 #macro DELVER_LOOT_INUMBER		0
 #macro PANDORA_LOOT_INUMBER		DELVER_LOOT_INUMBER + 1
+#macro ROBOT_LOOT_INUMBER       PANDORA_LOOT_INUMBER + 1
 
 	//Screen
 #macro HIGH_DEFINITION_WIDTH   1920

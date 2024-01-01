@@ -11,9 +11,9 @@ enum RobotBossStates
 
 state = UniversalStates.INTRO;
 
-air_hp = 1 + 1 * oDifficultyController.bosses_defeated;
-robot_hp = 1 + 2 * oDifficultyController.bosses_defeated;
-ship_hp = 1 + 1 * oDifficultyController.bosses_defeated;
+air_hp = 10 + 1 * oDifficultyController.bosses_defeated;
+robot_hp = 20 + 2 * oDifficultyController.bosses_defeated;
+ship_hp = 10 + 1 * oDifficultyController.bosses_defeated;
 
 hp = air_hp; 
 
@@ -25,6 +25,8 @@ maxhp = hp;
 prev_hp = hp;
 
 damaged = false;
+
+loot_profile_id = ROBOT_LOOT_INUMBER;
 
 //Intro
 intro_timer_max = 6 * 60;

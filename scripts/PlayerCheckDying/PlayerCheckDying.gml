@@ -6,7 +6,7 @@ function PlayerCheckDying() {
 		state = UniversalStates.DEAD;
 		if (global.multiplayer) 
 		{
-			with (Create(x, y, oEssence, row))
+			with (Create(oCamera.right + CAMERA_OFFSET, y - 100, oEssence, row))
 			{
 					depth -= 2;
 					player_id = other.player_index;

@@ -46,7 +46,7 @@ if (state == ItemDropStates.SPIN)
 		
 		instance_destroy();
 	}
-	
+	x = lerp(x, oCamera.x, 0.05);
 	if (x < oCamera.left - CAMERA_OFFSET) 
 	{
 		instance_destroy();

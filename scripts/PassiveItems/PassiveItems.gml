@@ -12,6 +12,8 @@ function GiveItemToPlayer(_player, _item)
 {
 	ds_list_add(_player.inventory, _item);
 	_player.item_picked_up = true;
+	
+	
 }
 
 function GetItemActions(_host, _event)
@@ -20,11 +22,11 @@ function GetItemActions(_host, _event)
 	for (var _i = 0; _i < ds_list_size(_host.inventory); _i++)
 	{
 		var _item = ds_list_find_value(_host.inventory, _i);
-		var hit_event = struct_exists(_item, _event) ? struct_get(_item, _event) : undefined;
+		var _action = struct_exists(_item, _event) ? struct_get(_item, _event) : undefined;
 		
-		if (hit_event != undefined)
+		if (_action != undefined)
 		{
-			_actions[array_length(_actions)] = hit_event;
+			_actions[array_length(_actions)] = _action;
 		}
 	}
 	
@@ -56,6 +58,15 @@ passive_items_profiles =
 		on_hurt : function(_host)
 		{
 			CreateOrbital(_host, 3, 32, oSuspiciousEye);
+		}
+	},
+	
+	{
+		name : "Bullet pack",
+		icon_index : 2,
+		on_pickup : function(_host)
+		{
+			_host.maxbullets += 5;	
 		}
 	}
 ]
