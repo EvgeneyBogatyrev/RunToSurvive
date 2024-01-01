@@ -107,7 +107,7 @@ if (state != ChasingStumpState.VICTORY && state != UniversalStates.INTRO && stat
 		{
 			row += sign(target.row - row);
 			scale = image_yscale;
-			image_xscale = sign(xspeed) * GetScale(row + sign(target.row - row), true);
+			image_xscale = sign(xspeed) * GetScale(row, true);
 		}
 		else
 		{

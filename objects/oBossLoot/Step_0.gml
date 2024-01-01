@@ -13,13 +13,21 @@ if (state == ItemDropStates.SPIN)
 	}
 	y += ysp;
 	
+	if (abs(x - destination_x) < destination_threshold)
+	{
+		//x = destination_x;
+		xspeed = 0;
+	}
+	x += xspeed;
+	
+	
 	
 	var _player = noone;
 	
 	for (var i = 0; i < instance_number(oPlayer); ++i)
 	{
 		var _tmp = instance_find(oPlayer, i);
-		if (_tmp.row == row && abs(_tmp.x - x) < sprite_width / 2 * scale)
+		if (_tmp.row == row && CheckCollisions(x, y, _tmp, row)) //&& abs(_tmp.x - x) < sprite_width / 2 * scale)
 		{
 			_player = _tmp;
 			break;
@@ -29,24 +37,15 @@ if (state == ItemDropStates.SPIN)
 	if (_player != noone && _player.state != UniversalStates.DEAD) 
 	{
 		GiveItemToPlayer(_player, profile);
-		/*switch (index) 
-		{
-			case DELVER_LOOT_INUMBER:
-			
-				_player.onHitEvent[array_length(_player.onHitEvent)] = LightningStrike;
-				break;
-			
-			default:
-			
-				Assert(false, "unknown boss loot index")
-				break;
-			
-		
-		}*/
 		
 		instance_destroy();
 	}
-	x = lerp(x, oCamera.x, 0.05);
+	
+	if (CheckCollisions(x, y, oObstacle, row))
+	{
+		x += 1;	
+	}
+	
 	if (x < oCamera.left - CAMERA_OFFSET) 
 	{
 		instance_destroy();

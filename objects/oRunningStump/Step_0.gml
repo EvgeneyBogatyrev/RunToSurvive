@@ -3,8 +3,6 @@
 
 if (hp > 0)
 {
-	ContactDamage(15, 0);
-
 	if (sprite_index == sStumpAppear)
 	{
 		if (AnimationEnd())
@@ -15,7 +13,8 @@ if (hp > 0)
 	}
 	else
 	{
-		x -= walkspeed * scale;	
+		x -= walkspeed * scale;
+		ContactDamage(15, 0);
 	}
 }
 else

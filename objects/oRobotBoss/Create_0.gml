@@ -15,6 +15,13 @@ air_hp = 10 + 1 * oDifficultyController.bosses_defeated;
 robot_hp = 20 + 2 * oDifficultyController.bosses_defeated;
 ship_hp = 10 + 1 * oDifficultyController.bosses_defeated;
 
+if (global.DEBUG)
+{
+	air_hp = 1;
+	robot_hp = 1;
+	ship_hp = 1;
+}
+
 hp = air_hp; 
 
 

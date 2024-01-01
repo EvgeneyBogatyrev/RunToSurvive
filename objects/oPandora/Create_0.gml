@@ -15,6 +15,13 @@ box_hp = 10 + 2 * oDifficultyController.bosses_defeated;
 gauntlet_hp = 20 + 4 * oDifficultyController.bosses_defeated;
 eye_hp = 10 + 2 * oDifficultyController.bosses_defeated;
 
+if (global.DEBUG)
+{
+	box_hp = 1;
+	gauntlet_hp = 1;
+	eye_hp = 1;
+}
+
 cum_hp = box_hp + gauntlet_hp + eye_hp;
 cum_hp_max = cum_hp;
 

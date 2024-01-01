@@ -113,5 +113,12 @@ if (image_angle > 270 || image_angle < 90)
 if (x < oCamera.left - CAMERA_BOUNDS)  instance_destroy();
 
 
-
-
+switch (row)
+{
+	case 0:
+		image_blend = merge_color(c_blue, c_white, 0.5);
+		break;
+	case 1:
+		image_blend = merge_color(c_green, c_white, 0.5);
+		break;
+}

@@ -13,6 +13,12 @@ state = UniversalStates.INTRO;
 mage_hp = 20 + 3 * oDifficultyController.bosses_defeated;
 insect_hp = 40 + 6 * oDifficultyController.bosses_defeated;
 
+if (global.DEBUG)
+{
+	mage_hp = 1;
+	insect_hp = 1;
+}
+
 cum_hp = mage_hp + insect_hp;
 cum_hp_max = cum_hp;
 

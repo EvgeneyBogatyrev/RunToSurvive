@@ -12,7 +12,7 @@ if (trail == undefined)
 	part_type_life(trail, 10, 20);	
 }
 
-
+event_inherited();
 
 switch (state)
 {
@@ -130,9 +130,9 @@ switch (state)
 			
 			if (x < oCamera.left - CAMERA_OFFSET)
 			{
-				xspeed = walkspeed - oRoomControl.roomspeed;
+				xspeed = walkspeed;
 				row = choose(0, 1, 2);
-				scale = GetScale(row);
+				scale = GetScale(row, true);
 				depth -= 2;
 				y = oGenerator.ground[row];
 				walk_from_behind = true;
@@ -228,4 +228,3 @@ switch (state)
 }
 
 
-event_inherited();

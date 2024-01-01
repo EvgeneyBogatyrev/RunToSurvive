@@ -18,8 +18,8 @@ function AimProjectileChooseTarget(_row){
 	
 		if (_row == _enemy.row || (_enemy.object_index == oDelver && _enemy.state == DelverStates.INSECT))
 		{	
-			_target = _enemy;
-			//if (_target == noone || distance_to_object(_target) > distance_to_object(_enemy))   _target = _enemy;
+			//_target = _enemy;
+			if (_target == noone || distance_to_object(_target) > distance_to_object(_enemy))   _target = _enemy;
 		}
 	}	
 	return _target;

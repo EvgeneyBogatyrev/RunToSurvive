@@ -8,7 +8,10 @@ profile = undefined;
 
 player_id = noone;
 
-ysp = -7;
+ysp = -15;
+xspeed = (oCamera.x - x) / 50;
+destination_x = oCamera.x;
+destination_threshold = 5;
 
 StopRoom();
 with (oRoomControl) block_score = true;

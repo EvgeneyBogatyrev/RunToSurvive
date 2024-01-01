@@ -1,6 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
+//draw_text(oCamera.x, oCamera.y, depth);
 
 if (draw_screen && (state == RobotBossStates.IDLE || state == RobotBossStates.WAIT_FOR_ROBOT || state == UniversalStates.INTRO))
 {

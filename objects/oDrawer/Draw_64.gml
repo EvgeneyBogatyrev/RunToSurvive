@@ -145,4 +145,5 @@ lowest_y = cur_y + 5 * offset;
 
 ds_list_destroy(list_of_players);
 
-draw_text(400, 400, instance_count);
+if (global.DEBUG)
+	draw_text(400, 400, instance_count);

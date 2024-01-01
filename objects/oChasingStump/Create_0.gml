@@ -30,6 +30,13 @@ intro_timer = intro_timer_max;
 first_phase_timer = 30 * 60;
 first_phase_timer_max = 30 * 60;
 
+if (global.DEBUG)
+{
+	//first_phase_timer = 1;
+	//first_phase_timer_max = 1;
+	hp = 1;
+}
+
 shown_hp = 0;
 healthbar_alpha = 0;
 

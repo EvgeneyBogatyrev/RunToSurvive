@@ -11,7 +11,7 @@ if (state == UniversalStates.DEAD && !loot_dropped)
 {
 	if (loot_profile_id != -1)
 	{
-		with (Create(x, y, oBossLoot, row))
+		with (Create(x, y - 50, oBossLoot, row))
 		{
 			depth -= 2;
 			profile = passive_items_profiles[other.loot_profile_id];
