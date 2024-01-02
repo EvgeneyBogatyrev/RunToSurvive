@@ -31,4 +31,6 @@ spawn_offset = 100;
 
 state = StumpTreeStates.APPEAR;
 
+loot_profile_id = TREE_LOOT_INUMBER;
+
 row = 1;

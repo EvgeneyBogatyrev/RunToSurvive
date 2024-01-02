@@ -38,7 +38,7 @@ passive_items_profiles =
 [
 	{
 		name : "Lightning Strike",
-		icon_index : 0,
+		icon_index : DELVER_LOOT_INUMBER,
 		on_hit : function(_host, _x_offset = 0)
 		{
 			var _chance = random(1);
@@ -54,7 +54,7 @@ passive_items_profiles =
 	
 	{
 		name : "Suspicious Eye",
-		icon_index : 1,
+		icon_index : PANDORA_LOOT_INUMBER,
 		on_hurt : function(_host)
 		{
 			CreateOrbital(_host, 3, 32, oSuspiciousEye);
@@ -63,10 +63,23 @@ passive_items_profiles =
 	
 	{
 		name : "Bullet pack",
-		icon_index : 2,
+		icon_index : ROBOT_LOOT_INUMBER,
 		on_pickup : function(_host)
 		{
 			_host.maxbullets += 5;	
+		}
+	},
+	
+	{
+		name : "Mater sprout",
+		icon_index : TREE_LOOT_INUMBER,
+		on_jump : function(_host)
+		{
+			var _chance = random(1);
+			if (_chance < 0.01)
+			{
+				_host.hp += 5;
+			}
 		}
 	}
 ]
