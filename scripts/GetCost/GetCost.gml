@@ -21,6 +21,12 @@ function GetCost(argument0) {
 			
 		case Gun.LIFESTEAL_GUN:
 			return 2;
+			
+		case Gun.REAL_SHOTGUN:
+			return 1/4;
+			
+		case Gun.ELECTRIC_GUN:
+			return 0.01;
 	
 		default:
 			Raise("Invalid gun\n");

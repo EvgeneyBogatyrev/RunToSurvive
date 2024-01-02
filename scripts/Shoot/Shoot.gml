@@ -28,6 +28,9 @@ function Shoot(_projectile, _sprite, _damage, _speed, _recall, _direction=undefi
 		yspeed = _yspeed;
 		sprite_index = _sprite;
 		scale = other.scale;
+		image_xscale = scale;		
+		image_yscale = scale;
+
 		depth = other.depth - 1;
 		dir = host.dir;
 		hit_events = GetItemActions(host, "on_hit")

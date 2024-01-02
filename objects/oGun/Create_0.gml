@@ -6,6 +6,8 @@ enum Gun
 	POWERGUN,
 	ROCKET_LAUNCHER,
 	LIFESTEAL_GUN,
+	REAL_SHOTGUN,
+	ELECTRIC_GUN
 };
 
 enum DrillStates
@@ -19,7 +21,7 @@ current_gun = Gun.STANDART_GUN;
 
 if (global.DEBUG)
 {
-	current_gun = Gun.POWERGUN;
+	current_gun = Gun.REAL_SHOTGUN;
 }
 
 last_gun = Gun.DRILL;
@@ -46,3 +48,6 @@ increase = true;
 launcher_times = 0;
 launcher_timer_max = 10;
 launcher_timer = launcher_timer_max;
+
+//electricity
+electricity_obj = undefined;

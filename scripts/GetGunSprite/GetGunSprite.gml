@@ -20,6 +20,12 @@ function GetGunSprite(gun_type){
 		
 		case Gun.LIFESTEAL_GUN:
 			return sLifestealGun;
+			
+		case Gun.REAL_SHOTGUN:
+			return sRealShotgun;
+			
+		case Gun.ELECTRIC_GUN:
+			return sStandartGun;
 	}
 
 }

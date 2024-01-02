@@ -1,6 +1,13 @@
 with(Create(x, y, oSparkle, row))
 {
-	sprite_index = sSparkleBeam;
+	if (other.sprite_index == sPellet)
+	{
+		sprite_index = sPellet;	
+	}
+	else
+	{
+		sprite_index = sSparkleBeam;
+	}
 	dir = other.dir;
 	scale = other.scale;
 	depth = other.depth;

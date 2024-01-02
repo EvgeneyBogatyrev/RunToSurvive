@@ -1,6 +1,11 @@
 function SummonRobot() {
 
 	//Obstacles
+	ds_map_replace(oRoomControl.room_properties, "BlockSprite", sMetalBlock);	
+	ds_map_replace(oRoomControl.room_properties, "BlockBigSprite", sMetalBlockBig);
+
+	ds_map_replace(oRoomControl.room_properties, "BackgroundFront", "bGraveyardTrees");
+	//ds_map_replace(oRoomControl.room_properties, "BackgroundBack", "bGraveyard");
 
 	//Forbidden
 	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 1, 1, 0]);

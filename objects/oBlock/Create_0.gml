@@ -2,4 +2,5 @@
 event_inherited();
 
 image_speed = 0;
-image_index = irandom_range(0, 3);
+image_index = -1;
+image_index_set = false;

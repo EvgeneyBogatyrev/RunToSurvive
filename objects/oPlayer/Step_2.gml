@@ -29,7 +29,7 @@ if (should_update_orbitals)
 	should_update_orbitals = false;
 }
 
-if (hp < prev_hp && hp > 0)
+if (hp < prev_hp && hp > 0 && hp < maxhp)
 {
 	for (var i = 0; i < array_length(onHurtEvent); i++)
 	{

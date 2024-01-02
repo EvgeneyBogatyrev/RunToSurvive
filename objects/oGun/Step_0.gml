@@ -7,6 +7,7 @@ else
 {
 	Assert(instance_exists(host), "No host for gun\n");
 	row = host.row;
+	dir = host.dir;
 	image_xscale = host.image_xscale;
 	image_yscale = host.image_yscale;
 	image_alpha  = host.image_alpha;
@@ -44,6 +45,15 @@ if (last_gun != Gun.DRILL && host.bullets >= GetCost(last_gun))
 	last_gun = Gun.DRILL;	
 	shoot = false;
 	shoot_hold = false;
+}
+
+if (current_gun != Gun.ELECTRIC_GUN)
+{
+	if (electricity_obj != undefined)
+	{
+		instance_destroy(electricity_obj);
+	}
+	electricity_obj	= undefined;	
 }
 
 switch(current_gun)
@@ -270,6 +280,53 @@ switch(current_gun)
 		shoot = false;
 		shoot_hold = false;
 		
+		break;
+		
+	case Gun.REAL_SHOTGUN:
+		sprite_index = GetGunSprite(Gun.REAL_SHOTGUN);
+		
+		cost = GetCost(current_gun);
+		var _damage = 1;
+		
+		if (shoot && !recall && host.bullets >= cost)
+		{
+			ShakeScreen(3, 5);
+			var _offset = 20;
+			for (var _angle = 30; _angle >= -30; _angle -= _offset)
+			{
+				Shoot(oProjectile, sPellet, _damage, 30, 8, _angle);			
+			}
+		}
+		shoot = false;
+		shoot_hold = false;
+		
+		break;
+		
+	case Gun.ELECTRIC_GUN:
+		sprite_index = GetGunSprite(Gun.ELECTRIC_GUN);
+		if (shoot_hold)
+		{
+			host.bullets -= 0.01;	
+			if (electricity_obj == undefined)
+			{
+				electricity_obj = Create(x, y, oElectricity, row);
+			}
+			electricity_obj.x = bbox_right;
+			electricity_obj.y = y;
+			electricity_obj.row = row;
+			electricity_obj.scale = scale;	
+			electricity_obj.dir = dir;
+		}
+		else
+		{
+			if (electricity_obj != undefined)
+			{
+				instance_destroy(electricity_obj);
+			}
+			electricity_obj	= undefined;
+		}
+		
+		shoot_hold = false;
 		break;
 		
 	default:

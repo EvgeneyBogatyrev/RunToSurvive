@@ -76,9 +76,9 @@ passive_items_profiles =
 		on_jump : function(_host)
 		{
 			var _chance = random(1);
-			if (_chance < 0.01)
+			if (_chance < 0.1)
 			{
-				_host.hp += 5;
+				_host.hp += 3;
 			}
 		}
 	}
