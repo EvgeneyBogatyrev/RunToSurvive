@@ -4,21 +4,28 @@
 ///@param damage     A damage of the bullet
 ///@param speed      A speed of the bullet
 ///@param recall     A recall of the bullet
-function Shoot(argument0, argument1, argument2, argument3, argument4) {
+function Shoot(_projectile, _sprite, _damage, _speed, _recall, _direction=undefined) {
 
-	var _projectile = argument0;
-	var _sprite = argument1;
-	var _damage = argument2;
-	var _speed = argument3;
-	var _recall = argument4;
+	var _xspeed, _yspeed;
+	if (_direction == undefined)
+	{
+		_xspeed = _speed;
+		_yspeed = 0;
+	}
+	else
+	{
+		_xspeed = lengthdir_x(_speed, _direction);		
+		_yspeed = lengthdir_y(_speed, _direction);	
+	
+	}
 
 	with(Create(x + 30 * host.dir * host.scale, y - 4 * host.scale, _projectile, row))
 	{
 		row = other.row;
 		damage = _damage;
 		host = other.host;
-		xspeed = _speed * host.dir;
-		yspeed = random_range(-1, 1);
+		xspeed = _xspeed * host.dir;
+		yspeed = _yspeed;
 		sprite_index = _sprite;
 		scale = other.scale;
 		depth = other.depth - 1;

@@ -57,7 +57,14 @@ function PlayerMove() {
 	jump_counter      = max(0, jump_counter - 1);	        // if this counter is greater than zero, then the player will jump if able
 	grounded_counter  = max(0, grounded_counter - 1);       // if this counter is greater than zero, then the player is able to jump
 
-	if (_jump)  jump_counter = 10;  
+	if (_jump)  
+	{
+		for (var i = 0; i < array_length(onJumpEvent); i++)
+		{
+			onJumpEvent[i](id);
+		}
+		jump_counter = 10;
+	}
 
 
 	if (_up && row > 0 && !changing_row)           // attempting to decrease row

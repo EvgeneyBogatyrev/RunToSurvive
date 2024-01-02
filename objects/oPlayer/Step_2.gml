@@ -8,7 +8,9 @@ if (x > oCamera.right)
 
 if (item_picked_up)
 {
-	onHurtEvent = GetItemActions(id, "on_hurt")
+	onHurtEvent = GetItemActions(id, "on_hurt");	
+	onJumpEvent = GetItemActions(id, "on_jump");
+
 	
 	var _item = inventory[| ds_list_size(inventory) - 1];
 	var _action = struct_exists(_item, "on_pickup") ? struct_get(_item, "on_pickup") : undefined;
