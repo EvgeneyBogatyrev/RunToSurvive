@@ -19,14 +19,22 @@ if (state == ItemDropStates.SPIN)
 		switch (image) 
 		{
 			case BATTERY_INUMBER:
-			
 				_player.bullets += irandom_range(1, 4);
+				if (_player.pocket[1] == ENERGYFIST_INUMBER)
+				{
+					bullets += 2;	
+				}
 				break;
 			
 			case HEARTH_INUMBER:
 				
 				var _healing_amount = irandom_range(5, 15);
 				_player.hp += _healing_amount;
+				if (_player.pocket[1] == DOUBLEHEART_INUMBER)
+				{
+					_player.hp += 5;	
+				}
+				
 				break;
 				
 			default:

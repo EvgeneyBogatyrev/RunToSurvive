@@ -25,6 +25,15 @@ with (oChargeStation)
 	}
 }
 
+
+with (oCloningStation)
+{
+	if (CheckCollisions(x, y, other, row))
+	{
+		instance_destroy();
+	}
+}
+
 if (x < oCamera.left - CAMERA_OFFSET)
 {
 	instance_destroy();	

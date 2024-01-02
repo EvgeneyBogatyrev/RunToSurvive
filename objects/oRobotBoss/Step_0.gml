@@ -161,7 +161,7 @@ switch (state)
 		
 	case RobotBossStates.SHIP:
 		image_angle = 0;
-		if (sprite_index != sShip)
+		if (sprite_index != sRobotShip)
 		{
 			part_particles_create(global.particle_systems[row], x, y - 150 * scale, trail, 5);
 			hp = ship_hp;
@@ -170,7 +170,7 @@ switch (state)
 			
 			if (x < oCamera.left - CAMERA_OFFSET)
 			{
-				sprite_index = sShip;
+				sprite_index = sRobotShip;
 				row = 1;
 				scale = GetScale(row);
 				depth -= 2;
@@ -178,6 +178,13 @@ switch (state)
 				saved_roomspeed = oRoomControl.roomspeed;
 				image_xscale = abs(image_xscale);
 				dir = 1;
+				
+				// Create magnet
+				with (Create(x + magnet_offset_x, y + magnet_offset_y, oRobotMagnet, row))
+				{
+					host = other.id;
+					depth = other.depth - 1;
+				}
 			}
 		}
 		else
@@ -186,13 +193,14 @@ switch (state)
 			{
 				oRoomControl.roomspeed -= 0.001;	
 			}
-			x = lerp(x, oCamera.left - 1, 0.15);
-			ContactDamage(20, 0);
+			xspeed = -oRoomControl.roomspeed;
+			x = lerp(x, oCamera.left - 10, 0.15);
+			ContactDamageKnockback(20, 25);
 		}
 		
 		if (hp <= 0)
 		{
-			ShakeScreen(10, 60);
+			ShakeScreen(10, 120);
 			global.score += 100;
 			oRoomControl.gamestate = GameState.NORMAL;
 			oRoomControl.roomspeed += roomspeed_acc;

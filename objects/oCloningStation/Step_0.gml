@@ -28,8 +28,8 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 						_input_type = input_type[other.revival[0]];
 						player_index = other.revival[0];
 						name = "Robo";
-						hp = 30;
-						bullets = 5;
+						hp = 50;
+						bullets = 10;
 						state = PlayerStates.NON_CONTROL;
 					}
 					break;
@@ -50,8 +50,8 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 						_input_type = input_type[other.revival[0]];
 						player_index = other.revival[0];
 						name = "Kyron";
-						hp = 30;
-						bullets = 5;
+						hp = 50;
+						bullets = 10;
 						state = PlayerStates.NON_CONTROL;
 					}
 					break;
@@ -71,8 +71,8 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 						_input_type = input_type[other.revival[0]];
 						name = names[other.revival[0]];
 						player_index = other.revival[0];
-						hp = 30;
-						bullets = 5;
+						hp = 50;
+						bullets = 10;
 						state = PlayerStates.NON_CONTROL;
 					}
 					break;
@@ -92,8 +92,8 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 						_input_type = input_type[other.revival[0]];
 						name = names[other.revival[0]];
 						player_index = other.revival[0];
-						hp = 30;
-						bullets = 5;
+						hp = 50;
+						bullets = 10;
 						state = PlayerStates.NON_CONTROL;
 					}
 					break;

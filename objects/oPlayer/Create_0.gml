@@ -72,6 +72,7 @@ revival_number = 0;
 
 pocket = [0, 0, 0, 0, 0];
 pocket[0] = STDGUN_INUMBER;
+//pocket[1] = DOUBLEHEART_INUMBER;
 
 
 item_picked_up = false;
