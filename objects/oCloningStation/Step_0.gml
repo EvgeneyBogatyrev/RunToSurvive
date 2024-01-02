@@ -17,14 +17,14 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 					with(other.resurected_player)
 					{
 						depth = other.depth + 2;
-						sPlayerStand = sRoboStand;
-						sPlayerRun = sRoboRun;
-						sPlayerJump = sRoboJump;
-						sPlayerIdle = sRoboIdle;
-						sPlayerDying = sKyronDying;
-						sPlayerIcon = sRoboIcon;
-						sPlayerOutOfScreen = sRoboOutOfScreen;
-						sPlayerHands = sRoboHands;
+						sPlayerStand = sCyberStand;
+						sPlayerRun = sCyberRun;
+						sPlayerJump = sCyberJump;
+						sPlayerIdle = sCyberIdle;
+						sPlayerDying = sCyberDying;
+						sPlayerIcon = sCyberIcon;
+						sPlayerOutOfScreen = sCyberOutOfScreen;
+						sPlayerHands = sCyberHands;
 						_input_type = input_type[other.revival[0]];
 						player_index = other.revival[0];
 						name = "Robo";

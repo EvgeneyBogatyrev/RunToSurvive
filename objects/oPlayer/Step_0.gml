@@ -23,7 +23,30 @@ switch (state)
 		break;
 	
 	case UniversalStates.DEAD:
-		
+	
+		if (death_alpha <= 0)
+		{
+			var _flag_dead = true;
+			if (instance_number(object_index) > 1)  with (oPlayer) 
+			{ 
+				if (id != other.id) 
+				{ 
+					if (state != UniversalStates.DEAD)  
+					{
+						_flag_dead = false; 
+						break;
+					}
+				} 
+			} 
+			else  LevelEnd();
+			if (_flag_dead)  LevelEnd();
+			else             instance_destroy();
+		}
+		else
+		{
+			death_alpha -= 0.02;
+		}
+		/*
 		if (name == "Robo")
 		{
 			var _flag = true;
@@ -77,7 +100,7 @@ switch (state)
 			if (_flag_dead)  LevelEnd();
 			else             instance_destroy();
 		}
- 
+		*/
 		_left =  false;
 		_right =  false;
 		_up =  false;
@@ -115,7 +138,7 @@ else	                 knockbacked = false;
 
 event_inherited();
 
-if (state == UniversalStates.DEAD && name == "Robo")  image_alpha = 0;
+//if (state == UniversalStates.DEAD && name == "Robo")  image_alpha = 0;
 
 if (keyboard_check_pressed(ord("G")))
 {
@@ -127,4 +150,9 @@ if (keyboard_check_pressed(ord("I")))
 {
 	hp -= 1;
 	if (array_length(connected_orbitals) > 0) instance_destroy(connected_orbitals[0]);
+}
+
+if (keyboard_check_pressed(ord("O")))
+{
+	hp -= 10;
 }

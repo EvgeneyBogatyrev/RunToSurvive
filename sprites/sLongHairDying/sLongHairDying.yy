@@ -67,7 +67,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"086a83b9-98c3-4966-8d4e-3afb65105aaf","path":"sprites/sLongHairDying/sLongHairDying.yy",},},},"Disabled":false,"id":"ceee5930-38c8-41b5-8295-1783f08ad8ff","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 32,
     "yorigin": 59,

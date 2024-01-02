@@ -75,14 +75,14 @@ for (var i = 0; i < number_of_players; ++i)
 			with(Create(500 + ((i == 3)? 100 : 0), ground[i % 3], oPlayer, i % 3))
 			{
 				depth = -100 * row - 2;
-				sPlayerStand = sRoboStand;
-				sPlayerRun = sRoboRun;
-				sPlayerJump = sRoboJump;
-				sPlayerIdle = sRoboIdle;
-				sPlayerDying = sKyronDying;
-				sPlayerIcon = sRoboIcon;
-				sPlayerOutOfScreen = sRoboOutOfScreen;
-				sPlayerHands = sRoboHands;
+				sPlayerStand = sCyberStand;
+				sPlayerRun = sCyberRun;
+				sPlayerJump = sCyberJump;
+				sPlayerIdle = sCyberIdle;
+				sPlayerDying = sCyberDying;
+				sPlayerIcon = sCyberIcon;
+				sPlayerOutOfScreen = sCyberOutOfScreen;
+				sPlayerHands = sCyberHands;
 				_input_type = input_type[i];
 				name = names[i];
 				player_index = i;

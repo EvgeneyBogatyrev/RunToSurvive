@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f8190fba-4e4c-4ce0-bdf2-4d0409f0c182","path":"sprites/sLongHairIdle/sLongHairIdle.yy",},},},"Disabled":false,"id":"c369c6df-5259-4211-98b5-6872ae3d641f","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 32,
     "yorigin": 59,

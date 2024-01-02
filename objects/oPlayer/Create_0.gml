@@ -37,6 +37,8 @@ shown_hp = maxhp;
 hp = maxhp;
 prev_hp = hp;
 
+death_alpha = 1;
+
 maxbullets = 20;
 shown_bullets = maxbullets;
 bullets = maxbullets;

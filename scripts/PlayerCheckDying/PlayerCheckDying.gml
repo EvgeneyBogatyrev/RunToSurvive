@@ -20,7 +20,8 @@ function PlayerCheckDying() {
 	if (hp <= 0 && state != UniversalStates.DEAD) 
 	{ 
 		state = UniversalStates.DEAD; 
-	
+		
+		/*
 		if (name == "Robo")
 		{
 			var _counter = 0;
@@ -50,9 +51,12 @@ function PlayerCheckDying() {
 			}
 		}
 		else
-		{
+		{*/
 		    sprite_index = sPlayerDying; 
-		    image_index = 0; 
+		    
+			image_speed = 0;
+			image_index = 0;
+			
 			if (global.multiplayer) 
 			{
 				with (Create(x, y, oEssence, row))
@@ -61,7 +65,7 @@ function PlayerCheckDying() {
 					player_id = other.player_index;
 				}
 			}
-		}
+		//}
 	
 		if (global.multiplayer)
 		{
