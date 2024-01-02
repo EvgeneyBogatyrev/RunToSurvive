@@ -1,6 +1,5 @@
 /// @description Initialize global variables.
 
-
 global.DEBUG = false;
 
 global.multiplayer = false;

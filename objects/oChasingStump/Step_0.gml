@@ -157,6 +157,12 @@ if (CheckCollisions(x, y + yspeed * scale, oBlock, row))
 if (first_phase_timer == first_phase_timer_max / 2)
 {
 	Create(x, y, oWildvineController, 0);
+	
+}
+
+if (first_phase_timer == first_phase_timer_max / 4)
+{
+	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 0, 1, 1, 0]);
 }
 
 if (first_phase_timer == 0/* || (first_phase_timer > 0 && hp <= 0)*/)

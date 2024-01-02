@@ -6,7 +6,8 @@ function GetPlayer() {
 	{
 		RANDOM,
 		LOWEST_HEALTH,
-		CLOSEST
+		CLOSEST,
+		NOT_STANDARD_WEAPON,
 	}
 
 	var _players_number = instance_number(oPlayer);
@@ -39,6 +40,19 @@ function GetPlayer() {
 			{
 				var _player = instance_find(oPlayer, i);
 				if ((_target == noone || distance_to_object(_player) < distance_to_object(_target)) && _player.state != UniversalStates.DEAD)  _target = _player;
+			}
+			return _target;
+			
+		case PlayerPreferences.NOT_STANDARD_WEAPON:
+			var _target = noone;
+			for (var i = 0; i < _players_number; ++i)
+			{
+				var _player = instance_find(oPlayer, i);
+				if (_player.state != UniversalStates.DEAD &&  _player.gun.current_gun != Gun.STANDART_GUN && _player.bullets > 0)  _target = _player;
+			}
+			if (_target == noone)
+			{
+				return GetPlayer(PlayerPreferences.RANDOM);	
 			}
 			return _target;
 	

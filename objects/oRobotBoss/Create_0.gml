@@ -65,3 +65,6 @@ walk_from_behind = false;
 // Ship
 roomspeed_acc = 4;
 saved_roomspeed = undefined;
+
+magnet_offset_x = 104 - 1;
+magnet_offset_y = 88 - 186;

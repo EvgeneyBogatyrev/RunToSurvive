@@ -1,6 +1,7 @@
 function PlayerBuffs() {
 	jumpspeed = 12;
 	protected = false;
+	walkspeed = 8;
 
 	switch (pocket[1])
 	{
@@ -14,6 +15,13 @@ function PlayerBuffs() {
 	
 		case ENERGYFIST_INUMBER:
 			//bullets += 0.005;  <- to OP
+			break;
+			
+		case LIGHTNINGBOOTS_INUMBER:
+			walkspeed = 10;
+			break
+			
+		case DOUBLEHEART_INUMBER:
 			break;
 	
 		default:
