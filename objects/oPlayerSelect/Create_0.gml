@@ -2,7 +2,7 @@
 
 number_of_characters = 4;
 
-images = [sKyronImage, sLongHairImage, sSteamImage, sRoboImage];
+images = [sKyronImage, sLongHairImage, sSteamImage, sCyberImage];
 
 number_of_players = global.multiplayer ? 0 : 1;
 number_of_players_max = 4;
