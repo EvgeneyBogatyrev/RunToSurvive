@@ -6,7 +6,7 @@ state = ItemDropStates.SPIN;
 
 profile = undefined;
 
-player_id = noone;
+player_ind = noone;
 
 ysp = -15;
 xspeed = (oCamera.x - x) / 50;

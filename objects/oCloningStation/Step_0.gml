@@ -102,8 +102,8 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 			{
 				revival[i] = revival[i + 1];	
 			}
-			pocket[1 + revival_number] = 0;
-			revival_number--;
+			//pocket[1 + revival_number] = 0;
+			revival_number -= 1;
 			
 			other.image_speed = other.im_speed;
 			other.image_index = 1;

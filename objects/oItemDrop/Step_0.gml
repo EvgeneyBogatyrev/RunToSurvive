@@ -22,7 +22,7 @@ if (state == ItemDropStates.SPIN)
 				_player.bullets += irandom_range(1, 4);
 				if (_player.pocket[1] == ENERGYFIST_INUMBER)
 				{
-					bullets += 2;	
+					_player.bullets += 2;	
 				}
 				break;
 			

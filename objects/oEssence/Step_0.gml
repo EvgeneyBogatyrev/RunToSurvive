@@ -20,12 +20,13 @@ if (!start)
 else
 {
 	var _player = GetCollider(x, y, oPlayer, row);
-	if (_player != noone && _player.state != UniversalStates.DEAD) 
+	if (_player != noone && _player.state != UniversalStates.DEAD && _player.hp > 0) 
 	{
 		with (_player)
 		{
-			revival[revival_number++] = other.player_id;	
-			pocket[revival_number + 1] = ESSENCE_INUMBER;
+			revival[revival_number] = other.player_ind;	
+			revival_number += 1;
+			//pocket[revival_number + 1] = ESSENCE_INUMBER;
 		}
 		instance_destroy();
 	}

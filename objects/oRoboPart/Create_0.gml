@@ -10,4 +10,4 @@ yspeed = 0;
 dir = 1;
 active = true;
 
-player_id = noone;
+player_ind = noone;

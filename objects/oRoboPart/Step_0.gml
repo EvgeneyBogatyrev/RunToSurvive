@@ -37,14 +37,14 @@ if (abs(xspeed) < 0.1 && grounded)
 	if (image_index != 0)  image_alpha -= 0.01;
 }
 
-if (player_id != noone)
+if (player_ind != noone)
 {
 	if (global.multiplayer)  with (Create(x, y, oEssence, row))
 	{
 		depth -= 2;
-		player_id = other.player_id;
+		player_ind = other.player_ind;
 	}
-	player_id = noone;
+	player_ind = noone;
 }
 
 x += oRoomControl.roomspeed * abs(scale);

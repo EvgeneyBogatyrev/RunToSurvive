@@ -2,7 +2,7 @@
 event_inherited();
 
 yspeed = 0;
-player_id = noone;
+player_ind = noone;
 magnitude = 10;
 
 phase = get_timer();

@@ -9,7 +9,7 @@ function PlayerCheckDying() {
 			with (Create(oCamera.right + CAMERA_OFFSET, y - 100, oEssence, row))
 			{
 					depth -= 2;
-					player_id = other.player_index;
+					player_ind = other.player_index;
 			}
 		}
 		
@@ -36,8 +36,8 @@ function PlayerCheckDying() {
 						image_index = i;
 						depth -= 3;
 				
-						if (i == 0)  player_id = other.player_index;
-						else         player_id = noone;
+						if (i == 0)  player_ind = other.player_index;
+						else         player_ind = noone;
 				
 						var _angle = random_range(0, 180);
 						if (i == 0)  _angle = 90;
@@ -62,7 +62,7 @@ function PlayerCheckDying() {
 				with (Create(x, y, oEssence, row))
 				{
 					depth -= 2;
-					player_id = other.player_index;
+					player_ind = other.player_index;
 				}
 			}
 		//}
@@ -74,7 +74,7 @@ function PlayerCheckDying() {
 				with (Create(x + sprite_get_width(sEssence) * (j + 1), y, oEssence, row))
 				{
 					depth -= 2;
-					player_id = other.revival[j];
+					player_ind = other.revival[j];
 				}
 			}	
 		}

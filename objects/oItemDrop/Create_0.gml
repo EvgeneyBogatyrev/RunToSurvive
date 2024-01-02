@@ -11,4 +11,4 @@ state = ItemDropStates.SPIN;
 
 image = 0;
 
-player_id = noone;
+player_ind = noone;
