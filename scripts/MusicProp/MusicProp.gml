@@ -92,6 +92,12 @@ function MusicProp(argument0) {
 		intro_lenght = 3.872;
 		loop_lenght = 46.328;// - 3.434;		
 	}
+	else if (s == musRobots)
+	{
+		bgm = audio_play_sound(musRobots, 0, false);
+		intro_lenght = 0;
+		loop_lenght = 73.852;
+	}
 	//else if (s == so_ending)
 	//{
 	//	bgm = audio_play_sound(so_ending, 0, false);

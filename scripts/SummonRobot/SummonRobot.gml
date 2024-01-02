@@ -20,7 +20,7 @@ function SummonRobot() {
 	audio_stop_sound(oAudioControl.bgm);
 	audio_play_sound(musBossIntro, 1, false);
 
-	oAudioControl.bgm = musEyeForAnEye;
+	oAudioControl.bgm = musRobots;
 	oAudioControl.music_set = false;
 
 

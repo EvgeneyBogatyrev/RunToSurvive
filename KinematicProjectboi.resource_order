@@ -33,6 +33,7 @@
     {"name":"sRoboRun","order":2,"path":"sprites/sRoboRun/sRoboRun.yy",},
     {"name":"sRoboJump","order":3,"path":"sprites/sRoboJump/sRoboJump.yy",},
     {"name":"sRoboHands","order":7,"path":"sprites/sRoboHands/sRoboHands.yy",},
+    {"name":"musRobots","order":8,"path":"sounds/musRobots/musRobots.yy",},
     {"name":"sRoboIcon","order":4,"path":"sprites/sRoboIcon/sRoboIcon.yy",},
     {"name":"oShootingRobotBullet","order":4,"path":"objects/oShootingRobotBullet/oShootingRobotBullet.yy",},
     {"name":"sRoboOutOfScreen","order":5,"path":"sprites/sRoboOutOfScreen/sRoboOutOfScreen.yy",},
