@@ -144,7 +144,6 @@
     {"name":"musBossIntro","order":7,"path":"sounds/musBossIntro/musBossIntro.yy",},
     {"name":"Enumerator","order":1,"path":"scripts/Enumerator/Enumerator.yy",},
     {"name":"Input","order":2,"path":"scripts/Input/Input.yy",},
-    {"name":"sPassiveItems","order":3,"path":"sprites/sPassiveItems/sPassiveItems.yy",},
     {"name":"Macros","order":3,"path":"scripts/Macros/Macros.yy",},
     {"name":"sShootingRobotBullet","order":7,"path":"sprites/sShootingRobotBullet/sShootingRobotBullet.yy",},
     {"name":"Print","order":4,"path":"scripts/Print/Print.yy",},
@@ -273,6 +272,7 @@
     {"name":"oCloningStation","order":10,"path":"objects/oCloningStation/oCloningStation.yy",},
     {"name":"sCyberJump","order":3,"path":"sprites/sCyberJump/sCyberJump.yy",},
     {"name":"rMenu","order":1,"path":"rooms/rMenu/rMenu.yy",},
+    {"name":"sPassiveItems","order":3,"path":"sprites/sPassiveItems/sPassiveItems.yy",},
     {"name":"rPlay","order":2,"path":"rooms/rPlay/rPlay.yy",},
   ],
 }

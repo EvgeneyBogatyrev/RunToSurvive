@@ -233,7 +233,6 @@
     {"id":{"name":"Assert","path":"scripts/Assert/Assert.yy",},},
     {"id":{"name":"Enumerator","path":"scripts/Enumerator/Enumerator.yy",},},
     {"id":{"name":"Input","path":"scripts/Input/Input.yy",},},
-    {"id":{"name":"sPassiveItems","path":"sprites/sPassiveItems/sPassiveItems.yy",},},
     {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},},
     {"id":{"name":"sShootingRobotBullet","path":"sprites/sShootingRobotBullet/sShootingRobotBullet.yy",},},
     {"id":{"name":"Print","path":"scripts/Print/Print.yy",},},
@@ -384,6 +383,7 @@
     {"id":{"name":"rLoad","path":"rooms/rLoad/rLoad.yy",},},
     {"id":{"name":"sCyberJump","path":"sprites/sCyberJump/sCyberJump.yy",},},
     {"id":{"name":"rMenu","path":"rooms/rMenu/rMenu.yy",},},
+    {"id":{"name":"sPassiveItems","path":"sprites/sPassiveItems/sPassiveItems.yy",},},
     {"id":{"name":"rPlay","path":"rooms/rPlay/rPlay.yy",},},
   ],
   "RoomOrderNodes": [
