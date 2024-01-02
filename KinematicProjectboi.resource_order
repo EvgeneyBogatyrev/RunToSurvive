@@ -7,8 +7,8 @@
     {"name":"Stump","order":4,"path":"folders/Sprites/Enemies/Stump.yy",},
     {"name":"Tree","order":5,"path":"folders/Sprites/Enemies/Tree.yy",},
     {"name":"Orbitals","order":10,"path":"folders/Sprites/Orbitals.yy",},
-    {"name":"Dark","order":1,"path":"folders/Sprites/Textures/Dark.yy",},
     {"name":"CyberKyron","order":5,"path":"folders/Sprites/Players/CyberKyron.yy",},
+    {"name":"Dark","order":1,"path":"folders/Sprites/Textures/Dark.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sTree","order":1,"path":"sprites/sTree/sTree.yy",},
@@ -33,6 +33,7 @@
     {"name":"sRoboRun","order":2,"path":"sprites/sRoboRun/sRoboRun.yy",},
     {"name":"sRoboJump","order":3,"path":"sprites/sRoboJump/sRoboJump.yy",},
     {"name":"sRoboHands","order":7,"path":"sprites/sRoboHands/sRoboHands.yy",},
+    {"name":"musRobots","order":8,"path":"sounds/musRobots/musRobots.yy",},
     {"name":"sRoboIcon","order":4,"path":"sprites/sRoboIcon/sRoboIcon.yy",},
     {"name":"oShootingRobotBullet","order":4,"path":"objects/oShootingRobotBullet/oShootingRobotBullet.yy",},
     {"name":"sRoboOutOfScreen","order":5,"path":"sprites/sRoboOutOfScreen/sRoboOutOfScreen.yy",},
