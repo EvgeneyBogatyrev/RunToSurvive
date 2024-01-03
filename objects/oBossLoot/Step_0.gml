@@ -46,6 +46,11 @@ if (state == ItemDropStates.SPIN)
 		x += 1;	
 	}
 	
+	if (CheckCollisions(x, y, oStumpTree, row))
+	{
+		x += 1;	
+	}
+	
 	if (x < oCamera.left - CAMERA_OFFSET) 
 	{
 		instance_destroy();
