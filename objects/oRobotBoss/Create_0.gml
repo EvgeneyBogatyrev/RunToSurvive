@@ -13,7 +13,7 @@ state = UniversalStates.INTRO;
 
 air_hp = 10 + 1 * oDifficultyController.bosses_defeated;
 robot_hp = 20 + 2 * oDifficultyController.bosses_defeated;
-ship_hp = 10 + 1 * oDifficultyController.bosses_defeated;
+ship_hp = 20 + 1 * oDifficultyController.bosses_defeated;
 
 if (global.DEBUG)
 {

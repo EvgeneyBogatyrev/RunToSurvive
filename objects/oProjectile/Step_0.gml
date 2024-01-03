@@ -1,12 +1,27 @@
+image_angle = point_direction(x, y, x + xspeed, y + yspeed);
+
 if (sprite_index == sPellet)
 {
 	image_speed = 0;
 	image_index = 0;
+	/*
+	if (trail == undefined)
+	{
+		trail = part_type_create();
+		part_type_shape(trail, pt_shape_sphere);
+		part_type_size(trail, 0.2 * GetScale(row), 0.2 * GetScale(row), -0.05, 0);
+		part_type_color1(trail, c_red);
+		part_type_alpha1(trail, 0.1);
+		part_type_speed(trail, 0, 0, -0.10, 0);
+		part_type_direction(trail, image_angle, image_angle, 0, 20);
+		part_type_life(trail,  80, 80);
+	}
+	*/
+
 }
 
 if (abs(x - oCamera.x) > oCamera.view_w_half * 3)  instance_destroy();
 
-image_angle = point_direction(x, y, x + xspeed, y + yspeed);
 
 if (CheckCollisions(x + xspeed, y + yspeed, oEnemyParent, row))
 {
@@ -29,6 +44,8 @@ if (CheckCollisions(x + xspeed, y + yspeed, oEnemyParent, row))
 			x += sign(xspeed);	
 			y += sign(yspeed) * yspeed / xspeed
 		}
+		
+		hit_an_enemy = true;
 	
 		if (object_is_ancestor(_victim.object_index, oHalfBossParent) && _victim.state != UniversalStates.DEAD)  StartBattle(row, host, _victim);
 		instance_destroy();	
@@ -63,9 +80,24 @@ if (place_meeting(x + xspeed, y + yspeed, oDelver) && oDelver.state == DelverSta
 	oDelver.cum_hp -= damage;
 	oDelver.hit_flash = 3;
 	display = true;
+	
+	hit_an_enemy = true;
 	instance_destroy();	
 }
 
+if (trail != undefined)
+{
+	// Particles
+	var _len = point_distance(x, y, xprevious, yprevious);
+	var _ang = point_direction(xprevious, yprevious, x, y);
+	var _x = x;
+	var _y = y;
+	
+	for (var i = 0; i < _len; ++i)
+	{	
+		part_particles_create(global.particle_systems[row], _x + lengthdir_x(3 *i, _ang), _y + lengthdir_y(3 * i, _ang), trail, 1);
+	}	
+}
 
 event_inherited();
 

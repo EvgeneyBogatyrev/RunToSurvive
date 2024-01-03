@@ -58,11 +58,7 @@ function PlayerMove() {
 	grounded_counter  = max(0, grounded_counter - 1);       // if this counter is greater than zero, then the player is able to jump
 
 	if (_jump)  
-	{
-		for (var i = 0; i < array_length(onJumpEvent); i++)
-		{
-			onJumpEvent[i](id);
-		}
+	{  
 		jump_counter = 10;
 	}
 
@@ -89,6 +85,11 @@ function PlayerMove() {
 		else                              yspeed = -jumpspeed;
 		jump_counter = 0;
 		grounded_counter = 0;
+		
+		for (var i = 0; i < array_length(onJumpEvent); i++)
+		{
+			onJumpEvent[i](id);
+		} 
 	}
 
 	if (CheckCollisions(x, y + yspeed * scale + 1, oBlock, row)) // vertical collision
@@ -128,7 +129,7 @@ function PlayerMove() {
 				while (CheckCollisions(x + xspeed * scale, y + 1, oBlock, row + row_der) || y >= oGenerator.ground[row + row_der]) y--;
 				row   += row_der;
 				scale = GetScale(row);
-				depth = - 100 * row - 2;
+				depth = - 100 * row - 2
 				changing_row = false;
 				yspeed = abs(yspeed);
 				jump_counter = 0;

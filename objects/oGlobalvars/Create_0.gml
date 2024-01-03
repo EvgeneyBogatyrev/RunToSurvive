@@ -1,6 +1,8 @@
 /// @description Initialize global variables.
+#macro DEBUG:DEBUG_MODE true
+#macro Default:DEBUG_MODE false
 
-global.DEBUG = false;
+global.DEBUG = DEBUG_MODE;
 
 global.multiplayer = false;
 	

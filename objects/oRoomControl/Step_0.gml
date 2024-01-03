@@ -1,7 +1,10 @@
-if (keyboard_check_pressed(ord("B")))
-	oPlayer.bullets += 2000;
-if (keyboard_check_pressed(ord("H")))
-	oPlayer.hp += 2000;
+if (global.DEBUG)
+{
+	if (keyboard_check_pressed(ord("B")))
+		oPlayer.bullets += 2000;
+	if (keyboard_check_pressed(ord("H")))
+		oPlayer.hp += 2000;
+}
 if (keyboard_check_pressed(ord("R")))
 	room_restart();
 

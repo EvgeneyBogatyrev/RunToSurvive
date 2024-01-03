@@ -10,4 +10,4 @@ done = false;
 
 offset = 0;
 
-damage = 5;
+damage = 3;

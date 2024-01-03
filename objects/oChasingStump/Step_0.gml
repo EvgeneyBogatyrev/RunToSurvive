@@ -169,7 +169,7 @@ if (first_phase_timer == 0/* || (first_phase_timer > 0 && hp <= 0)*/)
 {
 	with (Create(oCamera.right + CAMERA_BOUNDS, oGenerator.ground[1], oStumpTree, 1))  
 	{
-		depth -= 2;
+		depth -= 4;
 		with (GetCollider(x, y, oObstacle, 1))
 		{
 			instance_destroy();	

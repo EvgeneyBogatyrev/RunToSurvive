@@ -9,7 +9,7 @@
   ],
   "configs": {
     "children": [
-      {"children":[],"name":"NewConfig1",},
+      {"children":[],"name":"DEBUG",},
     ],
     "name": "Default",
   },
@@ -73,7 +73,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.2.108",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"sStone","path":"sprites/sStone/sStone.yy",},},
@@ -120,6 +120,7 @@
     {"id":{"name":"sSteampunkStand","path":"sprites/sSteampunkStand/sSteampunkStand.yy",},},
     {"id":{"name":"sSteampunkIdle","path":"sprites/sSteampunkIdle/sSteampunkIdle.yy",},},
     {"id":{"name":"sSteampunkJump","path":"sprites/sSteampunkJump/sSteampunkJump.yy",},},
+    {"id":{"name":"sShotgunShell","path":"sprites/sShotgunShell/sShotgunShell.yy",},},
     {"id":{"name":"sSteampunkRun","path":"sprites/sSteampunkRun/sSteampunkRun.yy",},},
     {"id":{"name":"sMissile","path":"sprites/sMissile/sMissile.yy",},},
     {"id":{"name":"sSteampunkHands","path":"sprites/sSteampunkHands/sSteampunkHands.yy",},},
@@ -236,6 +237,7 @@
     {"id":{"name":"musBossIntro","path":"sounds/musBossIntro/musBossIntro.yy",},},
     {"id":{"name":"Assert","path":"scripts/Assert/Assert.yy",},},
     {"id":{"name":"Enumerator","path":"scripts/Enumerator/Enumerator.yy",},},
+    {"id":{"name":"oShotgunShell","path":"objects/oShotgunShell/oShotgunShell.yy",},},
     {"id":{"name":"Input","path":"scripts/Input/Input.yy",},},
     {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},},
     {"id":{"name":"sShootingRobotBullet","path":"sprites/sShootingRobotBullet/sShootingRobotBullet.yy",},},

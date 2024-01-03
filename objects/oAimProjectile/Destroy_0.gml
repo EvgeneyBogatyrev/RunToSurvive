@@ -12,7 +12,10 @@ if (display) with(Create(x, y, oDamageNumber, row))
 	depth = other.depth - 2;
 }
 
-for (var i = 0; i < array_length(hit_events); i++)
+if (hit_an_enemy)
 {
-	hit_events[i](id);
+	for (var i = 0; i < array_length(hit_events); i++)
+	{
+		hit_events[i](id);
+	}
 }

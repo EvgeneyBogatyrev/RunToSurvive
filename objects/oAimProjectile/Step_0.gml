@@ -21,6 +21,7 @@ if (CheckCollisions(x, y, oEnemyParent, row))
 	var _victim = GetCollider(x, y, oEnemyParent, row);
 	if (_victim.state != UniversalStates.DEAD && _victim.state != HalfBossStates.INACTIVE && _victim.hp > 0) 
 	{
+		hit_an_enemy = true;
 		_victim.hp -= damage;
 		display = true;
 		_victim.hit_flash = 3;
@@ -40,6 +41,7 @@ if (CheckCollisions(x, y, oSolidParent, row))
 
 if (place_meeting(x, y, oDelver) && oDelver.state == DelverStates.INSECT)
 {
+	hit_an_enemy = true;
 	oDelver.hp -= damage;
 	oDelver.hit_flash = 3;
 	oDelver.cum_hp -= damage;

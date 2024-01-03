@@ -1,6 +1,11 @@
 function CreateOrbital(_host, _speed, _dist, _type){
+	var _orbital_count = array_length(_host.connected_orbitals);
 	
-	Print(_host);
+	if (_orbital_count >= 8)
+	{
+		return;	
+	}
+	
 	var _new_orbital = Create(_host.x, _host.y, _type, _host.row).id;
 	with(_new_orbital)
 	{
@@ -9,7 +14,6 @@ function CreateOrbital(_host, _speed, _dist, _type){
 		distance_to_host = _dist;
 	}
 	
-	var _orbital_count = array_length(_host.connected_orbitals);
 	_host.connected_orbitals[_orbital_count] = _new_orbital;
 	
 	_orbital_count += 1;

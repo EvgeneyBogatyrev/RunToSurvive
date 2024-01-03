@@ -4,7 +4,7 @@
 ///@param damage     A damage of the bullet
 ///@param speed      A speed of the bullet
 ///@param recall     A recall of the bullet
-function Shoot(_projectile, _sprite, _damage, _speed, _recall, _direction=undefined) {
+function Shoot(_projectile, _sprite, _damage, _speed, _recall, _direction=undefined, _sound=true) {
 
 	var _xspeed, _yspeed;
 	if (_direction == undefined)
@@ -53,13 +53,16 @@ function Shoot(_projectile, _sprite, _damage, _speed, _recall, _direction=undefi
 	//image_index = 1;
 	recall = _recall;
 	host.bullets -= cost;
-	if(_sprite == sRocket)
+	if (_sound)
 	{
-		audio_play_sound(soRocketShoot, 1, false);
-	}
-	else
-	{
-		audio_play_sound(soShoot, 1, false);
+		if(_sprite == sRocket)
+		{
+			audio_play_sound(soRocketShoot, 1, false);
+		}
+		else
+		{
+			audio_play_sound(soShoot, 1, false);
+		}
 	}
 
 

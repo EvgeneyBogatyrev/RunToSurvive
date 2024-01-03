@@ -219,7 +219,8 @@ switch (state)
 		break;
 		
 	case UniversalStates.DEAD:
-		xspeed = 0;
+		x -= 2
+		;xspeed = 1;
 		if (AnimationEnd())
 		{
 			image_speed = 0;	
