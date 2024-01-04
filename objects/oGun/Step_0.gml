@@ -120,6 +120,7 @@ switch(current_gun)
 						_enemy.hp -= damage;
 						_enemy.hit_flash = 3;
 						
+						/*
 						hit_events = [];
 						for (var _i = 0; _i < ds_list_size(host.inventory); _i++)
 						{
@@ -130,7 +131,7 @@ switch(current_gun)
 								hit_event(id, 82 * sign(image_xscale));
 							}
 						}
-						
+						*/
 
 						
 						if (object_is_ancestor(_enemy.object_index, oBossParent))
@@ -315,16 +316,20 @@ switch(current_gun)
 		sprite_index = GetGunSprite(Gun.ELECTRIC_GUN);
 		if (shoot_hold)
 		{
-			host.bullets -= 0.01;	
+			host.bullets -= 0.05;	
 			if (electricity_obj == undefined)
 			{
 				electricity_obj = Create(x, y, oElectricity, row);
 			}
-			electricity_obj.x = bbox_right;
-			electricity_obj.y = y;
+			electricity_obj.x = x + 30 * host.dir * host.scale;
+			electricity_obj.y = y - 4 * host.scale;
 			electricity_obj.row = row;
 			electricity_obj.scale = scale;	
 			electricity_obj.dir = dir;
+			electricity_obj.depth = depth - 1;
+			electricity_obj.image_xscale = image_xscale;
+			electricity_obj.image_yscale = image_yscale;
+			electricity_obj.host = host;
 		}
 		else
 		{
