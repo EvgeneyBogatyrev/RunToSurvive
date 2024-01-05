@@ -11,6 +11,15 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 			var _player_name = names[revival[0]];
 			var _player_inventory = revival_inventory[0];
 			
+			var _respawned_player = SpawnPlayerCharacter(revival[0], _player_name, other.x, other.y - 15 * other.scale, other.row);
+			
+			_respawned_player.hp = 50;
+			_respawned_player.bullets = 10;
+			_respawned_player.state = PlayerStates.NON_CONTROL;
+			
+			other.resurected_player = _respawned_player;
+			
+			/* 
 			switch (_player_name)
 			{
 				case "Robo":
@@ -101,6 +110,9 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 					
 				
 			}
+			*/
+			
+			
 			other.resurected_player.inventory = _player_inventory;
 			if (!ds_list_empty(other.resurected_player.inventory))
 				other.resurected_player.item_picked_up = true;

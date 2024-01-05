@@ -53,7 +53,7 @@ function PlayerCheckDying() {
 		}
 		else
 		{*/
-		    sprite_index = sPlayerDying; 
+		    sprite_index = character.sprites.die; 
 		    
 			image_speed = 0;
 			image_index = 0;

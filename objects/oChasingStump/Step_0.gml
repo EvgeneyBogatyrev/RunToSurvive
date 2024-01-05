@@ -10,6 +10,7 @@ switch (state)
 		image_index = 1;
 		
 		xspeed = -0.0001;
+		dir = -1;
 		
 		while (CheckCollisions(x, y, oBlock, row))  y--;
 		
@@ -119,7 +120,7 @@ if (state != ChasingStumpState.VICTORY && state != UniversalStates.INTRO && stat
 	if (hp <= 0)
 	{
 		if (!not_give_score) global.score += 200;
-		sprite_index = sStumpDying;
+		sprite_index = sStumpBossDying;
 		state = UniversalStates.DEAD;
 		if (first_phase_timer > 0) first_phase_timer = 0;
 		with (Create(x, y, oItemDrop, row))
@@ -154,7 +155,7 @@ if (CheckCollisions(x, y + yspeed * scale, oBlock, row))
 }
 
 
-if (first_phase_timer == first_phase_timer_max / 2)
+if (first_phase_timer <= first_phase_timer_max / 2 && !instance_exists(oWildvineController) && oRoomControl.gamestate == GameState.BOSS)
 {
 	Create(x, y, oWildvineController, 0);
 	

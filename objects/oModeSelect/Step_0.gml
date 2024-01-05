@@ -7,7 +7,8 @@
 	var _up = _keys[2];
 	var _down = _keys[3];
 	var _OK = _keys[4];
-
+	var _back = _keys[5];
+	
 #endregion
 
 #region Cursor control
@@ -52,7 +53,19 @@
 				break;
 		}
 	}
-
+	
+	if (_back)
+	{
+		dbutton = [];
+		button = [];
+		_length = 0;
+		instance_change(oMainMenu, true);
+		with (oMainMenu) 
+		{
+			center_timer = -1;		
+		}
+	}
+	
 #endregion
 
 #region Sounds

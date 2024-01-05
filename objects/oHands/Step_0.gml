@@ -2,7 +2,7 @@ if (not instance_exists(host))
 	instance_destroy();	
 else
 {
-	sprite_index = host.sPlayerHands;
+	sprite_index = host.character.sprites.hands;
 	row = host.row;
 	image_xscale = host.image_xscale;
 	image_yscale = host.image_yscale;

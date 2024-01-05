@@ -14,7 +14,8 @@ if (need_to_center)
 	var _up = _keys[2];
 	var _down = _keys[3];
 	var _OK = _keys[4];
-
+	var _back = _keys[5];
+	
 #endregion
 
 #region Cursors control
@@ -100,10 +101,10 @@ if (need_to_center)
 			global.character = "LongHair";
 			break;
 		case 2:
-			global.character = "SteamPunk";
+			global.character = "Steampunk";
 			break;
 		case 3:
-			global.character = "Robo";
+			global.character = "Cyber";
 			break;
 	}
 
@@ -166,6 +167,20 @@ if (need_to_center)
 				SaveGame();
 				break;
 		}
+	}
+	if (_back)
+	{
+		//Go back to menu
+		button = [];
+		dbutton = [];
+		_cursor_length = 0;
+		_switcher_length = 0;
+		instance_change(oMainMenu, true);
+		with (oMainMenu) 
+		{
+			center_timer = -1;		
+		}
+		SaveGame();
 	}
 
 #endregion

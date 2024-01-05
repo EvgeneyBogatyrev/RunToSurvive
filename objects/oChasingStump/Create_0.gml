@@ -23,6 +23,8 @@ fast_timer = 0;
 
 current_speed = walkspeed;
 
+crowned = true;
+
 state = UniversalStates.INTRO;
 intro_timer_max = 5 * 60;
 intro_timer = intro_timer_max;
@@ -34,7 +36,7 @@ if (global.DEBUG)
 {
 	//first_phase_timer = 1;
 	//first_phase_timer_max = 1;
-	hp = 1;
+	maxhp = 1;
 }
 
 shown_hp = 0;

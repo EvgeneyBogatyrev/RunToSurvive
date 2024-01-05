@@ -16,10 +16,10 @@ switch (global.character)
 		case "LongHair":
 			character_position = 1;
 			break;
-		case "SteamPunk":
+		case "Steampunk":
 			character_position = 2;
 			break;
-		case "Robo":
+		case "Cyber":
 			character_position = 3;
 			break;
 	}

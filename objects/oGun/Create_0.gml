@@ -21,7 +21,7 @@ current_gun = Gun.STANDART_GUN;
 
 if (global.DEBUG)
 {
-	current_gun = Gun.ELECTRIC_GUN;
+	current_gun = Gun.REAL_SHOTGUN;
 }
 
 last_gun = Gun.DRILL;

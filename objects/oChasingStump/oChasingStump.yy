@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sStumpRun",
-    "path": "sprites/sStumpRun/sStumpRun.yy",
+    "name": "sStumpBossRun",
+    "path": "sprites/sStumpBossRun/sStumpBossRun.yy",
   },
   "spriteMaskId": null,
   "visible": true,

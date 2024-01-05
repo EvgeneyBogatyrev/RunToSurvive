@@ -296,15 +296,15 @@ switch(current_gun)
 			for (var _angle = 45; _angle >= -45; _angle -= _offset)
 			{
 				Shoot(oProjectile, sPellet, _damage, 30, 8, _angle, _angle == 45 ? true: false);
-				var _spd = 5;
-				with (Create(x, y, oShotgunShell, row))
-				{
-					depth = other.depth;
-					rotation_speed = irandom_range(-5, 5);
-					var _shell_angle = irandom_range(160, 210);
-					xspeed = lengthdir_x(_spd, _shell_angle) * other.host.dir;					
-					yspeed = lengthdir_y(_spd, _shell_angle);
-				}
+			}
+			var _spd = 5;
+			with (Create(x, y, oShotgunShell, row))
+			{
+				depth = other.depth;
+				rotation_speed = irandom_range(-5, 5);
+				var _shell_angle = irandom_range(160, 210);
+				xspeed = lengthdir_x(_spd, _shell_angle) * other.host.dir;					
+				yspeed = lengthdir_y(_spd, _shell_angle);
 			}
 		}
 		shoot = false;

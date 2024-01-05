@@ -81,7 +81,7 @@ for (var i = 0; i < ds_list_size(list_of_players); i++)
 			pl_sub[i] = 0;
 		}
 	}
-	draw_sprite(_pl.sPlayerIcon, pl_sub[i], cur_x, cur_y + 4);
+	draw_sprite(_pl.character.sprites.icon, pl_sub[i], cur_x, cur_y + 4);
 	
 
 	cur_x += offset + rectangle_size;

@@ -51,6 +51,8 @@ for (var j = 0; j < 3; ++j)
 
 for (var i = 0; i < number_of_players; ++i)
 {
+	SpawnPlayerCharacter(i, names[i], 500 + ((i == 3)? 100 : 0), ground[i % 3], i % 3);
+	/*
 	switch (names[i])
 	{
 		case "Kyron":
@@ -124,4 +126,5 @@ for (var i = 0; i < number_of_players; ++i)
 			}
 			break;
 	}
+	*/
 }
