@@ -1,11 +1,12 @@
 ///desc
+Print(x, y);
 if (!start)
 {
-	if (CheckCollisions(x, y + (yspeed + sprite_width/2) * scale, oSolidParent, row))
+	if (CheckCollisions(x, y + yspeed, oSolidParent, row))
 	{
 		repeat (abs(yspeed * scale))	
 		{
-			if (CheckCollisions(x, y + sign(yspeed) + sprite_height/2 * scale, oSolidParent, row))  break;
+			if (CheckCollisions(x, y + 1, oSolidParent, row))  break;
 			y += sign(yspeed);
 		}
 		yspeed = 0;
@@ -24,7 +25,8 @@ else
 	{
 		with (_player)
 		{
-			revival[revival_number] = other.player_ind;	
+			revival[revival_number] = other.player_ind;
+			revival_inventory[revival_number] = other.inventory;
 			revival_number += 1;
 			//pocket[revival_number + 1] = ESSENCE_INUMBER;
 		}
@@ -35,8 +37,19 @@ else
 }
 if (x < oCamera.left)
 { 
-	x += oCamera.view_w_half * 2 + CAMERA_OFFSET;
-	y -= 200;
+	x += oCamera.view_w_half * 2;
+	repeat (oCamera.view_w_half)
+	{
+		if (x < oCamera.right)
+		{
+			x += 5;	
+		}
+		else
+		{
+			break;	
+		}
+	}
+	y = oGenerator.ground[row] - 20 * scale;
 	start = false;
 }
 event_inherited();

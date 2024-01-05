@@ -9,6 +9,7 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 		if (revival_number > 0)
 		{
 			var _player_name = names[revival[0]];
+			var _player_inventory = revival_inventory[0];
 			
 			switch (_player_name)
 			{
@@ -97,16 +98,26 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 						state = PlayerStates.NON_CONTROL;
 					}
 					break;
+					
+				
 			}
+			other.resurected_player.inventory = _player_inventory;
+			if (!ds_list_empty(other.resurected_player.inventory))
+				other.resurected_player.item_picked_up = true;
+			
 			for (var i = 0; i < revival_number - 1; ++i)
 			{
 				revival[i] = revival[i + 1];	
+				revival_inventory[i] = revival_inventory[i + 1];	
+				
 			}
 			//pocket[1 + revival_number] = 0;
 			revival_number -= 1;
 			
 			other.image_speed = other.im_speed;
 			other.image_index = 1;
+			
+			
 		}
 	}
 }
