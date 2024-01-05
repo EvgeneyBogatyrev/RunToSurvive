@@ -15,3 +15,4 @@ destination_threshold = 5;
 
 StopRoom();
 with (oRoomControl) block_score = true;
+oRoomControl.gamestate = GameState.NORMAL;

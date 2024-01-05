@@ -1,11 +1,25 @@
 event_inherited();
 
+if (CheckCollisions(x, y, oPlayer, row))
+{
+	var _player = GetCollider(x, y, oPlayer, row);
+	
+	if (instance_exists(_player) && _player.state != UniversalStates.DEAD && _player.pocket[1] == CRUSH_INUMBER)
+	{
+		hp = 0;	
+	}
+}
+
 if (hp <= 0)
 {
 	with (Create(x, y, oItemDrop, row))
 	{
 		depth -= 2;
-		image = choose(STDGUN_INUMBER, POWERGUN_INUMBER, SHOTGUN_INUMBER, ROCKET_LAUNCHER_INUMBER, LIFESTEAL_GUN_INUMBER, ROCKETBOOTS_INUMBER, FORCEFIELD_INUMBER, ENERGYFIST_INUMBER, DOUBLEHEART_INUMBER, LIGHTNINGBOOTS_INUMBER, REALSHOTGUN_GUN_INUMBER);
+		image = choose(STDGUN_INUMBER, POWERGUN_INUMBER, SHOTGUN_INUMBER, 
+						ROCKET_LAUNCHER_INUMBER, LIFESTEAL_GUN_INUMBER, 
+						ROCKETBOOTS_INUMBER, FORCEFIELD_INUMBER, ENERGYFIST_INUMBER,
+						DOUBLEHEART_INUMBER, LIGHTNINGBOOTS_INUMBER, REALSHOTGUN_GUN_INUMBER,
+						ELECTRIC_GUN_INUMBER, CRUSH_INUMBER);
 	}
 	instance_destroy();
 }

@@ -173,7 +173,7 @@ switch (state)
 		
 	case UniversalStates.DEAD:
 		//Add Animation FIX!
- 		oRoomControl.gamestate = GameState.NORMAL;
+ 		oRoomControl.gamestate = GameState.LOOT;
 		GetStandartRoomProperties();
 		instance_destroy();		
 		break;

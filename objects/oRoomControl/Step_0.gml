@@ -24,7 +24,7 @@ if (gamestate == GameState.BATTLE)
 	}
 }
 
-if (gamestate == PlayerStates.NORMAL && !block_score)
+if (gamestate == PlayerStates.NORMAL)
 {
 	if (score_timer <= 0)
 	{

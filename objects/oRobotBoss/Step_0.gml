@@ -196,13 +196,27 @@ switch (state)
 			xspeed = -oRoomControl.roomspeed;
 			x = lerp(x, oCamera.left - 10, 0.15);
 			ContactDamageKnockback(20, 25);
+			
+			var _number_of_players = instance_number(oPlayer);
+			for (var _i = 0; _i < _number_of_players; ++_i)
+			{
+				var _player = instance_find(oPlayer, _i)
+				with (_player)
+				{
+					if (row == other.row)
+					{
+						blocked = true;
+					}
+				}	
+			}
+			
 		}
 		
 		if (hp <= 0)
 		{
 			ShakeScreen(10, 120);
 			global.score += 100;
-			oRoomControl.gamestate = GameState.NORMAL;
+			oRoomControl.gamestate = GameState.LOOT;
 			oRoomControl.roomspeed += roomspeed_acc;
 			GetStandartRoomProperties();
 			instance_destroy(oRobotSpawner);	
@@ -214,6 +228,16 @@ switch (state)
 				{
 					instance_destroy();	
 				}
+			}
+			
+			var _number_of_players = instance_number(oPlayer);
+			for (var _i = 0; _i < _number_of_players; ++_i)
+			{
+				var _player = instance_find(oPlayer, _i)
+				with (_player)
+				{
+					blocked = false;
+				}	
 			}
 		}
 		break;

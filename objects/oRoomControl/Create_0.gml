@@ -2,7 +2,8 @@ enum GameState
 {
 	NORMAL,
 	BATTLE,
-	BOSS
+	BOSS,
+	LOOT	//Retreiving loot
 };
 
 roomspeed = -2;

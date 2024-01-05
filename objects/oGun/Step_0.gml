@@ -80,7 +80,7 @@ switch(current_gun)
 		sprite_index = sDrill;
 		image_speed = 1;
 		
-		damage = 1;
+		damage = host.drill_damage;
 		
 		switch (drill_state)
 		{

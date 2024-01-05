@@ -36,7 +36,7 @@ switch (state)
 		if (hp <= 0)
 		{
 			global.score += 125;
-			oRoomControl.gamestate = GameState.NORMAL;
+			oRoomControl.gamestate = GameState.LOOT;
 			GetStandartRoomProperties();
 			ShakeScreen(12, 120);
 			ResumeRoom();

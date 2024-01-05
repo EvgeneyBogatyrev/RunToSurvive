@@ -242,7 +242,7 @@ switch (state)
 		if (AnimationEnd())
 		{
 			global.score += 100;
-			oRoomControl.gamestate = GameState.NORMAL;
+			oRoomControl.gamestate = GameState.LOOT;
 			GetStandartRoomProperties();
 			instance_destroy();			
 		}

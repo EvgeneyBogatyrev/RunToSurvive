@@ -42,6 +42,7 @@ death_alpha = 1;
 maxbullets = 20;
 shown_bullets = maxbullets;
 bullets = maxbullets;
+drill_damage = 1;
 
 state = PlayerStates.NORMAL;
 

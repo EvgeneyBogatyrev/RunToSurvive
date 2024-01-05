@@ -25,7 +25,7 @@ function GetGunSprite(gun_type){
 			return sRealShotgun;
 			
 		case Gun.ELECTRIC_GUN:
-			return sStandartGun;
+			return sElectricGun;
 	}
 
 }

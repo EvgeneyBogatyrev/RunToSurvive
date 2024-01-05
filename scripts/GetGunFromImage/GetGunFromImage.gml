@@ -15,6 +15,8 @@ function GetGunFromImage(argument0) {
 			return Gun.LIFESTEAL_GUN;
 		case REALSHOTGUN_GUN_INUMBER:
 			return Gun.REAL_SHOTGUN;
+		case ELECTRIC_GUN_INUMBER:
+			return Gun.ELECTRIC_GUN;
 		default:
 			Raise("Wrong gun image_index\n");
 			break;
