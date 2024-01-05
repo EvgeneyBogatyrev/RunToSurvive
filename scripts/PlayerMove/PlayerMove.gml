@@ -86,10 +86,13 @@ function PlayerMove() {
 		jump_counter = 0;
 		grounded_counter = 0;
 		
-		for (var i = 0; i < array_length(onJumpEvent); i++)
+		if (oRoomControl.gamestate != GameState.LOOT)
 		{
-			onJumpEvent[i](id);
-		} 
+			for (var i = 0; i < array_length(onJumpEvent); i++)
+			{
+				onJumpEvent[i](id);
+			} 
+		}
 	}
 
 	if (CheckCollisions(x, y + yspeed * scale + 1, oBlock, row)) // vertical collision
