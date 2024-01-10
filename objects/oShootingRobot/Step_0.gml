@@ -44,4 +44,4 @@ if (x < oCamera.left - CAMERA_BOUNDS || (state == ShootingRobotStates.BACK && x 
 }
 
 
-ContactDamage(5, 0);
+ContactDamage(damage, 0);

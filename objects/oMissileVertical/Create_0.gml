@@ -1,6 +1,6 @@
 event_inherited();
 
-damage = 15;
+damage = GetStats("Drone");
 spd = 10;
 
 angle = -1;

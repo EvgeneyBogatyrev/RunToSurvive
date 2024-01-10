@@ -40,7 +40,7 @@ switch (state)
 	case PandoraStates.BOX:
 		//Move
 		PandoraBoxMovement(ystart);
-		ContactDamage(10, 0);
+		//ContactDamage(10, 0);
 		
 		//Spawn eye
 		if (spawn_timer == 0)
@@ -76,7 +76,7 @@ switch (state)
 		break;
 		
 	case PandoraStates.GAUNTLET:
-		if (ContactDamage(30, 0))  Knockback(oPlayer, 2);
+		if (ContactDamage(damage, 0))  Knockback(oPlayer, 2);
 		
 		//Rotation
 		if (sprite_index == sPandoraBoxBlink &&  image_angle < 90) 

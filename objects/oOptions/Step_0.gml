@@ -74,6 +74,12 @@ if (need_to_center)
 		if (_right) character_position ++;
 	}
 	
+	if (cursor_position == 5)
+	{
+		if (_left)  global.difficulty --
+		if (_right) global.difficulty ++;
+	}
+	
 	if (cursor_position >= _cursor_length)      cursor_position = 0;
 	if (cursor_position < 0)                    cursor_position = _cursor_length - 1;
 	
@@ -88,6 +94,9 @@ if (need_to_center)
 	
 	if (character_position > 3)  character_position = 0;
 	if (character_position < 0)  character_position = 3;
+	
+	if (global.difficulty < 0)	global.difficulty = 3;
+	if (global.difficulty > 3)	global.difficulty = 0;
 	
 	global.music_gain = music_position / 10;
 	global.sound_gain = sound_position / 10;
@@ -117,7 +126,9 @@ if (need_to_center)
 	dbutton[2] = "MUSIC VOLUME: " + string(100 * global.music_gain) + "%";
 	dbutton[3] = "SOUND VOLUME: " + string(100 * global.sound_gain) + "%";
 	dbutton[4] = "Character: " + global.character;
-	dbutton[5] = "BACK";
+	dbutton[5] = "Difficulty: " + difficulty[global.difficulty];
+	dbutton[6] = "Reset highscore";
+	dbutton[7] = "BACK";
 
 
 	for(var i = 0; i < _cursor_length; i++)
@@ -151,9 +162,15 @@ if (need_to_center)
 			case 2:
 			case 3:
 			case 4:
-			break;			
+			case 5:
+			break;	
+			
+			case 6:
+				global.highscore = 0;
+				SaveGame();
+			break;
 		
-			case 5 : 
+			case 7 : 
 			//Go back to menu
 				button = [];
 				dbutton = [];

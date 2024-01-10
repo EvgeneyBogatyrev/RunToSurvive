@@ -14,7 +14,7 @@ if (hp > 0)
 	else
 	{
 		x -= walkspeed * scale;
-		ContactDamage(15, 0);
+		ContactDamage(damage, 0);
 	}
 }
 else

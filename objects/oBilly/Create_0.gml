@@ -1,7 +1,7 @@
 /// @description 
 event_inherited();
 
-hp = min(40, irandom_range(8, 15) + floor(oDifficultyController.minibosses_defeated / 5));
+hp = irandom_range(8, 15) + floor(oDifficultyController.minibosses_defeated / 5) * GetStats("Increase hp");
 maxhp = hp;
 shown_hp = hp;
 
@@ -12,3 +12,5 @@ saved_player = noone;
 state = HalfBossStates.IDLE;
 
 notice_player = ReturnNoone;
+
+damage = GetStats("Billy");

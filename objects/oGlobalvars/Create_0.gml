@@ -27,6 +27,7 @@ global.display_height = 768;
 
 global.score = 0;
 global.highscore = 0;
+global.difficulty = undefined;
 
 global.filename = working_directory + "file.name";
 

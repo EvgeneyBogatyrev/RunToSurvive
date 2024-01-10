@@ -10,8 +10,8 @@ enum DelverStates
 
 state = UniversalStates.INTRO;
 
-mage_hp = 20 + 3 * oDifficultyController.bosses_defeated;
-insect_hp = 40 + 6 * oDifficultyController.bosses_defeated;
+mage_hp = 20 + 3 * oDifficultyController.bosses_defeated  * GetStats("Increase hp");
+insect_hp = 40 + 6 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
 
 if (global.DEBUG)
 {
@@ -60,6 +60,8 @@ attack_sprite = sDelverInsectAttack; // attack sprite
 attack_image_index = 6;  // when to deal damage
 attack_x_shift = 50; // damage circle shift relative to local x
 attack_radius = 40; // damage circle radius
+
+slash_damage = GetStats("Delver's slash");
 
 
 // Debug

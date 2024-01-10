@@ -11,9 +11,11 @@ enum PandoraStates
 hp = 6;
 maxhp = 6;
 
-box_hp = 10 + 2 * oDifficultyController.bosses_defeated;
-gauntlet_hp = 20 + 4 * oDifficultyController.bosses_defeated;
-eye_hp = 10 + 2 * oDifficultyController.bosses_defeated;
+box_hp = 10 + 2 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
+gauntlet_hp = 20 + 4 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
+eye_hp = 10 + 2 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
+
+damage = GetStats("Pandora's contact")
 
 if (global.DEBUG)
 {

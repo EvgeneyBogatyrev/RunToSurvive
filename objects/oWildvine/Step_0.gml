@@ -22,7 +22,7 @@ switch(state)
 	break;
 	case VineStates.Strike:
 	
-		ContactDamage(15, 0);
+		ContactDamage(damage, 0);
 		if (bbox_bottom > ystart)
 		{
 			y -= 5 * scale;
@@ -35,10 +35,10 @@ switch(state)
 		}
 	break;
 	case VineStates.Idle:
-		ContactDamage(10, 0);
+		ContactDamage(damage, 0);
 		if (hp < 1)
 		{
-			timer -= ((1 - hp) * 10) / (oDifficultyController.bosses_defeated / 2 + 1);
+			timer -= ((1 - hp) * 10) / (oDifficultyController.bosses_defeated * GetStats("Increase hp") / 2 + 1);
 			hp = 1;
 		}
 		if (timer <= 0)

@@ -11,9 +11,9 @@ enum RobotBossStates
 
 state = UniversalStates.INTRO;
 
-air_hp = 10 + 1 * oDifficultyController.bosses_defeated;
-robot_hp = 20 + 2 * oDifficultyController.bosses_defeated;
-ship_hp = 20 + 1 * oDifficultyController.bosses_defeated;
+air_hp = 10 + 1 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
+robot_hp = 20 + 2 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
+ship_hp = 20 + 1 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
 
 if (global.DEBUG)
 {
@@ -68,3 +68,6 @@ saved_roomspeed = undefined;
 
 magnet_offset_x = 104 - 1;
 magnet_offset_y = 88 - 186;
+
+damage_second_phase = GetStats("Robot boss 2nd phase");
+damage_third_phase = GetStats("Robot boss 3rd phase");

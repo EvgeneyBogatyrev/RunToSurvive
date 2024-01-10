@@ -61,6 +61,7 @@
     {"name":"sEssence","order":4,"path":"sprites/sEssence/sEssence.yy",},
     {"name":"sStandartGun","order":1,"path":"sprites/sStandartGun/sStandartGun.yy",},
     {"name":"sShotgun","order":2,"path":"sprites/sShotgun/sShotgun.yy",},
+    {"name":"GetStats","order":10,"path":"scripts/GetStats/GetStats.yy",},
     {"name":"sPowerGun","order":3,"path":"sprites/sPowerGun/sPowerGun.yy",},
     {"name":"DrawLightning","order":4,"path":"scripts/DrawLightning/DrawLightning.yy",},
     {"name":"sRocketLauncher","order":4,"path":"sprites/sRocketLauncher/sRocketLauncher.yy",},

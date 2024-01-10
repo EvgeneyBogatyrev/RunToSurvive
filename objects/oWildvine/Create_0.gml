@@ -27,3 +27,5 @@ for (var _i = 0; _i < vine_count; _i++)
 
 
 hp = 1;
+
+damage = GetStats("Wildvine");

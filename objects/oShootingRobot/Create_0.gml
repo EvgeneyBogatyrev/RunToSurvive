@@ -26,3 +26,5 @@ wait_before_shoot_timer = 30;
 
 shooting_offset_x = 20 - 52;
 shooting_offset_y = 52 - 14;
+
+damage = GetStats("Shooting robot contact");

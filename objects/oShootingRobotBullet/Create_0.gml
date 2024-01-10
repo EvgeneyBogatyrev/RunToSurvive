@@ -1,6 +1,6 @@
 event_inherited();
 
-damage = 15;
+damage = GetStats("Shooting robot fire");
 xspeed = -15;
 
 

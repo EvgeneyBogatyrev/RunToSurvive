@@ -34,7 +34,7 @@ switch (state)
 		
 	case ChasingStumpState.CHASE:
 		
-		if (CheckCollisions(x, y + 1, oBlock, row))  ContactDamage(15, 0);
+		if (CheckCollisions(x, y + 1, oBlock, row))  ContactDamage(damage, 0);
 		
 		target = GetPlayer(PlayerPreferences.CLOSEST);
 		

@@ -198,7 +198,7 @@ switch (state)
 				}
 				else if (sprite_index == attack_sprite && image_index >= attack_image_index)
 				{
-					CircleDamage(20, 0, x + dir * attack_x_shift * scale, y, attack_radius * scale);
+					CircleDamage(slash_damage, 0, x + dir * attack_x_shift * scale, y, attack_radius * scale);
 					ShakeScreen(3, 10);
 					visualise_circle = true;
 				}

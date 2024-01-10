@@ -8,3 +8,4 @@ exist_timer = 20;
 
 offset = 0;
 
+damage = GetStats("Delver's lightning");

@@ -20,7 +20,7 @@ switch (state)
 			{
 				sprite_index = sBillyAttack;
 				image_index = 0;
-				if (ContactDamage(25, 0))  StartBattle(row, _player, id);
+				if (ContactDamage(damage, 0))  StartBattle(row, _player, id);
 				with (_player)
 				{	
 					if (pocket[0] < 2 && pocket[1] < 2)  exit;

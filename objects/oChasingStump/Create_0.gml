@@ -10,7 +10,7 @@ enum ChasingStumpState
 };
 
 
-maxhp = 100 + 5 * oDifficultyController.bosses_defeated;
+maxhp = 100 + 5 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
 hp = maxhp;
 
 slowspeed = 3;
@@ -46,3 +46,4 @@ not_give_score = false;
 
 image_blend = c_green;
 
+damage = GetStats("Chasing stump");

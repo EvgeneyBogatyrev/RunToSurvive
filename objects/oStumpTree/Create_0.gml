@@ -12,7 +12,7 @@ enum StumpTreeStates
 };
 
 
-max_hp = 60 + 2 * oDifficultyController.bosses_defeated;
+max_hp = 60 + 2 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
 
 if (global.DEBUG)
 {
@@ -27,6 +27,8 @@ stump_spam_timer_max = 60;
 stump_spam_timer = stump_spam_timer_max;
 
 spawn_offset = 100;
+
+damage = GetStats("Tree boss");
 
 
 state = StumpTreeStates.APPEAR;

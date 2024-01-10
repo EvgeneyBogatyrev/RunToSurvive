@@ -24,4 +24,6 @@ charge_counter = charge_counter_max;
 
 saved_angle = 0;
 
+damage = GetStats("Pandora's eye")
+
 player = noone;

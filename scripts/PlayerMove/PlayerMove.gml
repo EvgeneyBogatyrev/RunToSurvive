@@ -9,7 +9,7 @@ function PlayerMove() {
 
 	if (CheckCollisions(x + xspeed * scale, y - 1, oObstacle, row) and !damaged) // if the player bumps into an obstacle, 
 	{																             //  deal damage equal to 30% of his health
-		var _damage = 10;
+		var _damage = GetStats("Obstacle");
 	
 		damaged      = true;	
 		damage_timer = 6*30;

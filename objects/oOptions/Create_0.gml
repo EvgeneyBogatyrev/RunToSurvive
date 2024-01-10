@@ -40,6 +40,8 @@ switch(global.display_width)
 		break;	
 }
 
+difficulty = ["EASY", "NORMAL", "HARD", "EXTREME"];
+
 //Set resolutions
 resolutionW = [LOW_DEFINITION_WIDTH, STANDART_DEFINITION_WIDTH, HIGH_DEFINITION_WIDTH];
 resolutionH = [LOW_DEFINITION_HEIGHT, STANDART_DEFINITION_HEIGHT, HIGH_DEFINITION_HEIGHT];
@@ -50,7 +52,9 @@ dbutton[1] = string(global.display_width) + "X" + string(global.display_height);
 dbutton[2] = "MUSIC VOLUME: " + string(100 * global.music_gain) + "%";
 dbutton[3] = "SOUND VOLUME: " + string(100 * global.sound_gain) + "%";
 dbutton[4] = "Character: " + global.character;
-dbutton[5] = "BACK";
+dbutton[5] = "Difficulty: " + difficulty[global.difficulty];
+dbutton[6] = "Reset highscore";
+dbutton[7] = "BACK";
 
 //Set drawing buttons
 button[0] = dbutton[0];
@@ -59,6 +63,9 @@ button[2] = dbutton[2];
 button[3] = dbutton[3];
 button[4] = dbutton[4];
 button[5] = dbutton[5];
+button[6] = dbutton[6];
+button[7] = dbutton[7];
+
 
 _cursor_length = array_length(button);
 _switcher_length = array_length(resolutionW);

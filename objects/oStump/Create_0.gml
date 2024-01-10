@@ -10,8 +10,10 @@ retrieve = false;
 retrieve_counter = 0;
 retrieve_counter_max = 60;
 
-hp = min(40, irandom_range(5, 10) + floor(oDifficultyController.minibosses_defeated / 5));
+hp = irandom_range(5, 10) + floor(oDifficultyController.minibosses_defeated / 5) * GetStats("Increase hp");
 maxhp = hp;
 shown_hp = hp;
 
 notice_player = PlayerNear;
+
+damage = GetStats("Stump");

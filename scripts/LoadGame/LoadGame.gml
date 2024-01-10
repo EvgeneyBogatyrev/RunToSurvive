@@ -8,6 +8,7 @@ function LoadGame() {
 		ds_map_add(save_map, "Sound gain", global.sound_gain);
 		ds_map_add(save_map, "Character", global.character);		
 		ds_map_add(save_map, "Highscore", global.highscore);
+		ds_map_add(save_map, "Difficulty", global.difficulty);
 
 		//ds_map_add(save_map, "Player1_pocket", 1);
 		//ds_map_add(save_map, "Player2_pocket", 1);
@@ -35,7 +36,9 @@ function LoadGame() {
 		global.music_gain = ds_map_find_value(save_map, "Music gain");
 		global.sound_gain = ds_map_find_value(save_map, "Sound gain");
 		global.character = ds_map_find_value(save_map, "Character");		
-		global.highscore = ds_map_find_value(save_map, "Highscore");
+		global.highscore = ds_map_find_value(save_map, "Highscore");		
+		global.difficulty = ds_map_find_value(save_map, "Difficulty");
+
 
 		
 		if (global.character == undefined) 
@@ -45,6 +48,10 @@ function LoadGame() {
 		if (global.highscore == undefined)
 		{
 			global.highscore = 0;	
+		}
+		if (global.difficulty == undefined)
+		{
+			global.difficulty = Difficulty.NORMAL;
 		}
 		//var p1 = ds_map_find_value(save_map, "Player1_pocket");
 		//var p2 = ds_map_find_value(save_map, "Player2_pocket");

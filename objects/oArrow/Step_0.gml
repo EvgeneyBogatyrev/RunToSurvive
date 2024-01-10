@@ -30,7 +30,7 @@ if (!exhausted && CheckCollisions(x, y, oPlayer, row))
 {
 	var _player = GetCollider(x, y, oPlayer, row);
 	Knockback(_player, 1/3);
-	ContactDamage(10, 0);
+	ContactDamage(damage, 0);
 	if (instance_exists(host) && host.state != UniversalStates.DEAD && host.state != HalfBossStates.INACTIVE)  StartBattle(row, _player, host);
 	instance_destroy();
 }

@@ -69,11 +69,13 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Textures","folderPath":"folders/Sprites/Textures.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Dark","folderPath":"folders/Sprites/Textures/Dark.yy",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"RunToSurvive_difficulty.csv","CopyToMask":-1,"filePath":"datafiles",},
+  ],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.2.108",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"sStone","path":"sprites/sStone/sStone.yy",},},
@@ -134,6 +136,7 @@
     {"id":{"name":"sDrill","path":"sprites/sDrill/sDrill.yy",},},
     {"id":{"name":"sStandartGun","path":"sprites/sStandartGun/sStandartGun.yy",},},
     {"id":{"name":"sShotgun","path":"sprites/sShotgun/sShotgun.yy",},},
+    {"id":{"name":"GetStats","path":"scripts/GetStats/GetStats.yy",},},
     {"id":{"name":"sPowerGun","path":"sprites/sPowerGun/sPowerGun.yy",},},
     {"id":{"name":"DrawLightning","path":"scripts/DrawLightning/DrawLightning.yy",},},
     {"id":{"name":"sRocketLauncher","path":"sprites/sRocketLauncher/sRocketLauncher.yy",},},
