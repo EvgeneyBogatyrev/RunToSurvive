@@ -21,7 +21,7 @@ if (spawn_timer <= 0)
 			var _robot = oShootingRobot;
 			spawn_timer_max = 3.5 * 60;
 		}
-		else if (oRobotBoss.state != UniversalStates.DEAD)
+		else if (oRobotBoss.state != UniversalStates.DEAD && oRobotBoss.state != UniversalStates.VICTORY)
 		{
 			var _row = irandom_range(0, 2);
 			_robot_pool = [oTallRobot, oShootingRobot, oFlyingRobot];
@@ -31,6 +31,11 @@ if (spawn_timer <= 0)
 			{
 				_robot = oMissileLauncher;	
 			}
+		}
+		else
+		{
+			_robot = oMissileLauncher;
+			_row = 0;
 		}
 	}
 	else

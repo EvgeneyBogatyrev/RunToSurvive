@@ -34,7 +34,7 @@ switch (state)
 		
 		if (_flag)
 		{
-			state = DelverStates.VICTORY;
+			state = UniversalStates.VICTORY;
 			exit;
 		}
 	
@@ -120,7 +120,7 @@ switch (state)
 			
 				if (player == noone)
 				{
-					state = DelverStates.VICTORY;	
+					state = UniversalStates.VICTORY;	
 					exit;
 				}
 			
@@ -248,7 +248,7 @@ switch (state)
 		}
 		break;
 	
-	case DelverStates.VICTORY:
+	case UniversalStates.VICTORY:
 		xspeed = insect_speed * scale;
 		yspeed = 0;
 		break;

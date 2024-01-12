@@ -18,6 +18,11 @@ function LevelEnd()
 		follow = Create(x, y, oFollow, 2);	
 	}
 	
+	with (oBossParent)
+	{
+		state = UniversalStates.VICTORY;	
+	}
+	
 	ShowEndScreen();
 	
 	//room_goto(rMenu);

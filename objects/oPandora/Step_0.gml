@@ -177,6 +177,11 @@ switch (state)
 		GetStandartRoomProperties();
 		instance_destroy();		
 		break;
+		
+	case UniversalStates.VICTORY:
+		PandoraBoxMovement(ystart);
+		x += 2;
+		break;
 	
 		
 }

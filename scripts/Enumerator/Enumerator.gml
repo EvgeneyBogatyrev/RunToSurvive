@@ -16,7 +16,8 @@ function Enumerator() {
 	{
 		INTRO = 100,
 		DEAD = -100,
-		CHARGE_ATTACK = -200
+		CHARGE_ATTACK = -200,
+		VICTORY = -133769,
 	};
 
 

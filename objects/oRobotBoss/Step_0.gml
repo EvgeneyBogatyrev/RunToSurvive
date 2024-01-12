@@ -243,8 +243,8 @@ switch (state)
 		break;
 		
 	case UniversalStates.DEAD:
-		x -= 2
-		;xspeed = 1;
+		x -= 2;
+		xspeed = 1;
 		if (AnimationEnd())
 		{
 			image_speed = 0;	
@@ -253,6 +253,12 @@ switch (state)
 		{
 			instance_destroy();	
 		}
+		break;
+		
+	case UniversalStates.VICTORY:
+		if (sprite_index == sRobotShip)	x -= 2;
+		else		x += 2;
+		xspeed = 1;
 		break;
 	
 	default:

@@ -84,12 +84,17 @@ switch (state)
 		speed = charged_speed * scale;
 		
 		break;
-		
+
+	case UniversalStates.VICTORY:
 	case UniversalStates.DEAD:
 		if (AnimationEnd())  instance_destroy();
 		x += oRoomControl.roomspeed * scale;
 		speed = 0;
 		image_angle = saved_angle;
+		break;
+		
+	
+		
 		break;
 
 }
