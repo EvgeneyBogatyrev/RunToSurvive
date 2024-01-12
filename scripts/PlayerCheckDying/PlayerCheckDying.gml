@@ -11,6 +11,7 @@ function PlayerCheckDying() {
 					depth -= 2;
 					player_ind = other.player_index;
 					inventory = other.inventory;
+					times_resurrected = oGenerator.times_resurrected[names[player_ind]];
 			}
 		}
 		
@@ -65,6 +66,7 @@ function PlayerCheckDying() {
 					depth -= 2;
 					player_ind = other.player_index;
 					inventory = other.inventory;
+					times_resurrected = oGenerator.times_resurrected[names[player_ind]];
 				}
 			}
 		//}
@@ -78,6 +80,7 @@ function PlayerCheckDying() {
 					depth -= 2;
 					player_ind = other.revival[j];
 					inventory = other.revival_inventory[j];
+					times_resurrected = oGenerator.times_resurrected[names[player_ind]];
 				}
 			}	
 		}

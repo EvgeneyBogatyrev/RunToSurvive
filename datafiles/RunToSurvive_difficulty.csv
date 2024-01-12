@@ -4,7 +4,7 @@ Max roomspeed,5,6,6,7
 Delver's lightning,10,20,30,60
 Delver's slash,10,20,25,50
 Pandora's eye,5,15,20,30
-Pandora's contact,15,30,60,100
+Pandora's contact,15,30,60,90
 Chasing stump,10,15,25,50
 Tree boss,1,10,20,25
 Running stump ,5,15,25,50
@@ -14,7 +14,7 @@ Shooting robot contact,1,10,20,30
 Shooting robot fire,10,20,35,50
 Drone,10,20,35,50
 Robot boss 2nd phase,15,25,40,60
-Robot boss 3rd phase,20,30,60,100
+Robot boss 3rd phase,20,30,60,90
 Obstacle,1,10,20,25
 Stump,10,20,30,40
 Archer,5,15,20,30

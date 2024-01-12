@@ -99,7 +99,7 @@ function CreateEnvironment(argument0, argument1, argument2) {
 				//Print(revival_number,", " ,instance_exists(oCloningStation));
 				
 				randomize();
-				if (revival_number > 0 && !instance_exists(oCloningStation) && irandom_range(0, 100) > 30)  _object = oCloningStation;	
+				if (revival_number > 0 && !instance_exists(oCloningStation) && irandom_range(0, 100) < 30)  _object = oCloningStation;	
 				if (irandom_range(0, 100) < 5)	_object = oChest;
 			}
 		

@@ -16,3 +16,5 @@ t_offset = 0;
 t_offset_max = 10;
 shot_counter = -2;
 shot_limit = 3;
+
+damage = GetStats("Obstacle");

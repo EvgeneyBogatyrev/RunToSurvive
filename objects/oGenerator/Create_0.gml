@@ -48,83 +48,10 @@ for (var j = 0; j < 3; ++j)
 	}
 }
 
+times_resurrected = ds_map_create();
 
 for (var i = 0; i < number_of_players; ++i)
 {
 	SpawnPlayerCharacter(i, names[i], 500 + ((i == 3)? 100 : 0), ground[i % 3], i % 3);
-	/*
-	switch (names[i])
-	{
-		case "Kyron":
-			with(Create(500 + ((i == 3)? 100 : 0), ground[i % 3], oPlayer, i % 3))
-			{
-				depth = -100 * row - 2;
-				sPlayerStand = sKyronStand;
-				sPlayerRun = sKyronRun;
-				sPlayerJump = sKyronJump;
-				sPlayerIdle = sKyronIdle;
-				sPlayerDying = sKyronDying;
-				sPlayerIcon = sKyronIcon;
-				sPlayerOutOfScreen = sKyronOutOfScreen;
-				sPlayerHands = sKyronHands;
-				_input_type = input_type[i];
-				name = names[i];
-				player_index = i;
-			}
-			break;
-			
-		case "Robo":
-			with(Create(500 + ((i == 3)? 100 : 0), ground[i % 3], oPlayer, i % 3))
-			{
-				depth = -100 * row - 2;
-				sPlayerStand = sCyberStand;
-				sPlayerRun = sCyberRun;
-				sPlayerJump = sCyberJump;
-				sPlayerIdle = sCyberIdle;
-				sPlayerDying = sCyberDying;
-				sPlayerIcon = sCyberIcon;
-				sPlayerOutOfScreen = sCyberOutOfScreen;
-				sPlayerHands = sCyberHands;
-				_input_type = input_type[i];
-				name = names[i];
-				player_index = i;
-			}
-			break;
-			
-		case "LongHair":
-			with(Create(500 + ((i == 3)? 100 : 0), ground[i % 3], oPlayer, i % 3))
-			{
-				depth = -100 * row - 2;
-				sPlayerStand = sLongHairStand;
-				sPlayerRun = sLongHairRun;
-				sPlayerJump = sLongHairJump;
-				sPlayerIdle = sLongHairIdle;
-				sPlayerDying = sLongHairDying;
-				sPlayerIcon = sLongHairIcon;
-				sPlayerOutOfScreen = sLongHairOutOfScreen;
-				sPlayerHands = sLongHairHands;
-				_input_type = input_type[i];
-				name = names[i];
-				player_index = i;
-			}
-			break;
-		case "SteamPunk":
-			with(Create(500 + ((i == 3)? 100 : 0), ground[i % 3], oPlayer, i % 3))
-			{
-				depth = -100 * row - 2;
-				sPlayerStand = sSteampunkStand;
-				sPlayerRun = sSteampunkRun;
-				sPlayerJump = sSteampunkJump;
-				sPlayerIdle = sSteampunkIdle;
-				sPlayerDying = sSteampunkDying;
-				sPlayerIcon = sSteampunkIcon;
-				sPlayerOutOfScreen = sSteampunkOutOfScreen;
-				sPlayerHands = sSteampunkHands;
-				_input_type = input_type[i];
-				name = names[i];
-				player_index = i;
-			}
-			break;
-	}
-	*/
+	ds_map_add(times_resurrected, names[i], 0);
 }
