@@ -31,5 +31,17 @@ var _s = _hrs_str + ":" + string_replace_all(string_format(_min, 2, 0) + ":" + s
 
 draw_text(128, 256, "Time: " + _s);
 
+for (var _i = 0; _i < instance_number(oEssence); _i++)
+{
+	var _ess = instance_find(oEssence, _i);
+	var _player_name = names[_ess.player_ind];
+	var _inventory = _ess.inventory;
+	var _player_sprite = GetSpritesFromName(_player_name).stand;
+	draw_sprite(_player_sprite, 0, 128, 256 + 128 * (_i + 1)); 
+	
+	
+}
+
+
 
 draw_set_alpha(1);

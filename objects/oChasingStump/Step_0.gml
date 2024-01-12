@@ -75,7 +75,7 @@ switch (state)
 		
 		
 		break;
-		
+	case UniversalStates.VICTORY:
 	case ChasingStumpState.VICTORY:
 		xspeed = -walkspeed;
 		break;
@@ -93,7 +93,7 @@ switch (state)
 		break;
 		
 	default:
-		instance_destroy();
+		break;
 }
 first_phase_timer--;
 if (first_phase_timer < 0)	first_phase_timer = -1;

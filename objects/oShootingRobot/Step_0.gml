@@ -31,6 +31,7 @@ switch (state)
 		}
 		break;
 		
+	default:
 	case ShootingRobotStates.BACK:
 		xspeed = max(walkspeed, -oRoomControl.roomspeed);
 		walkspeed += 0.1;

@@ -18,6 +18,7 @@ if (room == rMenu)
 }
 else
 {
-	if (number_of_players > 1)   global.multiplayer = true;	
-	else                         global.multiplayer = false;
+	global.multiplayer = true;
+	//if (number_of_players > 1)   global.multiplayer = true;	
+	//else                         global.multiplayer = false;
 }

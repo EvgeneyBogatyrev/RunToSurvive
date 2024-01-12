@@ -3,6 +3,7 @@ event_inherited();
 
 switch (state)
 {
+	default:
 	case FlyingRobotStates.MOVE:
 		xspeed = -walkspeed;
 		

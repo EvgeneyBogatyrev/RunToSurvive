@@ -13,6 +13,17 @@ function PlayerCheckDying() {
 					inventory = other.inventory;
 					times_resurrected = oGenerator.times_resurrected[? names[player_ind]];
 			}
+			
+			for (var j = 0; j < revival_number; ++j)
+			{
+				with (Create(x + sprite_get_width(sEssence) * (j + 1), y, oEssence, row))
+				{
+					depth -= 2;
+					player_ind = other.revival[j];
+					inventory = other.revival_inventory[j];
+					times_resurrected = oGenerator.times_resurrected[? names[player_ind]];
+				}
+			}
 		}
 		
 		if (instance_number(object_index) <= 1)  LevelEnd();

@@ -18,10 +18,14 @@ function LevelEnd()
 		follow = Create(x, y, oFollow, 2);	
 	}
 	
-	with (oBossParent)
+	oRoomControl.gamestate = GameState.LOOT;
+	
+	with (oEnemyParent)
 	{
 		state = UniversalStates.VICTORY;	
 	}
+	
+	
 	
 	ShowEndScreen();
 	
