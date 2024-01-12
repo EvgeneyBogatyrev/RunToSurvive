@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-ContactDamage(damage, 0);
+if (hp > 0)	ContactDamage(damage, 0);
 
 if (hp <= 0 && shot_counter < shot_limit && instance_exists(oRobotBoss) && oRobotBoss.state == RobotBossStates.IDLE)
 {

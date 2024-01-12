@@ -37,10 +37,9 @@ switch (state)
 						break;
 					}
 				} 
-			} 
-			else  LevelEnd();
+			}
 			if (_flag_dead)  LevelEnd();
-			else             instance_destroy();
+			instance_destroy();
 		}
 		else
 		{

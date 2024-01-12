@@ -11,12 +11,13 @@ function PlayerCheckDying() {
 					depth -= 2;
 					player_ind = other.player_index;
 					inventory = other.inventory;
-					times_resurrected = oGenerator.times_resurrected[names[player_ind]];
+					times_resurrected = oGenerator.times_resurrected[? names[player_ind]];
 			}
 		}
 		
-		if (instance_number(object_index) > 1)  instance_destroy(); 
-		else                                    LevelEnd(); 
+		if (instance_number(object_index) <= 1)  LevelEnd();
+		
+		instance_destroy();
 	} 
 
 	if (hp <= 0 && state != UniversalStates.DEAD) 
@@ -66,7 +67,7 @@ function PlayerCheckDying() {
 					depth -= 2;
 					player_ind = other.player_index;
 					inventory = other.inventory;
-					times_resurrected = oGenerator.times_resurrected[names[player_ind]];
+					times_resurrected = oGenerator.times_resurrected[? names[player_ind]];
 				}
 			}
 		//}
@@ -80,7 +81,7 @@ function PlayerCheckDying() {
 					depth -= 2;
 					player_ind = other.revival[j];
 					inventory = other.revival_inventory[j];
-					times_resurrected = oGenerator.times_resurrected[names[player_ind]];
+					times_resurrected = oGenerator.times_resurrected[? names[player_ind]];
 				}
 			}	
 		}

@@ -11,14 +11,13 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 			var _player_name = names[revival[0]];
 			var _player_inventory = revival_inventory[0];
 			
-			var _times_resurrected = ds_list_find_value(oGenerator.times_resurrected, _player_name);
-			
+			//var _times_resurrected = ds_map_find_value(oGenerator.times_resurrected, _player_name);			
 			var _respawned_player = SpawnPlayerCharacter(revival[0], _player_name, other.x, other.y - 15 * other.scale, other.row);
 			
-			_respawned_player.hp = _respawned_player.maxhp - 20 * _times_resurrected;			
+			_respawned_player.hp = _respawned_player.maxhp / 2;// - 20 * _times_resurrected;			
 			_respawned_player.prev_hp = _respawned_player.hp;	
 			
-			ds_list_add(oGenerator.times_resurrected, _player_name, _times_resurrected + 1);
+			//ds_map_(oGenerator.times_resurrected, _player_name, _times_resurrected + 1);
 
 			_respawned_player.bullets = 0;
 			_respawned_player.state = PlayerStates.NON_CONTROL;

@@ -8,3 +8,5 @@ if (global.DEBUG)
 }
 
 last_boss = "";
+
+bosses_array = ["Robot", "Pandora", "Delver", "ChasingStump"]

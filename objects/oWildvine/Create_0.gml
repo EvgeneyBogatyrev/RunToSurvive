@@ -10,8 +10,8 @@ enum VineStates
 
 state = VineStates.Waiting;
 
-strike_wait_time = 1.5 * 60;
-retract_wait_time = 1.5 * 60;
+strike_wait_time = !instance_exists(oStumpTree) ? 0.75 * 60 : 1.5 * 60;
+retract_wait_time = !instance_exists(oStumpTree) ? 0.75 * 60 : 1.5 * 60;
 
 timer = strike_wait_time;
 

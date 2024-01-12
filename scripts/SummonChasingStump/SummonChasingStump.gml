@@ -1,7 +1,7 @@
 /// !!! IN PROGRESS !!!
 function SummonChasingStump() 
 {
-	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 0, 0, 1, 0, 0]);
+	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 0, 0, 0, 0, 0]);
 
 	with (Create(oCamera.right + CAMERA_BOUNDS, oGenerator.ground[2] - 150, oChasingStump, 0))  depth -= 2;
 

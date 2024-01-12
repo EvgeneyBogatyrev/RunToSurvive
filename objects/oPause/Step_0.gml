@@ -4,7 +4,7 @@ var _right = _keys[1];
 var _up = _keys[2];
 var _down = _keys[3];
 var _OK = _keys[4];
-var _pause = _keys[5];
+var _pause = _keys[5] | _keys[6];
 
 #region Sounds
 if (paused)

@@ -1,7 +1,7 @@
 /// @description
 
 normal_speed = 1 - oRoomControl.roomspeed;
-charged_speed = 4 - oRoomControl.roomspeed;
+charged_speed = max(4 - oRoomControl.roomspeed, 6);
 
 if (hp <= 0 && state != UniversalStates.DEAD)
 {

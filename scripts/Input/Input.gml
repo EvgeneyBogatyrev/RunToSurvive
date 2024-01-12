@@ -94,10 +94,13 @@ function Input(argument0) {
 				_down |= _cur_array[3];
 				_jump |= (keyboard_check_pressed(vk_enter) || _cur_array[4]);
 				_pause |= _cur_array[9];
-			
+				if (i == 0) _cancel = keyboard_check_pressed(vk_escape);
+				else _cancel |= _cur_array[8];
+				
+				
 			}
 		
-			return [_left, _right, _up, _down, _jump, _pause];
+			return [_left, _right, _up, _down, _jump, _pause, _cancel];
 	
 
 		case InputTypes.ANY: 

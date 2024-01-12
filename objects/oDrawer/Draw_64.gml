@@ -1,5 +1,5 @@
 /// @description Draw stats.
-
+/*
 shader_set(shdBloom);
 surface_set_target(surf_ping);
 draw_surface(application_surface, 0, 0);
@@ -24,13 +24,13 @@ surface_reset_target();
 gpu_set_tex_filter(false);
 
 shader_reset();
-
+*/                      
 draw_surface(application_surface, 0, 0);
-
-//gpu_set_blendmode(bm_add);
-//draw_surface(surf_ping, 0, 0);
-//gpu_set_blendmode(bm_normal);
-
+/*
+gpu_set_blendmode(bm_add);
+draw_surface(surf_ping, 0, 0);
+gpu_set_blendmode(bm_normal);
+*/
 var list_of_players = ds_list_create();
 
 with(oPlayer)  
@@ -88,15 +88,33 @@ for (var i = 0; i < ds_list_size(list_of_players); i++)
 
 	var cur_player = ds_list_find_value(list_of_players, i);
 	
+	draw_set_valign(fa_middle);
+	draw_set_halign(fa_center);
+	draw_set_color(c_white);
+	draw_set_font(CstmFntOutline);
+	
 	draw_sprite_ext(sHealthBar, 1, cur_x, cur_y + 1, (cur_player.shown_hp / cur_player.maxhp), 1, 0, c_red, 1);
 	draw_sprite(sHealthBar, 0, cur_x, cur_y);
+	
+	if (_pl._show_inv)
+		draw_text(cur_x + sprite_get_width(sHealthBar) / 2, cur_y + sprite_get_height(sHealthBar) / 2, string(cur_player.hp));
+	
 	
 	cur_y += (rectangle_size + offset)/2;
 	cur_x = x + 3*offset + rectangle_size;
 
 	
+	
 	draw_sprite_ext(sHealthBar, 2, cur_x, cur_y + 1, (cur_player.shown_bullets / cur_player.maxbullets), 1, 0, c_yellow, 1);
 	draw_sprite(sHealthBar, 0, cur_x, cur_y);
+	
+	if (_pl._show_inv)
+		draw_text(cur_x + sprite_get_width(sHealthBar) / 2, cur_y + sprite_get_height(sHealthBar) / 2, string(cur_player.bullets));
+	
+	
+	draw_set_valign(fa_top);
+	draw_set_halign(fa_left);
+	draw_set_font(fntMenu);
 	
 	cur_x += sprite_get_width(sHealthBar) + offset;
 	cur_y -= (rectangle_size - offset)/2;

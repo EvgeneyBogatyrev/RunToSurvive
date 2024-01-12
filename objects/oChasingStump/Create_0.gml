@@ -15,7 +15,7 @@ hp = maxhp;
 
 slowspeed = 3;
 walkspeed = 6;
-fastspeed = 7;
+fastspeed = 8;
 jumpspeed = 12;
 
 fast_timer_max = 200;

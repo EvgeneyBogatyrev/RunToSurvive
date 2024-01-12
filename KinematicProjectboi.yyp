@@ -75,7 +75,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.1.129",
+    "IDEVersion": "2023.8.2.108",
   },
   "resources": [
     {"id":{"name":"sStone","path":"sprites/sStone/sStone.yy",},},
@@ -323,6 +323,7 @@
     {"id":{"name":"fntTitle","path":"fonts/fntTitle/fntTitle.yy",},},
     {"id":{"name":"sElectricGun","path":"sprites/sElectricGun/sElectricGun.yy",},},
     {"id":{"name":"oWildvineController","path":"objects/oWildvineController/oWildvineController.yy",},},
+    {"id":{"name":"oDeathScreen","path":"objects/oDeathScreen/oDeathScreen.yy",},},
     {"id":{"name":"oMainMenu","path":"objects/oMainMenu/oMainMenu.yy",},},
     {"id":{"name":"oMissileVertical","path":"objects/oMissileVertical/oMissileVertical.yy",},},
     {"id":{"name":"oModeSelect","path":"objects/oModeSelect/oModeSelect.yy",},},

@@ -59,13 +59,19 @@ switch (state)
 			{
 				fast_timer = fast_timer_max;	
 			}
+			if (x < oCamera.left - 40)
+			{
+				x = oCamera.left - 40;	
+			}
 		}
 			
 		
 		if (abs(target.x - x) > 180)
 			xspeed = current_speed * sign(target.x - x);
-		if (abs(target.x - x) < 20 && abs(target.y - y) < 30)
+		else if (abs(target.x - x) < 20 && abs(target.y - y) < 30)
 			xspeed = -current_speed * sign(target.x - x);
+		else if (abs(xspeed) < 1)
+			xspeed = current_speed * sign(target.x - x);
 		
 		
 		break;
@@ -95,7 +101,7 @@ if (state != ChasingStumpState.VICTORY && state != UniversalStates.INTRO && stat
 {
 	if ((CheckCollisions(x + xspeed * sign(scale), y, oBlock, row)  || row != target.row) && CheckCollisions(x, y + 1, oBlock, row))
 	{
-		yspeed -= jumpspeed * sign(scale);
+		yspeed = -jumpspeed * sign(scale);
 	}
 	
 	if (row != target.row)
@@ -144,7 +150,7 @@ if (CheckCollisions(x + xspeed * sign(scale), y, oBlock, row))
 
 yspeed -= grav;
 
-if (CheckCollisions(x, y + yspeed * scale, oBlock, row))
+if (CheckCollisions(x, y + yspeed * scale, oBlock, row) && yspeed >= 0)
 {
 	repeat (abs(yspeed * scale))
 	{
