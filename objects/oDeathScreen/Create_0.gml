@@ -1,5 +1,7 @@
 StopRoom();
 
+time_of_the_run = oRoomControl.run_timer;
+
 allowed_to_move = true;
 allowed_to_move_hor = true;
 

@@ -24,7 +24,7 @@ if (gamestate == GameState.BATTLE)
 	}
 }
 
-if (gamestate == PlayerStates.NORMAL)
+if (gamestate == GameState.NORMAL)
 {
 	if (score_timer <= 0)
 	{
@@ -36,3 +36,5 @@ if (gamestate == PlayerStates.NORMAL)
 		score_timer -= 1;	
 	}
 }
+
+run_timer += delta_time;

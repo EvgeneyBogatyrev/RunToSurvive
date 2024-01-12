@@ -21,6 +21,7 @@ score_timer_max = 60;
 score_timer = room_speed;
 block_score = false;
 
+run_timer = 0;
 
 room_properties = ds_map_create();
 GetStandartRoomProperties();
