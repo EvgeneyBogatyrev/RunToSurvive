@@ -40,7 +40,7 @@ switch (state)
 		
 		if (target == noone || !instance_exists(target))
 		{
-			state = ChasingStumpState.VICTORY;
+			state = UniversalStates.VICTORY;
 			exit;
 		}
 		if (current_speed != slowspeed)
@@ -76,7 +76,6 @@ switch (state)
 		
 		break;
 	case UniversalStates.VICTORY:
-	case ChasingStumpState.VICTORY:
 		xspeed = -walkspeed;
 		break;
 		
@@ -97,7 +96,7 @@ switch (state)
 }
 first_phase_timer--;
 if (first_phase_timer < 0)	first_phase_timer = -1;
-if (state != ChasingStumpState.VICTORY && state != UniversalStates.INTRO && state != UniversalStates.DEAD)
+if (state != UniversalStates.VICTORY && state != UniversalStates.INTRO && state != UniversalStates.DEAD)
 {
 	if ((CheckCollisions(x + xspeed * sign(scale), y, oBlock, row)  || row != target.row) && CheckCollisions(x, y + 1, oBlock, row))
 	{
