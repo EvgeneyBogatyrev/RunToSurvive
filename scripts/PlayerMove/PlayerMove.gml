@@ -95,13 +95,13 @@ function PlayerMove() {
 		}
 	}
 
-	if (CheckCollisions(x, y + yspeed * scale + 1, oBlock, row)) // vertical collision
+	if (CheckCollisions(x, y + yspeed * scale + sign(yspeed), oBlock, row)) // vertical collision
 	{
 		//while (!CheckCollisions(x, y + 1, oBlock, row))  y += 1;
 		repeat (abs(yspeed * scale))
 		{
-			if (CheckCollisions(x, y + 1, oBlock, row))  break;
-			y++;
+			if (CheckCollisions(x, y + sign(yspeed), oBlock, row))  break;
+			y += sign(yspeed);
 		}
 		
 		yspeed            =  0;

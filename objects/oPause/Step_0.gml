@@ -4,14 +4,14 @@ var _right = _keys[1];
 var _up = _keys[2];
 var _down = _keys[3];
 var _OK = _keys[4];
-var _pause = _keys[5] | _keys[6];
+var _pause = _keys[5];
+var _back = _keys[6];
 
 #region Sounds
 if (paused)
 {
 	if (_up || _down)  audio_play_sound(soSelect, 1, false);
 	if (_OK)           audio_play_sound(soConfirm, 10, false);
-	
 }
 #endregion
 
@@ -23,6 +23,7 @@ if (_pause)
 		screen_save(working_directory + "screen.png");
 		background = sprite_add(working_directory + "screen.png", 0, false, false, 0, 0);
 		paused = true;
+		paused_on_this_frame = true;
 		layer_set_visible("Pause", true);
 		oCamera.cam = view_camera[1];
 		view_set_visible(1, true);
@@ -33,17 +34,7 @@ if (_pause)
 	}
 	else
 	{
-		if (file_exists("screen.png"))  file_delete("screen.png");
-		MODE = "Menu";
-		cursor_position = 0;
-		max_cursor = 2;
-		paused = false;
-		layer_set_visible("Pause", false);
-		instance_activate_all();
-		oCamera.cam = view_camera[0];
-		view_set_visible(1, false);
-		view_set_visible(0, true);
-		audio_resume_all();	
+		unpause();
 	}
 }
 
@@ -51,13 +42,16 @@ if (paused)
 {
 	
 	if (_up)   cursor_position--;
-	
-	
 	if (_down) cursor_position++;
 	
 	
 	if (cursor_position < 0 )           cursor_position = max_cursor;
 	if (cursor_position > max_cursor)   cursor_position = 0;
+	
+	if (_back)
+	{
+		unpause();
+	}
 	
 	#region menu
 	if (MODE == "Menu")
@@ -67,6 +61,8 @@ if (paused)
 			switch(cursor_position)
 			{
 				case 0 : 
+					unpause();
+					/*
 					paused = false;
 					layer_set_visible("Pause", false);
 					instance_activate_all();
@@ -74,6 +70,7 @@ if (paused)
 					view_set_visible(1, false);
 					view_set_visible(0, true);
 					audio_resume_all();
+					*/
 					break;
 				
 				case 1 :
@@ -109,5 +106,5 @@ if (paused)
 		}
 	}
 	#endregion
-			
 }
+if (paused_on_this_frame) paused_on_this_frame = false;

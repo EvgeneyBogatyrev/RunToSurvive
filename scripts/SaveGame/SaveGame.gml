@@ -14,7 +14,7 @@ function SaveGame() {
 	ds_map_replace(save_map, "Character", global.character);	
 	ds_map_replace(save_map, "Highscore", global.highscore);	
 	ds_map_replace(save_map, "Difficulty", global.difficulty);
-
+	ds_map_replace(save_map, "Fullscreen", window_get_fullscreen());
 
 
 	//var p1 = player1_pocket[0] + 10 * player1_pocket[1] + 100 * player1_pocket[2];

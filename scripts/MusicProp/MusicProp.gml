@@ -98,6 +98,12 @@ function MusicProp(argument0) {
 		intro_lenght = 0;
 		loop_lenght = 73.852;
 	}
+	else if (s == musNowsYourShot)
+	{
+		bgm = audio_play_sound(musNowsYourShot, 0, false);
+		intro_lenght = 13.713;
+		loop_lenght = 123.534;
+	}
 	//else if (s == so_ending)
 	//{
 	//	bgm = audio_play_sound(so_ending, 0, false);

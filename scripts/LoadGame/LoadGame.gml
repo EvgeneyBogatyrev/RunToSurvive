@@ -38,7 +38,7 @@ function LoadGame() {
 		global.character = ds_map_find_value(save_map, "Character");		
 		global.highscore = ds_map_find_value(save_map, "Highscore");		
 		global.difficulty = ds_map_find_value(save_map, "Difficulty");
-
+		
 
 		
 		if (global.character == undefined) 

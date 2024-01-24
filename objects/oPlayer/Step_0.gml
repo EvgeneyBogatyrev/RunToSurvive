@@ -143,7 +143,7 @@ if (global.DEBUG)
 {
 	if (keyboard_check_pressed(ord("G")))
 	{
-		GiveItemToPlayer(id, passive_items_profiles[0]);
+		GiveItemToPlayer(id, passive_items_profiles[irandom(3)]);
 		//CreateOrbital(id, 3, 32, oSuspiciousEye);
 	}
 

@@ -11,7 +11,7 @@ if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
 	} until (_new_boss != last_boss);
 	if (global.DEBUG)
 	{
-		//_new_boss = "Delver";
+		_new_boss = "Spamton";
 	}
 	switch (_new_boss)
 	{
@@ -26,7 +26,10 @@ if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
 			break;
 		case "Robot":
 			SummonRobot();
-			break
+			break;
+		case "Spamton":
+			SummonSpamton();
+			break;
 	}
 	last_boss = _new_boss;
 	
