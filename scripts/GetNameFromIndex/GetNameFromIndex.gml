@@ -5,6 +5,7 @@ function GetNameFromIndex(argument0) {
 	if (argument0 == 2)  return "Steampunk";
 	if (argument0 == 3)  return "Cyber";
 	return "Kyron";
+	return "Buruch";
 
 
 }

@@ -100,6 +100,21 @@ switch (state)
 			}
 		}
 		
+		if (prev_hp > hp)
+		{
+			heart_hp -= (prev_hp - hp);
+			
+			Print(heart_hp);
+			
+			if (heart_hp <= 0)
+			{
+				state = SpamtonStates.PIPIS;
+			}
+			
+			hp = prev_hp;
+			cum_hp = prev_hp;
+		}	
+		
 		break;
 		
 	case SpamtonStates.PIPIS:
@@ -160,6 +175,7 @@ switch (state)
 			}
 		}
 		
+		
 		break;
 	
 	case UniversalStates.DEAD:
@@ -200,18 +216,11 @@ if (state == SpamtonStates.HEART || state == SpamtonStates.PIPIS)
 }
 
 change_attack_timer--;
-if (change_attack_timer <= 0 && state != UniversalStates.DEAD)
+if (change_attack_timer <= 0 && state == SpamtonStates.PIPIS)
 {
-	change_attack_timer = change_attack_timer_max;
-	if (state == SpamtonStates.HEART)
-	{
-		state = SpamtonStates.PIPIS;	
-	}
-	else if (state == SpamtonStates.PIPIS)
-	{
-		state = SpamtonStates.HEART;
-	}
-		
+	change_attack_timer = change_attack_timer_max * random_range(0.9, 1.5);
+	state = SpamtonStates.HEART;
+	heart_hp = heart_hp_max;
 }
 
 
@@ -222,7 +231,7 @@ if (hp <= 0 && state != UniversalStates.DEAD)
 	if (loot_profile_id != -1)	oRoomControl.gamestate = GameState.LOOT;
 	else						oRoomControl.gamestate = GameState.NORMAL;
 	GetStandartRoomProperties();
-	ShakeScreen(12, 120);;
+	ShakeScreen(12, 120);
 	state = UniversalStates.DEAD;
 	with (oSpamtonSmall)
 	{
@@ -233,6 +242,8 @@ if (hp <= 0 && state != UniversalStates.DEAD)
 		instance_destroy();	
 	}
 }
+
+prev_hp = hp;
 
 // Inherit the parent event
 event_inherited();

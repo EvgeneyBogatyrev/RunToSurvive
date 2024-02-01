@@ -22,6 +22,9 @@ switch (global.character)
 		case "Cyber":
 			character_position = 3;
 			break;
+		case "Buruch":
+			character_position = 4;
+			break;
 	}
 
 switch(global.display_width)

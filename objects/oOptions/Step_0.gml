@@ -92,8 +92,8 @@ if (need_to_center)
 	if (sound_position > 10)  sound_position = 10;
 	if (sound_position< 0)    sound_position = 0;
 	
-	if (character_position > 3)  character_position = 0;
-	if (character_position < 0)  character_position = 3;
+	if (character_position > 4)  character_position = 0;
+	if (character_position < 0)  character_position = 4;
 	
 	if (global.difficulty < 0)	global.difficulty = 3;
 	if (global.difficulty > 3)	global.difficulty = 0;
@@ -114,6 +114,9 @@ if (need_to_center)
 			break;
 		case 3:
 			global.character = "Cyber";
+			break;
+		case 4:
+			global.character = "Buruch";
 			break;
 	}
 

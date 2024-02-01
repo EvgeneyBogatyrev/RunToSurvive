@@ -19,7 +19,7 @@ maxhp = 50 + 5 * oDifficultyController.bosses_defeated * GetStats("Increase hp")
 
 if (global.DEBUG)
 {
-	maxhp = 1;	
+	maxhp = 100;	
 }
 
 cum_hp_max = maxhp;
@@ -72,5 +72,12 @@ miniboss_spawn_timer = miniboss_spawn_timer_max;
 
 first_pipis = true;
 
+
+heart_hp_max = 5;
+heart_hp = heart_hp_max;
+
+prev_hp = hp;
+
 //loot_profile_id = ROBOT_LOOT_INUMBER;
+
 
