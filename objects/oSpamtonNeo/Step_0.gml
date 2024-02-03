@@ -2,14 +2,14 @@
 // You can write your code in this editor
 
 //y = ystart + sin((get_timer() - phase) / 250000) * magnitude;
-;
 
 switch (state)
 {
 	case UniversalStates.INTRO:
-		x = lerp(x, oCamera.right - CAMERA_BOUNDS / 3, 0.1);
+		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.1);
 			
 		hp = maxhp;
+		cum_hp = maxhp;
 			
 		intro_timer--;
 		if (intro_timer == 0)
@@ -20,7 +20,7 @@ switch (state)
 		break;
 		
 	case SpamtonStates.HEART:
-		x = lerp(x, oCamera.right - CAMERA_BOUNDS / 3, 0.1);
+		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.1);
 		// Changing rows
 		change_row_timer--;
 		if (change_row_timer <= 0)
@@ -43,8 +43,8 @@ switch (state)
 		}
 
 
-		y = lerp(y, y_to_go, 0.1);
-		if (abs(y - y_to_go) < 3)
+		draw_y = lerp(draw_y, y_to_go, 0.1);
+		if (abs(draw_y - y_to_go) < 3)
 		{
 			scale = GetScale(row, true);
 		}
@@ -83,7 +83,7 @@ switch (state)
 				}
 				
 				
-				with (Create(x + lengthdir_x(heart_length, heart_angle), y + lengthdir_y(heart_length, heart_angle), oSpamtonShard, row))
+				with (Create(draw_x + lengthdir_x(heart_length, heart_angle), draw_y + lengthdir_y(heart_length, heart_angle), oSpamtonShard, row))
 				{
 					xspeed = lengthdir_x(10, _angle);					
 					yspeed = lengthdir_y(10, _angle);	
@@ -92,12 +92,19 @@ switch (state)
 			}
 		}
 		
-		
-		
 		break;
 }
 
-
+if (state != SpamtonStates.HEART)
+{
+	x = draw_x;
+	y = draw_y;	
+}
+else
+{
+	x = heart_x;
+	y = heart_y;
+}
 
 
 // Inherit the parent event

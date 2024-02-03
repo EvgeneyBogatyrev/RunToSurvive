@@ -11,7 +11,7 @@ function SummonSpamton(){
 	//Forbidden
 	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 1, 1, 0]);
 
-	with (Create(oCamera.right - CAMERA_BOUNDS, oGenerator.ground[0] - 150, oSpamtonNeo, 0)) {}
+	with (Create(oCamera.right - CAMERA_BOUNDS, oGenerator.ground[0] - 120, oSpamtonNeo, 0)) {}
 
 	audio_stop_sound(oAudioControl.bgm);
 	audio_play_sound(musBossIntro, 1, false);

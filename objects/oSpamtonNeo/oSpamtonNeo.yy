@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sSpamtonNEOHead",
-    "path": "sprites/sSpamtonNEOHead/sSpamtonNEOHead.yy",
+    "name": "sSpamtonNEOHeart",
+    "path": "sprites/sSpamtonNEOHeart/sSpamtonNEOHeart.yy",
   },
   "spriteMaskId": null,
   "visible": true,

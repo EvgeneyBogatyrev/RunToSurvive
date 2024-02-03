@@ -3,8 +3,8 @@ var _cos = cos(current_time / 350);
 
 //calculate positions and rotations
 //body
-var _body_x = x;
-var _body_y = y;
+var _body_x = draw_x;
+var _body_y = draw_y;
 var _body_rot = _sin * 5;
 
 //head
@@ -61,8 +61,9 @@ draw_sprite_ext(sSpamtonNEOWingLeft, 0, _arm_l_x, _arm_l_y, scale, scale, _arm_l
 
 if (state == SpamtonStates.HEART)
 {
-	var heart_x = _body_x + lengthdir_x(heart_length, heart_angle);	
-	var heart_y = _body_y + lengthdir_y(heart_length, heart_angle);
+	
+	heart_x = _body_x + lengthdir_x(heart_length, heart_angle);	
+	heart_y = _body_y + lengthdir_y(heart_length, heart_angle);
 	
 	var _tmp_x = _body_x;
 	var _tmp_y = _body_y;
@@ -77,6 +78,12 @@ if (state == SpamtonStates.HEART)
 	
 	draw_sprite_ext(sSpamtonNEOHeart, 0, heart_x, heart_y, scale, scale, 0, image_blend, image_alpha);
 
-	
+	if (hit_flash > 0)
+	{
+		hit_flash--;
+		shader_set(shdHit);
+		draw_sprite_ext(sSpamtonNEOHeart, 0, heart_x, heart_y, scale, scale, 0, image_blend, image_alpha);
+		shader_reset();
+	}
 
 }
