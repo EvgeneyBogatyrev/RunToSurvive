@@ -159,6 +159,7 @@
     {"name":"sSpamCity","order":5,"path":"sprites/sSpamCity/sSpamCity.yy",},
     {"name":"musOverworld","order":2,"path":"sounds/musOverworld/musOverworld.yy",},
     {"name":"musKyron","order":3,"path":"sounds/musKyron/musKyron.yy",},
+    {"name":"oSpamtonPipis","order":2,"path":"objects/oSpamtonPipis/oSpamtonPipis.yy",},
     {"name":"sElectricity","order":12,"path":"sprites/sElectricity/sElectricity.yy",},
     {"name":"musForestWeirdness","order":4,"path":"sounds/musForestWeirdness/musForestWeirdness.yy",},
     {"name":"musForestRush","order":5,"path":"sounds/musForestRush/musForestRush.yy",},

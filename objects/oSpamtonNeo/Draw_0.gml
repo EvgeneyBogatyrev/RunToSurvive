@@ -22,6 +22,9 @@ var _arm_l_rot = _cos * 10 * scale;
 //right arm
 var _arm_r_x = _body_x + GetRotatedXOffset(-15, 25, _body_rot) * scale;
 var _arm_r_y = _body_y - GetRotatedYOffset(-15, 25, _body_rot) * scale;
+arm_right_x = _arm_r_x;
+arm_right_y = _arm_r_y;
+
 var _arm_r_rot = -_cos * 10 * scale;
 
 //left leg
@@ -45,8 +48,15 @@ for (var _i = 0; _i < 6; _i++)
 }
 draw_set_color(c_white);
 
-draw_sprite_ext(sSpamtonNEOArmRight, 0, _arm_r_x, _arm_r_y, scale, scale, _arm_r_rot, image_blend, image_alpha);
 draw_sprite_ext(sSpamtonNEOWingRight, 0, _arm_r_x, _arm_r_y, scale, scale, _arm_r_rot, image_blend, image_alpha);
+if (state == SpamtonStates.PIPIS)
+{
+	draw_sprite_ext(sSpamtonNEOArmRight, 1, _arm_r_x, _arm_r_y, scale, scale, gun_rotation, image_blend, image_alpha);	
+}
+else
+{
+	draw_sprite_ext(sSpamtonNEOArmRight, 0, _arm_r_x, _arm_r_y, scale, scale, _arm_r_rot, image_blend, image_alpha);
+}
 
 draw_sprite_ext(sSpamtonNEOLeg, 0, _leg_r_x, _leg_r_y, scale, scale, _leg_r_rot, image_blend, image_alpha);
 draw_sprite_ext(sSpamtonNEOLeg, 0, _leg_l_x, _leg_l_y, scale, scale, _leg_l_rot, image_blend, image_alpha);

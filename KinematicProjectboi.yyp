@@ -251,6 +251,7 @@
     {"id":{"name":"sSpamCity","path":"sprites/sSpamCity/sSpamCity.yy",},},
     {"id":{"name":"musOverworld","path":"sounds/musOverworld/musOverworld.yy",},},
     {"id":{"name":"musKyron","path":"sounds/musKyron/musKyron.yy",},},
+    {"id":{"name":"oSpamtonPipis","path":"objects/oSpamtonPipis/oSpamtonPipis.yy",},},
     {"id":{"name":"sElectricity","path":"sprites/sElectricity/sElectricity.yy",},},
     {"id":{"name":"musForestWeirdness","path":"sounds/musForestWeirdness/musForestWeirdness.yy",},},
     {"id":{"name":"musForestRush","path":"sounds/musForestRush/musForestRush.yy",},},

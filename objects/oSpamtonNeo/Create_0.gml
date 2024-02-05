@@ -46,3 +46,19 @@ heart_x = x;
 heart_y = y;
 
 
+gun_rotation_min = 190;
+gun_rotation_max = 250;
+gun_rotation_add = 1;
+gun_rotation = gun_rotation_min;
+
+pipis_shot_timer_max = 1 * 60;
+pipis_shot_timer = pipis_shot_timer_max;
+
+arm_right_x = 0;
+arm_right_y = 0;
+arm_len = 83;
+
+change_attack_timer_max = 30 * 60;
+change_attack_timer = change_attack_timer_max;
+
+
