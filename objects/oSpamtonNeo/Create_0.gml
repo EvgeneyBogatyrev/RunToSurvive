@@ -15,7 +15,13 @@ event_inherited();
 
 state = UniversalStates.INTRO;
 
-maxhp = 100;
+maxhp = 50 + 2 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
+
+if (global.DEBUG)
+{
+	maxhp = 1;	
+}
+
 cum_hp_max = maxhp;
 cum_hp = cum_hp_max;
 
@@ -61,4 +67,6 @@ arm_len = 83;
 change_attack_timer_max = 30 * 60;
 change_attack_timer = change_attack_timer_max;
 
+
+loot_profile_id = ROBOT_LOOT_INUMBER;
 

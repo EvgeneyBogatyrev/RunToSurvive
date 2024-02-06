@@ -153,6 +153,17 @@ switch (state)
 		}
 		
 		break;
+	
+	case UniversalStates.DEAD:
+		draw_x += oRoomControl.roomspeed * scale;
+		if (draw_x < oCamera.left - CAMERA_BOUNDS)
+		{
+			instance_destroy();	
+		}
+		y_to_go = -100;
+		draw_y = lerp(draw_y, y_to_go, 0.01);
+		break;
+		
 }
 
 if (state != SpamtonStates.HEART)
@@ -167,7 +178,7 @@ else
 }
 
 change_attack_timer--;
-if (change_attack_timer <= 0)
+if (change_attack_timer <= 0 && state != UniversalStates.DEAD)
 {
 	change_attack_timer = change_attack_timer_max;
 	if (state == SpamtonStates.HEART)
@@ -181,6 +192,15 @@ if (change_attack_timer <= 0)
 		
 }
 
+
+if (hp <= 0 && state != UniversalStates.DEAD)
+{
+	global.score += 125;
+	oRoomControl.gamestate = GameState.LOOT;
+	GetStandartRoomProperties();
+	ShakeScreen(12, 120);;
+	state = UniversalStates.DEAD;
+}
 
 // Inherit the parent event
 event_inherited();
