@@ -87,7 +87,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"45f85bbc-641d-40c3-9924-1c25ed70922d","path":"sprites/sChargeHolo/sChargeHolo.yy",},},},"Disabled":false,"id":"119e8e18-03e1-4198-9545-6f2ea870a3f7","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 16,
     "yorigin": 16,

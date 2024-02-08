@@ -6,7 +6,7 @@ if (CheckCollisions(x, y, oBlock, row))
 	instance_destroy();	
 }
 
-ContactDamage(15, 0);
+ContactDamage(damage, 0);
 
 // Inherit the parent event
 event_inherited();

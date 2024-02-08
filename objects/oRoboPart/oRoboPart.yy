@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Player&Stuff",
-    "path": "folders/Objects/Player&Stuff.yy",
+    "name": "Spamton",
+    "path": "folders/Objects/Enemies/Spamton.yy",
   },
   "parentObjectId": null,
   "persistent": false,

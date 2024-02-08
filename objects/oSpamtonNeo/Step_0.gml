@@ -17,12 +17,14 @@ switch (state)
 		intro_timer--;
 		if (intro_timer == 0)
 		{
-			state = choose(SpamtonStates.PIPIS, SpamtonStates.HEART);	
+			state = SpamtonStates.PIPIS; //choose(SpamtonStates.PIPIS, SpamtonStates.HEART);	
 		}
 		
 		break;
 		
 	case SpamtonStates.HEART:
+		sprite_index = sSpamtonNEOHeart;
+		first_pipis = true;
 		ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 1, 1, 0]);
 		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.1);
 		// Changing rows
@@ -101,6 +103,7 @@ switch (state)
 		break;
 		
 	case SpamtonStates.PIPIS:
+	sprite_index = sDelverCasting;
 		ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 0, 1, 0]);
 		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.1);
 		
@@ -149,6 +152,11 @@ switch (state)
 			{
 				xspeed = lengthdir_x(10, other.gun_rotation - 90);				
 				yspeed = lengthdir_y(10, other.gun_rotation - 90);
+				if (other.first_pipis)
+				{
+					has_pointer = true;
+					other.first_pipis = false;
+				}
 			}
 		}
 		
@@ -175,6 +183,20 @@ else
 {
 	x = heart_x;
 	y = heart_y;
+}
+
+if (state != UniversalStates.INTRO && state != UniversalStates.DEAD)
+{
+	miniboss_spawn_timer--;	
+	if (miniboss_spawn_timer <= 0)
+	{
+		miniboss_spawn_timer = miniboss_spawn_timer_max;
+		var _row = choose(0, 1, 2);
+		with (Create(oCamera.right + CAMERA_BOUNDS, oGenerator.ground[_row], oSpamtonSmall, _row))
+		{
+			xspeed = -4;	
+		}
+	}
 }
 
 change_attack_timer--;

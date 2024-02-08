@@ -2,6 +2,11 @@
 if (state == ItemDropStates.SPIN)
 {
 	
+	if (!CheckCollisions(x, y, oBlock, other.row))
+	{
+		y -= 5 * grav;	
+	}
+	
 	var _player = noone;
 	
 	for (var i = 0; i < instance_number(oPlayer); ++i)

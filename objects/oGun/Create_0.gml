@@ -21,7 +21,7 @@ current_gun = Gun.STANDART_GUN;
 
 if (global.DEBUG)
 {
-	current_gun = Gun.ROCKET_LAUNCHER;
+	//current_gun = Gun.ROCKET_LAUNCHER;
 }
 
 last_gun = Gun.DRILL;

@@ -4,6 +4,9 @@
   "name": "oSpamtonPipis",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -12,8 +15,8 @@
     "path": "folders/Objects/Enemies/Spamton.yy",
   },
   "parentObjectId": {
-    "name": "oMinorItem",
-    "path": "objects/oMinorItem/oMinorItem.yy",
+    "name": "oEnemyParent",
+    "path": "objects/oEnemyParent/oEnemyParent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sSpamtonNEOHeart",
-    "path": "sprites/sSpamtonNEOHeart/sSpamtonNEOHeart.yy",
+    "name": "sPipis",
+    "path": "sprites/sPipis/sPipis.yy",
   },
   "spriteMaskId": null,
   "visible": true,

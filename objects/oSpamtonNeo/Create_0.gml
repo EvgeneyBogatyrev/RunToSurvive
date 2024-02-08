@@ -19,7 +19,7 @@ maxhp = 50 + 2 * oDifficultyController.bosses_defeated * GetStats("Increase hp")
 
 if (global.DEBUG)
 {
-	maxhp = 1;	
+	maxhp = 50;	
 }
 
 cum_hp_max = maxhp;
@@ -57,7 +57,7 @@ gun_rotation_max = 250;
 gun_rotation_add = 1;
 gun_rotation = gun_rotation_min;
 
-pipis_shot_timer_max = 1 * 60;
+pipis_shot_timer_max = 1.5 * 60;
 pipis_shot_timer = pipis_shot_timer_max;
 
 arm_right_x = 0;
@@ -67,6 +67,10 @@ arm_len = 83;
 change_attack_timer_max = 30 * 60;
 change_attack_timer = change_attack_timer_max;
 
+miniboss_spawn_timer_max = 2 * 60;
+miniboss_spawn_timer = miniboss_spawn_timer_max;
+
+first_pipis = true;
 
 loot_profile_id = ROBOT_LOOT_INUMBER;
 

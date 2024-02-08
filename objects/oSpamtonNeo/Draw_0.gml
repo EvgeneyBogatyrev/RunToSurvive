@@ -72,11 +72,11 @@ draw_sprite_ext(sSpamtonNEOWingLeft, 0, _arm_l_x, _arm_l_y, scale, scale, _arm_l
 if (state == SpamtonStates.HEART)
 {
 	
-	heart_x = _body_x + lengthdir_x(heart_length, heart_angle);	
-	heart_y = _body_y + lengthdir_y(heart_length, heart_angle);
+	heart_x = _body_x - 3 * scale + lengthdir_x(heart_length, heart_angle);	
+	heart_y = _body_y - 20 * scale + lengthdir_y(heart_length, heart_angle);
 	
-	var _tmp_x = _body_x;
-	var _tmp_y = _body_y;
+	var _tmp_x = _body_x - 3 * scale;
+	var _tmp_y = _body_y - 20 * scale;
 	
 	while (abs(_tmp_x - heart_x) > 5)
 	{

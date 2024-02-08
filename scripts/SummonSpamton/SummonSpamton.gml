@@ -3,7 +3,14 @@
 function SummonSpamton(){
 	//Obstacles
 	ds_map_replace(oRoomControl.room_properties, "BlockSprite", sSpamRails);	
-	ds_map_replace(oRoomControl.room_properties, "BlockBigSprite", sSpamRailsEmpty);
+	ds_map_replace(oRoomControl.room_properties, "BlockBigSprite", sSpamRailsBig);
+	ds_map_replace(oRoomControl.room_properties, "BlockEmptySprite", sSpamRailsEmpty);
+	
+	ds_map_replace(oRoomControl.room_properties, "BlockRoundedLeftSprite", sSpamRails);
+	ds_map_replace(oRoomControl.room_properties, "BlockRoundedRightSprite", sSpamRails);
+	ds_map_replace(oRoomControl.room_properties, "BlockRoundedLeftAndRightSprite", sSpamRails);
+
+
 
 	ds_map_replace(oRoomControl.room_properties, "BackgroundBack", "bSpamCity");
 	ds_map_replace(oRoomControl.room_properties, "BackgroundFront", "bGraveyardTrees");

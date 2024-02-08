@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sItemBackground",
-    "path": "sprites/sItemBackground/sItemBackground.yy",
+    "name": "sChargeHolo",
+    "path": "sprites/sChargeHolo/sChargeHolo.yy",
   },
   "spriteMaskId": null,
   "visible": true,
