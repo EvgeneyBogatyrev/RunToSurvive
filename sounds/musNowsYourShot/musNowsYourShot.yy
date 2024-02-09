@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "musNowsYourShot",
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "BackGroundMusic",
+    "path": "audiogroups/BackGroundMusic",
   },
   "bitDepth": 1,
   "bitRate": 128,
