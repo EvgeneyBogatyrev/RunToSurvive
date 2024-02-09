@@ -39,6 +39,9 @@ else
 			{
 				revival[revival_number] = other.player_ind;
 				revival_inventory[revival_number] = other.inventory;
+				revival_guns[revival_number] = other.players_gun;				
+				revival_powerups[revival_number] = other.players_powerup;
+
 				revival_number += 1;
 				//pocket[revival_number + 1] = ESSENCE_INUMBER;
 			}

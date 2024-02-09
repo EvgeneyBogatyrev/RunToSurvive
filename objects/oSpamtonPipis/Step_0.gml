@@ -50,6 +50,7 @@ if (CheckCollisions(x + xspeed, y, oBlock, row))
 
 if (hp <= 0)
 {
+	global.score += 3;
 	with (Create(x, y, oItemDrop, row))
 	{
 		depth -= 2;

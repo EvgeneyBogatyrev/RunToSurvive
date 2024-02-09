@@ -20,15 +20,13 @@ ContactDamage(damage, 0);
 
 if (hp <= 0)
 {
+	global.score += 5;
 	with (Create(x, y, oItemDrop, row))
 	{
 		depth -= 2;
 		image = choose(HEARTH_INUMBER);
-		while (!CheckCollisions(x, y + 1, oBlock, row))
-		{
-			y++;	
-		}
 	}
+	
 	instance_destroy();	
 }
 

@@ -17,7 +17,7 @@ switch (state)
 		intro_timer--;
 		if (intro_timer == 0)
 		{
-			state = SpamtonStates.PIPIS; //choose(SpamtonStates.PIPIS, SpamtonStates.HEART);	
+			state = choose(SpamtonStates.PIPIS, SpamtonStates.HEART);	
 		}
 		
 		break;
@@ -103,7 +103,7 @@ switch (state)
 		break;
 		
 	case SpamtonStates.PIPIS:
-	sprite_index = sDelverCasting;
+		sprite_index = sDelverCasting;
 		ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 0, 1, 0]);
 		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.1);
 		
@@ -185,7 +185,7 @@ else
 	y = heart_y;
 }
 
-if (state != UniversalStates.INTRO && state != UniversalStates.DEAD)
+if (state == SpamtonStates.HEART || state == SpamtonStates.PIPIS)
 {
 	miniboss_spawn_timer--;	
 	if (miniboss_spawn_timer <= 0)
@@ -222,6 +222,14 @@ if (hp <= 0 && state != UniversalStates.DEAD)
 	GetStandartRoomProperties();
 	ShakeScreen(12, 120);;
 	state = UniversalStates.DEAD;
+	with (oSpamtonSmall)
+	{
+		instance_destroy();	
+	}
+	with (oSpamtonPipis)
+	{
+		instance_destroy();	
+	}
 }
 
 // Inherit the parent event

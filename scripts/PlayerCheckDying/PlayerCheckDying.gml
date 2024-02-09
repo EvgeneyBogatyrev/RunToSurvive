@@ -12,6 +12,9 @@ function PlayerCheckDying() {
 					player_ind = other.player_index;
 					inventory = other.inventory;
 					times_resurrected = oGenerator.times_resurrected[? names[player_ind]];
+					players_gun = other.pocket[0];					
+					players_powerup = other.pocket[1];
+
 			}
 			
 			for (var j = 0; j < revival_number; ++j)
@@ -22,6 +25,8 @@ function PlayerCheckDying() {
 					player_ind = other.revival[j];
 					inventory = other.revival_inventory[j];
 					times_resurrected = oGenerator.times_resurrected[? names[player_ind]];
+					players_gun = other.revival_guns[j];					
+					players_powerup = other.revival_powerups[j];
 				}
 			}
 		}
@@ -79,6 +84,8 @@ function PlayerCheckDying() {
 					player_ind = other.player_index;
 					inventory = other.inventory;
 					times_resurrected = oGenerator.times_resurrected[? names[player_ind]];
+					players_gun = other.pocket[0];					
+					players_powerup = other.pocket[1];
 				}
 			}
 		//}
@@ -93,6 +100,8 @@ function PlayerCheckDying() {
 					player_ind = other.revival[j];
 					inventory = other.revival_inventory[j];
 					times_resurrected = oGenerator.times_resurrected[? names[player_ind]];
+					players_gun = other.revival_guns[j];					
+					players_powerup = other.revival_powerups[j];
 				}
 			}	
 		}

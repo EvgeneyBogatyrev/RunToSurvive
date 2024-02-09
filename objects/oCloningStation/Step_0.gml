@@ -32,6 +32,8 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 			{
 				revival[i] = revival[i + 1];	
 				revival_inventory[i] = revival_inventory[i + 1];	
+				revival_guns[i] = revival_guns[i + 1];					
+				revival_guns[i] = revival_powerups[i + 1];	
 				
 			}
 			//pocket[1 + revival_number] = 0;

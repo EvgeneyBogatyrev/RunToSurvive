@@ -14,7 +14,14 @@ draw_text(_w / 2, 64, "YOU" + (global.multiplayer ? " ALL " : " ") + "DIED");
 
 //Score result
 draw_set_halign(fa_left);
-draw_text(128, 128, "Score: " + string(global.score));
+var _difficulties = ["EASY", "NORMAL", "HARD", "EXTREME"];
+draw_text(128, 128, "Difficulty: " + _difficulties[global.difficulty]);
+var _add = "";
+if (is_highscore)
+{
+	_add = " - HIGHSCORE!";
+}
+draw_text(128, 168, "Score: " + string(global.score) + _add);
 
 //Time calculation
 var _full_time_in_seconds = floor(time_of_the_run / 1000000);
@@ -29,20 +36,28 @@ _hrs_str = string_length(_hrs_str) > 1 ? _hrs_str : "0" + _hrs_str;
 
 //Time result
 var _s = _hrs_str + ":" + string_replace_all(string_format(_min, 2, 0) + ":" + string_format(_sec, 2, 0), " ", "0");   
-draw_text(128, 168, "Time: " + _s);
+draw_text(128, 208, "Time: " + _s);
 
 
 //Player and inventory printout
 
-draw_text(128, 256, "Your posessions:")
+draw_text(128, 296, "Your posessions:")
 
-for (var _i = 0; _i < instance_number(oEssence); _i++)
+var _essence_number = instance_number(oEssence);
+var _draw_y = 296 + 64;
+
+for (var _i = 0; _i < _essence_number; _i++)
 {
 	var _ess = instance_find(oEssence, _i);
 	var _player_name = names[_ess.player_ind];
 	var _inventory = _ess.inventory;
+	var _gun = _ess.players_gun;	
+	var _powerup = _ess.players_powerup;
+	
+	_draw_y += 96 * _i;
+
 	var _player_icon = GetSpritesFromName(_player_name).icon;
-	var _draw_y = 256 + 64 + 96 * (_i);
+	
 	draw_sprite(_player_icon, 0, 128, _draw_y - 30);
 	
 	var _items = ds_map_create();
@@ -65,6 +80,27 @@ for (var _i = 0; _i < instance_number(oEssence); _i++)
 		
 		draw_sprite_ext(sPassiveItems, _id, _draw_x, _draw_y, 0.5, 0.5, 0, c_white, 1);
 		draw_text(_draw_x + 25, _draw_y + 25, string(_amount));
+	}
+	
+	var _draw_x = 128 + 32 + 64 * (ds_map_size(_items) + 1);
+	// Draw gun and powerups
+	if (_essence_number <= 2)
+	{
+		_draw_y += 64;	
+		_draw_x = 128;
+		
+		if (_powerup == 0)
+		{
+			_draw_x += 32;	
+		}
+	}
+	
+	
+	draw_sprite_ext(sItems, _gun, _draw_x, _draw_y, 0.5, 0.5, 0, c_white, 1);
+	
+	if (_powerup > 0)
+	{
+		draw_sprite_ext(sItems, _powerup, _draw_x + 64, _draw_y, 0.5, 0.5, 0, c_white, 1);
 	}
 	
 	ds_map_destroy(_items);

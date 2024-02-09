@@ -13,3 +13,5 @@ for (var i = 0; i <= 4; ++i)
 	allowed_array[i] = true;
 	allowed_hor_array[i] = true;
 }
+
+is_highscore = global.score > global.highscore;

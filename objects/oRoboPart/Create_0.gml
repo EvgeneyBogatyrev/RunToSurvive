@@ -11,3 +11,5 @@ dir = 1;
 active = true;
 
 player_ind = noone;
+
+rotation_speed = irandom_range(-3, 3);

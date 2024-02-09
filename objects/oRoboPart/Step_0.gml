@@ -2,6 +2,7 @@
 image_blend = make_color_hsv(0, 0, abs(scale) * (255 / SCALE_TWO));
 image_xscale = sign(image_xscale) * scale;
 image_yscale = scale;
+if (!grounded) image_angle += rotation_speed;
 
 if (CheckCollisions(x + xspeed * scale, y, oBlock, row))
 {
@@ -34,18 +35,9 @@ y += yspeed;
 
 if (abs(xspeed) < 0.1 && grounded)
 {
-	if (image_index != 0)  image_alpha -= 0.01;
+	image_alpha -= 0.01;
 }
 
-if (player_ind != noone)
-{
-	if (global.multiplayer)  with (Create(x, y, oEssence, row))
-	{
-		depth -= 2;
-		player_ind = other.player_ind;
-	}
-	player_ind = noone;
-}
 
 x += oRoomControl.roomspeed * abs(scale);
 

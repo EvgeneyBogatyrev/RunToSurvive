@@ -19,6 +19,6 @@ Obstacle,1,10,20,25
 Stump,10,20,30,40
 Archer,5,15,20,30
 Billy,15,25,35,45
-SpamtonShard,1,5,10,15
-SpamtonPipis,5,10,15,20
-SpamtonClone,5,10,15,20
+SpamtonShard,5,10,15,25
+SpamtonPipis,5,10,15,25
+SpamtonClone,10,20,30,50
