@@ -21,6 +21,7 @@ else
 {
 	if (!given)
 	{
+		oDifficultyController.minions_defeated += 1;
 		global.score += 5;
 		given = true;
 		with (Create(x, y, oItemDrop, row))

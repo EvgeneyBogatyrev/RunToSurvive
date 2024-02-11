@@ -1,5 +1,6 @@
 minibosses_defeated = 0;
 bosses_defeated = 0;
+minions_defeated = 0;
 
 
 enum Difficulty 

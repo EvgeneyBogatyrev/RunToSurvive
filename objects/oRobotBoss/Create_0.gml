@@ -13,7 +13,7 @@ state = UniversalStates.INTRO;
 
 air_hp = 10 + 1 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
 robot_hp = 20 + 2 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
-ship_hp = 20 + 1 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
+ship_hp = 20 + 2 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
 
 if (global.DEBUG)
 {

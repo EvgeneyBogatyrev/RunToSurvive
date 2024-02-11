@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 1 + floor(oDifficultyController.bosses_defeated * GetStats("Increase hp") / 2);
+hp = 1 + floor(oDifficultyController.minions_defeated * GetStats("Increase hp") / 5);
 
 draw_alpha = 1;
 

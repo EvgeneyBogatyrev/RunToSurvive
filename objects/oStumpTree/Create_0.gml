@@ -12,7 +12,7 @@ enum StumpTreeStates
 };
 
 
-max_hp = 60 + 2 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
+max_hp = 45 + 5 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
 
 if (global.DEBUG)
 {

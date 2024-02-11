@@ -23,7 +23,7 @@ mode_select_menu.AddField("SINGLEPLAYER", function()
 {
 	number_of_players = 1;
 	names[0] = global.character;
-	input_type[0] = InputTypes.KEYBOARD; // FIX!
+	input_type[0] = InputTypes.ANY; // FIX!
 	room_goto(rPlay);
 });
 mode_select_menu.AddField("MULTIPLAYER", function()

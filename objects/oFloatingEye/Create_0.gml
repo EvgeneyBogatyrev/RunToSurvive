@@ -7,7 +7,7 @@ enum EyeStates
 	CHASE
 }
 
-hp = 2;
+hp = 1 + floor(oDifficultyController.minions_defeated * GetStats("Increase hp") / 5);
 state = EyeStates.SEEK;
 dir = 1;
 

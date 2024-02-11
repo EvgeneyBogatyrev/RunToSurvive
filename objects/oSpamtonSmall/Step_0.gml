@@ -20,6 +20,7 @@ ContactDamage(damage, 0);
 
 if (hp <= 0)
 {
+	oDifficultyController.minions_defeated += 1;
 	global.score += 5;
 	with (Create(x, y, oItemDrop, row))
 	{

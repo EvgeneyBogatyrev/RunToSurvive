@@ -104,7 +104,6 @@ function Input(argument0) {
 			break;
 
 		case InputTypes.ANY: 
-		
 			var _array = [];
 		
 			for (var i = 0; i < 5; ++i)

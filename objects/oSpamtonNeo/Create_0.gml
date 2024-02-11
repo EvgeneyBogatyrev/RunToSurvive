@@ -15,11 +15,11 @@ event_inherited();
 
 state = UniversalStates.INTRO;
 
-maxhp = 50 + 2 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
+maxhp = 50 + 5 * oDifficultyController.bosses_defeated * GetStats("Increase hp");
 
 if (global.DEBUG)
 {
-	maxhp = 50;	
+	maxhp = 1;	
 }
 
 cum_hp_max = maxhp;
@@ -72,5 +72,5 @@ miniboss_spawn_timer = miniboss_spawn_timer_max;
 
 first_pipis = true;
 
-loot_profile_id = ROBOT_LOOT_INUMBER;
+//loot_profile_id = ROBOT_LOOT_INUMBER;
 

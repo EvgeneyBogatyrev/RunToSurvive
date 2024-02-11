@@ -218,7 +218,9 @@ if (change_attack_timer <= 0 && state != UniversalStates.DEAD)
 if (hp <= 0 && state != UniversalStates.DEAD)
 {
 	global.score += 125;
-	oRoomControl.gamestate = GameState.LOOT;
+	
+	if (loot_profile_id != -1)	oRoomControl.gamestate = GameState.LOOT;
+	else						oRoomControl.gamestate = GameState.NORMAL;
 	GetStandartRoomProperties();
 	ShakeScreen(12, 120);;
 	state = UniversalStates.DEAD;

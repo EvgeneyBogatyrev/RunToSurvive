@@ -5,6 +5,7 @@ charged_speed = max(4 - oRoomControl.roomspeed, 6);
 
 if (hp <= 0 && state != UniversalStates.DEAD)
 {
+	oDifficultyController.minions_defeated += 1;
 	global.score += 10;
 	state = UniversalStates.DEAD;
 	sprite_index = sFloatingEyeDie;
