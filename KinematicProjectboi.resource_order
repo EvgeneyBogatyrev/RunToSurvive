@@ -11,12 +11,12 @@
     {"name":"Stump","order":4,"path":"folders/Sprites/Enemies/Stump.yy",},
     {"name":"Tree","order":5,"path":"folders/Sprites/Enemies/Tree.yy",},
     {"name":"Orbitals","order":10,"path":"folders/Sprites/Orbitals.yy",},
+    {"name":"Buruch","order":13,"path":"folders/Sprites/Players/Buruch.yy",},
     {"name":"CyberKyron","order":5,"path":"folders/Sprites/Players/CyberKyron.yy",},
     {"name":"LongHair","order":1,"path":"folders/Sprites/Players/LongHair.yy",},
     {"name":"RoboKyron","order":2,"path":"folders/Sprites/Players/RoboKyron.yy",},
     {"name":"SteamPunk","order":3,"path":"folders/Sprites/Players/SteamPunk.yy",},
     {"name":"Dark","order":1,"path":"folders/Sprites/Textures/Dark.yy",},
-    {"name":"Buruch","order":13,"path":"folders/Sprites/Players/Buruch.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sTree","order":1,"path":"sprites/sTree/sTree.yy",},

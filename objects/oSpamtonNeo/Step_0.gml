@@ -175,6 +175,14 @@ switch (state)
 			}
 		}
 		
+		change_attack_timer--;
+		if (change_attack_timer <= 0 && state == SpamtonStates.PIPIS)
+		{
+			change_attack_timer = change_attack_timer_max * random_range(0.9, 1.5);
+			state = SpamtonStates.HEART;
+			heart_hp = heart_hp_max;
+		}
+		
 		
 		break;
 	
@@ -213,14 +221,6 @@ if (state == SpamtonStates.HEART || state == SpamtonStates.PIPIS)
 			xspeed = -4;	
 		}
 	}
-}
-
-change_attack_timer--;
-if (change_attack_timer <= 0 && state == SpamtonStates.PIPIS)
-{
-	change_attack_timer = change_attack_timer_max * random_range(0.9, 1.5);
-	state = SpamtonStates.HEART;
-	heart_hp = heart_hp_max;
 }
 
 

@@ -65,6 +65,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Obstacles","folderPath":"folders/Sprites/Obstacles.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Orbitals","folderPath":"folders/Sprites/Orbitals.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Players","folderPath":"folders/Sprites/Players.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Buruch","folderPath":"folders/Sprites/Players/Buruch.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"CyberKyron","folderPath":"folders/Sprites/Players/CyberKyron.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Kyron","folderPath":"folders/Sprites/Players/Kyron.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"LongHair","folderPath":"folders/Sprites/Players/LongHair.yy",},
@@ -73,7 +74,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Prototypes","folderPath":"folders/Sprites/Prototypes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Textures","folderPath":"folders/Sprites/Textures.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Dark","folderPath":"folders/Sprites/Textures/Dark.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Buruch","folderPath":"folders/Sprites/Players/Buruch.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"RunToSurvive_difficulty.csv","CopyToMask":-1,"filePath":"datafiles",},
@@ -81,7 +81,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.2.108",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"sStone","path":"sprites/sStone/sStone.yy",},},
