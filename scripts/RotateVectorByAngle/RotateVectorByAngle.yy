@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "RotateVectorByAngle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Calculative",
-    "path": "folders/Scripts/Calculative.yy",
+  "$GMScript":"",
+  "%Name":"RotateVectorByAngle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"RotateVectorByAngle",
+  "parent":{
+    "name":"Calculative",
+    "path":"folders/Scripts/Calculative.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

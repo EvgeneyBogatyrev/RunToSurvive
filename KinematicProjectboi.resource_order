@@ -1,5 +1,5 @@
 {
-  "FolderOrderSettings": [
+  "FolderOrderSettings":[
     {"name":"Spamton","order":12,"path":"folders/Objects/Enemies/Spamton.yy",},
     {"name":"Rework","order":6,"path":"folders/Objects/Menu/Rework.yy",},
     {"name":"Menu","order":3,"path":"folders/Scripts/Menu.yy",},
@@ -18,7 +18,7 @@
     {"name":"SteamPunk","order":3,"path":"folders/Sprites/Players/SteamPunk.yy",},
     {"name":"Dark","order":1,"path":"folders/Sprites/Textures/Dark.yy",},
   ],
-  "ResourceOrderSettings": [
+  "ResourceOrderSettings":[
     {"name":"sTree","order":1,"path":"sprites/sTree/sTree.yy",},
     {"name":"sChargeStation","order":2,"path":"sprites/sChargeStation/sChargeStation.yy",},
     {"name":"sChest","order":3,"path":"sprites/sChest/sChest.yy",},

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "StopBattle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Actions",
-    "path": "folders/Scripts/Actions.yy",
+  "$GMScript":"",
+  "%Name":"StopBattle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"StopBattle",
+  "parent":{
+    "name":"Actions",
+    "path":"folders/Scripts/Actions.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

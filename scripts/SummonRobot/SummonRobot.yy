@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SummonRobot",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Summons",
-    "path": "folders/Scripts/Summons.yy",
+  "$GMScript":"",
+  "%Name":"SummonRobot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SummonRobot",
+  "parent":{
+    "name":"Summons",
+    "path":"folders/Scripts/Summons.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

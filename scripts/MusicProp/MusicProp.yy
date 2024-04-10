@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "MusicProp",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Functional",
-    "path": "folders/Scripts/Functional.yy",
+  "$GMScript":"",
+  "%Name":"MusicProp",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MusicProp",
+  "parent":{
+    "name":"Functional",
+    "path":"folders/Scripts/Functional.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

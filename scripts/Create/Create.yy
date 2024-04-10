@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Create",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Object_oriented",
-    "path": "folders/Scripts/Object_oriented.yy",
+  "$GMScript":"",
+  "%Name":"Create",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Create",
+  "parent":{
+    "name":"Object_oriented",
+    "path":"folders/Scripts/Object_oriented.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

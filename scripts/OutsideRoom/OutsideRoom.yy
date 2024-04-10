@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "OutsideRoom",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Calculative",
-    "path": "folders/Scripts/Calculative.yy",
+  "$GMScript":"",
+  "%Name":"OutsideRoom",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"OutsideRoom",
+  "parent":{
+    "name":"Calculative",
+    "path":"folders/Scripts/Calculative.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

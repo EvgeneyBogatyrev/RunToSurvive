@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SummonChasingStump",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Summons",
-    "path": "folders/Scripts/Summons.yy",
+  "$GMScript":"",
+  "%Name":"SummonChasingStump",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SummonChasingStump",
+  "parent":{
+    "name":"Summons",
+    "path":"folders/Scripts/Summons.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

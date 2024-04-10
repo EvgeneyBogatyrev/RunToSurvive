@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "DrawTextOutline",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "GUI",
-    "path": "folders/Scripts/GUI.yy",
+  "$GMScript":"",
+  "%Name":"DrawTextOutline",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DrawTextOutline",
+  "parent":{
+    "name":"GUI",
+    "path":"folders/Scripts/GUI.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

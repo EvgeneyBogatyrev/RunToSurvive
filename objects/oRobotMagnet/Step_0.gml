@@ -47,7 +47,6 @@ switch (state)
 		}
 		
 		_desired_angle = point_direction(x, y, player.x, player.y);
-		Print(abs(_desired_angle - image_angle))
 		if (abs(_desired_angle - image_angle) < angle_threshold)
 		{
 			// Take the gun

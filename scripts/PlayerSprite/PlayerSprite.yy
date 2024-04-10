@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "PlayerSprite",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Player",
-    "path": "folders/Scripts/Actions/Player.yy",
+  "$GMScript":"",
+  "%Name":"PlayerSprite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerSprite",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Actions/Player.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

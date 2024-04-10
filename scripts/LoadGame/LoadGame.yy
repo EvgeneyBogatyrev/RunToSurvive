@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "LoadGame",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Save&Load",
-    "path": "folders/Scripts/Save&Load.yy",
+  "$GMScript":"",
+  "%Name":"LoadGame",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LoadGame",
+  "parent":{
+    "name":"Save&Load",
+    "path":"folders/Scripts/Save&Load.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

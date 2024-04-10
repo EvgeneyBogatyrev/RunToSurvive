@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AimProjectileChooseTarget",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "AI",
-    "path": "folders/Scripts/AI.yy",
+  "$GMScript":"",
+  "%Name":"AimProjectileChooseTarget",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AimProjectileChooseTarget",
+  "parent":{
+    "name":"AI",
+    "path":"folders/Scripts/AI.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

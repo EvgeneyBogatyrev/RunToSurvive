@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SummonDelver",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Summons",
-    "path": "folders/Scripts/Summons.yy",
+  "$GMScript":"",
+  "%Name":"SummonDelver",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SummonDelver",
+  "parent":{
+    "name":"Summons",
+    "path":"folders/Scripts/Summons.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

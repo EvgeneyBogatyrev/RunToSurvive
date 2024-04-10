@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "GetGunFromImage",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Getters",
-    "path": "folders/Scripts/Getters.yy",
+  "$GMScript":"",
+  "%Name":"GetGunFromImage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GetGunFromImage",
+  "parent":{
+    "name":"Getters",
+    "path":"folders/Scripts/Getters.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

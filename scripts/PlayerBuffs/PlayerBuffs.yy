@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "PlayerBuffs",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Player",
-    "path": "folders/Scripts/Actions/Player.yy",
+  "$GMScript":"",
+  "%Name":"PlayerBuffs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerBuffs",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Actions/Player.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

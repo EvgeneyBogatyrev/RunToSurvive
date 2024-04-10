@@ -230,6 +230,16 @@ switch (state)
 				}
 			}
 			
+			with (oRobotMagnet)
+			{
+				instance_destroy();
+			}
+			
+			with (oRobotWeaponReplica)
+			{
+				instance_destroy();
+			}
+			
 			var _number_of_players = instance_number(oPlayer);
 			for (var _i = 0; _i < _number_of_players; ++_i)
 			{

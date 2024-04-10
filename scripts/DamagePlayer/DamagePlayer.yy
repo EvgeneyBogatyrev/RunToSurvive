@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "DamagePlayer",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Player",
-    "path": "folders/Scripts/Actions/Player.yy",
+  "$GMScript":"",
+  "%Name":"DamagePlayer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DamagePlayer",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Actions/Player.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

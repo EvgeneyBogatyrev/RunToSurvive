@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CreateOrbital",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Player",
-    "path": "folders/Scripts/Actions/Player.yy",
+  "$GMScript":"",
+  "%Name":"CreateOrbital",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateOrbital",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Actions/Player.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

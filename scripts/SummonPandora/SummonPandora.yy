@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SummonPandora",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Summons",
-    "path": "folders/Scripts/Summons.yy",
+  "$GMScript":"",
+  "%Name":"SummonPandora",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SummonPandora",
+  "parent":{
+    "name":"Summons",
+    "path":"folders/Scripts/Summons.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

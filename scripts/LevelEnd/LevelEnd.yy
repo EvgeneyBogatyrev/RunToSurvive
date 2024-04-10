@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "LevelEnd",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "GUI",
-    "path": "folders/Scripts/GUI.yy",
+  "$GMScript":"",
+  "%Name":"LevelEnd",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LevelEnd",
+  "parent":{
+    "name":"GUI",
+    "path":"folders/Scripts/GUI.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
