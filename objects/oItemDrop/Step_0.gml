@@ -34,10 +34,13 @@ if (state == ItemDropStates.SPIN)
 			case HEARTH_INUMBER:
 				
 				var _healing_amount = irandom_range(5, 15);
-				_player.hp += _healing_amount;
 				if (_player.pocket[1] == DOUBLEHEART_INUMBER)
 				{
-					_player.hp += 5;	
+					_player.hp += _healing_amount * 2;	
+				}
+				else
+				{
+					_player.hp += _healing_amount;	
 				}
 				
 				break;

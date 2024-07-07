@@ -59,6 +59,8 @@ _jump = false;
 _shoot = false;
 _show_inv = false;
 
+force_down = 0;
+
 gun = Create(x, y, oGun, 0);
 with(gun)	host = other.id;
 	
@@ -73,8 +75,12 @@ revival_number = 0;
 
 pocket = [0, 0, 0, 0, 0];
 pocket[0] = STDGUN_INUMBER;
-//pocket[1] = DOUBLEHEART_INUMBER;
+if (global.DEBUG)
+{
+	pocket[1] = DOUBLEHEART_INUMBER;
+}
 
+damageBoost = 0;
 
 item_picked_up = false;
 inventory = ds_list_create();

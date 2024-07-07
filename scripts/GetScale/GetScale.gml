@@ -20,7 +20,8 @@ function GetScale() {
 		case 2:
 			return SCALE_TWO;
 		default:
-			Raise("Cannot find scale for the row number " + string(_row) + "\n");
+			Print("Cannot find scale for the row number " + string(_row) + "\n");
+			return SCALE_ZERO;
 			break;
 	}
 

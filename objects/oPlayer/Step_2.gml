@@ -1,7 +1,7 @@
 /// @description
 event_inherited();
 
-if (x > oCamera.right)
+if (x > oCamera.right && state != PlayerStates.TRAPPED)
 {
 	x = oCamera.right;	
 }

@@ -1,16 +1,6 @@
 event_inherited();
 
-enum VenusStates
-{
-	GROWING,
-	IDLE,
-	CATCH,
-}
+shock_counter_max = 3 * 60;
+shock_counter = shock_counter_max;
 
-state = VenusStates.IDLE;
-
-max_hp = 3;
-hp = max_hp;
-
-image_index = 0;
-image_speed = 0;
+need_to_tumble = false;

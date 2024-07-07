@@ -85,6 +85,11 @@ if (place_meeting(x + xspeed, y + yspeed, oDelver) && oDelver.state == DelverSta
 	instance_destroy();	
 }
 
+if (instance_exists(host) && host.object_index != oPlayer)
+{
+	ContactDamage(damage, 0);	
+}
+
 if (trail != undefined)
 {
 	// Particles

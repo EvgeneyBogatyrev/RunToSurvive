@@ -9,6 +9,7 @@ if (abs(shown_hp - cum_hp) >= 1)
 
 if (state == UniversalStates.DEAD && !loot_dropped)
 {
+	Print(loot_profile_id);
 	if (loot_profile_id != -1)
 	{
 		with (Create(x, y - 50, oBossLoot, row))

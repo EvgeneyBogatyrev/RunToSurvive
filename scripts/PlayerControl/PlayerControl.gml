@@ -17,9 +17,6 @@ function PlayerControl() {
 	//_left_gun = _keys[7];
 	//_right_gun = _keys[8];
 
-	if (_shoot && instance_exists(gun))       gun.shoot = true;
-	if (_shoot_hold && instance_exists(gun))  gun.shoot_hold = true;
-
 	//if (_left_gun && instance_exists(gun) && pocket[0] != 0)
 	//{
 	//	var _next_gun = GetGunFromImage(other.pocket[0]);

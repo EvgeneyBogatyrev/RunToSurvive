@@ -20,6 +20,20 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0)
 	image_speed = 1;
 	image_index = 1;
 	instance_destroy(holo);
+	holo = noone;
+}
+
+if (CheckCollisions(x, y, oGunMan, row) && image_index == 0)
+{
+	image_speed = 1;
+	image_index = 1;
+	instance_destroy(holo);
+	holo = noone;
+	
+	with (oGunMan)
+	{
+		bullets += 10;	
+	}
 }
 
 if (AnimationEnd())

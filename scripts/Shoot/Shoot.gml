@@ -33,7 +33,14 @@ function Shoot(_projectile, _sprite, _damage, _speed, _recall, _direction=undefi
 
 		depth = other.depth - 1;
 		dir = host.dir;
-		hit_events = GetItemActions(host, "on_hit")
+		if (host.object_index == oPlayer) 
+		{
+			hit_events = GetItemActions(host, "on_hit");
+		}
+		else
+		{
+			hit_events = [];	
+		}
 	
 		if (object_index == oAimProjectile)
 		{

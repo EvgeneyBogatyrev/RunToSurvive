@@ -15,7 +15,9 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 			var _respawned_player = SpawnPlayerCharacter(revival[0], _player_name, other.x, other.y - 15 * other.scale, other.row);
 			
 			_respawned_player.hp = _respawned_player.maxhp / 2;// - 20 * _times_resurrected;			
-			_respawned_player.prev_hp = _respawned_player.hp;	
+			_respawned_player.prev_hp = _respawned_player.hp;
+			_respawned_player.damaged = true;	
+			_respawned_player.damage_timer = 5*30;
 			
 			//ds_map_(oGenerator.times_resurrected, _player_name, _times_resurrected + 1);
 

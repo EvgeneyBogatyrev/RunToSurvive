@@ -194,6 +194,9 @@ switch (state)
 		}
 		y_to_go = -100;
 		draw_y = lerp(draw_y, y_to_go, 0.01);
+		oRoomControl.gamestate = GameState.LOOT;
+		GetStandartRoomProperties();
+		instance_destroy();	
 		break;
 		
 }
@@ -228,9 +231,10 @@ if (hp <= 0 && state != UniversalStates.DEAD)
 {
 	global.score += 125;
 	
-	if (loot_profile_id != -1)	oRoomControl.gamestate = GameState.LOOT;
-	else						oRoomControl.gamestate = GameState.NORMAL;
-	GetStandartRoomProperties();
+	oRoomControl.gamestate = GameState.LOOT;
+	//if (loot_profile_id != -1)	oRoomControl.gamestate = GameState.LOOT;
+	//else						oRoomControl.gamestate = GameState.NORMAL;
+	//GetStandartRoomProperties();
 	ShakeScreen(12, 120);
 	state = UniversalStates.DEAD;
 	with (oSpamtonSmall)

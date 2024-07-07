@@ -6,6 +6,6 @@ image_speed = 0;
 
 resurected_player = noone;
 
-im_speed = 2.5;
+im_speed = 5;
 
 

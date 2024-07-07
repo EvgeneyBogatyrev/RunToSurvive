@@ -10,6 +10,20 @@ switch (state)
 {
 	case PlayerStates.NORMAL:
 		PlayerControl();
+		if (force_down > 0)
+		{
+			if (row == 0)	
+			{
+				_down = true;
+			}
+			_left = false;
+			_right = false;
+			_up = false;
+			force_down--;
+		}
+		if (_shoot && instance_exists(gun))       gun.shoot = true;
+		if (_shoot_hold && instance_exists(gun))  gun.shoot_hold = true;
+		
 		break;
 		
 	case PlayerStates.TRAPPED:
@@ -20,6 +34,11 @@ switch (state)
 		_down =  false;
 		_shoot =  false;
 		_shoot_hold = false;
+		_jump = false;
+		x = oCamera.right + 300;
+		y = -10;
+		yspeed = 0;
+		row_der = 0;
 		break;
 	
 	case UniversalStates.DEAD:
@@ -143,7 +162,7 @@ if (global.DEBUG)
 {
 	if (keyboard_check_pressed(ord("G")))
 	{
-		GiveItemToPlayer(id, passive_items_profiles[irandom(3)]);
+		GiveItemToPlayer(id, passive_items_profiles[irandom_range(0, array_length(passive_items_profiles) - 1) ]);
 		//CreateOrbital(id, 3, 32, oSuspiciousEye);
 	}
 

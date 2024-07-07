@@ -69,7 +69,7 @@ switch(current_gun)
 		if (shoot && !recall && host.bullets >= cost)
 		{
 			ShakeScreen(3, 5);
-			Shoot(oProjectile, sBulletBeam, _damage, 40, 8);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
 		}
 		shoot = false;
 		shoot_hold = false;
@@ -173,7 +173,7 @@ switch(current_gun)
 		if (shoot && !recall && host.bullets >= cost && shotgun_times == 0)
 		{
 			ShakeScreen(2, 4);
-			Shoot(oProjectile, sBulletBeam, _damage, 40, 8);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
 			shotgun_timer = shotgun_timer_max;
 			shotgun_times = 3;
 		}
@@ -187,7 +187,7 @@ switch(current_gun)
 		{
 			shotgun_times--;
 			host.bullets += cost;
-			Shoot(oProjectile, sBulletBeam, _damage, 40, 8);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
 			shotgun_timer = shotgun_timer_max;
 		}
 		
@@ -220,7 +220,7 @@ switch(current_gun)
 			var _damage = cost * 2;
 				
 			ShakeScreen(3, 5);
-			Shoot(oProjectile, sBulletBeam, _damage, 40, 8);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
 				
 			temp_bullets = 0;
 		}
@@ -239,7 +239,7 @@ switch(current_gun)
 		if (shoot && !recall && host.bullets >= cost)
 		{
 			ShakeScreen(7, 5);
-			Shoot(oAimProjectile, sRocket, _damage, 20, 8);
+			Shoot(oAimProjectile, sRocket, _damage + host.damageBoost, 20, 8);
 			launcher_timer = launcher_timer_max;
 			launcher_times = 4;
 		}
@@ -254,7 +254,7 @@ switch(current_gun)
 			launcher_times--;
 			host.bullets += cost;
 			ShakeScreen(7, 5);
-			Shoot(oAimProjectile, sRocket, _damage, 20, 8);
+			Shoot(oAimProjectile, sRocket, _damage + host.damageBoost, 20, 8);
 			launcher_timer = launcher_timer_max;
 		}
 		
@@ -271,10 +271,20 @@ switch(current_gun)
 		if (shoot && !recall && host.bullets >= cost)
 		{
 			ShakeScreen(3, 5);
-			Shoot(oProjectile, sBulletBeam, _damage, 40, 8);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
 			if (instance_exists(host))
 			{
-				host.hp += 1;	
+				var _heal_amount = 1;
+				
+				if (host.object_index == oPlayer && host.pocket[1] == DOUBLEHEART_INUMBER)
+				{
+					_heal_amount *= 2;	
+				}
+				host.hp += _heal_amount;
+				if object_is_ancestor(host.object_index, oBossParent)
+				{
+					host.cum_hp += _heal_amount;	
+				}
 			}
 			
 		}
@@ -295,7 +305,7 @@ switch(current_gun)
 			var _offset = 30;
 			for (var _angle = 45; _angle >= -45; _angle -= _offset)
 			{
-				Shoot(oProjectile, sPellet, _damage, 30, 8, _angle, _angle == 45 ? true: false);
+				Shoot(oProjectile, sPellet, _damage + host.damageBoost, 30, 8, _angle, _angle == 45 ? true: false);
 			}
 			var _spd = 5;
 			with (Create(x, y, oShotgunShell, row))
@@ -316,7 +326,7 @@ switch(current_gun)
 		sprite_index = GetGunSprite(Gun.ELECTRIC_GUN);
 		if (shoot_hold)
 		{
-			host.bullets -= 0.05;	
+			host.bullets -= 0.025;	
 			if (electricity_obj == undefined)
 			{
 				electricity_obj = Create(x, y, oElectricity, row);

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"SummonGunMan",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SummonGunMan",
+  "parent":{
+    "name":"Summons",
+    "path":"folders/Scripts/Summons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

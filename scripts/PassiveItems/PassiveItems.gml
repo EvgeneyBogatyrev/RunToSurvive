@@ -78,9 +78,43 @@ passive_items_profiles =
 			var _chance = random(1);
 			if (_chance < 0.1)
 			{
-				_host.hp += 3;
+				var _heal_amount = 3;
+				if (_host.pocket[1] == DOUBLEHEART_INUMBER)
+				{
+					_heal_amount *= 2;	
+				}
+				_host.hp += _heal_amount;
 			}
 		}
-	}
+	},
+	
+	{
+		name : "Spamton glasses",
+		icon_index : SPAMTON_LOOT_INUMBER,
+		on_pickup : function(_host)
+		{
+			_host.damageBoost += 1;	
+		}
+	},
+	{
+		name : "Elite weapon",
+		icon_index : GUNMAN_LOOT_INUMBER,
+		on_pickup : function(_host)
+		{
+			var _guns = [Gun.POWERGUN, Gun.REAL_SHOTGUN, Gun.ROCKET_LAUNCHER];			
+			var _gun_images = [POWERGUN_INUMBER, REALSHOTGUN_GUN_INUMBER, ROCKET_LAUNCHER_INUMBER];
+
+			var _index = irandom_range(0, array_length(_guns) - 1);
+			var _new_gun = _guns[_index];			
+			var _new_gun_image = _gun_images[_index];
+
+
+			_host.gun.current_gun = _new_gun;
+			_host.gun.last_gun = Gun.DRILL;
+			_host.pocket[0] = _new_gun_image;
+			_host.bullets = _host.maxbullets;
+			_host.shoot_hold = false;
+		}
+	},
 ]
 
