@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oGunMan",
+  "%Name":"oWallOfFleshController",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oGunMan",
+  "name":"oWallOfFleshController",
   "overriddenProperties":[],
   "parent":{
-    "name":"GunMan",
-    "path":"folders/Objects/Enemies/GunMan.yy",
+    "name":"WallOfFlesh",
+    "path":"folders/Objects/Enemies/WallOfFlesh.yy",
   },
   "parentObjectId":{
     "name":"oBossParent",
@@ -22,7 +19,7 @@
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
-  "physicsGroup":0,
+  "physicsGroup":1,
   "physicsKinematic":false,
   "physicsLinearDamping":0.1,
   "physicsObject":false,
@@ -35,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sRoboStand",
-    "path":"sprites/sRoboStand/sRoboStand.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

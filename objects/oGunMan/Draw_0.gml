@@ -5,7 +5,7 @@
 event_inherited();
 
 
-draw_text(x, y - 20, string(bullets));
+//draw_text(x, y - 20, string(bullets));
 //draw_text(x, y - 40, string(hp));
 //draw_text(x, y - 60, string(cum_hp));
 

@@ -49,7 +49,8 @@ passive_items_profiles =
 					host = _host.host;
 				}
 			}
-		}
+		},
+		description : "Your bullets have a 20% chance to cause a lightning strike that deals 3 damage."
 	},
 	
 	{
@@ -58,7 +59,8 @@ passive_items_profiles =
 		on_hurt : function(_host)
 		{
 			CreateOrbital(_host, 3, 32, oSuspiciousEye);
-		}
+		},
+		description : "Whenever you take a hit, a floating eye that deals 5 damage appears around you."
 	},
 	
 	{
@@ -67,7 +69,8 @@ passive_items_profiles =
 		on_pickup : function(_host)
 		{
 			_host.maxbullets += 5;	
-		}
+		},
+		description : "Your maximum energy is increased by 5."
 	},
 	
 	{
@@ -85,7 +88,8 @@ passive_items_profiles =
 				}
 				_host.hp += _heal_amount;
 			}
-		}
+		},
+		description : "Whenever you jump, you have a 10% chance to heal by 3."
 	},
 	
 	{
@@ -94,7 +98,8 @@ passive_items_profiles =
 		on_pickup : function(_host)
 		{
 			_host.damageBoost += 1;	
-		}
+		},
+		description : "Damage from your bullets is increased by 1."
 	},
 	{
 		name : "Elite weapon",
@@ -114,7 +119,8 @@ passive_items_profiles =
 			_host.pocket[0] = _new_gun_image;
 			_host.bullets = _host.maxbullets;
 			_host.shoot_hold = false;
-		}
+		},
+		description : "Equip a random fully-charged unique weapon when you pick this up or revive."
 	},
 ]
 

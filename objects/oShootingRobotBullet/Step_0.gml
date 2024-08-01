@@ -19,8 +19,15 @@ var _len = point_distance(x, y, xprevious, yprevious);
 var _ang = point_direction(xprevious, yprevious, x, y);
 var _x = xprevious;
 var _y = yprevious;
+
+image_angle = _ang;
 	
 for (var i = 0; i < _len; ++i)
 {	
 	part_particles_create(global.particle_systems[row], _x + lengthdir_x(i, _ang), _y + lengthdir_y(i, _ang), trail, 1);
+}
+
+if (CheckCollisions(x, y, oSolidParent, row))
+{
+	instance_destroy();	
 }

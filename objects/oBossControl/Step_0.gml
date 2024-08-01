@@ -29,7 +29,7 @@ if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
 	//} until (_new_boss != last_boss);
 	if (global.DEBUG)
 	{
-		//_new_boss = "GunMan";
+		//_new_boss = "WallOfFlesh";
 	}
 	switch (_new_boss)
 	{
@@ -50,6 +50,9 @@ if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
 			break;
 		case "GunMan":
 			SummonGunMan();
+			break;
+		case "WallOfFlesh":
+			SummonWallOfFlesh();
 			break;
 	}
 	last_boss = _new_boss;

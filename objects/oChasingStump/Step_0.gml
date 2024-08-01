@@ -124,7 +124,7 @@ if (state != UniversalStates.VICTORY && state != UniversalStates.INTRO && state 
 	
 	if (hp <= 0)
 	{
-		if (!not_give_score) global.score += 200;
+		if (!not_give_score) global.score += 500;
 		sprite_index = sStumpBossDying;
 		state = UniversalStates.DEAD;
 		if (first_phase_timer > 0) first_phase_timer = 0;

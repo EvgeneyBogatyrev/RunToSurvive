@@ -158,7 +158,7 @@ switch (state)
 		
 		if (hp <= 0 || alive_timer == 0)
 		{
-			global.score += 80;
+			global.score += 200;
 			state = UniversalStates.DEAD;
 			with (oFloatingEye) 
 			{

@@ -24,8 +24,10 @@ third_hp = 10 + 2 * oDifficultyController.bosses_defeated  * GetStats("Increase 
 
 if (global.DEBUG)
 {
-	//first_hp = 1;
-	//second_hp = 1;
+	first_hp = 1;
+	second_hp = 1;	
+	third_hp = 1;
+
 }
 
 cum_hp = first_hp + second_hp + third_hp;

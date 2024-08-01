@@ -324,7 +324,7 @@ if (state != UniversalStates.DEAD && x < oCamera.right)
 	var _up = desired_row < row;
 	var _down = desired_row > row;
 	
-	if (random_range(0, 100) > 10)
+	if (random_range(0, 100) > 5)
 	{
 		_up = false;
 		_down = false;
