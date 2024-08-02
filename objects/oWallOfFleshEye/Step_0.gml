@@ -1,3 +1,30 @@
+
+if row = 0
+{
+	x = lerp(x, oWallOfFleshMouth.x + 64, 0.1);	
+}
+else
+{
+	x = lerp(x, oWallOfFleshMouth.x - 64, 0.1);
+}
+
+var sees_player = false;
+with(oPlayer)
+{
+	if (row == other.row)
+	{
+		var _diff = angle_difference(other.image_angle, point_direction(other.x, other.y, x - xspeed, y - sprite_height / 2 * scale));
+		other.image_angle -= _diff * 0.2;
+		sees_player = true;
+	}
+}
+
+if (!sees_player)
+{
+	var _diff = angle_difference(other.image_angle, 0);
+	other.image_angle -= _diff * 0.2;
+}
+
 // Shoot the player
 shoot_timer--;
 if (shoot_timer <= 0)
@@ -29,16 +56,6 @@ if (hp != prev_hp)
 }
 
 event_inherited();
-
-if row = 0
-{
-	x = lerp(x, oWallOfFleshMouth.x + 64, 0.1);	
-}
-else
-{
-	x = lerp(x, oWallOfFleshMouth.x, 0.1);
-}
-
 
 
 

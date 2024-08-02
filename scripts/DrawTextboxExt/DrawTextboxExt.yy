@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DrawTextboxExt",
   "isCompatibility":false,
   "isDnD":false,

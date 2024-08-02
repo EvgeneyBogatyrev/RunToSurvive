@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetCollider",
   "isCompatibility":false,
   "isDnD":false,

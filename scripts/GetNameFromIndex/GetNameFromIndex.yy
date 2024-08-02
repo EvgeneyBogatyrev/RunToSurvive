@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetNameFromIndex",
   "isCompatibility":false,
   "isDnD":false,

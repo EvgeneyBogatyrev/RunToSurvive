@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ResumeRoom",
   "isCompatibility":false,
   "isDnD":false,

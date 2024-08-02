@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SelectGamepad",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetTextboxButtons",
   "isCompatibility":false,
   "isDnD":false,

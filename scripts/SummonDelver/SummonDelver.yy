@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SummonDelver",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateOrbital",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetGunFromImage",
   "isCompatibility":false,
   "isDnD":false,

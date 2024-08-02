@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetScale",
   "isCompatibility":false,
   "isDnD":false,

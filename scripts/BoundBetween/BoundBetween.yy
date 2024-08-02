@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BoundBetween",
   "isCompatibility":false,
   "isDnD":false,

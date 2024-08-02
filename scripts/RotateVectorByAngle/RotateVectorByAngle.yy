@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"RotateVectorByAngle",
   "isCompatibility":false,
   "isDnD":false,

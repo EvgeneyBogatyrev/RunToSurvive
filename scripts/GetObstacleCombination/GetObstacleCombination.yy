@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetObstacleCombination",
   "isCompatibility":false,
   "isDnD":false,

@@ -10,6 +10,8 @@ cum_hp_max = 10;
 maxhp = 10;
 
 
+further_eye = undefined;
+
 for (var _row = 0; _row < 3; ++_row)
 {
 	if (_row == 1)
@@ -23,7 +25,8 @@ for (var _row = 0; _row < 3; ++_row)
 	{
 		with (Create(0, oGenerator.ground[_row], oWallOfFleshEye, _row))
 		{
-			depth -= 4;	
+			depth -= 4;
+			if row = 0 other.further_eye = id;
 		}
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PandoraBoxMovement",
   "isCompatibility":false,
   "isDnD":false,

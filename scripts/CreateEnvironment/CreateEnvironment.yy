@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateEnvironment",
   "isCompatibility":false,
   "isDnD":false,

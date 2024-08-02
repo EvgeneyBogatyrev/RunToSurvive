@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetPlayer",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SummonPandora",
   "isCompatibility":false,
   "isDnD":false,

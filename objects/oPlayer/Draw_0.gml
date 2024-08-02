@@ -2,8 +2,6 @@
 
 if (state = UniversalStates.DEAD) image_alpha = image_alpha * death_alpha;
 
-draw_self();
-
 
 if (damaged and hp > 0)
 {

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AimProjectileChooseTarget",
   "isCompatibility":false,
   "isDnD":false,
