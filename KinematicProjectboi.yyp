@@ -83,7 +83,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.2.0.132",
   },
   "name":"KinematicProjectboi",
   "resources":[
@@ -157,6 +157,7 @@
     {"id":{"name":"oShipRemains","path":"objects/oShipRemains/oShipRemains.yy",},},
     {"id":{"name":"oShootingRobot","path":"objects/oShootingRobot/oShootingRobot.yy",},},
     {"id":{"name":"oShootingRobotBullet","path":"objects/oShootingRobotBullet/oShootingRobotBullet.yy",},},
+    {"id":{"name":"oWallOfFleshBullet","path":"objects/oWallOfFleshBullet/oWallOfFleshBullet.yy",},},
     {"id":{"name":"oShotgunShell","path":"objects/oShotgunShell/oShotgunShell.yy",},},
     {"id":{"name":"oSolidParent","path":"objects/oSolidParent/oSolidParent.yy",},},
     {"id":{"name":"oSpamtonNeo","path":"objects/oSpamtonNeo/oSpamtonNeo.yy",},},

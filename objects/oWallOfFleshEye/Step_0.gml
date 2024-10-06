@@ -33,9 +33,17 @@ if (shoot_timer <= 0)
 	{
 		if (row == other.row)
 		{
-			with (Create(other.x, other.y, oShootingRobotBullet, row))
+			var _player_x = x;			
+			var _player_y = y;
+			var _player_sprite_height = sprite_height;
+			var _player_scale = scale;
+			var _player_xspeed = xspeed;
+			var _eye_x = other.x;
+			var _eye_y = other.y;
+
+			with (Create(_eye_x, _eye_y, oWallOfFleshBullet, row))
 			{
-				var direction_to_shoot = point_direction(x - xspeed, y - sprite_height / 2 * scale, other.x, other.y);
+				var direction_to_shoot = point_direction(_eye_x, _eye_y, _player_x - _player_xspeed, _player_y - _player_sprite_height / 2 * _player_scale);
 				Print(direction_to_shoot);
 				xspeed = lengthdir_x(15, direction_to_shoot);	
 				yspeed = lengthdir_y(15, direction_to_shoot);

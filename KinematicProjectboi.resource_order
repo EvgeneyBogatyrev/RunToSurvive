@@ -90,6 +90,7 @@
     {"name":"oShipRemains","order":9,"path":"objects/oShipRemains/oShipRemains.yy",},
     {"name":"oShootingRobot","order":3,"path":"objects/oShootingRobot/oShootingRobot.yy",},
     {"name":"oShootingRobotBullet","order":4,"path":"objects/oShootingRobotBullet/oShootingRobotBullet.yy",},
+    {"name":"oWallOfFleshBullet","order":4,"path":"objects/oWallOfFleshBullet/oWallOfFleshBullet.yy",},
     {"name":"oShotgunShell","order":14,"path":"objects/oShotgunShell/oShotgunShell.yy",},
     {"name":"oSolidParent","order":3,"path":"objects/oSolidParent/oSolidParent.yy",},
     {"name":"oSpamtonPipis","order":2,"path":"objects/oSpamtonPipis/oSpamtonPipis.yy",},
