@@ -18,7 +18,7 @@ for (var _row = 0; _row < 3; ++_row)
 	{
 		with (Create(0, oGenerator.ground[_row], oWallOfFleshMouth, _row))
 		{
-			depth -= 4;	
+			depth += 1;	
 		}
 	}
 	else
@@ -26,7 +26,7 @@ for (var _row = 0; _row < 3; ++_row)
 		with (Create(0, oGenerator.ground[_row], oWallOfFleshEye, _row))
 		{
 			depth -= 4;
-			if row = 0 other.further_eye = id;
+			if row == 0 other.further_eye = id;
 		}
 	}
 }
