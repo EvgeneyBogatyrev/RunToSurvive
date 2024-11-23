@@ -1,2 +1,2 @@
 /// @description
-application_surface_draw_enable(true);
+//application_surface_draw_enable(true);

@@ -84,7 +84,7 @@ gun = Create(x, y, oGun, 0);
 gun.host = id;
 
 gun.current_gun = Gun.STANDART_GUN
-
+pocket = [STDGUN_INUMBER];
 
 drill_damage = 1;
 

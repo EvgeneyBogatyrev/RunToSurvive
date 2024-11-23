@@ -5,6 +5,7 @@ instance_create_layer(0, 0, "Controllers", oDrawer);
 instance_create_layer(0, 0, "Controllers", oBackgroundControl);
 instance_create_layer(0, 0, "Controllers", oBossControl);
 instance_create_layer(0, 0, "Controllers", oPause);
+instance_create_layer(0, 0, "Controllers", oDebugConsole);
 
 // Particles
 global.particle_systems = [];

@@ -24,9 +24,9 @@ soul_radius = 9;
 
 u_blur_vector = shader_get_uniform(shdExtra, "blur_vector")
 
-surf_ping = surface_create(room_width, room_height);
-surf_pong = surface_create(room_width, room_height);
+//surf_ping = surface_create(room_width, room_height);
+//surf_pong = surface_create(room_width, room_height);
 
-application_surface_draw_enable(false);
+//application_surface_draw_enable(false);
 
 

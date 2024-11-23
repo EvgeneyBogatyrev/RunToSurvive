@@ -25,7 +25,7 @@ gpu_set_tex_filter(false);
 
 shader_reset();
 */                      
-draw_surface(application_surface, 0, 0);
+//draw_surface(application_surface, 0, 0);
 /*
 gpu_set_blendmode(bm_add);
 draw_surface(surf_ping, 0, 0);

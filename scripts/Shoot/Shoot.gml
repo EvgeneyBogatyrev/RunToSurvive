@@ -3,8 +3,8 @@
 ///@param sprite     A sprite of the bullet
 ///@param damage     A damage of the bullet
 ///@param speed      A speed of the bullet
-///@param recall     A recall of the bullet
-function Shoot(_projectile, _sprite, _damage, _speed, _recall, _direction=undefined, _sound=true) {
+///@param recoil     A recoil of the bullet
+function Shoot(_projectile, _sprite, _damage, _speed, _recoil, _direction=undefined, _sound=true) {
 
 	var _xspeed, _yspeed;
 	if (_direction == undefined)
@@ -58,7 +58,7 @@ function Shoot(_projectile, _sprite, _damage, _speed, _recall, _direction=undefi
 	
 	}
 	//image_index = 1;
-	recall = _recall;
+	recoil = _recoil;
 	host.bullets -= cost;
 	if (_sound)
 	{

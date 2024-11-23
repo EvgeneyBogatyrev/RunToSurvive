@@ -4,6 +4,12 @@ function GetCost(argument0) {
 
 	switch(argument0)
 	{
+		case Gun.BASIC_REPEATER:
+		case Gun.KICKS_N_PUNCHES:
+		case Gun.STEAMPUNK_HAMMER:
+		case Gun.SHORTRANGE_BLASTER:
+			return 0;
+		
 		case Gun.STANDART_GUN:
 			return 1;
 	
@@ -27,7 +33,7 @@ function GetCost(argument0) {
 			
 		case Gun.ELECTRIC_GUN:
 			return 0.01;
-	
+		
 		default:
 			Raise("Invalid gun\n");
 			break;

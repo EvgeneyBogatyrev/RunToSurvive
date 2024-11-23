@@ -6,32 +6,35 @@ if (!instance_exists(host))
 else 
 {
 	Assert(instance_exists(host), "No host for gun\n");
+	
 	row = host.row;
 	dir = host.dir;
 	image_xscale = host.image_xscale;
 	image_yscale = host.image_yscale;
 	image_alpha  = host.image_alpha;
-	
+	image_angle = 0;
 	switch (current_gun)
 	{
 		case Gun.ROCKET_LAUNCHER:
 			depth = host.depth + 1;
-			x = host.x - recall * host.dir * host.scale;
+			x = host.x - recoil * host.dir * host.scale;
 			y = host.yprevious - 34 * host.scale;
 			break;
 	
 		default:
 			depth = host.depth - 1;
-			x = host.xprevious - (4 + recall) * host.dir * host.scale;
+			x = host.xprevious - (4 + recoil) * host.dir * host.scale;
 			y = host.yprevious - 22 * host.scale;
 			break;
 	}
 }
 
-if (host.bullets < GetCost(current_gun) && last_gun == Gun.DRILL && shotgun_times == 0 && launcher_times == 0) 
+var _held_gun = GetGunStateFromID(host.pocket[0]);
+
+if (host.bullets < GetCost(current_gun) && secondary == false && shotgun_times == 0 && launcher_times == 0) 
 {
-	last_gun = current_gun;
-	current_gun = Gun.DRILL;
+	secondary = true;
+	current_gun = host.character.secondary_weapon;
 	shotgun_times = 0;
 	shotgun_timer = 0;
 	launcher_times = 0;
@@ -39,10 +42,10 @@ if (host.bullets < GetCost(current_gun) && last_gun == Gun.DRILL && shotgun_time
 	temp_bullets = 0;
 }
 
-if (last_gun != Gun.DRILL && host.bullets >= GetCost(last_gun))
+if (secondary && host.bullets >= GetCost(_held_gun))
 {
-	current_gun = last_gun;
-	last_gun = Gun.DRILL;	
+	current_gun = _held_gun;
+	secondary = false;
 	shoot = false;
 	shoot_hold = false;
 }
@@ -66,7 +69,7 @@ switch(current_gun)
 		cost = GetCost(current_gun);
 		var _damage = 2;
 		
-		if (shoot && !recall && host.bullets >= cost)
+		if (shoot && !recoil && host.bullets >= cost)
 		{
 			ShakeScreen(3, 5);
 			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
@@ -75,7 +78,125 @@ switch(current_gun)
 		shoot_hold = false;
 		
 		break;
+	
+	case Gun.STEAMPUNK_HAMMER:
+		sprite_index = sSteamPunkHammer;
+		image_speed = 0;
+		image_index = 0;
+		image_xscale *= 1.3;
+		image_yscale *= 1.3;
+	
+		damage = 2 * host.drill_damage;
 		
+		switch (hammer_state)
+		{
+			case MeleeStates.IDLE:
+				depth = host.depth + swing_dir;
+				if (swing_dir > 0)
+				{
+					image_angle = 35 * host.dir;
+				}
+				else
+				{
+					image_angle = 125 * host.dir;
+				}
+				if (shoot && (recoil == 0))
+				{
+					hammer_state = MeleeStates.ATTACK;
+					shoot = false;
+					shoot_hold = false;
+					
+					ds_list_clear(hit_by_attack);
+					
+					
+					dir_lock = host.dir;
+					recoil = swing_time;
+				}
+			break;
+				
+			case MeleeStates.ATTACK:
+				var _swing_prog = 1 - (recoil / swing_time);
+				var _swinganim = animcurve_get(HammerSwings);
+				x = host.xprevious - 4 * host.scale + animcurve_channel_evaluate(_swinganim.channels[2], _swing_prog) * dir_lock;
+				depth = host.depth + swing_dir * ((_swing_prog < 0.5) * 2 - 1);
+				if (swing_dir > 0)
+				{
+					
+					image_angle = animcurve_channel_evaluate(_swinganim.channels[0], _swing_prog) * dir_lock;
+				}
+				else
+				{
+					
+					image_angle = animcurve_channel_evaluate(_swinganim.channels[1], _swing_prog) * dir_lock;
+				}
+				
+				if (_swing_prog > 0.25 && _swing_prog < 0.8)
+				{
+					var _colliding_enemies = ds_list_create();
+					var _amount = instance_place_list(x, y, oEnemyParent, _colliding_enemies, true);
+				
+					for (var i = 0; i < _amount; ++i)
+					{
+						var _enemy = _colliding_enemies[| i];
+					
+						if (_enemy.object_index == oDelver)
+						{
+							if (_enemy.state != DelverStates.INSECT)
+							{
+								continue;	
+							}
+						}
+						else if (_enemy.row != row)  continue;
+					
+						if (ds_list_find_index(hit_by_attack, _enemy) == -1 && _enemy.active && _enemy.hp > 0)
+						{
+							ds_list_add(hit_by_attack, _enemy);	
+							_enemy.hp -= damage;
+							_enemy.hit_flash = 3;
+						
+							/*
+							hit_events = [];
+							for (var _i = 0; _i < ds_list_size(host.inventory); _i++)
+							{
+								var _item = ds_list_find_value(host.inventory, _i);
+								var hit_event = struct_exists(_item, "on_hit") ? struct_get(_item, "on_hit") : undefined;
+								if (hit_event != undefined)
+								{
+									hit_event(id, 82 * sign(image_xscale));
+								}
+							}
+							*/
+
+						
+							if (object_is_ancestor(_enemy.object_index, oBossParent))
+							{
+								_enemy.cum_hp -= damage;
+							}
+						
+							if (object_is_ancestor(_enemy.object_index, oHalfBossParent))
+							{
+								StartBattle(row, host, _enemy.id);
+							}
+						
+							with (Create(x + 80 * scale * host.dir, y - 4 * scale, oDamageNumber, row))
+							{
+								damage = other.damage;
+							}						
+						}
+					}
+					ds_list_destroy(_colliding_enemies);
+				}
+				
+				if (recoil <= 0)
+				{
+					hammer_state = MeleeStates.IDLE;
+					swing_dir *= -1;
+				}
+			break;
+		}
+		
+		break;
+	
 	case Gun.DRILL:
 		sprite_index = sDrill;
 		image_speed = 1;
@@ -85,18 +206,18 @@ switch(current_gun)
 		switch (drill_state)
 		{
 			
-			case DrillStates.FREE:
-				if (shoot && recall == 0)
+			case MeleeStates.IDLE:
+				if (shoot && recoil == 0)
 				{
-					drill_state = DrillStates.ATTACK;
-					recall = -16;
+					drill_state = MeleeStates.ATTACK;
+					recoil = -16;
 					shoot = false;
 					shoot_hold = false;
 					ds_list_clear(hit_by_attack);
 				}
 				break;
 				
-			case DrillStates.ATTACK:
+			case MeleeStates.ATTACK:
 				
 				var _colliding_enemies = ds_list_create();
 				var _amount = instance_place_list(x, y, oEnemyParent, _colliding_enemies, true);
@@ -152,7 +273,7 @@ switch(current_gun)
 				}
 				ds_list_destroy(_colliding_enemies);
 				
-				if (recall == 0)  drill_state = DrillStates.FREE;			
+				if (recoil == 0)  drill_state = MeleeStates.IDLE;			
 				
 				break;
 			
@@ -170,7 +291,7 @@ switch(current_gun)
 		cost = GetCost(current_gun);
 		var _damage = 2;
 		
-		if (shoot && !recall && host.bullets >= cost && shotgun_times == 0)
+		if (shoot && !recoil && host.bullets >= cost && shotgun_times == 0)
 		{
 			ShakeScreen(2, 4);
 			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
@@ -198,7 +319,7 @@ switch(current_gun)
 		cost = GetCost(current_gun);
 		damage = host.bullets * 2;			
 		
-		if (shoot_hold && !recall)
+		if (shoot_hold && !recoil)
 		{
 			if (temp_bullets == 0)  temp_bullets = 1;
 			if (increase)
@@ -236,7 +357,7 @@ switch(current_gun)
 		cost = GetCost(current_gun);
 		var _damage = 1;
 		
-		if (shoot && !recall && host.bullets >= cost)
+		if (shoot && !recoil && host.bullets >= cost)
 		{
 			ShakeScreen(7, 5);
 			Shoot(oAimProjectile, sRocket, _damage + host.damageBoost, 20, 8);
@@ -268,7 +389,7 @@ switch(current_gun)
 		cost = GetCost(current_gun);
 		var _damage = 3;
 		
-		if (shoot && !recall && host.bullets >= cost)
+		if (shoot && !recoil && host.bullets >= cost)
 		{
 			ShakeScreen(3, 5);
 			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
@@ -299,7 +420,7 @@ switch(current_gun)
 		cost = GetCost(current_gun);
 		var _damage = 1;
 		
-		if (shoot && !recall && host.bullets >= cost)
+		if (shoot && !recoil && host.bullets >= cost)
 		{
 			ShakeScreen(3, 5);
 			var _offset = 30;
@@ -357,4 +478,4 @@ switch(current_gun)
 		break;
 }
 
-if (recall != 0)  recall -= sign(recall);
+if (recoil != 0)  recoil -= sign(recoil);

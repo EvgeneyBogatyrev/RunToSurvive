@@ -12,16 +12,21 @@ else
 	{
 		case Gun.ROCKET_LAUNCHER:
 			depth = host.depth + 1;
-			x = host.x - (4 + host.gun.recall) * host.dir * host.scale;
+			x = host.x - (4 + host.gun.recoil) * host.dir * host.scale;
 			y = host.yprevious - 22 * host.scale;
 			special_mode = true;
+			enabled = true;
 			break;
-		
+		case Gun.STEAMPUNK_HAMMER:
+		case Gun.KICKS_N_PUNCHES:
+			enabled = false;
+			break;
 		default:
 			depth = host.gun.depth - 1;
-			x = host.xprevious - (4 + host.gun.recall) * host.dir * host.scale;
+			x = host.xprevious - (4 + host.gun.recoil) * host.dir * host.scale;
 			y = host.yprevious - 22 * host.scale;
 			special_mode = false;
+			enabled = true;
 			break;
 	}
 }

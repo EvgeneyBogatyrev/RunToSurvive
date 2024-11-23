@@ -1,5 +1,9 @@
 enum Gun 
 {
+	BASIC_REPEATER,
+	KICKS_N_PUNCHES,
+	STEAMPUNK_HAMMER,
+	SHORTRANGE_BLASTER,
 	DRILL, 
 	STANDART_GUN,
 	SHOTGUN,
@@ -7,12 +11,15 @@ enum Gun
 	ROCKET_LAUNCHER,
 	LIFESTEAL_GUN,
 	REAL_SHOTGUN,
-	ELECTRIC_GUN
+	ELECTRIC_GUN,
 };
 
-enum DrillStates
+
+
+
+enum MeleeStates
 {
-	FREE,
+	IDLE,
 	ATTACK,
 };
 
@@ -24,14 +31,25 @@ if (global.DEBUG)
 	current_gun = Gun.LIFESTEAL_GUN;
 }
 
-last_gun = Gun.DRILL;
-recall = 0;
+secondary = false;
+
+recoil = 0;
 shoot = false;
 cost = 0;
 damage = 0;
 
+
+//Combo Punch
+
+
+//Hammer
+hammer_state = MeleeStates.IDLE;
+dir_lock = 0;
+swing_dir = 1;
+swing_time = 40;
+
 //Drill
-drill_state = DrillStates.FREE;
+drill_state = MeleeStates.IDLE;
 hit_by_attack = ds_list_create();
 
 //Shotgun

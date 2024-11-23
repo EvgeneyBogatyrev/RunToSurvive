@@ -33,8 +33,8 @@ switch (state)
 					
 					if (active_pocket_index == _penetrate_index)
 					{
-						if (gun.current_gun != Gun.DRILL)  gun.current_gun = Gun.STANDART_GUN;
-						else							   gun.last_gun = Gun.STANDART_GUN;
+						gun.current_gun = Gun.STANDART_GUN;
+						gun.secondary = false;
 					}
 					
 				}

@@ -28,6 +28,16 @@ function GetSpritesFromName(_name)
 	
 }
 
+function GetWeaponFromName(_name)
+{
+	switch (_name)
+	{
+		default:
+			return Gun.DRILL;
+		case "Steampunk":
+			return Gun.STEAMPUNK_HAMMER;
+	}
+}
 
 function Character(_name) constructor
 {
@@ -35,6 +45,9 @@ function Character(_name) constructor
 	
 	sprites = GetSpritesFromName(_name);
 	
+	secondary_weapon = GetWeaponFromName(_name);
+	
+	passive_skill = undefined;
 }
 
 
@@ -48,7 +61,6 @@ function SpawnPlayerCharacter(_player_id, _name, _x, _y, _row)
 	_player_instance._input_type = input_type[_player_id];
 	_player_instance.name = _name;
 	_player_instance.player_index = _player_id;
-	
 	
 	return _player_instance;
 	

@@ -17,22 +17,22 @@ var _accept = _keys[7];
 var _cancel = _keys[8];
 
 var _next_gun = -1;
-if (index < ROCKETBOOTS_INUMBER)  _next_gun = GetGunFromImage(index);
+if (index < ROCKETBOOTS_INUMBER)  _next_gun = GetGunStateFromID(index);
 
-if (_accept || _next_gun == host.gun.current_gun || _next_gun == host.gun.last_gun)
+if (_accept || index == host.pocket[0])
 {
 	var _pocket_index;
 	if (index < ROCKETBOOTS_INUMBER)
 	{
 		_pocket_index = 0;
-		if (host.gun.current_gun == _next_gun || host.gun.last_gun == _next_gun)
+		if (index == host.pocket[0])
 		{
 		    host.bullets = host.maxbullets;
 		}
 		else
 		{
 			host.gun.current_gun = _next_gun;
-			host.gun.last_gun = Gun.DRILL;
+			host.gun.secondary = false;
 		}
 	}
 	else	_pocket_index = 1;		

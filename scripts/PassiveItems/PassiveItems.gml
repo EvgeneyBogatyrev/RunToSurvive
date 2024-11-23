@@ -115,7 +115,6 @@ passive_items_profiles =
 
 
 			_host.gun.current_gun = _new_gun;
-			_host.gun.last_gun = Gun.DRILL;
 			_host.pocket[0] = _new_gun_image;
 			_host.bullets = _host.maxbullets;
 			_host.shoot_hold = false;

@@ -289,6 +289,7 @@ if (state != UniversalStates.DEAD && state != UniversalStates.INTRO && state != 
 		else if (hp_state == GunManHpState.SECOND)
 		{
 			gun.current_gun = Gun.SHOTGUN;
+			pocket[0] = SHOTGUN_INUMBER;
 			hp_state = GunManHpState.THIRD;	
 			//maxhp = third_hp;
 			//hp = maxhp;

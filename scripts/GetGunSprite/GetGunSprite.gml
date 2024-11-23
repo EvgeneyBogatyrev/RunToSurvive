@@ -3,6 +3,9 @@
 function GetGunSprite(gun_type){
 	switch (gun_type)
 	{
+		case Gun.STEAMPUNK_HAMMER:
+			return sSteamPunkHammer;
+		
 		case Gun.STANDART_GUN:
 			return sStandartGun;
 		

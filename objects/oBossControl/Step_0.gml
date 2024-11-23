@@ -31,6 +31,7 @@ if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
 	{
 		_new_boss = "WallOfFlesh";
 	}
+	var _boss_summoned = true;
 	switch (_new_boss)
 	{
 		case "Pandora":
@@ -54,9 +55,16 @@ if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
 		case "WallOfFlesh":
 			SummonWallOfFlesh();
 			break;
+		default:
+			Print(_new_boss, "what the heck? who is this dude? invalid boss name");
+			_boss_summoned = false;
+			break;
 	}
 	last_boss = _new_boss;
 	
 	timer = max_timer;
-	oRoomControl.gamestate = GameState.BOSS;
+	if (_boss_summoned)
+	{
+		oRoomControl.gamestate = GameState.BOSS;
+	}
 }
