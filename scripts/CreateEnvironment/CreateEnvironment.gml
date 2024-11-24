@@ -38,37 +38,49 @@ function CreateEnvironment(argument0, argument1, argument2) {
 		case Obstacles.BLOCKS :
 			var _shape = GetShape();
 			var _scale = GetScale(_row);
-			for (var _height = array_length_1d(_shape) - 1; _height >= 0; --_height)
+			
+			var _surface_width = array_length(_shape[0]) * BLOCKSIZE * _scale;			
+			var _surface_height = array_length(_shape) * BLOCKSIZE * _scale;
+			
+			var _draw_surface = surface_create(_surface_width, _surface_height);
+			surface_set_target(_draw_surface);
+			
+			for (var _height = array_length(_shape) - 1; _height >= 0; --_height)
 			{
 				var _line = _shape[_height];
-				var _level = array_length_1d(_shape) - _height;
-				for (var _elem = 0; _elem < array_length_1d(_shape[_height]); ++_elem)	
+				var _level = array_length(_shape) - _height;
+				for (var _elem = 0; _elem < array_length(_shape[_height]); ++_elem)	
 				{
 					if (_line[_elem] != 0) 
 					{
-						with (Create(_start + _elem * (BLOCKSIZE - 1) * _scale, oGenerator.ground[_row] - _level * BLOCKSIZE * _scale, oStructureBlock, _row)) //-1
-						{
-							var _sprite_index = abs(_line[_elem]);
+						var _sprite_index = abs(_line[_elem]);
+						var _draw_sprite;
 						
-							switch (_sprite_index)
-							{
-								case 4:
-									sprite_index = oRoomControl.room_properties[? "BlockEmptySprite"];
-									break;
-								case 2:
-									sprite_index = oRoomControl.room_properties[? "BlockRoundedLeftSprite"];
-									break;
-								case 3:
-									sprite_index = oRoomControl.room_properties[? "BlockRoundedRightSprite"];
-									break;
-								case 1:
-									sprite_index = oRoomControl.room_properties[? "BlockSprite"];
-									break;
+						switch (_sprite_index)
+						{
+							case 4:
+								_draw_sprite = oRoomControl.room_properties[? "BlockEmptySprite"];
+								break;
+							case 2:
+								_draw_sprite = oRoomControl.room_properties[? "BlockRoundedLeftSprite"];
+								break;
+							case 3:
+								_draw_sprite = oRoomControl.room_properties[? "BlockRoundedRightSprite"];
+								break;
+							case 1:
+								_draw_sprite = oRoomControl.room_properties[? "BlockSprite"];
+								break;
 							
-								default:
-									Raise("Invalid block sprite index\n");
-									break;
-							}	
+							default:
+								Raise("Invalid block sprite index\n");
+								break;
+						}	
+						
+						draw_sprite_ext(_draw_sprite, floor(random(sprite_get_number(_draw_sprite))), _start + _elem * (BLOCKSIZE - 1) * _scale, oGenerator.ground[_row] - _level * BLOCKSIZE * _scale, _scale, _scale, 0, c_white, 1);
+						
+						/*with (Create(_start + _elem * (BLOCKSIZE - 1) * _scale, oGenerator.ground[_row] - _level * BLOCKSIZE * _scale, oStructureBlock, _row)) //-1
+						{
+							
 						
 							if (_line[_elem] < 0 && (irandom_range(1, 100) > 90 || global.level_started)) 
 							{
@@ -86,9 +98,20 @@ function CreateEnvironment(argument0, argument1, argument2) {
 							}
 						
 						}
+						*/
 					}
 				}
 			}
+			surface_reset_target();
+			
+			_block_sprite_index = sprite_create_from_surface(_draw_surface, 0, _surface_height, _surface_width, _surface_height, false, false, 0, 0);
+			Print(_block_sprite_index);
+			with (Create(_start, oGenerator.ground[_row], oStructureBlock, _row))
+			{
+				sprite_index = other._block_sprite_index;
+				mask_index = other._block_sprite_index;
+			}
+			surface_free(_draw_surface);
 			break;
 		
 		case Obstacles.CHARGE_STATION :

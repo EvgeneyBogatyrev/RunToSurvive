@@ -1,5 +1,5 @@
 function LoadGame() {
-	if (not file_exists(global.filename))
+	if (false and not file_exists(global.filename))
 	{
 		save_map = ds_map_create();
 		ds_map_add(save_map, "Resolution_width", 1024);
@@ -31,15 +31,35 @@ function LoadGame() {
 	else
 	{
 		save_map = ds_map_secure_load(global.filename);
-		global.display_width = ds_map_find_value(save_map, "Resolution_width");
-		global.display_height = ds_map_find_value(save_map, "Resolution_height");
-		global.music_gain = ds_map_find_value(save_map, "Music gain");
-		global.sound_gain = ds_map_find_value(save_map, "Sound gain");
-		global.character = ds_map_find_value(save_map, "Character");		
-		global.highscore = ds_map_find_value(save_map, "Highscore");		
-		global.difficulty = ds_map_find_value(save_map, "Difficulty");
+		if (save_map == -1)
+		{
+			global.display_width = undefined;
+			global.display_height = undefined;
+			//global.music_gain = undefined;
+			//global.sound_gain = undefined;
+			global.character = undefined;
+			global.highscore = undefined;
+			global.difficulty = undefined;
+		}
+		else
+		{
+			global.display_width = ds_map_find_value(save_map, "Resolution_width");
+			global.display_height = ds_map_find_value(save_map, "Resolution_height");
+			global.music_gain = ds_map_find_value(save_map, "Music gain");
+			global.sound_gain = ds_map_find_value(save_map, "Sound gain");
+			global.character = ds_map_find_value(save_map, "Character");		
+			global.highscore = ds_map_find_value(save_map, "Highscore");		
+			global.difficulty = ds_map_find_value(save_map, "Difficulty");
+		}
 		
-
+		if (global.display_width == undefined)
+		{
+			global.display_width = 1024;
+		}
+		if (global.display_height == undefined)
+		{
+			global.display_height = 768;
+		}
 		
 		if (global.character == undefined) 
 		{

@@ -7,6 +7,7 @@ function SaveGame() {
 	//var _string = ds_list_write(_list)	
 
 	//ds_map_replace(save_map, "Collection", _string);
+	save_map = ds_map_create();
 	ds_map_replace(save_map, "Music gain", global.music_gain);
 	ds_map_replace(save_map, "Sound gain", global.sound_gain);
 	ds_map_replace(save_map, "Resolution_width", global.display_width);
