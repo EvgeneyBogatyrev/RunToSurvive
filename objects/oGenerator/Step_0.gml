@@ -1,6 +1,6 @@
 if (last_block[2].x <= oCamera.right + oCamera.view_w_half * GetScale(2))
 {
-	obstacles = GetObstacleCombination(oRoomControl.room_properties[? "ForbiddenObstacles"], obstacles);
+	obstacles = GetObstacleCombination(oRoomControl.room_properties[? "ForbiddenObstacles"], obstacles, preprocess_forbidden_obstacles);
 	for (var i = 0; i < 3; ++i)
 	{
 		var _start_point = last_block[i].x;

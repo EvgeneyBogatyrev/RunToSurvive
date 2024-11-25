@@ -20,3 +20,22 @@ function Knockback() {
 
 
 }
+
+function KnockbackForce(_victim, _force_x, _force_y) {
+
+
+	if (_victim == undefined)  exit;
+
+	with (_victim)
+	{
+		if (!knockbacked)	
+		{
+			xspeed += _force_x;
+			yspeed += _force_y;
+			knockbacked = true;
+			knockback_timer = 15;
+		}
+	}
+
+
+}

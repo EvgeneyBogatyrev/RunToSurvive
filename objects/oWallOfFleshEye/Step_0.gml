@@ -27,7 +27,7 @@ if (!sees_player)
 
 // Shoot the player
 shoot_timer--;
-if (shoot_timer <= 0)
+if (shoot_timer <= 0  && oWallOfFleshController.state != UniversalStates.DEAD)
 {	
 	with (oPlayer)
 	{

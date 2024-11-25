@@ -59,6 +59,19 @@ switch(state)
 		
 	case UniversalStates.DEAD:
 		if (AnimationEnd())  image_speed = 0;
+		if (!CheckCollisions(x, y + 1, oSolidParent, row) && instance_exists(oWallOfFleshController))
+		{
+			real_image_alpha -= 0.05;
+			if (real_image_alpha <= 0)
+			{
+				instance_destroy();	
+			}
+			image_alpha = real_image_alpha;
+		}
+		else
+		{
+			real_image_alpha = image_alpha;	
+		}
 		break;
 		
 	default:

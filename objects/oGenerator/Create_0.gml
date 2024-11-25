@@ -56,3 +56,5 @@ for (var i = 0; i < number_of_players; ++i)
 	SpawnPlayerCharacter(i, names[i], 500 + ((i == 3)? 100 : 0), ground[i % 3], i % 3);
 	ds_map_add(times_resurrected, names[i], 0);
 }
+
+preprocess_forbidden_obstacles = false;

@@ -4,11 +4,14 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 10;
-cum_hp = 10;
-cum_hp_max = 10;
-maxhp = 10;
+hp = 100;
+cum_hp = 100;
+cum_hp_max = 100;
+maxhp = 100;
 
+go_back = false;
+
+loot_profile_id = SPAMTON_LOOT_INUMBER;
 
 further_eye = undefined;
 
@@ -29,6 +32,12 @@ for (var _row = 0; _row < 3; ++_row)
 			if row == 0 other.further_eye = id;
 		}
 	}
+}
+
+with (oHalfBossParent)
+{
+	hp = 0;	
+	not_give_score = true;
 }
 
 StopRoom();

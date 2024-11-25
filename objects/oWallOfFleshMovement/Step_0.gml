@@ -1,4 +1,9 @@
 
+if (go_back)
+{
+	x -= 3;	
+}
+
 if (CheckCollisions(x + 100, y, oSolidParent, row))
 {
 	y -= 2;
@@ -12,13 +17,40 @@ if (moving_down_counter <= 0 && !CheckCollisions(x, y + 1, oSolidParent, row))
 	y += 1;	
 }
 
-for (var _h = 0; _h < 500; _h += 50)
+// Knockback player
+
+for (var _i = 0; _i < instance_number(oPlayer); ++_i)
 {
-	while (CheckCollisions(x - 50, y + _h, oSolidParent, row))
+	var _player = instance_find(oPlayer, _i);	
+	
+	if (_player.x < x + 30 * scale)
 	{
-		with (GetCollider(x - 50, y + _h, oSolidParent, row))
+		if (!_player.damaged)
 		{
-			instance_destroy();	
+			_player.damaged = true;	
+			_player.damage_timer = 5*30;
+		
+			if (!_player.protected)  _player.hp -= contact_damage;
+			else                    
+			{
+				_player.protected = false;
+				if (_player.pocket[1] == FORCEFIELD_INUMBER)
+				{
+					_player.pocket[1] = 0;	
+				}
+			}
+		}
+		
+		with (_player)
+		{
+			if CheckCollisions(x + 50 * scale, y - 10, oSolidParent, row)
+			{
+				KnockbackForce(_player, 200, -15);
+			}
+			else
+			{
+				KnockbackForce(_player, 200, 0);	
+			}
 		}
 	}
 }

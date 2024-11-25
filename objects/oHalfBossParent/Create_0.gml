@@ -17,3 +17,5 @@ maxhp = 0;
 
 healthbar_alpha = 0;
 not_give_score = false;
+
+real_image_alpha = 1;

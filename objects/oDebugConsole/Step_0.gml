@@ -1,4 +1,4 @@
-if keyboard_check_pressed(192)
+if keyboard_check_pressed(192) || keyboard_check_pressed(ord("L"))
 {
 	enabled = !enabled;
 

@@ -25,3 +25,14 @@ if (hp <= 0)
 }
 
 if (x < oCamera.left - CAMERA_BOUNDS)  instance_destroy();
+
+if (!CheckCollisions(x, y + 1, oSolidParent, row) && instance_exists(oWallOfFleshController))
+{
+	real_image_alpha -= 0.05;
+	if (real_image_alpha <= 0)
+	{
+		instance_destroy();	
+	}
+	image_alpha = real_image_alpha;
+}
+		

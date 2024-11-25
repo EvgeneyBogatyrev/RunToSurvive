@@ -6,6 +6,11 @@ hp      = BoundBetween(hp, 0, maxhp);
 shown_bullets = ApproachTo(shown_bullets, floor(bullets));
 shown_hp      = ApproachTo(shown_hp, floor(hp));
 
+if (y > oGenerator.ground[2] + 100)
+{
+	hp = -100;	
+}
+
 switch (state)
 {
 	case PlayerStates.NORMAL:

@@ -28,6 +28,8 @@ function SummonWallOfFlesh() {
 
 	oAudioControl.bgm = musEyeForAnEye;
 	oAudioControl.music_set = false;
+	
+	oGenerator.preprocess_forbidden_obstacles = true;
 
 
 }

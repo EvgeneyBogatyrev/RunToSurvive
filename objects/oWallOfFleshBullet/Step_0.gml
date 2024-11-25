@@ -31,3 +31,8 @@ if (CheckCollisions(x, y, oSolidParent, row))
 {
 	instance_destroy();	
 }
+
+if (x < oCamera.left - 200 || x > oCamera.right + CAMERA_BOUNDS)
+{
+	instance_destroy();	
+}

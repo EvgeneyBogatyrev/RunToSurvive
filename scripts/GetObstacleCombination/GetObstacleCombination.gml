@@ -6,6 +6,12 @@ function GetObstacleCombination(argument0, argument1) {
 
 	var _forbidden = argument0;
 	var _previous  = argument1;
+	
+	var _preprocess_forbidden = false;
+	if (argument_count > 2)
+	{
+		_preprocess_forbidden = argument[2];
+	}
 
 	Assert(_forbidden[0] == 0, "Cannot forbid an empty space\n");
 
@@ -26,10 +32,10 @@ function GetObstacleCombination(argument0, argument1) {
 	var _counter = 0;
 	for (var i = 0; i < 6; ++i)
 	{
-		//if (!_forbidden[i]) 
-		//{
-		for (var j = 0; j < _chance_of_occurance[i]; ++j)   _pool[_counter++] = i;
-		//}
+		if (!_forbidden[i] || !_preprocess_forbidden) 
+		{
+			for (var j = 0; j < _chance_of_occurance[i]; ++j)   _pool[_counter++] = i;
+		}
 	}
 
 	if (_counter == 1)  return array_create(3, Obstacles.EMPTY);
@@ -64,12 +70,15 @@ function GetObstacleCombination(argument0, argument1) {
 		}
 	}
 	
-	// Remove forbidden obstacles
-	for (var i = 0; i < 3; ++i)
+	if (!_preprocess_forbidden)
 	{
-		if (_forbidden[_result[i]])
+		// Remove forbidden obstacles
+		for (var i = 0; i < 3; ++i)
 		{
-			_result[i] = 0;	
+			if (_forbidden[_result[i]])
+			{
+				_result[i] = 0;	
+			}
 		}
 	}
 
