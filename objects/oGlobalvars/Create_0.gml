@@ -47,6 +47,8 @@ global.show_animation = true;
 
 global.level_started = false;
 
+global.difficulty = Difficulty.NORMAL;
+
 randomize();
 
 globalvar CstmFnt,CstmFntOutline,FntDamage;

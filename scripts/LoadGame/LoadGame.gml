@@ -8,7 +8,7 @@ function LoadGame() {
 		ds_map_add(save_map, "Sound gain", global.sound_gain);
 		ds_map_add(save_map, "Character", global.character);		
 		ds_map_add(save_map, "Highscore", global.highscore);
-		ds_map_add(save_map, "Difficulty", global.difficulty);
+		ds_map_add(save_map, "Difficulty", Difficulty.NORMAL);
 
 		//ds_map_add(save_map, "Player1_pocket", 1);
 		//ds_map_add(save_map, "Player2_pocket", 1);

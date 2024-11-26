@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SummonWallOfFlesh",
   "isCompatibility":false,
   "isDnD":false,
