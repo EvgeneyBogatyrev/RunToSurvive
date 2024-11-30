@@ -1,44 +1,64 @@
-/// @description Вставьте описание здесь
-// Вы можете записать свой код в этом редакторе
-
 // Inherit the parent event
 event_inherited();
 
-if (go_back)
+if (!instance_exists(oPlayer))
 {
-	x -= 2;	
+	state = UniversalStates.VICTORY;	
 }
 
-if (hp <= 0 && state != UniversalStates.DEAD)
+switch (state)
 {
-	state = UniversalStates.DEAD;
-	x = oWallOfFleshMouth.x;
-	with (oWallOfFleshMovement)
-	{
-		go_back = true;	
-	}
-	go_back = true;
-	oRoomControl.gamestate = GameState.LOOT;
-}
-
-if (state == UniversalStates.DEAD)
-{
-	if (x < oCamera.left - 500)
-	{
-		for (var _i = 0; _i < instance_number(oWallOfFleshMovement); ++_i)
+	case UniversalStates.INTRO:
+		hp = maxhp;
+		cum_hp = cum_hp_max;
+		
+		intro_timer--;
+		if (intro_timer == 0)
 		{
-			with (instance_find(oWallOfFleshMovement, _i))
+			state = WallOfFleshStates.BATTLE;	
+		}
+		x = oWallOfFleshMouth.x;
+		
+		break;
+		
+	case WallOfFleshStates.BATTLE:
+		x = oWallOfFleshMouth.x;
+		if (hp <= 0 && state != UniversalStates.DEAD)
+		{
+			state = UniversalStates.DEAD;
+			
+			global.score += 100;
+			oRoomControl.gamestate = GameState.LOOT;
+			oGenerator.preprocess_forbidden_obstacles = false;
+			GetStandartRoomProperties();
+		}
+		break;
+		
+	case UniversalStates.DEAD:
+		x -= slide_back_speed;
+		if (x < oCamera.left - 500)
+		{
+			// Destroy every part
+			
+			with (oWallOfFleshEye)
 			{
 				instance_destroy();	
 			}
-		}
-		with (oWallOfFleshMouth)
-		{
+			
+			
+			with (oWallOfFleshMouth)
+			{
+				instance_destroy();	
+			}
 			instance_destroy();	
 		}
-		//ResumeRoom();
-		oGenerator.preprocess_forbidden_obstacles = false;
-		GetStandartRoomProperties();
-		instance_destroy();	
-	}
+		break;
+		
+	case UniversalStates.VICTORY:
+		x -= slide_back_speed;
+		break;
 }
+
+
+
+

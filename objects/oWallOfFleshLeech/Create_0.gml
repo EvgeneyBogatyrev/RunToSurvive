@@ -7,3 +7,8 @@ event_inherited();
 start_time = get_timer();
 timescale = 1/100000;
 magnitude = 15;
+
+hp = 3 + floor(oDifficultyController.minions_defeated * GetStats("Increase hp") / 5);;
+damage = 15;
+
+real_image_aplha = 1;

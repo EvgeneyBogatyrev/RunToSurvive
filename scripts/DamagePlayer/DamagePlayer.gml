@@ -138,3 +138,32 @@ function ContactDamageKnockback(_damage, _speed_coef)
 
 	return _dealt;
 }
+
+
+function DamageSpecificPlayer(_player, _damage, _ignore_damaged=false)
+{
+	if (_player.damaged)
+	{
+		return false;	
+	}
+
+	_player.damaged = true;	
+	_player.damage_timer = 5*30;
+	
+
+	_dealt = true;
+		
+	if (!_player.protected)  _player.hp -= _damage;
+	else                    
+	{
+		_player.protected = false;
+		if (_player.pocket[1] == FORCEFIELD_INUMBER)
+		{
+			_player.pocket[1] = 0;	
+		}
+	}
+		
+	if (_dealt)  ShakeScreen(10, 15);
+
+	return _dealt;
+}

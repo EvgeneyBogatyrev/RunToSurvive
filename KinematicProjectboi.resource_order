@@ -189,6 +189,7 @@
     {"name":"ReturnNoone","order":6,"path":"scripts/ReturnNoone/ReturnNoone.yy",},
     {"name":"RotateVectorByAngle","order":9,"path":"scripts/RotateVectorByAngle/RotateVectorByAngle.yy",},
     {"name":"Scale","order":2,"path":"scripts/Scale/Scale.yy",},
+    {"name":"Arrays","order":5,"path":"scripts/Arrays/Arrays.yy",},
     {"name":"SelectGamepad","order":7,"path":"scripts/SelectGamepad/SelectGamepad.yy",},
     {"name":"ShakeScreen","order":3,"path":"scripts/ShakeScreen/ShakeScreen.yy",},
     {"name":"Shoot","order":6,"path":"scripts/Shoot/Shoot.yy",},

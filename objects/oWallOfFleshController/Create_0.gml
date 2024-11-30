@@ -1,39 +1,57 @@
-/// @description Вставьте описание здесь
-// Вы можете записать свой код в этом редакторе
-
 // Inherit the parent event
 event_inherited();
 
-hp = 100;
-cum_hp = 100;
-cum_hp_max = 100;
-maxhp = 100;
+enum WallOfFleshStates
+{
+	BATTLE,	
+}
 
-go_back = false;
+// global
+maxhp = 1 + 10 * oDifficultyController.bosses_defeated;
+hp = maxhp;
+cum_hp = maxhp;
+cum_hp_max = maxhp;
 
+
+state = UniversalStates.INTRO;
+
+oGenerator.preprocess_forbidden_obstacles = true;  //To increase number of structures
+
+
+// intro
+intro_timer_max = 6 * 60;
+intro_timer = intro_timer_max;
+
+// dead
+slide_back_speed = 2;
 loot_profile_id = SPAMTON_LOOT_INUMBER;
 
+
+// Create eyes and mouth
 further_eye = undefined;
 
 for (var _row = 0; _row < 3; ++_row)
 {
 	if (_row == 1)
 	{
-		with (Create(0, oGenerator.ground[_row], oWallOfFleshMouth, _row))
+		with (Create(x, oGenerator.ground[_row], oWallOfFleshMouth, _row))
 		{
 			depth += 1;	
+			controller = other.id;
 		}
 	}
 	else
 	{
-		with (Create(0, oGenerator.ground[_row], oWallOfFleshEye, _row))
+		with (Create(x, oGenerator.ground[_row], oWallOfFleshEye, _row))
 		{
 			depth -= 4;
+			controller = other.id;
 			if row == 0 other.further_eye = id;
 		}
 	}
 }
 
+// Destroy all halfbosses
 with (oHalfBossParent)
 {
 	hp = 0;	

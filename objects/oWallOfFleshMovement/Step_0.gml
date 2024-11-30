@@ -1,20 +1,22 @@
 
-if (go_back)
+if (instance_exists(oWallOfFleshController) && (oWallOfFleshController.state == UniversalStates.DEAD || oWallOfFleshController.state == UniversalStates.VICTORY))
 {
-	x -= 3;	
+	x -= slide_back_speed;	
 }
-
-if (CheckCollisions(x + 100, y, oSolidParent, row))
+else
 {
-	y -= 2;
-	moving_down_counter = moving_down_counter_max;
-}
+	if (CheckCollisions(x + 120, y, oSolidParent, row))
+	{
+		y -= 2;
+		moving_down_counter = moving_down_counter_max;
+	}
 
-moving_down_counter--;
+	moving_down_counter--;
 
-if (moving_down_counter <= 0 && !CheckCollisions(x, y + 1, oSolidParent, row))
-{
-	y += 1;	
+	if (moving_down_counter <= 0 && !CheckCollisions(x, y + 1, oSolidParent, row))
+	{
+		y += 1;	
+	}
 }
 
 // Knockback player

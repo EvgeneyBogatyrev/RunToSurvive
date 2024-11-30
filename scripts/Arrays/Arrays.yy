@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"DamagePlayer",
+  "%Name":"Arrays",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"DamagePlayer",
+  "name":"Arrays",
   "parent":{
-    "name":"Player",
-    "path":"folders/Scripts/Actions/Player.yy",
+    "name":"Object_oriented",
+    "path":"folders/Scripts/Object_oriented.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

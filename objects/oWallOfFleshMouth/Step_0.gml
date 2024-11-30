@@ -1,6 +1,6 @@
 
 xspeed = (-oRoomControl.roomspeed + 1);
-if (oWallOfFleshController.state != UniversalStates.DEAD && x < oCamera.left - 50)
+if (instance_exists(oWallOfFleshController) && oWallOfFleshController.state != UniversalStates.DEAD && x < oCamera.left - 50 && oWallOfFleshController.state != UniversalStates.VICTORY)
 {
 	x = oCamera.left - 50;	
 }
@@ -10,7 +10,7 @@ hp = 1;
 
 
 leech_spawn_timer--;
-if (leech_spawn_timer <= 0 && oWallOfFleshController.state != UniversalStates.DEAD)
+if (leech_spawn_timer <= 0 && instance_exists(oWallOfFleshController) && oWallOfFleshController.state == WallOfFleshStates.BATTLE)
 {
 	leech_spawn_timer = leech_spawn_timer_max;
 

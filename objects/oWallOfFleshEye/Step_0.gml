@@ -1,11 +1,13 @@
-
-if row = 0
+if (instance_exists(oWallOfFleshMouth))
 {
-	x = lerp(x, oWallOfFleshMouth.x + 64, 0.1);	
-}
-else
-{
-	x = lerp(x, oWallOfFleshMouth.x - 64, 0.1);
+	if row = 0
+	{
+		x = lerp(x, oWallOfFleshMouth.x + 64, 0.1);	
+	}
+	else
+	{
+		x = lerp(x, oWallOfFleshMouth.x - 32, 0.1);
+	}
 }
 
 var sees_player = false;
@@ -27,7 +29,7 @@ if (!sees_player)
 
 // Shoot the player
 shoot_timer--;
-if (shoot_timer <= 0  && oWallOfFleshController.state != UniversalStates.DEAD)
+if (shoot_timer <= 0  && instance_exists(oWallOfFleshController) && oWallOfFleshController.state == WallOfFleshStates.BATTLE)
 {	
 	with (oPlayer)
 	{
