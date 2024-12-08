@@ -68,7 +68,12 @@ function CreateEnvironment(argument0, argument1, argument2) {
 								default:
 									Raise("Invalid block sprite index\n");
 									break;
-							}	
+							}
+							
+							if (instance_exists(oWallOfFleshController) && _sprite_index < 4 && random_range(0, 1) < 0.1)
+							{
+								lava_block = true;
+							}
 						
 							if (_line[_elem] < 0 && (irandom_range(1, 100) > 90 || global.level_started)) 
 							{

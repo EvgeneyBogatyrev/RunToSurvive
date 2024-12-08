@@ -14,3 +14,18 @@ if (destroyed)
 		instance_destroy();	
 	}
 }
+
+
+if (lava_block)
+{
+	sprite_index = sSpamRailsEmpty;
+	var _collider = GetCollider(x - 5, y - 1, oPlayer, row);
+	if (_collider == noone)
+	{
+		_collider = GetCollider(x + 5, y - 1, oPlayer, row);
+	}
+	if (_collider != noone)
+	{
+		DamageSpecificPlayer(_collider, 10);	
+	}
+}

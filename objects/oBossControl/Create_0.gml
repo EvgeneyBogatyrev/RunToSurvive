@@ -10,9 +10,9 @@ if (global.DEBUG)
 
 last_boss = "";
 
-bosses_array = ["Robot", "Pandora", "Delver", "ChasingStump", "Spamton", "GunMan"]//, "WallOfFlesh"];
+bosses_array = ["Robot", "Pandora", "Delver", "ChasingStump", "Spamton", "GunMan", "WallOfFlesh"];
 
-banned_as_first_boss = ["Robot", "Pandora", "Spamton"];
+banned_as_first_boss = ["Robot", "Pandora", "Spamton", "WallOfFlesh"];
 banned_as_second_boss = ["Robot", "Spamton"];
 
 tmp_bosses_array = array_shuffle(bosses_array);

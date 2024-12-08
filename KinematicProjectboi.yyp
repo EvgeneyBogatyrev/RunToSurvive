@@ -85,7 +85,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.2.0.132",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"KinematicProjectboi",
   "resources":[
@@ -195,6 +195,7 @@
     {"id":{"name":"AimProjectileChooseTarget","path":"scripts/AimProjectileChooseTarget/AimProjectileChooseTarget.yy",},},
     {"id":{"name":"AnimationEnd","path":"scripts/AnimationEnd/AnimationEnd.yy",},},
     {"id":{"name":"ApproachTo","path":"scripts/ApproachTo/ApproachTo.yy",},},
+    {"id":{"name":"Arrays","path":"scripts/Arrays/Arrays.yy",},},
     {"id":{"name":"Assert","path":"scripts/Assert/Assert.yy",},},
     {"id":{"name":"BoundBetween","path":"scripts/BoundBetween/BoundBetween.yy",},},
     {"id":{"name":"Character","path":"scripts/Character/Character.yy",},},
@@ -251,7 +252,6 @@
     {"id":{"name":"RotateVectorByAngle","path":"scripts/RotateVectorByAngle/RotateVectorByAngle.yy",},},
     {"id":{"name":"SaveGame","path":"scripts/SaveGame/SaveGame.yy",},},
     {"id":{"name":"Scale","path":"scripts/Scale/Scale.yy",},},
-    {"id":{"name":"Arrays","path":"scripts/Arrays/Arrays.yy",},},
     {"id":{"name":"SelectGamepad","path":"scripts/SelectGamepad/SelectGamepad.yy",},},
     {"id":{"name":"ShakeScreen","path":"scripts/ShakeScreen/ShakeScreen.yy",},},
     {"id":{"name":"Shoot","path":"scripts/Shoot/Shoot.yy",},},
