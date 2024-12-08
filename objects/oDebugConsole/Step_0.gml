@@ -19,24 +19,33 @@ if keyboard_check_pressed(192) || keyboard_check_pressed(vk_alt)
 				{
 					case "hp":
 						oPlayer.hp = int64(_cmd[1]);
+						break;
 					case "ammo":
 						oPlayer.bullets = int64(_cmd[1]);
+						break;
 					case "gun":
 						oPlayer.gun.current_gun = int64(_cmd[1]);
-					break;
+						break;
 					case "boss":
 						array_insert(oBossControl.tmp_bosses_array, 0, _cmd[1]);		
-					break;
+						break;
 					case "bossbegin":
+						if len(_cmd) > 1 array_insert(oBossControl.tmp_bosses_array, 0, _cmd[1]);
 						oBossControl.timer = 0;
-					break;
+						break;
 					case "spawnitem":
 						with (Create(oCamera.right, oGenerator.ground[0] - 100, oItemDrop, 0))
 						{
 							depth -= 2;
 							image = int64(_cmd[1]);
 						}
-					break;
+						break;
+					case "roomspeed":
+						with (oRoomControl)
+						{
+							roomspeed =  -int64(_cmd[1]);
+							roomspeed_limit = int64(_cmd[1]);
+						}
 				}
 			}
 			ds_list_clear(cmd_queue);
@@ -70,6 +79,7 @@ if keyboard_check_pressed(vk_enter)
 			case "spawnitem":
 			case "hp":
 			case "ammo":
+			case "roomspeed":
 				ds_list_add(cmd_queue, _parse);
 			break;
 				

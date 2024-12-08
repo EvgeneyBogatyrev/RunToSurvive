@@ -43,17 +43,9 @@ for (var _i = 0; _i < instance_number(oPlayer); ++_i)
 			}
 		}
 		
-		with (_player)
-		{
-			if CheckCollisions(x + 50 * scale, y - 10, oSolidParent, row)
-			{
-				KnockbackForce(_player, 200, -15);
-			}
-			else
-			{
-				KnockbackForce(_player, 200, 0);	
-			}
-		}
+		
+		KnockbackForce(_player, 15*scale, -15*scale);	
+		
 	}
 }
 

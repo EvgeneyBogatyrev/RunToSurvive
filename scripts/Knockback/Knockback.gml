@@ -30,10 +30,10 @@ function KnockbackForce(_victim, _force_x, _force_y) {
 	{
 		if (!knockbacked)	
 		{
-			xspeed += _force_x;
-			yspeed += _force_y;
+			xspeed = _force_x;
+			yspeed = _force_y;
 			knockbacked = true;
-			knockback_timer = 15;
+			state = PlayerStates.NON_CONTROL;
 		}
 	}
 

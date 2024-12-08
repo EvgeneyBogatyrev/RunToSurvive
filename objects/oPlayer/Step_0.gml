@@ -30,6 +30,13 @@ switch (state)
 		if (_shoot_hold && instance_exists(gun))  gun.shoot_hold = true;
 		
 		break;
+	case PlayerStates.KNOCKBACKED:
+		PlayerControl();
+		if (_left || _right)
+		{
+			state = PlayerStates.NORMAL;
+		}
+		
 		
 	case PlayerStates.TRAPPED:
 		PlayerControl();
@@ -134,6 +141,29 @@ switch (state)
 		break;
 	
 	case PlayerStates.NON_CONTROL:
+		
+		if knockbacked
+		{
+			PlayerControl();
+			PlayerCheckDying();
+			var _xspeed = xspeed;
+	
+			var _move = _right - _left;
+			dir = (_move != 0) ? sign(_move) : dir;
+	
+			_left =  false;
+			_right =  false;
+			_up =  false;
+			_down =  false;
+			_jump = false;
+	
+			PlayerMove();
+	
+			xspeed = _xspeed;
+	
+			if (_shoot && instance_exists(gun))       gun.shoot = true;
+			if (_shoot_hold && instance_exists(gun))  gun.shoot_hold = true;
+		}
 		PlayerSprite();
 		break;
 	
@@ -154,9 +184,6 @@ if (damaged)
 	damage_timer--;	
 	if (damage_timer <= 0)  damaged = false;
 }
-
-if (knockback_timer > 0) knockback_timer--;
-else	                 knockbacked = false;	
 
 
 event_inherited();

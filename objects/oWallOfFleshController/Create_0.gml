@@ -7,7 +7,7 @@ enum WallOfFleshStates
 }
 
 // global
-maxhp = 1 + 10 * oDifficultyController.bosses_defeated;
+maxhp = 65 + 10 * oDifficultyController.bosses_defeated;
 hp = maxhp;
 cum_hp = maxhp;
 cum_hp_max = maxhp;

@@ -43,6 +43,13 @@ function PlayerMove() {
 		    xspeed = walkspeed * escape_direction / 2;	                          // calculate the direction player need to go out of the obstacle
 		
 		}
+		
+		if (knockbacked and state = PlayerStates.NON_CONTROL)
+		{
+			state = PlayerStates.NORMAL;
+			knockbacked = false;
+		}
+		
 	}
 	else  
 	{
@@ -107,6 +114,11 @@ function PlayerMove() {
 		yspeed            =  0;
 		grounded_counter  = 10;
 		if (jump_counter == 0) changing_row = false;
+		if (knockbacked and state = PlayerStates.NON_CONTROL)
+		{
+			state = PlayerStates.NORMAL;
+			knockbacked = false;
+		}
 	}
 	else                                                          // vertical movement
 	{

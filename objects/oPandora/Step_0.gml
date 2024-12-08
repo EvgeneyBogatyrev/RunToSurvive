@@ -76,7 +76,7 @@ switch (state)
 		break;
 		
 	case PandoraStates.GAUNTLET:
-		if (ContactDamage(damage, 0))  Knockback(oPlayer, 2);
+		ContactDamageKnockback(damage, max(0, 10 * dir * scale), -15 * scale);
 		
 		//Rotation
 		if (sprite_index == sPandoraBoxBlink &&  image_angle < 90) 

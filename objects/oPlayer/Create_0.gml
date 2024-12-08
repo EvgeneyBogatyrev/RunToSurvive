@@ -3,6 +3,7 @@ event_inherited();
 enum PlayerStates
 {
 	NORMAL,
+	KNOCKBACKED,
 	TRAPPED,
 	NON_CONTROL
 };
