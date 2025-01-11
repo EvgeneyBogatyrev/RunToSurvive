@@ -12,7 +12,7 @@ if (trail == undefined)
 	part_type_life(trail,  40, 40);	
 }
 
-ContactDamage(damage, 0);
+ContactDamage(damage);
 
 // Particles
 var _len = point_distance(x, y, xprevious, yprevious);

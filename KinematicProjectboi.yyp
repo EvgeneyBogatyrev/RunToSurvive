@@ -469,6 +469,7 @@
     {"id":{"name":"sWildvine","path":"sprites/sWildvine/sWildvine.yy",},},
     {"id":{"name":"sWoF_border","path":"sprites/sWoF_border/sWoF_border.yy",},},
     {"id":{"name":"sWoF","path":"sprites/sWoF/sWoF.yy",},},
+    {"id":{"name":"Timeline1","path":"timelines/Timeline1/Timeline1.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

@@ -59,6 +59,8 @@ dbutton[5] = "Difficulty: " + difficulty[global.difficulty];
 dbutton[6] = "Reset highscore";
 dbutton[7] = "BACK";
 
+Print("Options", global.difficulty);
+
 //Set drawing buttons
 button[0] = dbutton[0];
 button[1] = dbutton[1];

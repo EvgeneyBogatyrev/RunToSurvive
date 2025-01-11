@@ -50,7 +50,6 @@ if (shoot_timer <= 0  && instance_exists(oWallOfFleshController) && oWallOfFlesh
 				xspeed = lengthdir_x(15, direction_to_shoot);	
 				yspeed = lengthdir_y(15, direction_to_shoot);
 				depth = GetScale(other.row) - 2;
-				damage = 0;
 			}
 		}
 	}

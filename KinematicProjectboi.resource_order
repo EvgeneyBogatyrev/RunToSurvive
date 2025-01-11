@@ -376,5 +376,6 @@
     {"name":"sWildvine","order":3,"path":"sprites/sWildvine/sWildvine.yy",},
     {"name":"sWoF_border","order":3,"path":"sprites/sWoF_border/sWoF_border.yy",},
     {"name":"sWoF","order":2,"path":"sprites/sWoF/sWoF.yy",},
+    {"name":"Timeline1","order":6,"path":"timelines/Timeline1/Timeline1.yy",},
   ],
 }

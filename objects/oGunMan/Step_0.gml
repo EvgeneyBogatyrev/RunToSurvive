@@ -28,7 +28,7 @@ if (opponent == undefined || !instance_exists(opponent) || opponent.state == Uni
 switch (state)
 {
 	case UniversalStates.INTRO:
-	
+		//scale = GetScale(row);
 		if (!area_created && abs(x - oCamera.x) < 1400)
 		{
 			area_created = true;
@@ -41,6 +41,7 @@ switch (state)
 			area_updated = true;
 			CreateConstruct(x - 800, 0, _charge_tower_shape, true);			
 		}
+		//scale = GetScale(row) * 1.2;
 		
 		hp = maxhp;
 		cum_hp = cum_hp_max;
@@ -108,7 +109,7 @@ switch (state)
 			}
 			if (_solid)
 			{
-				if (row != 0)
+				if (row == 1)
 				{
 					jump_counter = 10;
 					gun.shoot = true;
@@ -436,6 +437,11 @@ if (state != UniversalStates.DEAD && x < oCamera.right)
 
 
 event_inherited();
+
+if (state != UniversalStates.INTRO)
+{
+	scale = GetScale(row) * 1.2;
+}
 
 PlayerSprite();
 

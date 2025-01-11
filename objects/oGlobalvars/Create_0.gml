@@ -27,7 +27,7 @@ global.score = 0;
 global.highscore = 0;
 global.difficulty = undefined;
 
-global.filename = /*working_directory + */"file.name";
+global.filename = working_directory + "file.name";
 
 globalvar save_map;
 global.character = "Kyron";
@@ -46,8 +46,6 @@ global.show_title = true;
 global.show_animation = true;
 
 global.level_started = false;
-
-global.difficulty = Difficulty.NORMAL;
 
 randomize();
 
