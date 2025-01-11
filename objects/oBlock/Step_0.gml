@@ -26,6 +26,6 @@ if (lava_block)
 	}
 	if (_collider != noone)
 	{
-		DamageSpecificPlayer(_collider, 10);	
+		DamageSpecificPlayer(_collider, GetStats("WallOfFleshBlock"));	
 	}
 }

@@ -1,6 +1,6 @@
 event_inherited();
 
-damage = GetStats("Shooting robot fire");
+damage = GetStats("WallOfFleshBeam");
 xspeed = -15;
 
 

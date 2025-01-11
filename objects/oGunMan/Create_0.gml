@@ -79,7 +79,7 @@ desired_row = 1;
 go_for_a_charge = false;
 
 bullets = 20;
-damageBoost = 19;
+damageBoost = GetStats("GunMan");
 gun = Create(x, y, oGun, 0);
 gun.host = id;
 
@@ -92,7 +92,7 @@ state_change_timer = -1;
 state_change_timer_max = 1.5 * 60;
 next_state = GunManStates.FIGHT;
 
-charging_station = Create(x - 400, y - 165, oChargeStation, 0);
+charging_station = Create(x - 430, y - 165, oChargeStation, 0);
 
 hp_state = GunManHpState.FIRST;
 

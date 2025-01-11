@@ -162,7 +162,7 @@ function CreateConstruct(_start, _row, _shape, _only_update=false) {
 						
 					if (_level == 1)
 					{
-						var _collider = GetCollider(x, y + BLOCKSIZE * scale, oGroundBlock, row);
+						var _collider = GetCollider(x, y + BLOCKSIZE * _scale, oGroundBlock, row);
 						if (_collider != noone)
 						{
 							_collider.sprite_index = oRoomControl.room_properties[? "BlockEmptySprite"];

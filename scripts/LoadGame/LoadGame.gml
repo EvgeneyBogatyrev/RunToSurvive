@@ -1,5 +1,5 @@
 function LoadGame() {
-	if (not file_exists(global.filename))
+	if (not file_exists(global.filename) || ds_map_secure_load(global.filename) == -1)
 	{
 		save_map = ds_map_create();
 		ds_map_add(save_map, "Resolution_width", 1024);
@@ -49,8 +49,10 @@ function LoadGame() {
 		{
 			global.highscore = 0;	
 		}
+		Print("Diff", global.difficulty);
 		if (global.difficulty == undefined)
 		{
+			Print("Diff is undefined");
 			global.difficulty = Difficulty.NORMAL;
 		}
 		//var p1 = ds_map_find_value(save_map, "Player1_pocket");

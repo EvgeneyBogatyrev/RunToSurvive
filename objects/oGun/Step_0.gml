@@ -72,7 +72,12 @@ switch(current_gun)
 		if (shoot && !recoil && host.bullets >= cost)
 		{
 			ShakeScreen(3, 5);
-			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
+			var _speed = 40;
+			if (instance_exists(host) && host.object_index == oGunMan)
+			{
+				_speed = 20;	
+			}
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, _speed, 8);
 		}
 		shoot = false;
 		shoot_hold = false;
@@ -354,10 +359,16 @@ switch(current_gun)
 		cost = GetCost(current_gun);
 		var _damage = 2;
 		
+		var _speed = 40;
+		if (instance_exists(host) && host.object_index == oGunMan)
+		{
+			_speed = 20;	
+		}
+		
 		if (shoot && !recoil && host.bullets >= cost && shotgun_times == 0)
 		{
 			ShakeScreen(2, 4);
-			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, _speed, 8);
 			shotgun_timer = shotgun_timer_max;
 			shotgun_times = 3;
 		}
@@ -371,7 +382,7 @@ switch(current_gun)
 		{
 			shotgun_times--;
 			host.bullets += cost;
-			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, _speed, 8);
 			shotgun_timer = shotgun_timer_max;
 		}
 		

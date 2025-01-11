@@ -27,7 +27,8 @@ if keyboard_check_pressed(192) || keyboard_check_pressed(vk_alt)
 						oPlayer.gun.current_gun = int64(_cmd[1]);
 						break;
 					case "boss":
-						array_insert(oBossControl.tmp_bosses_array, 0, _cmd[1]);		
+						array_insert(oBossControl.tmp_bosses_array, 0, _cmd[1]);
+						oBossControl.timer = 0;
 						break;
 					case "bossbegin":
 						if len(_cmd) > 1 array_insert(oBossControl.tmp_bosses_array, 0, _cmd[1]);

@@ -11,7 +11,7 @@ if (hp > 0)
 		if _player.state == UniversalStates.DEAD continue;
 		if _player.row != row continue;
 	
-		if ((_chosen_player == undefined || _chosen_player.x > _player.x) && _player.x > x - walkspeed)
+		if ((_chosen_player == undefined || _chosen_player.x > _player.x) && _player.x > x - 4 * walkspeed)
 		{
 			_chosen_player = _player;	
 		}
@@ -19,7 +19,7 @@ if (hp > 0)
 
 	if (_chosen_player != undefined)
 	{
-		_add_y = (_chosen_player.y - 30 - y) * 0.8;
+		_add_y = (_chosen_player.y - 30 - y) * 0.2;
 	}
 	else
 	{
