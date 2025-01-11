@@ -566,7 +566,7 @@ switch(current_gun)
 			var _damage = 2;
 				
 			ShakeScreen(3, 5);
-			Shoot(oProjectile, sBulletBeam, _damage, 40, 8);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
 				
 			charge_timer = 0;
 		}
@@ -576,7 +576,7 @@ switch(current_gun)
 			var _damage = 5;
 				
 			ShakeScreen(3, 5);
-			Shoot(oProjectile, sBulletBeam, _damage, 40, 8);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
 				
 			charge_timer = 0;
 		}
