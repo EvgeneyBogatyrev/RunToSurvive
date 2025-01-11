@@ -2,6 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function GetSpritesFromName(_name)
 {
+	// Log all sprites so GameMaker does not remove it as unused
+	var _player_sprites = [sKyronStand,sKyronIdle,sKyronRun,sKyronJump,sKyronDying,sKyronIcon,sKyronOutOfScreen,sKyronHands];
+	_player_sprites = [sLongHairStand,sLongHairIdle,sLongHairRun,sLongHairJump,sLongHairDying,sLongHairIcon,sLongHairOutOfScreen,sLongHairHands];
+	_player_sprites = [sSteampunkStand,sSteampunkIdle,sSteampunkRun,sSteampunkJump,sSteampunkDying,sSteampunkIcon,sSteampunkOutOfScreen,sSteampunkHands];
+	_player_sprites = [sCyberStand,sCyberIdle,sCyberRun,sCyberJump,sCyberDying,sCyberIcon,sCyberOutOfScreen,sCyberHands];
+	_player_sprites = [sBuruchIdle,sBuruchRun,sBuruchJump,sBuruchDying,sBuruchIcon,sBuruchOutOfScreen,sBuruchHands];
+	_player_sprites = [sRoboStand,sRoboIdle,sRoboRun,sRoboJump,sRoboIcon,sRoboOutOfScreen,sRoboHands];
+	
 	var _stand = asset_get_index("s" + _name + "Stand");
 	var _idle = asset_get_index("s" + _name + "Idle");
 	var _run = asset_get_index("s" + _name + "Run");
