@@ -240,6 +240,7 @@
     {"name":"sBuruchRun","order":6,"path":"sprites/sBuruchRun/sBuruchRun.yy",},
     {"name":"sChargeHolo","order":4,"path":"sprites/sChargeHolo/sChargeHolo.yy",},
     {"name":"sChargeStation","order":2,"path":"sprites/sChargeStation/sChargeStation.yy",},
+    {"name":"sChargingGun","order":18,"path":"sprites/sChargingGun/sChargingGun.yy",},
     {"name":"sChest","order":3,"path":"sprites/sChest/sChest.yy",},
     {"name":"sCloningStation","order":7,"path":"sprites/sCloningStation/sCloningStation.yy",},
     {"name":"sCloningStationOpen","order":8,"path":"sprites/sCloningStationOpen/sCloningStationOpen.yy",},

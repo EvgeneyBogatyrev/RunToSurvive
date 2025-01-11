@@ -12,6 +12,7 @@ enum Gun
 	LIFESTEAL_GUN,
 	REAL_SHOTGUN,
 	ELECTRIC_GUN,
+	CHARGING_GUN,
 };
 
 
@@ -28,7 +29,7 @@ current_gun = Gun.STANDART_GUN;
 
 if (global.DEBUG)
 {
-	current_gun = Gun.LIFESTEAL_GUN;
+	current_gun = Gun.CHARGING_GUN;
 }
 
 secondary = false;
@@ -69,3 +70,7 @@ launcher_timer = launcher_timer_max;
 
 //electricity
 electricity_obj = undefined;
+
+//CHARGING Gun
+charge_timer = 0;
+

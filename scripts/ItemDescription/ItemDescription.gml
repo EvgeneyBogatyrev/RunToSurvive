@@ -93,6 +93,12 @@ item_description = [
 	item_id : ESSENCE_INUMBER,
 	item_name : "Essence",
 	description : "Your friend's soul."
+},
+{
+	item_id : CHARGING_GUN_INUMBER,
+	gun_state : Gun.CHARGING_GUN,
+	item_name : "Charging gun",
+	description : "Spend 2 energy to deal 3 damage or charg it to deal 5 damage."
 }
 ];
 

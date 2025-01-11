@@ -85,7 +85,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.1.171",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"KinematicProjectboi",
   "resources":[
@@ -310,6 +310,7 @@
     {"id":{"name":"sBuruchRun","path":"sprites/sBuruchRun/sBuruchRun.yy",},},
     {"id":{"name":"sChargeHolo","path":"sprites/sChargeHolo/sChargeHolo.yy",},},
     {"id":{"name":"sChargeStation","path":"sprites/sChargeStation/sChargeStation.yy",},},
+    {"id":{"name":"sChargingGun","path":"sprites/sChargingGun/sChargingGun.yy",},},
     {"id":{"name":"sChest","path":"sprites/sChest/sChest.yy",},},
     {"id":{"name":"sCloningStation","path":"sprites/sCloningStation/sCloningStation.yy",},},
     {"id":{"name":"sCloningStationOpen","path":"sprites/sCloningStationOpen/sCloningStationOpen.yy",},},

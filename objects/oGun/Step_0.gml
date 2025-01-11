@@ -40,6 +40,7 @@ if (host.bullets < GetCost(current_gun) && secondary == false && shotgun_times =
 	launcher_times = 0;
 	launcher_timer = 0;
 	temp_bullets = 0;
+	charge_timer = 0;
 }
 
 if (secondary && host.bullets >= GetCost(_held_gun))
@@ -538,6 +539,49 @@ switch(current_gun)
 		break;
 		
 	default:
+		break;
+		
+	case Gun.CHARGING_GUN:
+		sprite_index = sChargingGun;
+			
+		cost = GetCost(current_gun);
+		if (shoot_hold && !recoil)
+		{
+			if (charge_timer == 0)  charge_timer = 1;
+			if (increase)
+			{
+				charge_timer += 1;
+				if (charge_timer >= 20)  increase = false;
+			}
+			//else
+			//{
+			//	temp_bullets -= 1;
+			//	if (temp_bullets < 1)  increase = true;	
+			//}
+		}
+			
+		if (!shoot_hold && charge_timer < 20 && charge_timer != 0) 
+		{
+			increase = true; 
+			var _damage = 2;
+				
+			ShakeScreen(3, 5);
+			Shoot(oProjectile, sBulletBeam, _damage, 40, 8);
+				
+			charge_timer = 0;
+		}
+		if (!shoot_hold && charge_timer >= 20) 
+		{
+			increase = true; 
+			var _damage = 5;
+				
+			ShakeScreen(3, 5);
+			Shoot(oProjectile, sBulletBeam, _damage, 40, 8);
+				
+			charge_timer = 0;
+		}
+		shoot = false;
+		shoot_hold = false;
 		break;
 }
 
