@@ -44,6 +44,7 @@ maxbullets = 20;
 shown_bullets = maxbullets;
 bullets = maxbullets;
 drill_damage = 1;
+base_drill_damage = 1;
 
 state = PlayerStates.NORMAL;
 
@@ -78,7 +79,7 @@ pocket = [0, 0, 0, 0, 0];
 pocket[0] = STDGUN_INUMBER;
 if (global.DEBUG)
 {
-	pocket[1] = DOUBLEHEART_INUMBER;
+	//pocket[1] = INFINITYGUN_INUMBER;
 }
 
 damageBoost = 0;

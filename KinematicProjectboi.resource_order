@@ -169,6 +169,7 @@
     {"name":"Increase","order":5,"path":"scripts/Increase/Increase.yy",},
     {"name":"Input","order":2,"path":"scripts/Input/Input.yy",},
     {"name":"ItemDescription","order":11,"path":"scripts/ItemDescription/ItemDescription.yy",},
+    {"name":"Items","order":13,"path":"scripts/Items/Items.yy",},
     {"name":"KinematicCollisions","order":6,"path":"scripts/KinematicCollisions/KinematicCollisions.yy",},
     {"name":"Knockback","order":5,"path":"scripts/Knockback/Knockback.yy",},
     {"name":"LevelEnd","order":4,"path":"scripts/LevelEnd/LevelEnd.yy",},

@@ -84,7 +84,7 @@ passive_items_profiles =
 				var _heal_amount = 3;
 				if (_host.pocket[1] == DOUBLEHEART_INUMBER)
 				{
-					_heal_amount *= 2;	
+					_heal_amount *= 1.5;	
 				}
 				_host.hp += _heal_amount;
 			}
@@ -93,7 +93,7 @@ passive_items_profiles =
 	},
 	
 	{
-		name : "Spamton glasses",
+		name : "Dealmaker",
 		icon_index : SPAMTON_LOOT_INUMBER,
 		on_pickup : function(_host)
 		{
@@ -106,8 +106,8 @@ passive_items_profiles =
 		icon_index : GUNMAN_LOOT_INUMBER,
 		on_pickup : function(_host)
 		{
-			var _guns = [Gun.POWERGUN, Gun.REAL_SHOTGUN, Gun.ROCKET_LAUNCHER];			
-			var _gun_images = [POWERGUN_INUMBER, REALSHOTGUN_GUN_INUMBER, ROCKET_LAUNCHER_INUMBER];
+			var _guns = GetEliteGuns();			
+			var _gun_images = GetEliteGunsImages();
 
 			var _index = irandom_range(0, array_length(_guns) - 1);
 			var _new_gun = _guns[_index];			
@@ -120,6 +120,15 @@ passive_items_profiles =
 			_host.shoot_hold = false;
 		},
 		description : "Equip a random fully-charged unique weapon when you pick this up or revive."
+	},
+	{
+		name : "Damage boost",
+		icon_index : WALL_LOOT_INUMBER,
+		on_pickup : function(_host)
+		{
+			_host.base_drill_damage += 1;	
+		},
+		description : "Damage from your meele attecks is increased by 1."
 	},
 ]
 

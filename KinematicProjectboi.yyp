@@ -85,7 +85,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"KinematicProjectboi",
   "resources":[
@@ -228,6 +228,7 @@
     {"id":{"name":"Increase","path":"scripts/Increase/Increase.yy",},},
     {"id":{"name":"Input","path":"scripts/Input/Input.yy",},},
     {"id":{"name":"ItemDescription","path":"scripts/ItemDescription/ItemDescription.yy",},},
+    {"id":{"name":"Items","path":"scripts/Items/Items.yy",},},
     {"id":{"name":"KinematicCollisions","path":"scripts/KinematicCollisions/KinematicCollisions.yy",},},
     {"id":{"name":"Knockback","path":"scripts/Knockback/Knockback.yy",},},
     {"id":{"name":"LevelEnd","path":"scripts/LevelEnd/LevelEnd.yy",},},

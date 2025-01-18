@@ -92,7 +92,7 @@ switch(current_gun)
 		image_xscale *= 1.3;
 		image_yscale *= 1.3;
 	
-		damage = 2 * host.drill_damage;
+		damage = 4 + host.drill_damage;
 		
 		switch (hammer_state)
 		{
@@ -474,7 +474,7 @@ switch(current_gun)
 				
 				if (host.object_index == oPlayer && host.pocket[1] == DOUBLEHEART_INUMBER)
 				{
-					_heal_amount *= 2;	
+					_heal_amount *= 1.5;	
 				}
 				host.hp += _heal_amount;
 				if object_is_ancestor(host.object_index, oBossParent)
@@ -597,3 +597,22 @@ switch(current_gun)
 }
 
 if (recoil != 0)  recoil -= sign(recoil);
+
+
+if (host.bullets < GetCost(current_gun) && host.pocket[1] == INFINITYGUN_INUMBER)
+{
+	var _guns = GetAllGuns();			
+	var _gun_images = GetAllGunsImages();
+
+	var _index = irandom_range(0, array_length(_guns) - 1);
+	var _new_gun = _guns[_index];			
+	var _new_gun_image = _gun_images[_index];
+
+	host.gun.current_gun = _new_gun;
+	host.pocket[0] = _new_gun_image;
+	host.bullets = host.maxbullets / 2;
+	host.shoot_hold = false;	
+	host.shoot = false;
+	
+	host.hp -= 20;
+}

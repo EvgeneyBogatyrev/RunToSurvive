@@ -15,11 +15,10 @@ if (hp <= 0)
 	with (Create(x, y, oItemDrop, row))
 	{
 		depth -= 2;
-		image = choose(STDGUN_INUMBER, POWERGUN_INUMBER, SHOTGUN_INUMBER, 
-						ROCKET_LAUNCHER_INUMBER, LIFESTEAL_GUN_INUMBER, 
-						ROCKETBOOTS_INUMBER, FORCEFIELD_INUMBER, ENERGYFIST_INUMBER,
-						DOUBLEHEART_INUMBER, LIGHTNINGBOOTS_INUMBER, REALSHOTGUN_GUN_INUMBER,
-						ELECTRIC_GUN_INUMBER, CRUSH_INUMBER, CHARGING_GUN_INUMBER);
+		var _all_items = GetAllDropItems();
+		image = _all_items[random_range(0, len(_all_items) - 1)];
+		
+		// To add new item to drop list, go to Items script.
 	}
 	instance_destroy();
 }
