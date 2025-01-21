@@ -29,25 +29,50 @@ if (hp <= 0 && state != UniversalStates.DEAD && state != HalfBossStates.INACTIVE
 	//	image = HEARTH_INUMBER;
 	//}
 	
-	with (Create(x, y, oItemDrop, row))
+	var _image;
+	var _rnd_val = random_range(0, 100);
+	
+	
+	if (object_index == oStump)
 	{
-		depth -= 2;
-		
-		
-		var _rnd_val = random_range(0, 100);
 		if (_rnd_val < 50)
 		{
-			image = HEARTH_INUMBER;	
+			_image = HEARTH_INUMBER;	
 		}
-		else if (_rnd_val < 85)
+		else
 		{
-			image = BATTERY_INUMBER;	
+			_image = BATTERY_INUMBER;	
+		}
+	}
+	else if (object_index == oArcher)
+	{
+		if (_rnd_val < 85)
+		{
+			_image = BATTERY_INUMBER;	
 		}
 		else
 		{
 			var _all_items = GetAllDropItems();
-			image = _all_items[irandom_range(0, len(_all_items) - 1)];
+			_image = _all_items[irandom_range(0, len(_all_items) - 1)];
 		}
+	}
+	else if (object_index == oBilly)
+	{
+		if (_rnd_val < 85)
+		{
+			_image = HEARTH_INUMBER;	
+		}
+		else
+		{
+			var _all_items = GetAllDropItems();
+			_image = _all_items[irandom_range(0, len(_all_items) - 1)];
+		}
+	}
+	
+	with (Create(x, y, oItemDrop, row))
+	{
+		depth -= 2;
+		image = _image;
 	}
 }
 

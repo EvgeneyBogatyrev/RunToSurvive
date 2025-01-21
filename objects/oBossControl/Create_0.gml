@@ -1,5 +1,5 @@
 /// @description
-max_timer = 60 * 60;
+max_timer = 45 * 60;
 timer = 15 * 60;
 
 if (global.DEBUG)

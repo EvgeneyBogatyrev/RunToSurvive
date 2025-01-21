@@ -24,7 +24,12 @@ if (state == ItemDropStates.SPIN)
 		switch (image) 
 		{
 			case BATTERY_INUMBER:
-				_player.bullets += irandom_range(1, 4);
+				var _bullet_gain = irandom_range(10, 15);
+				if (instance_exists(oStumpTree))
+				{
+					_bullet_gain = irandom_range(1, 4)	
+				}
+				_player.bullets += _bullet_gain;
 				if (_player.pocket[1] == ENERGYFIST_INUMBER)
 				{
 					_player.bullets += 2;	
