@@ -25,7 +25,7 @@ cum_hp_max = cum_hp;
 maxhp = mage_hp;
 hp = maxhp;
 
-loot_profile_id = DELVER_LOOT_INUMBER;
+loot_profile_ids = [DELVER_LOOT_INUMBER];
 
 //Intro
 intro_timer_max = 6 * 60;

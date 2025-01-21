@@ -4,10 +4,11 @@ if (CheckCollisions(x, y, oPlayer, row))
 {
 	var _player = GetCollider(x, y, oPlayer, row);
 	
-	if (instance_exists(_player) && _player.state != UniversalStates.DEAD && _player.pocket[1] == CRUSH_INUMBER)
-	{
-		hp = 0;	
-	}
+	hp = 0;
+	//if (instance_exists(_player) && _player.state != UniversalStates.DEAD && _player.pocket[1] == CRUSH_INUMBER)
+	//{
+	//	hp = 0;	
+	//}
 }
 
 if (hp <= 0)
@@ -16,7 +17,7 @@ if (hp <= 0)
 	{
 		depth -= 2;
 		var _all_items = GetAllDropItems();
-		image = _all_items[random_range(0, len(_all_items) - 1)];
+		image = _all_items[irandom_range(0, len(_all_items) - 1)];
 		
 		// To add new item to drop list, go to Items script.
 	}

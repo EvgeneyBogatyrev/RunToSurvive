@@ -33,7 +33,7 @@ prev_hp = hp;
 
 damaged = false;
 
-loot_profile_id = ROBOT_LOOT_INUMBER;
+loot_profile_ids = [ROBOT_LOOT_INUMBER];
 
 //Intro
 intro_timer_max = 6 * 60;

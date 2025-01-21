@@ -111,4 +111,12 @@ onHitEvent = []; //our damage!!!!! to monsters
 onHurtEvent = [];
 onJumpEvent = [];
 
+if (global.DEBUG)
+{
+	for (var _x = x + 30; _x < 2000; _x += 50)
+	{
+		Create(_x, y, oChest, 0);
+	}
+}
+
 

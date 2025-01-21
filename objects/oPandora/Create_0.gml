@@ -33,7 +33,7 @@ sprite_index = sPandoraBoxBlink;
 flyspeed = 6;
 eyes_amount = 10;
 
-loot_profile_id = PANDORA_LOOT_INUMBER;
+loot_profile_ids = [PANDORA_LOOT_INUMBER];
 
 //Box state
 intro_timer = 6 * 60;

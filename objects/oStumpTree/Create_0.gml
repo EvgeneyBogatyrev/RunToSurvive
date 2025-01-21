@@ -33,6 +33,6 @@ damage = GetStats("Tree boss");
 
 state = StumpTreeStates.APPEAR;
 
-loot_profile_id = TREE_LOOT_INUMBER;
+loot_profile_ids = [TREE_LOOT_INUMBER];
 
 row = 1;

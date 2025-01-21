@@ -24,7 +24,7 @@ intro_timer = intro_timer_max;
 
 // dead
 slide_back_speed = 2;
-loot_profile_id = WALL_LOOT_INUMBER;
+loot_profile_ids = [WALL_LOOT_INUMBER];
 
 
 // Create eyes and mouth

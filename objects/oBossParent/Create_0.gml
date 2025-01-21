@@ -9,5 +9,5 @@ maxhp = 0;
 
 healthbar_alpha = 0;
 
-loot_profile_id = -1;
+loot_profile_ids = [-1];
 loot_dropped = false;

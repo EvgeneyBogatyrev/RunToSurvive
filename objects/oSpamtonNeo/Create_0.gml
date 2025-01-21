@@ -76,6 +76,6 @@ heart_hp = heart_hp_max;
 
 prev_hp = hp;
 
-loot_profile_id = SPAMTON_LOOT_INUMBER;
+loot_profile_ids = [SPAMTON_LOOT_INUMBER];
 
 

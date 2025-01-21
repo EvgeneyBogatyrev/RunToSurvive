@@ -92,7 +92,7 @@ switch(current_gun)
 		image_xscale *= 1.3;
 		image_yscale *= 1.3;
 	
-		damage = 4 + host.drill_damage;
+		damage = 3 + host.drill_damage;
 		
 		switch (hammer_state)
 		{
@@ -574,7 +574,7 @@ switch(current_gun)
 		if (!shoot_hold && charge_timer < 20 && charge_timer != 0) 
 		{
 			increase = true; 
-			var _damage = 2;
+			var _damage = 3;
 				
 			ShakeScreen(3, 5);
 			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
@@ -584,7 +584,7 @@ switch(current_gun)
 		if (!shoot_hold && charge_timer >= 20) 
 		{
 			increase = true; 
-			var _damage = 5;
+			var _damage = 7;
 				
 			ShakeScreen(3, 5);
 			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);

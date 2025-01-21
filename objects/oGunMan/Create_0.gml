@@ -38,7 +38,7 @@ hp = maxhp;
 
 hp_limit = second_hp + third_hp;
 
-loot_profile_id = GUNMAN_LOOT_INUMBER;
+loot_profile_ids = [GUNMAN_LOOT_INUMBER];
 
 //Intro
 intro_timer_max = 6 * 60;
@@ -113,7 +113,7 @@ select_new_player = function() {
 	{
 		return undefined;	
 	}
-	return _player_list[random_range(0, array_length(_player_list))];
+	return _player_list[irandom_range(0, array_length(_player_list) - 1)];
 }
 
 opponent = select_new_player();	

@@ -5,7 +5,7 @@ hit_timer_max = 10;
 hit_timer = 0;
 
 
-damage = 2;
+damage = 3;
 
 // Inherit the parent event
 event_inherited();
