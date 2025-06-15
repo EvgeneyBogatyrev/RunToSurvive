@@ -1,6 +1,6 @@
 /// @description
 max_timer = 45 * 60;
-timer = 15 * 60;
+timer = 30 * 60;
 
 if (global.DEBUG)
 {
