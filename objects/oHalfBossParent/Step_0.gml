@@ -43,6 +43,10 @@ if (hp <= 0 && state != UniversalStates.DEAD && state != HalfBossStates.INACTIVE
 		{
 			_image = BATTERY_INUMBER;	
 		}
+		if (oRoomControl.gamestate != GameState.BOSS)
+		{
+			oQuests.stumps_killed += 1;
+		}
 	}
 	else if (object_index == oArcher)
 	{
@@ -55,6 +59,10 @@ if (hp <= 0 && state != UniversalStates.DEAD && state != HalfBossStates.INACTIVE
 			var _all_items = GetAllDropItems();
 			_image = _all_items[irandom_range(0, len(_all_items) - 1)];
 		}
+		if (oRoomControl.gamestate != GameState.BOSS)
+		{
+			oQuests.archers_killed += 1;
+		}
 	}
 	else if (object_index == oBilly)
 	{
@@ -66,6 +74,10 @@ if (hp <= 0 && state != UniversalStates.DEAD && state != HalfBossStates.INACTIVE
 		{
 			var _all_items = GetAllDropItems();
 			_image = _all_items[irandom_range(0, len(_all_items) - 1)];
+		}
+		if (oRoomControl.gamestate != GameState.BOSS)
+		{
+			oQuests.billys_killed += 1;
 		}
 	}
 	

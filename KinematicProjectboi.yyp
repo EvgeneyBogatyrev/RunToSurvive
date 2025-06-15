@@ -1,5 +1,5 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"KinematicProjectboi",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -79,13 +79,14 @@
     {"$GMFolder":"","%Name":"Textures","folderPath":"folders/Sprites/Textures.yy","name":"Textures","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Dark","folderPath":"folders/Sprites/Textures/Dark.yy","name":"Dark","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"RunToSurvive_difficulty.csv","CopyToMask":-1,"filePath":"datafiles","name":"RunToSurvive_difficulty.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"KinematicProjectboi",
   "resources":[
@@ -102,6 +103,7 @@
     {"id":{"name":"oBilly","path":"objects/oBilly/oBilly.yy",},},
     {"id":{"name":"oBlock","path":"objects/oBlock/oBlock.yy",},},
     {"id":{"name":"oBossControl","path":"objects/oBossControl/oBossControl.yy",},},
+    {"id":{"name":"oBossControlQuest","path":"objects/oBossControlQuest/oBossControlQuest.yy",},},
     {"id":{"name":"oBossLoot","path":"objects/oBossLoot/oBossLoot.yy",},},
     {"id":{"name":"oBossParent","path":"objects/oBossParent/oBossParent.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
@@ -151,6 +153,7 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oPlayerSelect","path":"objects/oPlayerSelect/oPlayerSelect.yy",},},
     {"id":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},},
+    {"id":{"name":"oQuests","path":"objects/oQuests/oQuests.yy",},},
     {"id":{"name":"oRoboPart","path":"objects/oRoboPart/oRoboPart.yy",},},
     {"id":{"name":"oRobotBoss","path":"objects/oRobotBoss/oRobotBoss.yy",},},
     {"id":{"name":"oRobotMagnet","path":"objects/oRobotMagnet/oRobotMagnet.yy",},},

@@ -27,12 +27,12 @@ if keyboard_check_pressed(192) || keyboard_check_pressed(vk_alt)
 						oPlayer.gun.current_gun = int64(_cmd[1]);
 						break;
 					case "boss":
-						array_insert(oBossControl.tmp_bosses_array, 0, _cmd[1]);
-						oBossControl.timer = 0;
+						array_insert(oBossControlQuest.bosses_array, 0, _cmd[1]);
+						oBossControlQuest.timer = 0;
 						break;
 					case "bossbegin":
-						if len(_cmd) > 1 array_insert(oBossControl.tmp_bosses_array, 0, _cmd[1]);
-						oBossControl.timer = 0;
+						if len(_cmd) > 1 array_insert(oBossControlQuest.bosses_array, 0, _cmd[1]);
+						oBossControlQuest.timer = 0;
 						break;
 					case "spawnitem":
 						with (Create(oCamera.right, oGenerator.ground[0] - 100, oItemDrop, 0))

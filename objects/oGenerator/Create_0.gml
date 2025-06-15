@@ -3,7 +3,8 @@ instance_create_layer(0, 0, "Controllers", oRoomControl);
 instance_create_layer(0, 0, "Controllers", oCamera);
 instance_create_layer(0, 0, "Controllers", oDrawer);
 instance_create_layer(0, 0, "Controllers", oBackgroundControl);
-instance_create_layer(0, 0, "Controllers", oBossControl);
+instance_create_layer(0, 0, "Controllers", oQuests);
+instance_create_layer(0, 0, "Controllers", oBossControlQuest);
 instance_create_layer(0, 0, "Controllers", oPause);
 instance_create_layer(0, 0, "Controllers", oDebugConsole);
 
