@@ -2,7 +2,8 @@ enum QuestType
 {
 	STUMPS,
 	ARCHERS,
-	BILLY
+	BILLY,
+	VARIES
 };
 
 quest = undefined;
@@ -27,8 +28,18 @@ function SetNewQuest()
 {
 	ClearBuffers();
 	
-	quest = choose(QuestType.STUMPS, QuestType.ARCHERS, QuestType.BILLY);
+	quest = choose(QuestType.STUMPS, QuestType.ARCHERS, QuestType.BILLY, QuestType.VARIES);
 	max_kills = choose(3, 4, 5);
+	
+	if (global.DEBUG)
+	{
+		max_kills = 1;	
+	}
+	
+	if (quest == QuestType.BILLY || quest == QuestType.VARIES)
+	{
+		max_kills = 3;	
+	}
 }
 
 
@@ -54,6 +65,11 @@ function CheckQuest()
 				quest_completed = true;	
 			}
 			break;
+		case QuestType.VARIES:
+			if (billys_killed > 0 && stumps_killed > 0 && archers_killed > 0)
+			{
+				quest_completed = true;	
+			}
 		default:
 			break;
 	}

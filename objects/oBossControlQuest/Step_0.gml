@@ -3,7 +3,7 @@
 if (oRoomControl.gamestate == GameState.NORMAL || oRoomControl.gamestate == GameState.BATTLE)
 	timer = ApproachTo(timer, 0);
 
-if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL && oQuests.quest_completed)
+if ((timer == 0) && oRoomControl.gamestate == GameState.NORMAL)
 {
 	if (array_length(bosses_array) == 0)
 	{

@@ -154,6 +154,8 @@
     {"id":{"name":"oPlayerSelect","path":"objects/oPlayerSelect/oPlayerSelect.yy",},},
     {"id":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},},
     {"id":{"name":"oQuests","path":"objects/oQuests/oQuests.yy",},},
+    {"id":{"name":"oReward","path":"objects/oReward/oReward.yy",},},
+    {"id":{"name":"oRewardStand","path":"objects/oRewardStand/oRewardStand.yy",},},
     {"id":{"name":"oRoboPart","path":"objects/oRoboPart/oRoboPart.yy",},},
     {"id":{"name":"oRobotBoss","path":"objects/oRobotBoss/oRobotBoss.yy",},},
     {"id":{"name":"oRobotMagnet","path":"objects/oRobotMagnet/oRobotMagnet.yy",},},

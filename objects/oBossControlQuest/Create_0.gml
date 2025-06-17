@@ -1,11 +1,11 @@
 /// @description
-max_timer = 45 * 60;
-timer = 20 * 60;
+max_timer = 5 * 60 * 60;
+timer = 5 * 60 * 60;
 
 if (global.DEBUG)
 {
-	timer = 5;	
-	max_timer = 5 * 60;
+	//timer = 5 * 60 * 60;	
+	//max_timer = 5 * 60;
 }
 
 level1_bosses = ["Delver", "GunMan"];

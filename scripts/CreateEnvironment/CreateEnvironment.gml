@@ -78,7 +78,7 @@ function CreateEnvironment(argument0, argument1, argument2) {
 							if (_line[_elem] < 0 && (irandom_range(1, 100) > 90 || global.level_started)) 
 							{
 								global.level_started = false;
-								Create(_start + _elem * (BLOCKSIZE - 1) * _scale - 1, oGenerator.ground[_row] - (_level) * BLOCKSIZE * _scale, oChest, _row)	;
+								//Create(_start + _elem * (BLOCKSIZE - 1) * _scale - 1, oGenerator.ground[_row] - (_level) * BLOCKSIZE * _scale, oChest, _row)	;
 							}
 						
 							if (_level == 1)
@@ -105,7 +105,7 @@ function CreateEnvironment(argument0, argument1, argument2) {
 				
 				randomize();
 				if (revival_number > 0 && !instance_exists(oCloningStation) && irandom_range(0, 100) < 30)  _object = oCloningStation;	
-				if (irandom_range(0, 100) < 5)	_object = oChest;
+				//if (irandom_range(0, 100) < 5)	_object = oChest;
 			}
 		
 			Create(_start + oCamera.view_w_half/2, oGenerator.ground[_row], _object, _row);
@@ -157,7 +157,7 @@ function CreateConstruct(_start, _row, _shape, _only_update=false) {
 					if (_line[_elem] < 0 && (irandom_range(1, 100) > 90 || global.level_started)) 
 					{
 						global.level_started = false;
-						if (!_only_update)	Create(_start + _elem * (BLOCKSIZE - 1) * _scale - 1, oGenerator.ground[_row] - (_level) * BLOCKSIZE * _scale, oChest, _row)	;
+						//if (!_only_update)	Create(_start + _elem * (BLOCKSIZE - 1) * _scale - 1, oGenerator.ground[_row] - (_level) * BLOCKSIZE * _scale, oChest, _row)	;
 					}
 						
 					if (_level == 1)
