@@ -10,3 +10,5 @@ yspeed = 0;
 hit_an_enemy = false;
 
 trail = undefined;
+
+on_fire = 0;

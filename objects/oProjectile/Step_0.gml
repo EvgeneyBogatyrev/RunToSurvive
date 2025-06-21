@@ -98,7 +98,7 @@ if (CheckCollisions(x + xspeed, y + yspeed, oEnemyParent, row))
 
 	if (_victim.state != UniversalStates.DEAD && _victim.state != HalfBossStates.INACTIVE && _victim.hp > 0) 
 	{
-		_victim.on_fire = 180;
+		_victim.on_fire = on_fire;
 		_victim.hp -= damage;
 		if object_is_ancestor(_victim.object_index, oBossParent)
 		{
@@ -146,7 +146,7 @@ if (place_meeting(x + xspeed, y + yspeed, oDelver) && oDelver.state == DelverSta
 		y += sign(yspeed) * yspeed / xspeed;
 		
 	}
-	oDelver.on_fire = 180;
+	oDelver.on_fire = on_fire;
 	oDelver.hp -= damage;
 	oDelver.cum_hp -= damage;
 	oDelver.hit_flash = 3;
