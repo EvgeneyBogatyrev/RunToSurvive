@@ -78,6 +78,7 @@
     {"$GMFolder":"","%Name":"Prototypes","folderPath":"folders/Sprites/Prototypes.yy","name":"Prototypes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Textures","folderPath":"folders/Sprites/Textures.yy","name":"Textures","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Dark","folderPath":"folders/Sprites/Textures/Dark.yy","name":"Dark","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Effects","folderPath":"folders/Sprites/Effects.yy","name":"Effects","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
@@ -86,7 +87,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.13.0.190",
   },
   "name":"KinematicProjectboi",
   "resources":[
@@ -347,6 +348,7 @@
     {"id":{"name":"sEssence","path":"sprites/sEssence/sEssence.yy",},},
     {"id":{"name":"sExplosion","path":"sprites/sExplosion/sExplosion.yy",},},
     {"id":{"name":"sEyeball","path":"sprites/sEyeball/sEyeball.yy",},},
+    {"id":{"name":"sFire","path":"sprites/sFire/sFire.yy",},},
     {"id":{"name":"sFloatingEye","path":"sprites/sFloatingEye/sFloatingEye.yy",},},
     {"id":{"name":"sFloatingEyeDie","path":"sprites/sFloatingEyeDie/sFloatingEyeDie.yy",},},
     {"id":{"name":"sFlyingRobot","path":"sprites/sFlyingRobot/sFlyingRobot.yy",},},

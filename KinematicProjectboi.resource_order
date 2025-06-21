@@ -54,6 +54,7 @@
     {"name":"Prototypes","order":9,"path":"folders/Sprites/Prototypes.yy",},
     {"name":"Textures","order":10,"path":"folders/Sprites/Textures.yy",},
     {"name":"Dark","order":1,"path":"folders/Sprites/Textures/Dark.yy",},
+    {"name":"Effects","order":13,"path":"folders/Sprites/Effects.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"fntItemDescription","order":2,"path":"fonts/fntItemDescription/fntItemDescription.yy",},
