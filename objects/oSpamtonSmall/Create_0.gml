@@ -8,3 +8,4 @@ event_inherited();
 hp = 5 + floor(oDifficultyController.minions_defeated * GetStats("Increase hp") / 5);
 damage = GetStats("SpamtonClone")
 
+can_be_knockbacked = true;

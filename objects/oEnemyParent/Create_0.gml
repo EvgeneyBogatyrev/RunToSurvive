@@ -3,6 +3,8 @@ event_inherited();
 
 state = HalfBossStates.IDLE;
 crowned = false;
+knockbacked = false;
+can_be_knockbacked = false;
 
 hit_flash = 0;
 

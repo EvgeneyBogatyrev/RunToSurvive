@@ -43,7 +43,39 @@ else
 	}
 }
 
+//Gravity
+if (!CheckCollisions(x, y + 1, oSolidParent, row) && can_be_knockbacked)
+{
+	//yspeed -= grav;
+	
+	if (CheckCollisions(x, y + yspeed * scale, oSolidParent, row))
+	{
+		repeat (abs(yspeed))
+		{
+			if (CheckCollisions(x, y + sign(yspeed), oSolidParent, row))
+			{
+				break;	
+			}
+			y += sign(yspeed);
+		}
+		yspeed = 0;
+	}
+}
+
+// Inherit the parent event
 event_inherited();
+
+if (!CheckCollisions(x, y + 1, oSolidParent, row))
+{
+	yspeed -= grav;
+
+}
+else
+{
+	yspeed = 0;
+	knockbacked = false
+}
+
 image_xscale = -abs(image_xscale);
 
 if (x < oCamera.left - CAMERA_BOUNDS)

@@ -1,9 +1,9 @@
 /// @description Вставьте описание здесь
 // Вы можете записать свой код в этом редакторе
 
-if (CheckCollisions(x, y, oBlock, row) && x > oCamera.right)
+if (CheckCollisions(x, y, oBlock, row))
 {
-	instance_destroy();	
+	y -= 10;
 }
 
 if (CheckCollisions(x + xspeed, y, oBlock, row))
@@ -31,6 +31,35 @@ if (hp <= 0)
 	instance_destroy();	
 }
 
+//Gravity
+if (!CheckCollisions(x, y + 1, oSolidParent, row) && can_be_knockbacked)
+{
+	
+	if (CheckCollisions(x, y + yspeed * scale, oSolidParent, row))
+	{
+		repeat (abs(yspeed))
+		{
+			if (CheckCollisions(x, y + sign(yspeed), oSolidParent, row))
+			{
+				break;	
+			}
+			y += sign(yspeed);
+		}
+		yspeed = 0;
+	}
+}
+
 // Inherit the parent event
 event_inherited();
+
+if (!CheckCollisions(x, y + 1, oSolidParent, row))
+{
+	yspeed -= grav;
+
+}
+else
+{
+	yspeed = 0;
+	knockbacked = false
+}
 

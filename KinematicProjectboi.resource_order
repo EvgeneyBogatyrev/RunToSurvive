@@ -28,6 +28,7 @@
     {"name":"Shaders","order":4,"path":"folders/Shaders.yy",},
     {"name":"Sounds","order":5,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":6,"path":"folders/Sprites.yy",},
+    {"name":"Effects","order":13,"path":"folders/Sprites/Effects.yy",},
     {"name":"Enemies","order":1,"path":"folders/Sprites/Enemies.yy",},
     {"name":"Billy","order":1,"path":"folders/Sprites/Enemies/Billy.yy",},
     {"name":"Delver","order":2,"path":"folders/Sprites/Enemies/Delver.yy",},
@@ -54,7 +55,6 @@
     {"name":"Prototypes","order":9,"path":"folders/Sprites/Prototypes.yy",},
     {"name":"Textures","order":10,"path":"folders/Sprites/Textures.yy",},
     {"name":"Dark","order":1,"path":"folders/Sprites/Textures/Dark.yy",},
-    {"name":"Effects","order":13,"path":"folders/Sprites/Effects.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"fntItemDescription","order":2,"path":"fonts/fntItemDescription/fntItemDescription.yy",},
@@ -344,6 +344,7 @@
     {"name":"sRobotShip","order":6,"path":"sprites/sRobotShip/sRobotShip.yy",},
     {"name":"sRocket","order":9,"path":"sprites/sRocket/sRocket.yy",},
     {"name":"sRocketLauncher","order":4,"path":"sprites/sRocketLauncher/sRocketLauncher.yy",},
+    {"name":"sShield","order":19,"path":"sprites/sShield/sShield.yy",},
     {"name":"sShootingRobot","order":1,"path":"sprites/sShootingRobot/sShootingRobot.yy",},
     {"name":"sShootingRobotBullet","order":7,"path":"sprites/sShootingRobotBullet/sShootingRobotBullet.yy",},
     {"name":"sShotgun","order":2,"path":"sprites/sShotgun/sShotgun.yy",},

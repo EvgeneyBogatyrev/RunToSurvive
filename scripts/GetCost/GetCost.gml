@@ -36,6 +36,8 @@ function GetCost(argument0) {
 			
 		case Gun.CHARGING_GUN:
 			return 3;
+		case Gun.SHIELD_MELEE:
+			return 0;
 		
 		default:
 			Raise("Invalid gun\n" + string(argument0));

@@ -67,4 +67,6 @@ if (state != UniversalStates.DEAD && state != HalfBossStates.INACTIVE && Contact
 	retrieve_counter = retrieve_counter_max;
 }
 
+Print(id, yspeed);
+
 

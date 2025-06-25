@@ -28,12 +28,18 @@ function KnockbackForce(_victim, _force_x, _force_y) {
 
 	with (_victim)
 	{
-		if (!knockbacked)	
+		if (object_is_ancestor(_victim.object_index, oEnemyParent) && can_be_knockbacked) or (object_index == oPlayer)
 		{
-			xspeed = _force_x;
-			yspeed = _force_y;
-			knockbacked = true;
-			state = PlayerStates.NON_CONTROL;
+				if (!knockbacked)	
+				{
+					xspeed = _force_x;
+					yspeed = _force_y;
+					knockbacked = true;
+					if (object_index == oPlayer)
+					{
+						state = PlayerStates.NON_CONTROL;
+					}
+				}
 		}
 	}
 

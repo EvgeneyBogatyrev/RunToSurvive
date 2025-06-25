@@ -127,5 +127,6 @@ with(hands)	 host = other.id;
 explotion_speed = 6;
 
 
+
 		
 
