@@ -115,7 +115,12 @@ if (global.DEBUG)
 {
 	for (var _x = x + 30; _x < 2000; _x += 50)
 	{
-		Create(_x, y, oChest, 0);
+		//Create(_x, y, oChest, 0);
+	}
+	
+	with (Create(x + 10, y - 100, oSpamtonSmall, 0))
+	{
+		xspeed = 3;	
 	}
 }
 

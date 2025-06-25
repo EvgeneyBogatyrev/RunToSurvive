@@ -98,7 +98,13 @@ item_description = [
 	item_id : CHARGING_GUN_INUMBER,
 	gun_state : Gun.CHARGING_GUN,
 	item_name : "Charging gun",
-	description : "Spend 2 energy to deal 3 damage or charge it to deal 5 damage."
+	description : "Spend 2 energy to deal 3 damage or charge it to deal 7 damage."
+},
+{
+	item_id : SHIELD_MELEE_INUMBER,
+	gun_state : Gun.SHIELD_MELEE,
+	item_name : "Shield",
+	description : "A melee weapon that deals 1 damage and knocks back enemies."
 },
 {
 	item_id : INFINITYGUN_INUMBER,

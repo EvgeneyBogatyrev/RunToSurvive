@@ -1,3 +1,13 @@
+// Calibarate over the ground
+if (!ground_calibrated)
+{
+	while (CheckCollisions(x, y, oSolidParent, row))
+	{
+		y -= 1;	
+	}
+	//ground_calibrated = true;	
+}
+
 
 if (shown_hp != hp)  healthbar_alpha = 1;
 shown_hp = ApproachTo(shown_hp, hp);
@@ -95,11 +105,14 @@ switch(state)
 {
 	case HalfBossStates.IDLE:
 		player = script_execute(notice_player);
+		if (knockbacked)  state = HalfBossStates.KNOCKBACKED;
 		if (player != noone)  state =  HalfBossStates.TRIGGERED;
 		break;
 
 	case HalfBossStates.TRIGGERED:
-		if (!instance_exists(player) || player.state == UniversalStates.DEAD)  
+		if (knockbacked)  state = HalfBossStates.KNOCKBACKED;
+
+		if (!instance_exists(player) || player.state == UniversalStates.DEAD)
 		{
 			player = noone;
 			state = HalfBossStates.IDLE;
@@ -115,6 +128,9 @@ switch(state)
 		if (active)  state = saved_state;
 		break;
 		
+	case HalfBossStates.KNOCKBACKED:
+		if (!knockbacked)  state = HalfBossStates.IDLE;
+		break;
 	case UniversalStates.DEAD:
 		if (AnimationEnd())  image_speed = 0;
 		if (!CheckCollisions(x, y + 1, oSolidParent, row) && instance_exists(oWallOfFleshController))
@@ -155,4 +171,39 @@ else
 	escape_direction = 0;	
 }
 
+//Gravity
+if (!CheckCollisions(x, y + 1, oSolidParent, row) && can_be_knockbacked)
+{
+	//yspeed -= grav;
+	
+	if (CheckCollisions(x, y + yspeed * scale, oSolidParent, row))
+	{
+		repeat (abs(yspeed))
+		{
+			if (CheckCollisions(x, y + sign(yspeed), oSolidParent, row))
+			{
+				break;	
+			}
+			y += sign(yspeed);
+		}
+		yspeed = 0;
+	}
+}
+
+
+
+
 event_inherited();
+
+if (!CheckCollisions(x, y + 1, oSolidParent, row))
+{
+	yspeed -= grav;
+
+}
+else
+{
+	yspeed = 0;
+	knockbacked = false
+}
+
+

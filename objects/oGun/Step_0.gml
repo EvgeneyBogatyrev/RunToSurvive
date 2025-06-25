@@ -594,6 +594,92 @@ switch(current_gun)
 		shoot = false;
 		shoot_hold = false;
 		break;
+	case Gun.SHIELD_MELEE:
+		sprite_index = sShield;
+		image_speed = 1;
+		
+		damage = 1 + host.drill_damage;
+	
+		
+		switch (shield_state)
+		{
+			
+			case MeleeStates.IDLE:
+				if (shoot && recoil == 0)
+				{
+					shield_state = MeleeStates.ATTACK;
+					recoil = -30;
+					shoot = false;
+					shoot_hold = false;
+					ds_list_clear(hit_by_attack);
+				}
+				break;
+				
+			case MeleeStates.ATTACK:
+				
+				var _colliding_enemies = ds_list_create();
+				var _amount = instance_place_list(x, y, oEnemyParent, _colliding_enemies, true);
+				
+				for (var i = 0; i < _amount; ++i)
+				{
+					var _enemy = _colliding_enemies[| i];
+					
+					if (_enemy.object_index == oDelver)
+					{
+						if (_enemy.state != DelverStates.INSECT)
+						{
+							//continue;	
+						}
+					}
+					else if (_enemy.row != row)  continue;
+					
+					if (ds_list_find_index(hit_by_attack, _enemy) == -1 && _enemy.active && _enemy.hp > 0)
+					{
+						KnockbackForce(_enemy, 1 * host.xspeed * scale, -10 * scale);
+						ds_list_add(hit_by_attack, _enemy);	
+						_enemy.hp -= damage;
+						_enemy.hit_flash = 3;
+						
+						/*
+						hit_events = [];
+						for (var _i = 0; _i < ds_list_size(host.inventory); _i++)
+						{
+							var _item = ds_list_find_value(host.inventory, _i);
+							var hit_event = struct_exists(_item, "on_hit") ? struct_get(_item, "on_hit") : undefined;
+							if (hit_event != undefined)
+							{
+								hit_event(id, 82 * sign(image_xscale));
+							}
+						}
+						*/
+
+						
+						if (object_is_ancestor(_enemy.object_index, oBossParent))
+						{
+							_enemy.cum_hp -= damage;
+						}
+						
+						if (object_is_ancestor(_enemy.object_index, oHalfBossParent))
+						{
+							StartBattle(row, host, _enemy.id);
+						}
+						
+						with (Create(x + 80 * scale * host.dir, y - 4 * scale, oDamageNumber, row))
+						{
+							damage = other.damage;
+						}						
+					}
+				}
+				ds_list_destroy(_colliding_enemies);
+				
+				if (recoil == 0)  shield_state = MeleeStates.IDLE;			
+				
+				break;
+			
+			default:
+				break;
+		}
+		break;
 }
 
 if (recoil != 0)  recoil -= sign(recoil);
@@ -615,4 +701,5 @@ if (host.bullets < GetCost(current_gun) && host.pocket[1] == INFINITYGUN_INUMBER
 	host.shoot = false;
 	
 	host.hp -= 20;
+	
 }

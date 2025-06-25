@@ -144,7 +144,7 @@ switch (state)
 	
 	case PlayerStates.NON_CONTROL:
 		
-		if knockbacked
+		if (knockbacked)
 		{
 			PlayerControl();
 			PlayerCheckDying();

@@ -11,17 +11,18 @@ function PlayerMove() {
 	{																             //  deal damage equal to 30% of his health
 		var _damage = GetStats("Obstacle");
 	
-		damaged      = true;	
-		damage_timer = 6*30;
+		//damaged      = true;	
+		//damage_timer = 6*30;
 	
-		if (!protected)  hp -= _damage;
-		else          
-		{
-			protected = false;
-			if (pocket[1] == FORCEFIELD_INUMBER)  pocket[1] = 0;	
-		}
+		//if (!protected)  hp -= _damage;
+		//else          
+		//{
+		//	protected = false;
+		//	if (pocket[1] == FORCEFIELD_INUMBER)  pocket[1] = 0;	
+		//}
 	
-		ShakeScreen(10, 15);
+		//ShakeScreen(10, 15);
+		//ShakeScreen(5, 7);
 	}
 
 	if (CheckCollisions(x + xspeed * scale + sign(xspeed), y - 1, oSolidParent, row))  // horizontal collision

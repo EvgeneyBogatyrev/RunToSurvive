@@ -13,6 +13,7 @@ enum Gun
 	REAL_SHOTGUN,
 	ELECTRIC_GUN,
 	CHARGING_GUN,
+	SHIELD_MELEE,
 };
 
 
@@ -41,6 +42,10 @@ damage = 0;
 
 
 //Combo Punch
+
+//Shield
+shield_state = MeleeStates.IDLE;
+hit_by_attack = ds_list_create();
 
 
 //Hammer

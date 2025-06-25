@@ -36,7 +36,7 @@ if (global.DEBUG)
 {
 	//first_phase_timer = 1;
 	//first_phase_timer_max = 1;
-	maxhp = 1;
+	maxhp = 10;
 }
 
 shown_hp = 0;
@@ -47,3 +47,4 @@ not_give_score = false;
 image_blend = c_green;
 
 damage = GetStats("Chasing stump");
+can_be_knockbacked = true;

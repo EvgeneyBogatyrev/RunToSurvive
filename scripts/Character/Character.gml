@@ -44,6 +44,8 @@ function GetWeaponFromName(_name)
 			return Gun.DRILL;
 		case "Steampunk":
 			return Gun.STEAMPUNK_HAMMER;
+		case "LongHair":
+			return Gun.SHIELD_MELEE;
 	}
 }
 

@@ -444,7 +444,9 @@ if (state != UniversalStates.DEAD && x < oCamera.right)
 }
 
 
+// Inherit the parent event
 event_inherited();
+
 
 if (state != UniversalStates.INTRO)
 {

@@ -347,6 +347,7 @@
     {"name":"sRobotShip","order":6,"path":"sprites/sRobotShip/sRobotShip.yy",},
     {"name":"sRocket","order":9,"path":"sprites/sRocket/sRocket.yy",},
     {"name":"sRocketLauncher","order":4,"path":"sprites/sRocketLauncher/sRocketLauncher.yy",},
+    {"name":"sShield","order":19,"path":"sprites/sShield/sShield.yy",},
     {"name":"sShootingRobot","order":1,"path":"sprites/sShootingRobot/sShootingRobot.yy",},
     {"name":"sShootingRobotBullet","order":7,"path":"sprites/sShootingRobotBullet/sShootingRobotBullet.yy",},
     {"name":"sShotgun","order":2,"path":"sprites/sShotgun/sShotgun.yy",},
