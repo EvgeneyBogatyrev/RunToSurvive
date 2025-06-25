@@ -12,13 +12,15 @@ remove_player = function(player_id) {
 	stored_players = _new_stored_players;
 }
 
+stomping_the_ground = false;
+optimal_height = ystart - 50;
 
 stomp_the_ground = function(timer) {
 	var _swinganim = animcurve_get(DroneStomp);
 	y = ystart - 50 * animcurve_channel_evaluate(_swinganim.channels[0], timer);	
-	Print(y, timer)
+	stomping_the_ground = true;
 }
 	
 event_inherited();
 
-hp = 1000;
+hp = 0;

@@ -127,6 +127,9 @@ with(hands)	 host = other.id;
 explotion_speed = 6;
 
 
+drone_position_offset_x = -100;
+drone_position_offset_y = -200;
+
 
 		
 

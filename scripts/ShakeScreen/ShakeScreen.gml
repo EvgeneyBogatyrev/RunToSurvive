@@ -1,7 +1,8 @@
 ///@desc Shake screen
 ///@param magtitude
 ///@param length
-function ShakeScreen(argument0, argument1) {
+function ShakeScreen(argument0, argument1) 
+{
 
 	var _magnitude = argument0;
 	var _length    = argument1;

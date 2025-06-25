@@ -9,8 +9,10 @@ if (opponent == undefined || !instance_exists(opponent) || opponent.state == Uni
 {
 	opponent = select_new_player();	
 	
-	drone.remove_player(opponent); 
-	
+	if (drone != undefined && instance_exists(oGunManDrone))
+	{
+		drone.remove_player(opponent); 
+	}
 	
 	if (opponent == undefined)
 	{
@@ -57,7 +59,7 @@ switch (state)
 		if (x < oCamera.right - 100 && oRoomControl.roomspeed != 0)
 		{
 			StopRoom();
-			drone = Create(x, y - 250, oGunManDrone, 0);
+			drone = Create(x + drone_position_offset_x, y + drone_position_offset_y, oGunManDrone, 0);
 			follow_object = Create(oCamera.x, oGenerator.ground[1], oFollow, 0);
 			with (oCamera) follow = other.follow_object;
 			
@@ -70,7 +72,7 @@ switch (state)
 					_player.x = oCamera.right + 600;
 					_player.y = 10;
 					_player.row = 0;
-					//_player.scale = GetScale(_player.row);
+					_player.scale = GetScale(_player.row);
 					array_push(drone.stored_players, _player);
 				}
 				//else if (_player == opponent)
@@ -182,6 +184,10 @@ switch (state)
 		if (instance_exists(follow_object))
 		{
 			instance_destroy(follow_object);
+		}
+		with (oGunManDrone)
+		{
+			instance_destroy();	
 		}
 		global.score += 100;
 		oRoomControl.gamestate = GameState.LOOT;
