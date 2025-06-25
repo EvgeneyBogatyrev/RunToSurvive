@@ -9,6 +9,8 @@ if (opponent == undefined || !instance_exists(opponent) || opponent.state == Uni
 {
 	opponent = select_new_player();	
 	
+	drone.remove_player(opponent); 
+	
 	
 	if (opponent == undefined)
 	{
@@ -55,6 +57,7 @@ switch (state)
 		if (x < oCamera.right - 100 && oRoomControl.roomspeed != 0)
 		{
 			StopRoom();
+			drone = Create(x, y - 250, oGunManDrone, 0);
 			follow_object = Create(oCamera.x, oGenerator.ground[1], oFollow, 0);
 			with (oCamera) follow = other.follow_object;
 			
@@ -68,7 +71,12 @@ switch (state)
 					_player.y = 10;
 					_player.row = 0;
 					//_player.scale = GetScale(_player.row);
+					array_push(drone.stored_players, _player);
 				}
+				//else if (_player == opponent)
+				//{
+				//	_drone.stored_player = opponent;
+				//}
 			}	
 		}
 		desired_row = 0;
@@ -244,7 +252,7 @@ if (state != UniversalStates.DEAD && state != UniversalStates.INTRO && state != 
 			state_change_timer = state_change_timer_max / 10;
 		}
 	}
-	else if (opponent.damaged || bullets <= 0)
+	else if (opponent.damaged || bullets <= 3)
 	{
 		if (next_state != GunManStates.FLEE)
 		{
@@ -280,7 +288,7 @@ if (state != UniversalStates.DEAD && state != UniversalStates.INTRO && state != 
 	{
 		if (hp_state == GunManHpState.FIRST)
 		{
-			with (Create(oCamera.right + 1750, oGenerator.ground[0] - 10, oVenus, 0))  depth -= 2;
+			with (Create(oCamera.right + 1750, oGenerator.ground[0] - 10, oTumble, 0))  depth -= 2;
 			hp_state = GunManHpState.SECOND;
 			//maxhp = second_hp;
 			//hp = maxhp;
@@ -300,7 +308,7 @@ if (state != UniversalStates.DEAD && state != UniversalStates.INTRO && state != 
 		else
 		{
 			state = UniversalStates.DEAD;
-			with (oVenus)
+			with (oTumble)
 			{
 				instance_destroy();	
 			}

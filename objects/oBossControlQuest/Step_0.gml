@@ -24,10 +24,10 @@ if ((timer == 0) && oRoomControl.gamestate == GameState.NORMAL)
 	//{
 	//	_new_boss = choose("Robot", "Pandora", "Delver", "ChasingStump");//, 
 	//} until (_new_boss != last_boss);
-	//if (global.DEBUG)
-	//{
-	//	_new_boss = "WallOfFlesh";
-	//}
+	if (global.DEBUG)
+	{
+		_new_boss = "GunMan";
+	}
 	var _boss_summoned = true;
 	switch (_new_boss)
 	{

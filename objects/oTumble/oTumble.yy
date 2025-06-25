@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"oVenus",
+  "%Name":"oTumble",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oVenus",
+  "name":"oTumble",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Enemies.yy",
+    "name":"GunMan",
+    "path":"folders/Objects/Enemies/GunMan.yy",
   },
   "parentObjectId":{
     "name":"oEnemyParent",
