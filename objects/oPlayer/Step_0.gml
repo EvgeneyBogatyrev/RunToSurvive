@@ -40,8 +40,8 @@ switch (state)
 		
 	case PlayerStates.TRAPPED:
 		PlayerControl();
-		_left =  false;
-		_right =  false;
+		//_left =  false;
+		//_right =  false;
 		_up =  false;
 		_down =  false;
 		_shoot =  false;
@@ -51,6 +51,8 @@ switch (state)
 		y = -10;
 		yspeed = 0;
 		row_der = 0;
+		row = 0;
+		PlayerSprite();
 		break;
 	
 	case UniversalStates.DEAD:
@@ -172,7 +174,7 @@ switch (state)
 		break;
 }
 
-if (state != PlayerStates.NON_CONTROL)
+if (state != PlayerStates.NON_CONTROL || state != PlayerStates.TRAPPED)
 {
 	PlayerMove();
 	PlayerCheckDying();

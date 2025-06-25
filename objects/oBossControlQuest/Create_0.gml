@@ -4,8 +4,8 @@ timer = 5 * 60 * 60;
 
 if (global.DEBUG)
 {
-	//timer = 5 * 60 * 60;	
-	//max_timer = 5 * 60;
+	timer = 3//5 * 60 * 60;	
+	max_timer = 3//5 * 60;
 }
 
 level1_bosses = ["Delver", "GunMan"];

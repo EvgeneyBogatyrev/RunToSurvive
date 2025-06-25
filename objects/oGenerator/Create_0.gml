@@ -1,3 +1,8 @@
+if (global.DEBUG)
+{
+	number_of_players++;	
+}
+
 instance_create_layer(0, 0, "Controllers", oDifficultyController);
 instance_create_layer(0, 0, "Controllers", oRoomControl);
 instance_create_layer(0, 0, "Controllers", oCamera);
@@ -52,10 +57,23 @@ for (var j = 0; j < 3; ++j)
 
 times_resurrected = ds_map_create();
 
+if (global.DEBUG)
+{
+	number_of_players--	
+}
+
 for (var i = 0; i < number_of_players; ++i)
 {
 	SpawnPlayerCharacter(i, names[i], 500 + ((i == 3)? 100 : 0), ground[i % 3], i % 3);
 	ds_map_add(times_resurrected, names[i], 0);
 }
+
+if (global.DEBUG)
+{
+	number_of_players++;
+	input_type[1] = InputTypes.KEYBOARD;
+	SpawnPlayerCharacter(1, "Steampunk", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
+}
+
 
 preprocess_forbidden_obstacles = false;

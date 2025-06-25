@@ -3,7 +3,7 @@ function PlayerSprite() {
 
 	if (state == UniversalStates.DEAD) exit;
 
-	if (grounded)
+	if (grounded || state == PlayerStates.TRAPPED)
 	{
 		if (abs(xspeed) > 1)
 		{

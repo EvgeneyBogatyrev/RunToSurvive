@@ -25,8 +25,8 @@ third_hp = 10 + 2 * oDifficultyController.bosses_defeated  * GetStats("Increase 
 if (global.DEBUG)
 {
 	first_hp = 1;
-	second_hp = 1;	
-	third_hp = 1;
+	second_hp = 10;	
+	third_hp = 10;
 
 }
 
@@ -97,7 +97,7 @@ charging_station = Create(x - 430, y - 165, oChargeStation, 0);
 
 hp_state = GunManHpState.FIRST;
 
-
+drone = undefined;
 // Select a player
 select_new_player = function() {
 	var _player_list = [];
