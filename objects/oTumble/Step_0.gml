@@ -32,6 +32,12 @@ if (need_to_tumble)
 			if (row == 0)
 				force_down = 20;	
 		}
+		with (oCamera)
+		{
+			need_to_refocus = true;
+			refocus_position_x = x;			
+			refocus_position_y = y;
+		}
 		ShakeScreen(25, 15);
 		need_to_tumble = false;
 	}

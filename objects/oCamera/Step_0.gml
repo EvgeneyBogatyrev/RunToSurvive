@@ -63,3 +63,11 @@ switch (focus)
 }
 
 camera_set_view_pos(cam, x - view_w_half, y - view_h_half);
+
+
+if (need_to_refocus && shake_remain == 0)
+{
+	x = refocus_position_x;	
+	y = refocus_position_y;	
+	need_to_refocus = false;
+}

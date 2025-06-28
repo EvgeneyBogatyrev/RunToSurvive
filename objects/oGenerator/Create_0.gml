@@ -1,7 +1,7 @@
-//if (global.DEBUG)
-//{
-//	number_of_players++;	
-//}
+if (global.DEBUG)
+{
+	//number_of_players += 3;	
+}
 
 instance_create_layer(0, 0, "Controllers", oDifficultyController);
 instance_create_layer(0, 0, "Controllers", oRoomControl);
@@ -57,10 +57,10 @@ for (var j = 0; j < 3; ++j)
 
 times_resurrected = ds_map_create();
 
-//if (global.DEBUG)
-//{
-//	number_of_players--	
-//}
+if (global.DEBUG)
+{
+	//number_of_players -= 3;
+}
 
 for (var i = 0; i < number_of_players; ++i)
 {
@@ -68,12 +68,15 @@ for (var i = 0; i < number_of_players; ++i)
 	ds_map_add(times_resurrected, names[i], 0);
 }
 
-//if (global.DEBUG)
-//{
-//	number_of_players++;
-//	input_type[1] = InputTypes.KEYBOARD;
-//	SpawnPlayerCharacter(1, "Steampunk", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
-//}
+if (global.DEBUG)
+{
+	//number_of_players += 3;
+	//input_type[1] = InputTypes.KEYBOARD;
+	//input_type[2] = InputTypes.KEYBOARD;
+	//SpawnPlayerCharacter(1, "Steampunk", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
+	//SpawnPlayerCharacter(1, "Cyber", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
+	//SpawnPlayerCharacter(1, "Kyron", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
+}
 
 
 preprocess_forbidden_obstacles = false;

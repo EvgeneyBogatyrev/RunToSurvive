@@ -47,12 +47,13 @@ switch (state)
 		_shoot =  false;
 		_shoot_hold = false;
 		_jump = false;
-		x = oCamera.right + 300;
-		y = -10;
+		//x = oCamera.right + 300;
+		//y = -10;
 		yspeed = 0;
 		row_der = 0;
 		row = 0;
 		PlayerSprite();
+		//PlayerMove();
 		break;
 	
 	case UniversalStates.DEAD:

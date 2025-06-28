@@ -131,5 +131,8 @@ drone_position_offset_x = -100;
 drone_position_offset_y = -200;
 
 
+drone_animation = undefined;
+
+
 		
 

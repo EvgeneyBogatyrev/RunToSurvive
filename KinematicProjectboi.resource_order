@@ -94,6 +94,7 @@
     {"name":"oGroundBlock","order":6,"path":"objects/oGroundBlock/oGroundBlock.yy",},
     {"name":"oGun","order":2,"path":"objects/oGun/oGun.yy",},
     {"name":"oGunManDrone","order":1,"path":"objects/oGunManDrone/oGunManDrone.yy",},
+    {"name":"oGunManDroneAnimation","order":3,"path":"objects/oGunManDroneAnimation/oGunManDroneAnimation.yy",},
     {"name":"oHalfBossParent","order":5,"path":"objects/oHalfBossParent/oHalfBossParent.yy",},
     {"name":"oHands","order":1,"path":"objects/oHands/oHands.yy",},
     {"name":"oInputSelect","order":3,"path":"objects/oInputSelect/oInputSelect.yy",},

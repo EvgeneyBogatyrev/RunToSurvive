@@ -51,7 +51,7 @@ switch (state)
 		cum_hp = cum_hp_max;
 		
 		intro_timer--;
-		if (intro_timer <= 0 && oRoomControl.roomspeed == 0)
+		if (intro_timer <= 0 && oRoomControl.roomspeed == 0 && drone_animation != undefined && !instance_exists(drone_animation))
 		{
 			state = GunManStates.FIGHT;
 		}
@@ -59,18 +59,24 @@ switch (state)
 		if (x < oCamera.right - 100 && oRoomControl.roomspeed != 0)
 		{
 			StopRoom();
-			drone = Create(x + drone_position_offset_x, y + drone_position_offset_y, oGunManDrone, 0);
+			//drone = Create(x + drone_position_offset_x, y + drone_position_offset_y, oGunManDrone, 0);
 			follow_object = Create(oCamera.x, oGenerator.ground[1], oFollow, 0);
 			with (oCamera) follow = other.follow_object;
 			
+			drone_animation = Create(follow_object.x, -50, oGunManDroneAnimation, 1);
+			drone_animation.player_not_to_catch = opponent;
+			drone_animation.fly_position_x = x + drone_position_offset_x;
+			drone_animation.fly_position_y = y + drone_position_offset_y;
+			
+			/*
 			for (var i = 0; i < instance_number(oPlayer); ++i)
 			{
 				var _player = instance_find(oPlayer, i);
 				if (_player.state != UniversalStates.DEAD && _player != opponent)
 				{
 					_player.state = PlayerStates.TRAPPED;
-					_player.x = oCamera.right + 600;
-					_player.y = 10;
+					//_player.x = oCamera.right + 600;
+					//_player.y = 10;
 					_player.row = 0;
 					_player.scale = GetScale(_player.row);
 					array_push(drone.stored_players, _player);
@@ -80,6 +86,8 @@ switch (state)
 				//	_drone.stored_player = opponent;
 				//}
 			}	
+			*/
+			
 		}
 		desired_row = 0;
 		desired_x_position = x;

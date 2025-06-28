@@ -18,9 +18,16 @@ optimal_height = ystart - 50;
 stomp_the_ground = function(timer) {
 	var _swinganim = animcurve_get(DroneStomp);
 	y = ystart - 50 * animcurve_channel_evaluate(_swinganim.channels[0], timer);	
+	image_angle = 60 * animcurve_channel_evaluate(_swinganim.channels[1], timer);
 	stomping_the_ground = true;
 }
 	
 event_inherited();
 
 hp = 0;
+
+// magnitude of floating in space
+float_magnitude = 0.7;
+
+// the shift of position when drawing a player
+player_position_shift = 100;

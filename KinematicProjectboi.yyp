@@ -135,6 +135,7 @@
     {"id":{"name":"oGun","path":"objects/oGun/oGun.yy",},},
     {"id":{"name":"oGunMan","path":"objects/oGunMan/oGunMan.yy",},},
     {"id":{"name":"oGunManDrone","path":"objects/oGunManDrone/oGunManDrone.yy",},},
+    {"id":{"name":"oGunManDroneAnimation","path":"objects/oGunManDroneAnimation/oGunManDroneAnimation.yy",},},
     {"id":{"name":"oHalfBossParent","path":"objects/oHalfBossParent/oHalfBossParent.yy",},},
     {"id":{"name":"oHands","path":"objects/oHands/oHands.yy",},},
     {"id":{"name":"oInputSelect","path":"objects/oInputSelect/oInputSelect.yy",},},
