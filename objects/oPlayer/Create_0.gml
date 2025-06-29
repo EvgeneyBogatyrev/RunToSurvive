@@ -79,7 +79,7 @@ pocket = [0, 0, 0, 0, 0];
 pocket[0] = STDGUN_INUMBER;
 if (global.DEBUG)
 {
-	//pocket[1] = INFINITYGUN_INUMBER;
+	pocket[1] = BURN_INUMBER;
 }
 
 damageBoost = 0;
@@ -118,10 +118,10 @@ if (global.DEBUG)
 		//Create(_x, y, oChest, 0);
 	}
 	
-	with (Create(x + 10, y - 100, oSpamtonSmall, 0))
+	/*with (Create(x + 10, y - 100, oSpamtonSmall, 0))
 	{
 		xspeed = 3;	
-	}
+	}*/
 }
 
 

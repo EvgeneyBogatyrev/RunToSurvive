@@ -15,7 +15,10 @@ if (CheckCollisions(x + xspeed, y, oBlock, row))
 	}
 	xspeed *= -1;
 }
-
+var _current_absolute_speed = abs(xspeed);
+var _direction = sign(xspeed);
+_current_absolute_speed = lerp(_current_absolute_speed, movement_speed, lerp_speed);
+xspeed = _direction * _current_absolute_speed;
 ContactDamage(damage, 0);
 
 if (hp <= 0)

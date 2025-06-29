@@ -24,6 +24,12 @@ function PlayerBuffs() {
 			
 		case DOUBLEHEART_INUMBER:
 			break;
+		
+		case DRONE_INUMBER:
+			break;
+			
+		case BURN_INUMBER:
+			break;
 			
 		case INFINITYGUN_INUMBER:
 			break;

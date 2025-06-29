@@ -17,7 +17,7 @@ maxhp = 50 + 5 * oDifficultyController.bosses_defeated * GetStats("Increase hp")
 
 if (global.DEBUG)
 {
-	maxhp = 1;	
+	//maxhp = 1;	
 }
 
 cum_hp_max = maxhp;

@@ -4,7 +4,7 @@
 ///@param damage     A damage of the bullet
 ///@param speed      A speed of the bullet
 ///@param recoil     A recoil of the bullet
-function Shoot(_projectile, _sprite, _damage, _speed, _recoil, _direction=undefined, _sound=true) {
+function Shoot(_projectile, _sprite, _damage, _speed, _recoil, _direction=undefined, _sound=true, _main_shoot = true) {
 
 	var _xspeed, _yspeed;
 	if (_direction == undefined)
@@ -19,7 +19,8 @@ function Shoot(_projectile, _sprite, _damage, _speed, _recoil, _direction=undefi
 	
 	}
 
-	with(Create(x + 30 * host.dir * host.scale, y - 4 * host.scale, _projectile, row))
+	var _bullet = Create(x + 30 * host.dir * host.scale, y - 4 * host.scale, _projectile, row);
+	with(_bullet)
 	{
 		row = other.row;
 		damage = _damage;
@@ -72,5 +73,19 @@ function Shoot(_projectile, _sprite, _damage, _speed, _recoil, _direction=undefi
 		}
 	}
 
-
+//Rocket_Drone
+	if (host.object_index == oPlayer && host.pocket[1] == DRONE_INUMBER && _main_shoot)
+	{
+		_main_shoot = false;
+		var _rnd_val = random_range(0, 100);
+		if (_rnd_val < 33)
+		{	
+			Shoot(oAimProjectile, sRocket, 1 + host.damageBoost, 20, 8, _direction, true, false);
+		}
+	}
+//Burn
+	if (host.object_index == oPlayer && host.pocket[1] == BURN_INUMBER)
+	{
+		_bullet.on_fire = 180;
+	}
 }

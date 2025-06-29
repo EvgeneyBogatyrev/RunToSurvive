@@ -129,7 +129,18 @@ switch(state)
 		break;
 		
 	case HalfBossStates.KNOCKBACKED:
-		if (!knockbacked)  state = HalfBossStates.IDLE;
+		if (!knockbacked)
+		{
+			state = HalfBossStates.IDLE;
+		}
+		else
+		{
+			if (x < oCamera.left) || (x > oCamera.right)
+			{
+				xspeed = 0
+				state = HalfBossStates.IDLE
+			}
+		}
 		break;
 	case UniversalStates.DEAD:
 		if (AnimationEnd())  image_speed = 0;

@@ -1,7 +1,10 @@
 if (!quest_completed && oRoomControl.gamestate == GameState.NORMAL)
 {
 	CheckQuest();	
-	//quest_completed = true;
+	if (global.DEBUG)
+	{
+		quest_completed = true;
+	}
 	
 	if (quest_completed)
 	{

@@ -8,3 +8,4 @@ acceleration = 1;
 speed = 2;
 
 hit_an_enemy = false;
+on_fire = 0;

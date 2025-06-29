@@ -30,7 +30,7 @@ current_gun = Gun.STANDART_GUN;
 
 if (global.DEBUG)
 {
-	current_gun = Gun.CHARGING_GUN;
+	current_gun = Gun.ROCKET_LAUNCHER;
 }
 
 secondary = false;

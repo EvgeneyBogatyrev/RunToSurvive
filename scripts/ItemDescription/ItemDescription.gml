@@ -107,6 +107,16 @@ item_description = [
 	description : "A melee weapon that deals 1 damage and knocks back enemies."
 },
 {
+	item_id : DRONE_INUMBER,
+	item_name : "Rocket Drone",
+	description : "While shooting you can fire an aditional missile."
+},
+{
+	item_id : BURN_INUMBER,
+	item_name : "Incendium",
+	description : "Your bullets causes burn."
+},
+{
 	item_id : INFINITYGUN_INUMBER,
 	item_name : "Gun configurator",
 	description : "Whenever you are out of energy, take 20 damage and equip a random half-charged gun."

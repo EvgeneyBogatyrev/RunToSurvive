@@ -10,6 +10,7 @@ switch (state)
 			
 		y_to_go = oGenerator.ground[row] - 100 * GetScale(row);
 		draw_y = lerp(draw_y, y_to_go, 0.01);
+		// draw_y += (y_to_go - draw_y) * 0.01;
 			
 		hp = maxhp;
 		cum_hp = maxhp;
@@ -221,7 +222,8 @@ if (state == SpamtonStates.HEART || state == SpamtonStates.PIPIS)
 		var _row = choose(0, 1, 2);
 		with (Create(oCamera.right + CAMERA_BOUNDS, oGenerator.ground[_row], oSpamtonSmall, _row))
 		{
-			xspeed = -4;	
+			movement_speed = 4;	
+			xspeed = -movement_speed;
 		}
 	}
 }

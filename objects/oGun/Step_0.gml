@@ -31,6 +31,8 @@ else
 
 var _held_gun = GetGunStateFromID(host.pocket[0]);
 
+ChargedGun = false;
+
 if (host.bullets < GetCost(current_gun) && secondary == false && shotgun_times == 0 && launcher_times == 0) 
 {
 	secondary = true;
@@ -419,6 +421,7 @@ switch(current_gun)
 			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
 				
 			temp_bullets = 0;
+			ChargedGun = true;
 		}
 		shoot = false;
 		shoot_hold = false;
@@ -580,6 +583,7 @@ switch(current_gun)
 			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
 				
 			charge_timer = 0;
+			ChargedGun = true;
 		}
 		if (!shoot_hold && charge_timer >= 20) 
 		{
@@ -590,6 +594,7 @@ switch(current_gun)
 			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
 				
 			charge_timer = 0;
+			ChargedGun = true;
 		}
 		shoot = false;
 		shoot_hold = false;
