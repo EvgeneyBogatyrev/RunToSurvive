@@ -22,3 +22,7 @@ Billy,15,25,35,45
 SpamtonShard,5,10,15,25
 SpamtonPipis,5,10,15,25
 SpamtonClone,10,20,30,50
+GunMan,5,15,30,40
+WallOfFleshBlock,1,5,10,15
+WallOfFleshBeam,5,10,15,20
+WallOfFleshLeech,5,15,20,25

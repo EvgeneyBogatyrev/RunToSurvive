@@ -40,3 +40,9 @@ buff = 32;
 
 camera_speed = 30;
 
+// Need to move camera to original position
+need_to_refocus = false;
+refocus_position_x = 0;
+refocus_position_y = 0;
+
+

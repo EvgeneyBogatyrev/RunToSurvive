@@ -1,5 +1,5 @@
 /// @description
-max_time = 10 * 60;
+max_time = 20 * 60;
 time = max_time;
 scale = 1;
 

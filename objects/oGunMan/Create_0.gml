@@ -25,8 +25,8 @@ third_hp = 10 + 2 * oDifficultyController.bosses_defeated  * GetStats("Increase 
 if (global.DEBUG)
 {
 	first_hp = 1;
-	second_hp = 1;	
-	third_hp = 1;
+	second_hp = 10;	
+	third_hp = 10;
 
 }
 
@@ -38,7 +38,7 @@ hp = maxhp;
 
 hp_limit = second_hp + third_hp;
 
-loot_profile_id = GUNMAN_LOOT_INUMBER;
+loot_profile_ids = [GUNMAN_LOOT_INUMBER];
 
 //Intro
 intro_timer_max = 6 * 60;
@@ -79,24 +79,25 @@ desired_row = 1;
 go_for_a_charge = false;
 
 bullets = 20;
-damageBoost = 19;
+damageBoost = GetStats("GunMan");
 gun = Create(x, y, oGun, 0);
 gun.host = id;
 
 gun.current_gun = Gun.STANDART_GUN
-pocket = [STDGUN_INUMBER];
+pocket = [STDGUN_INUMBER, 0];
 
 drill_damage = 1;
+base_drill_damage = 1;
 
 state_change_timer = -1;
 state_change_timer_max = 1.5 * 60;
 next_state = GunManStates.FIGHT;
 
-charging_station = Create(x - 400, y - 165, oChargeStation, 0);
+charging_station = Create(x - 430, y - 165, oChargeStation, 0);
 
 hp_state = GunManHpState.FIRST;
 
-
+drone = undefined;
 // Select a player
 select_new_player = function() {
 	var _player_list = [];
@@ -112,7 +113,7 @@ select_new_player = function() {
 	{
 		return undefined;	
 	}
-	return _player_list[random_range(0, array_length(_player_list))];
+	return _player_list[irandom_range(0, array_length(_player_list) - 1)];
 }
 
 opponent = select_new_player();	
@@ -124,6 +125,13 @@ hands = Create(x, y, oHands, 0);
 with(hands)	 host = other.id;
 
 explotion_speed = 6;
+
+
+drone_position_offset_x = -100;
+drone_position_offset_y = -200;
+
+
+drone_animation = undefined;
 
 
 		

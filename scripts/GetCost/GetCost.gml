@@ -33,9 +33,14 @@ function GetCost(argument0) {
 			
 		case Gun.ELECTRIC_GUN:
 			return 0.01;
+			
+		case Gun.CHARGING_GUN:
+			return 3;
+		case Gun.SHIELD_MELEE:
+			return 0;
 		
 		default:
-			Raise("Invalid gun\n");
+			Raise("Invalid gun\n" + string(argument0));
 			break;
 	}
 

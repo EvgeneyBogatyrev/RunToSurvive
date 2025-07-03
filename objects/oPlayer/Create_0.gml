@@ -3,6 +3,7 @@ event_inherited();
 enum PlayerStates
 {
 	NORMAL,
+	KNOCKBACKED,
 	TRAPPED,
 	NON_CONTROL
 };
@@ -43,6 +44,7 @@ maxbullets = 20;
 shown_bullets = maxbullets;
 bullets = maxbullets;
 drill_damage = 1;
+base_drill_damage = 1;
 
 state = PlayerStates.NORMAL;
 
@@ -77,7 +79,7 @@ pocket = [0, 0, 0, 0, 0];
 pocket[0] = STDGUN_INUMBER;
 if (global.DEBUG)
 {
-	pocket[1] = DOUBLEHEART_INUMBER;
+	pocket[1] = BURN_INUMBER;
 }
 
 damageBoost = 0;
@@ -108,5 +110,18 @@ protected = false;
 onHitEvent = []; //our damage!!!!! to monsters
 onHurtEvent = [];
 onJumpEvent = [];
+
+if (global.DEBUG)
+{
+	for (var _x = x + 30; _x < 2000; _x += 50)
+	{
+		//Create(_x, y, oChest, 0);
+	}
+	
+	/*with (Create(x + 10, y - 100, oSpamtonSmall, 0))
+	{
+		xspeed = 3;	
+	}*/
+}
 
 

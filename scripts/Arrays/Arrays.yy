@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Arrays",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Arrays",
+  "parent":{
+    "name":"Object_oriented",
+    "path":"folders/Scripts/Object_oriented.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -72,7 +72,7 @@ item_description = [
 {
 	item_id : DOUBLEHEART_INUMBER,
 	item_name : "Second heart",
-	description : "Your healing is doubled."
+	description : "Your healing is increased by 50%."
 },
 {
 	item_id : CRUSH_INUMBER,
@@ -93,7 +93,34 @@ item_description = [
 	item_id : ESSENCE_INUMBER,
 	item_name : "Essence",
 	description : "Your friend's soul."
-}
+},
+{
+	item_id : CHARGING_GUN_INUMBER,
+	gun_state : Gun.CHARGING_GUN,
+	item_name : "Charging gun",
+	description : "Spend 2 energy to deal 3 damage or charge it to deal 7 damage."
+},
+{
+	item_id : SHIELD_MELEE_INUMBER,
+	gun_state : Gun.SHIELD_MELEE,
+	item_name : "Shield",
+	description : "A melee weapon that deals 1 damage and knocks back enemies."
+},
+{
+	item_id : DRONE_INUMBER,
+	item_name : "Rocket Drone",
+	description : "While shooting you can fire an aditional missile."
+},
+{
+	item_id : BURN_INUMBER,
+	item_name : "Incendium",
+	description : "Your bullets causes burn."
+},
+{
+	item_id : INFINITYGUN_INUMBER,
+	item_name : "Gun configurator",
+	description : "Whenever you are out of energy, take 20 damage and equip a random half-charged gun."
+},
 ];
 
 function GetGunStateFromID(_INUMBER)

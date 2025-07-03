@@ -10,4 +10,4 @@ if (x < oCamera.left - CAMERA_BOUNDS)
 }
 
 
-ContactDamageKnockback(damage, 2);
+ContactDamageKnockback(damage, max(0, 10 * dir * scale), -15 * scale);

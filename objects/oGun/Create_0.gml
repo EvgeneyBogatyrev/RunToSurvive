@@ -12,6 +12,8 @@ enum Gun
 	LIFESTEAL_GUN,
 	REAL_SHOTGUN,
 	ELECTRIC_GUN,
+	CHARGING_GUN,
+	SHIELD_MELEE,
 };
 
 
@@ -28,7 +30,8 @@ current_gun = Gun.STANDART_GUN;
 
 if (global.DEBUG)
 {
-	current_gun = Gun.SHORTRANGE_BLASTER;
+
+	current_gun = Gun.ROCKET_LAUNCHER;
 }
 
 secondary = false;
@@ -40,6 +43,10 @@ damage = 0;
 
 
 //Combo Punch
+
+//Shield
+shield_state = MeleeStates.IDLE;
+hit_by_attack = ds_list_create();
 
 
 //Hammer
@@ -69,3 +76,7 @@ launcher_timer = launcher_timer_max;
 
 //electricity
 electricity_obj = undefined;
+
+//CHARGING Gun
+charge_timer = 0;
+

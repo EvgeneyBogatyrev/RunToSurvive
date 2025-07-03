@@ -184,8 +184,29 @@ if (first_phase_timer == 0/* || (first_phase_timer > 0 && hp <= 0)*/)
 	current_speed = slowspeed;
 }
 
+//Gravity
+if (!CheckCollisions(x, y + 1, oSolidParent, row) && can_be_knockbacked)
+{
+	//yspeed -= grav;
+	
+	if (CheckCollisions(x, y + yspeed * scale, oSolidParent, row))
+	{
+		repeat (abs(yspeed))
+		{
+			if (CheckCollisions(x, y + sign(yspeed), oSolidParent, row))
+			{
+				break;	
+			}
+			y += sign(yspeed);
+		}
+		yspeed = 0;
+	}
+}
 
-
+// Inherit the parent event
 event_inherited();
+
+
+
 
 

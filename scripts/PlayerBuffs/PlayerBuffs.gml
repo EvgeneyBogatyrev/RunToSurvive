@@ -2,7 +2,7 @@ function PlayerBuffs() {
 	jumpspeed = 12;
 	protected = false;
 	walkspeed = 8;
-	drill_damage = 1;
+	drill_damage = base_drill_damage;
 
 	switch (pocket[1])
 	{
@@ -24,9 +24,18 @@ function PlayerBuffs() {
 			
 		case DOUBLEHEART_INUMBER:
 			break;
+		
+		case DRONE_INUMBER:
+			break;
+			
+		case BURN_INUMBER:
+			break;
+			
+		case INFINITYGUN_INUMBER:
+			break;
 			
 		case CRUSH_INUMBER:
-			drill_damage = irandom_range(1, 3);
+			drill_damage = base_drill_damage + irandom_range(1, 3);
 			break;
 	
 		default:

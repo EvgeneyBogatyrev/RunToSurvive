@@ -31,6 +31,8 @@ else
 
 var _held_gun = GetGunStateFromID(host.pocket[0]);
 
+ChargedGun = false;
+
 if (host.bullets < GetCost(current_gun) && secondary == false && shotgun_times == 0 && launcher_times == 0) 
 {
 	secondary = true;
@@ -40,6 +42,7 @@ if (host.bullets < GetCost(current_gun) && secondary == false && shotgun_times =
 	launcher_times = 0;
 	launcher_timer = 0;
 	temp_bullets = 0;
+	charge_timer = 0;
 }
 
 if (secondary && host.bullets >= GetCost(_held_gun))
@@ -72,7 +75,12 @@ switch(current_gun)
 		if (shoot && !recoil && host.bullets >= cost)
 		{
 			ShakeScreen(3, 5);
-			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
+			var _speed = 40;
+			if (instance_exists(host) && host.object_index == oGunMan)
+			{
+				_speed = 20;	
+			}
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, _speed, 8);
 		}
 		shoot = false;
 		shoot_hold = false;
@@ -86,7 +94,7 @@ switch(current_gun)
 		image_xscale *= 1.3;
 		image_yscale *= 1.3;
 	
-		damage = 2 * host.drill_damage;
+		damage = 3 + host.drill_damage;
 		
 		switch (hammer_state)
 		{
@@ -132,6 +140,69 @@ switch(current_gun)
 				
 				if (_swing_prog > 0.25 && _swing_prog < 0.8)
 				{
+					
+					if (instance_exists(oWormEnemy))
+					{
+						//Print("Found worm enemies:", instance_number(oWormEnemy));
+						for (var _i = 0; _i < instance_number(oWormEnemy); ++_i)
+						{
+							var _worm_enemy = instance_find(oWormEnemy, _i);
+							if (_worm_enemy.row != row || _worm_enemy.state == UniversalStates.DEAD)
+							{
+								//Print("Worm enemy on the other row:", _worm_enemy.row);
+								continue;	
+							}
+							var _collision_found = false;
+							var _collision_masks = _worm_enemy.collision_detector();
+							for (var _mask_index = 0; _mask_index < len(_collision_masks); ++_mask_index)
+							{
+								var _x = _collision_masks[_mask_index][0];
+								var _y = _collision_masks[_mask_index][1];
+								var spr = _collision_masks[_mask_index][2];
+			
+			
+								var spr_width = sprite_get_width(spr);
+								var spr_height = sprite_get_height(spr);
+			
+    
+								// Define the collision rectangle for the current entity
+								var rect_left = _x - spr_width / 2;
+								var rect_top = _y - spr_height / 2;
+								var rect_right = _x + spr_width / 2;
+								var rect_bottom = _y + spr_height / 2;
+			
+    
+								// Check if bullet collides with this entity
+								if (x > rect_left && x < rect_right && y > rect_top && y < rect_bottom)
+								{
+								    _collision_found = true;
+								    break;
+								}
+							}
+		
+							if (_collision_found)
+							{
+								//Print("Found collision");
+								_worm_enemy.hp -= damage;
+								if object_is_ancestor(_worm_enemy.object_index, oBossParent)
+								{
+									_worm_enemy.cum_hp -= damage;	
+								}
+								
+								_worm_enemy.hit_flash = 3;
+	
+								if (object_is_ancestor(_worm_enemy.object_index, oHalfBossParent) && _worm_enemy.state != UniversalStates.DEAD)  StartBattle(row, host, _worm_enemy);
+								
+								with (Create(x + 80 * scale * host.dir, y - 4 * scale, oDamageNumber, row))
+								{
+									damage = other.damage;
+								}
+							}
+						}
+					}
+
+					//
+					
 					var _colliding_enemies = ds_list_create();
 					var _amount = instance_place_list(x, y, oEnemyParent, _colliding_enemies, true);
 				
@@ -337,10 +408,16 @@ switch(current_gun)
 		cost = GetCost(current_gun);
 		var _damage = 2;
 		
+		var _speed = 40;
+		if (instance_exists(host) && host.object_index == oGunMan)
+		{
+			_speed = 20;	
+		}
+		
 		if (shoot && !recoil && host.bullets >= cost && shotgun_times == 0)
 		{
 			ShakeScreen(2, 4);
-			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, _speed, 8);
 			shotgun_timer = shotgun_timer_max;
 			shotgun_times = 3;
 		}
@@ -354,7 +431,7 @@ switch(current_gun)
 		{
 			shotgun_times--;
 			host.bullets += cost;
-			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, _speed, 8);
 			shotgun_timer = shotgun_timer_max;
 		}
 		
@@ -390,6 +467,7 @@ switch(current_gun)
 			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
 				
 			temp_bullets = 0;
+			ChargedGun = true;
 		}
 		shoot = false;
 		shoot_hold = false;
@@ -445,7 +523,7 @@ switch(current_gun)
 				
 				if (host.object_index == oPlayer && host.pocket[1] == DOUBLEHEART_INUMBER)
 				{
-					_heal_amount *= 2;	
+					_heal_amount *= 1.5;	
 				}
 				host.hp += _heal_amount;
 				if object_is_ancestor(host.object_index, oBossParent)
@@ -522,6 +600,157 @@ switch(current_gun)
 		
 	default:
 		break;
+		
+	case Gun.CHARGING_GUN:
+		sprite_index = sChargingGun;
+			
+		cost = GetCost(current_gun);
+		if (shoot_hold && !recoil)
+		{
+			if (charge_timer == 0)  charge_timer = 1;
+			if (increase)
+			{
+				charge_timer += 1;
+				if (charge_timer >= 20)  increase = false;
+			}
+			//else
+			//{
+			//	temp_bullets -= 1;
+			//	if (temp_bullets < 1)  increase = true;	
+			//}
+		}
+			
+		if (!shoot_hold && charge_timer < 20 && charge_timer != 0) 
+		{
+			increase = true; 
+			var _damage = 3;
+				
+			ShakeScreen(3, 5);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
+				
+			charge_timer = 0;
+			ChargedGun = true;
+		}
+		if (!shoot_hold && charge_timer >= 20) 
+		{
+			increase = true; 
+			var _damage = 7;
+				
+			ShakeScreen(3, 5);
+			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, 40, 8);
+				
+			charge_timer = 0;
+			ChargedGun = true;
+		}
+		shoot = false;
+		shoot_hold = false;
+		break;
+	case Gun.SHIELD_MELEE:
+		sprite_index = sShield;
+		image_speed = 1;
+		
+		damage = 1 + host.drill_damage;
+	
+		
+		switch (shield_state)
+		{
+			
+			case MeleeStates.IDLE:
+				if (shoot && recoil == 0)
+				{
+					shield_state = MeleeStates.ATTACK;
+					recoil = -30;
+					shoot = false;
+					shoot_hold = false;
+					ds_list_clear(hit_by_attack);
+				}
+				break;
+				
+			case MeleeStates.ATTACK:
+				
+				var _colliding_enemies = ds_list_create();
+				var _amount = instance_place_list(x, y, oEnemyParent, _colliding_enemies, true);
+				
+				for (var i = 0; i < _amount; ++i)
+				{
+					var _enemy = _colliding_enemies[| i];
+					
+					if (_enemy.object_index == oDelver)
+					{
+						if (_enemy.state != DelverStates.INSECT)
+						{
+							//continue;	
+						}
+					}
+					else if (_enemy.row != row)  continue;
+					
+					if (ds_list_find_index(hit_by_attack, _enemy) == -1 && _enemy.active && _enemy.hp > 0)
+					{
+						KnockbackForce(_enemy, 1 * host.xspeed * scale, -10 * scale);
+						ds_list_add(hit_by_attack, _enemy);	
+						_enemy.hp -= damage;
+						_enemy.hit_flash = 3;
+						
+						/*
+						hit_events = [];
+						for (var _i = 0; _i < ds_list_size(host.inventory); _i++)
+						{
+							var _item = ds_list_find_value(host.inventory, _i);
+							var hit_event = struct_exists(_item, "on_hit") ? struct_get(_item, "on_hit") : undefined;
+							if (hit_event != undefined)
+							{
+								hit_event(id, 82 * sign(image_xscale));
+							}
+						}
+						*/
+
+						
+						if (object_is_ancestor(_enemy.object_index, oBossParent))
+						{
+							_enemy.cum_hp -= damage;
+						}
+						
+						if (object_is_ancestor(_enemy.object_index, oHalfBossParent))
+						{
+							StartBattle(row, host, _enemy.id);
+						}
+						
+						with (Create(x + 80 * scale * host.dir, y - 4 * scale, oDamageNumber, row))
+						{
+							damage = other.damage;
+						}						
+					}
+				}
+				ds_list_destroy(_colliding_enemies);
+				
+				if (recoil == 0)  shield_state = MeleeStates.IDLE;			
+				
+				break;
+			
+			default:
+				break;
+		}
+		break;
 }
 
 if (recoil != 0)  recoil -= sign(recoil);
+
+
+if (host.bullets < GetCost(current_gun) && host.pocket[1] == INFINITYGUN_INUMBER)
+{
+	var _guns = GetAllGuns();			
+	var _gun_images = GetAllGunsImages();
+
+	var _index = irandom_range(0, array_length(_guns) - 1);
+	var _new_gun = _guns[_index];			
+	var _new_gun_image = _gun_images[_index];
+
+	host.gun.current_gun = _new_gun;
+	host.pocket[0] = _new_gun_image;
+	host.bullets = host.maxbullets / 2;
+	host.shoot_hold = false;	
+	host.shoot = false;
+	
+	host.hp -= 20;
+	
+}

@@ -41,3 +41,13 @@ if (AnimationEnd())
 	image_index = 3;
 	image_speed = 0;
 }
+
+if (x < oCamera.x && !CheckCollisions(x, bbox_bottom + 1, oSolidParent, row) && instance_exists(oWallOfFleshController))
+{
+	real_image_alpha -= 0.05;
+	if (real_image_alpha <= 0)
+	{
+		instance_destroy();	
+	}
+	image_alpha = real_image_alpha;
+}

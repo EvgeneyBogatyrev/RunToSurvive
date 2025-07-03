@@ -1,6 +1,7 @@
 /// @description
 
-if (oRoomControl.gamestate == GameState.NORMAL)  timer = ApproachTo(timer, 0);
+if (oRoomControl.gamestate == GameState.NORMAL || oRoomControl.gamestate == GameState.BATTLE)
+	timer = ApproachTo(timer, 0);
 
 if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
 {
@@ -62,7 +63,7 @@ if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
 	}
 	last_boss = _new_boss;
 	
-	timer = max_timer;
+	timer = int64(max_timer * random_range(0.95, 1.05));
 	if (_boss_summoned)
 	{
 		oRoomControl.gamestate = GameState.BOSS;

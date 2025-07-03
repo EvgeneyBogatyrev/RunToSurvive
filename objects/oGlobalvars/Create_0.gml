@@ -20,12 +20,12 @@ player_colors = [];
 global.music_gain = 1.0;
 global.sound_gain = 0.5;
 
-global.display_width = 1024;
-global.display_height = 768;
+global.display_width = 1280;
+global.display_height = 720;
 
 global.score = 0;
 global.highscore = 0;
-global.difficulty = undefined;
+global.difficulty = 1;
 
 global.filename = working_directory + "file.name";
 

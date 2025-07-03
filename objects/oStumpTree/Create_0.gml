@@ -16,7 +16,7 @@ max_hp = 45 + 5 * oDifficultyController.bosses_defeated * GetStats("Increase hp"
 
 if (global.DEBUG)
 {
-	max_hp = 1;	
+	max_hp = 10;	
 }
 
 hp = max_hp;
@@ -33,6 +33,6 @@ damage = GetStats("Tree boss");
 
 state = StumpTreeStates.APPEAR;
 
-loot_profile_id = TREE_LOOT_INUMBER;
+loot_profile_ids = [TREE_LOOT_INUMBER];
 
 row = 1;

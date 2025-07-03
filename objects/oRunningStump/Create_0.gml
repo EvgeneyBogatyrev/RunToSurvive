@@ -13,3 +13,5 @@ state = 1;
 given = false;
 
 damage = GetStats("Running stump");
+
+can_be_knockbacked = true;

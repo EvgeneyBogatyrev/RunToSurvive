@@ -6,6 +6,11 @@ hp      = BoundBetween(hp, 0, maxhp);
 shown_bullets = ApproachTo(shown_bullets, floor(bullets));
 shown_hp      = ApproachTo(shown_hp, floor(hp));
 
+if (y > oGenerator.ground[2] + 100)
+{
+	hp = -100;	
+}
+
 switch (state)
 {
 	case PlayerStates.NORMAL:
@@ -25,20 +30,30 @@ switch (state)
 		if (_shoot_hold && instance_exists(gun))  gun.shoot_hold = true;
 		
 		break;
+	case PlayerStates.KNOCKBACKED:
+		PlayerControl();
+		if (_left || _right)
+		{
+			state = PlayerStates.NORMAL;
+		}
+		
 		
 	case PlayerStates.TRAPPED:
 		PlayerControl();
-		_left =  false;
-		_right =  false;
+		//_left =  false;
+		//_right =  false;
 		_up =  false;
 		_down =  false;
 		_shoot =  false;
 		_shoot_hold = false;
 		_jump = false;
-		x = oCamera.right + 300;
-		y = -10;
+		//x = oCamera.right + 300;
+		//y = -10;
 		yspeed = 0;
 		row_der = 0;
+		row = 0;
+		PlayerSprite();
+		//PlayerMove();
 		break;
 	
 	case UniversalStates.DEAD:
@@ -129,6 +144,29 @@ switch (state)
 		break;
 	
 	case PlayerStates.NON_CONTROL:
+		
+		if (knockbacked)
+		{
+			PlayerControl();
+			PlayerCheckDying();
+			var _xspeed = xspeed;
+	
+			var _move = _right - _left;
+			dir = (_move != 0) ? sign(_move) : dir;
+	
+			_left =  false;
+			_right =  false;
+			_up =  false;
+			_down =  false;
+			_jump = false;
+	
+			PlayerMove();
+	
+			xspeed = _xspeed;
+	
+			if (_shoot && instance_exists(gun))       gun.shoot = true;
+			if (_shoot_hold && instance_exists(gun))  gun.shoot_hold = true;
+		}
 		PlayerSprite();
 		break;
 	
@@ -149,9 +187,6 @@ if (damaged)
 	damage_timer--;	
 	if (damage_timer <= 0)  damaged = false;
 }
-
-if (knockback_timer > 0) knockback_timer--;
-else	                 knockbacked = false;	
 
 
 event_inherited();

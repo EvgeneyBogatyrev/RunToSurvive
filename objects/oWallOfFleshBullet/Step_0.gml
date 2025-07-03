@@ -12,7 +12,7 @@ if (trail == undefined)
 	part_type_life(trail,  40, 40);	
 }
 
-ContactDamage(damage, 0);
+ContactDamage(damage);
 
 // Particles
 var _len = point_distance(x, y, xprevious, yprevious);
@@ -28,6 +28,11 @@ for (var i = 0; i < _len; ++i)
 }
 
 if (CheckCollisions(x, y, oSolidParent, row))
+{
+	instance_destroy();	
+}
+
+if (x < oCamera.left - 200 || x > oCamera.right + CAMERA_BOUNDS)
 {
 	instance_destroy();	
 }

@@ -102,7 +102,7 @@ switch (state)
 		
 	case RobotBossStates.ROBOT:
 	
-		ContactDamageKnockback(damage_second_phase, 2);
+		ContactDamageKnockback(damage_second_phase, max(0, 10 * dir * scale), -15 * scale);
 	
 		if (!walk_from_behind)
 		{
@@ -195,7 +195,7 @@ switch (state)
 			}
 			xspeed = -oRoomControl.roomspeed;
 			x = lerp(x, oCamera.left - 10, 0.15);
-			ContactDamageKnockback(damage_third_phase, 15);
+			ContactDamageKnockback(damage_third_phase,  5 * xspeed, -3 * abs(xspeed));
 			
 			var _number_of_players = instance_number(oPlayer);
 			for (var _i = 0; _i < _number_of_players; ++_i)

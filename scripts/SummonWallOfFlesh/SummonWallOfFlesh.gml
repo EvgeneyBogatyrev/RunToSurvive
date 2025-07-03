@@ -19,7 +19,7 @@ function SummonWallOfFlesh() {
 	//Forbidden
 	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 0, 1, 0]);
 
-	with (Create(oCamera.left - 120, oGenerator.ground[0] - 150, oWallOfFleshController, 0))  depth -= 2;
+	with (Create(oCamera.left - 80, oGenerator.ground[0] - 150, oWallOfFleshController, 0))  depth -= 2;
 
 
 
@@ -28,6 +28,6 @@ function SummonWallOfFlesh() {
 
 	oAudioControl.bgm = musEyeForAnEye;
 	oAudioControl.music_set = false;
-
+	
 
 }

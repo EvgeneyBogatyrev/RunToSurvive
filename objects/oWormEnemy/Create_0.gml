@@ -15,3 +15,14 @@ segments = [];
 sprite_index = head_sprite;
 
 init = false;
+
+collision_detector = undefined;
+
+damage = 0;
+
+hp = 1;
+
+normal_move = true;
+random_velocities = [];
+
+real_image_alpha = 1;

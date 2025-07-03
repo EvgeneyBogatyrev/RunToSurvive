@@ -9,6 +9,10 @@ if (opponent == undefined || !instance_exists(opponent) || opponent.state == Uni
 {
 	opponent = select_new_player();	
 	
+	if (drone != undefined && instance_exists(oGunManDrone))
+	{
+		drone.remove_player(opponent); 
+	}
 	
 	if (opponent == undefined)
 	{
@@ -28,7 +32,7 @@ if (opponent == undefined || !instance_exists(opponent) || opponent.state == Uni
 switch (state)
 {
 	case UniversalStates.INTRO:
-	
+		//scale = GetScale(row);
 		if (!area_created && abs(x - oCamera.x) < 1400)
 		{
 			area_created = true;
@@ -41,12 +45,13 @@ switch (state)
 			area_updated = true;
 			CreateConstruct(x - 800, 0, _charge_tower_shape, true);			
 		}
+		//scale = GetScale(row) * 1.2;
 		
 		hp = maxhp;
 		cum_hp = cum_hp_max;
 		
 		intro_timer--;
-		if (intro_timer <= 0 && oRoomControl.roomspeed == 0)
+		if (intro_timer <= 0 && oRoomControl.roomspeed == 0 && drone_animation != undefined && !instance_exists(drone_animation))
 		{
 			state = GunManStates.FIGHT;
 		}
@@ -54,21 +59,35 @@ switch (state)
 		if (x < oCamera.right - 100 && oRoomControl.roomspeed != 0)
 		{
 			StopRoom();
+			//drone = Create(x + drone_position_offset_x, y + drone_position_offset_y, oGunManDrone, 0);
 			follow_object = Create(oCamera.x, oGenerator.ground[1], oFollow, 0);
 			with (oCamera) follow = other.follow_object;
 			
+			drone_animation = Create(follow_object.x, -50, oGunManDroneAnimation, 1);
+			drone_animation.player_not_to_catch = opponent;
+			drone_animation.fly_position_x = x + drone_position_offset_x;
+			drone_animation.fly_position_y = y + drone_position_offset_y;
+			
+			/*
 			for (var i = 0; i < instance_number(oPlayer); ++i)
 			{
 				var _player = instance_find(oPlayer, i);
 				if (_player.state != UniversalStates.DEAD && _player != opponent)
 				{
 					_player.state = PlayerStates.TRAPPED;
-					_player.x = oCamera.right + 600;
-					_player.y = 10;
+					//_player.x = oCamera.right + 600;
+					//_player.y = 10;
 					_player.row = 0;
-					//_player.scale = GetScale(_player.row);
+					_player.scale = GetScale(_player.row);
+					array_push(drone.stored_players, _player);
 				}
+				//else if (_player == opponent)
+				//{
+				//	_drone.stored_player = opponent;
+				//}
 			}	
+			*/
+			
 		}
 		desired_row = 0;
 		desired_x_position = x;
@@ -108,7 +127,7 @@ switch (state)
 			}
 			if (_solid)
 			{
-				if (row != 0)
+				if (row == 1)
 				{
 					jump_counter = 10;
 					gun.shoot = true;
@@ -173,6 +192,10 @@ switch (state)
 		if (instance_exists(follow_object))
 		{
 			instance_destroy(follow_object);
+		}
+		with (oGunManDrone)
+		{
+			instance_destroy();	
 		}
 		global.score += 100;
 		oRoomControl.gamestate = GameState.LOOT;
@@ -243,7 +266,7 @@ if (state != UniversalStates.DEAD && state != UniversalStates.INTRO && state != 
 			state_change_timer = state_change_timer_max / 10;
 		}
 	}
-	else if (opponent.damaged || bullets <= 0)
+	else if (opponent.damaged || bullets <= 3)
 	{
 		if (next_state != GunManStates.FLEE)
 		{
@@ -279,7 +302,7 @@ if (state != UniversalStates.DEAD && state != UniversalStates.INTRO && state != 
 	{
 		if (hp_state == GunManHpState.FIRST)
 		{
-			with (Create(oCamera.right + 1750, oGenerator.ground[0] - 10, oVenus, 0))  depth -= 2;
+			with (Create(oCamera.right + 1750, oGenerator.ground[0] - 10, oTumble, 0))  depth -= 2;
 			hp_state = GunManHpState.SECOND;
 			//maxhp = second_hp;
 			//hp = maxhp;
@@ -299,7 +322,7 @@ if (state != UniversalStates.DEAD && state != UniversalStates.INTRO && state != 
 		else
 		{
 			state = UniversalStates.DEAD;
-			with (oVenus)
+			with (oTumble)
 			{
 				instance_destroy();	
 			}
@@ -435,7 +458,14 @@ if (state != UniversalStates.DEAD && x < oCamera.right)
 }
 
 
+// Inherit the parent event
 event_inherited();
+
+
+if (state != UniversalStates.INTRO)
+{
+	scale = GetScale(row) * 1.2;
+}
 
 PlayerSprite();
 

@@ -1,4 +1,4 @@
-if keyboard_check_pressed(192)
+if keyboard_check_pressed(192) || keyboard_check_pressed(vk_alt)
 {
 	enabled = !enabled;
 
@@ -79,21 +79,23 @@ if keyboard_check_pressed(vk_enter)
 		//	case "ammo":
 		//		ds_list_add(cmd_queue, _parse);
 		//	break;
+
 				
 		//}
-		
+		ds_list_insert(history, 0, keyboard_string);
+		ds_list_insert(cmd_history, 0, keyboard_string);
+
 		if struct_exists(commands, _parse[0])
 		{
 			ds_list_add(cmd_queue, _parse);
 		}
 		else
 		{
-			ds_list_add(history, "Unknown command.");
+			ds_list_insert(history, 0, "Unknown command.");
 
 		}
 		
-		ds_list_add(history, keyboard_string);
-		ds_list_add(cmd_history, keyboard_string);
+		
 	}
 	
 	keyboard_string = "";

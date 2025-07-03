@@ -11,17 +11,18 @@ function PlayerMove() {
 	{																             //  deal damage equal to 30% of his health
 		var _damage = GetStats("Obstacle");
 	
-		damaged      = true;	
-		damage_timer = 6*30;
+		//damaged      = true;	
+		//damage_timer = 6*30;
 	
-		if (!protected)  hp -= _damage;
-		else          
-		{
-			protected = false;
-			if (pocket[1] == FORCEFIELD_INUMBER)  pocket[1] = 0;	
-		}
+		//if (!protected)  hp -= _damage;
+		//else          
+		//{
+		//	protected = false;
+		//	if (pocket[1] == FORCEFIELD_INUMBER)  pocket[1] = 0;	
+		//}
 	
-		ShakeScreen(10, 15);
+		//ShakeScreen(10, 15);
+		//ShakeScreen(5, 7);
 	}
 
 	if (CheckCollisions(x + xspeed * scale + sign(xspeed), y - 1, oSolidParent, row))  // horizontal collision
@@ -43,6 +44,13 @@ function PlayerMove() {
 		    xspeed = walkspeed * escape_direction / 2;	                          // calculate the direction player need to go out of the obstacle
 		
 		}
+		
+		if (knockbacked and state = PlayerStates.NON_CONTROL)
+		{
+			state = PlayerStates.NORMAL;
+			knockbacked = false;
+		}
+		
 	}
 	else  
 	{
@@ -107,6 +115,11 @@ function PlayerMove() {
 		yspeed            =  0;
 		grounded_counter  = 10;
 		if (jump_counter == 0) changing_row = false;
+		if (knockbacked and state = PlayerStates.NON_CONTROL)
+		{
+			state = PlayerStates.NORMAL;
+			knockbacked = false;
+		}
 	}
 	else                                                          // vertical movement
 	{

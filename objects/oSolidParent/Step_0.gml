@@ -6,10 +6,11 @@ event_inherited();
 
 if (fade_away)
 {
-	image_alpha -= 0.1;
-	if (image_alpha <= 0)
+	real_image_alpha -= 0.05;
+	if (real_image_alpha <= 0)
 	{
 		instance_destroy();	
 	}
+	image_alpha = real_image_alpha;
 }
 

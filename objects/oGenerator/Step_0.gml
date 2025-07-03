@@ -1,6 +1,6 @@
 if (last_block[2].x <= oCamera.right + oCamera.view_w_half * GetScale(2))
 {
-	obstacles = GetObstacleCombination(oRoomControl.room_properties[? "ForbiddenObstacles"], obstacles);
+	obstacles = GetObstacleCombination(oRoomControl.room_properties[? "ForbiddenObstacles"], obstacles, preprocess_forbidden_obstacles);
 	for (var i = 0; i < 3; ++i)
 	{
 		var _start_point = last_block[i].x;
@@ -11,6 +11,10 @@ if (last_block[2].x <= oCamera.right + oCamera.view_w_half * GetScale(2))
 			last_block[i] = Create(_x, ground[i], oGroundBlock, i);
 			with (last_block[i])
 			{
+				if (instance_exists(oWallOfFleshController) && random_range(0, 1) < 0.05)
+				{
+					lava_block = true;	
+				}
 				sprite_index = oRoomControl.room_properties[? "BlockSprite"];
 			}
 			if (_count % 3 == 0) 
