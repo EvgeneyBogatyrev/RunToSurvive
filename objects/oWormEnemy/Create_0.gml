@@ -5,9 +5,9 @@ number_of_segments = 10;
 
 walkspeed = 10;
 
-head_sprite = sBullet;
-segment_sprite = sBullet;
-tail_sprite = sBullet;
+head_sprite = sBulletBeta;
+segment_sprite = sBulletBeta;
+tail_sprite = sBulletBeta;
 
 segments = [];
 

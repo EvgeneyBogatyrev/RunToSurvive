@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.273753,
+  "duration":0.26875284,
   "name":"soConfirm",
   "parent":{
     "name":"Sounds",

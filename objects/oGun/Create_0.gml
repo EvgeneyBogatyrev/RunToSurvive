@@ -28,7 +28,7 @@ current_gun = Gun.STANDART_GUN;
 
 if (global.DEBUG)
 {
-	current_gun = Gun.LIFESTEAL_GUN;
+	current_gun = Gun.SHORTRANGE_BLASTER;
 }
 
 secondary = false;

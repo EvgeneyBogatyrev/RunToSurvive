@@ -4,7 +4,7 @@
 ///@param damage     A damage of the bullet
 ///@param speed      A speed of the bullet
 ///@param recoil     A recoil of the bullet
-function Shoot(_projectile, _sprite, _damage, _speed, _recoil, _direction=undefined, _sound=true) {
+function Shoot(_projectile, _sprite, _damage, _speed, _recoil, _direction=undefined, _sound=true, _lifespan=999999) {
 
 	var _xspeed, _yspeed;
 	if (_direction == undefined)
@@ -27,10 +27,12 @@ function Shoot(_projectile, _sprite, _damage, _speed, _recoil, _direction=undefi
 		xspeed = _xspeed * host.dir;
 		yspeed = _yspeed;
 		sprite_index = _sprite;
-		scale = other.scale;
+		scale = host.scale;
 		image_xscale = scale;		
 		image_yscale = scale;
-
+		
+		lifespan = _lifespan;
+		
 		depth = other.depth - 1;
 		dir = host.dir;
 		if (host.object_index == oPlayer) 
