@@ -19,7 +19,6 @@ function GetSpritesFromName(_name)
 	var _out = asset_get_index("s" + _name + "OutOfScreen");
 	var _hands = asset_get_index("s" + _name + "Hands");
 	
-	
 	return 
 	{
 		stand : sprite_exists(_stand) ? _stand : sKyronStand,
@@ -40,12 +39,22 @@ function GetWeaponFromName(_name)
 {
 	switch (_name)
 	{
-		default:
-			return Gun.DRILL;
-		case "Steampunk":
-			return Gun.STEAMPUNK_HAMMER;
+		default:			
+			return Gun.BASIC_REPEATER;
+			//return Gun.DRILL;
+		case "Kyron":
+			return Gun.BASIC_REPEATER;
+		
 		case "LongHair":
 			return Gun.SHIELD_MELEE;
+
+		case "Steampunk":
+			return Gun.STEAMPUNK_HAMMER;
+
+		case "Cyber":
+			return Gun.SHORTRANGE_BLASTER;
+
+		
 	}
 }
 

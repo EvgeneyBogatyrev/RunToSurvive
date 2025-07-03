@@ -4,6 +4,14 @@ with(Create(x, y, oSparkle, row))
 	{
 		sprite_index = sPellet;	
 	}
+	else if other.sprite_index == sBullet 
+	{
+		sprite_index = sSparkle;	
+	}
+	else if other.sprite_index = sBlast
+	{
+		sprite_index = sSparkleBlast;
+	}
 	else
 	{
 		sprite_index = sSparkleBeam;

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.802256,
+  "duration":0.79725623,
   "name":"soExplosion",
   "parent":{
     "name":"Sounds",

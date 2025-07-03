@@ -24,13 +24,13 @@ function Knockback() {
 function KnockbackForce(_victim, _force_x, _force_y) {
 
 
-	if (_victim == undefined)  exit;
+	if (_victim == undefined)  return;
 
 	with (_victim)
 	{
 		if (object_is_ancestor(_victim.object_index, oEnemyParent) && can_be_knockbacked) or (object_index == oPlayer)
 		{
-				if (!knockbacked)	
+				if (!knockbacked)
 				{
 					xspeed = _force_x;
 					yspeed = _force_y;

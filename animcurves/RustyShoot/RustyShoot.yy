@@ -1,0 +1,30 @@
+{
+  "$GMAnimCurve":"",
+  "%Name":"RustyShoot",
+  "channels":[
+    {"$GMAnimCurveChannel":"","%Name":"rotation","colour":4290799884,"name":"rotation","points":[
+        {"th0":-0.1,"th1":0.066793896,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.058873754,"th1":0.019871857,"tv0":-0.16294715,"tv1":0.0550001,"x":0.089694664,"y":0.6930275,},
+        {"th0":-0.05982415,"th1":0.08794379,"tv0":0.17316303,"tv1":-0.25455627,"x":0.19274808,"y":-0.03365131,},
+        {"th0":-0.08244274,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.55152667,"y":1.0,},
+        {"th0":0.0,"th1":0.07480917,"tv0":0.0,"tv1":0.0,"x":0.55152667,"y":-1.0,},
+        {"th0":-0.08252398,"th1":0.050089836,"tv0":0.009713877,"tv1":-0.0058960617,"x":0.8950382,"y":0.2810564,},
+        {"th0":-0.07633591,"th1":0.1,"tv0":0.026666667,"tv1":0.0,"x":1.0,"y":0.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"y","colour":4281083598,"name":"y","points":[
+        {"th0":-0.1,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":0.0,"th1":0.0,"tv0":0.0,"tv1":9.313226E-10,"x":0.2,"y":-0.006666667,},
+        {"th0":-0.17500001,"th1":0.17499998,"tv0":0.0,"tv1":0.0,"x":0.55,"y":0.9533333,},
+        {"th0":-7.3341644E-10,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.9,"y":0.0,},
+        {"th0":0.0,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":0.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+  ],
+  "function":2,
+  "name":"RustyShoot",
+  "parent":{
+    "name":"Animation Curves",
+    "path":"folders/Animation Curves.yy",
+  },
+  "resourceType":"GMAnimCurve",
+  "resourceVersion":"2.0",
+}

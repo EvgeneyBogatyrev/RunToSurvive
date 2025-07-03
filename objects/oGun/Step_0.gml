@@ -267,6 +267,52 @@ switch(current_gun)
 		}
 		
 		break;
+	case Gun.BASIC_REPEATER:
+	
+	
+		var _reload_time = 30;
+		sprite_index = sRusty;
+		image_speed = 0;
+		image_index = 0;
+		x = host.xprevious + host.dir * 12 * host.scale
+		
+		if recoil
+		{
+			var _shootanim = animcurve_get(RustyShoot);
+			image_angle = animcurve_channel_evaluate(_shootanim.channels[0], 1 - (recoil / _reload_time)) * 180
+			y -= animcurve_channel_evaluate(_shootanim.channels[1], 1 - (recoil / _reload_time)) * 24 * host.scale
+		}
+		if (shoot && (recoil <= 0))
+		{
+			x -= host.dir * host.scale * 14
+			Shoot(oProjectile, sBullet, 1, 25, _reload_time)
+			x += host.dir * host.scale * 14
+		}
+		shoot = false;
+		
+		break;
+	
+	case Gun.KICKS_N_PUNCHES:
+		
+		break;
+	
+	case Gun.SHORTRANGE_BLASTER:
+		sprite_index = sBlaster;
+		image_speed = 0;
+		image_index = 0;
+		
+		x = host.xprevious + host.dir * 12 * host.scale
+		
+		if (shoot && (recoil <= 0))
+		{
+			x -= host.dir * host.scale * 14
+			Shoot(oProjectile, sBlast, 1, 12, 30, undefined, true, 20)
+			x += host.dir * host.scale * 14
+		}
+		
+		shoot = false
+		
+		break;
 	
 	case Gun.DRILL:
 		sprite_index = sDrill;
