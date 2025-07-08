@@ -12,7 +12,7 @@ for (var i = 0; i < instance_number(oPlayer); ++i)
 if (_player != noone && hp <= 0 && _player.pocket[1] == REFRACTOR_INUMBER && !refreshed)
 {
 	_player.hp += 5;
-	_player.bullets += 2;
+	_player.bullets += 3;
 	refreshed = true;
 }
 event_inherited();

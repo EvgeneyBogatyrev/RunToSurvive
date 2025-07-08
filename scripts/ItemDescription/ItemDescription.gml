@@ -62,12 +62,12 @@ item_description = [
 {	
 	item_id : FORCEFIELD_INUMBER,
 	item_name : "Force field headphones",
-	description : "Prevent the next hit you take."
+	description : "Prevents the next hit you take."
 },
 {
 	item_id : ENERGYFIST_INUMBER,
 	item_name : "Energy fist",
-	description : "Increases energy gain from energy stations."
+	description : "Increases energy gain from Charging Stations."
 },
 {
 	item_id : DOUBLEHEART_INUMBER,
@@ -77,7 +77,7 @@ item_description = [
 {
 	item_id : CRUSH_INUMBER,
 	item_name : "Crush",
-	description : "Drill deals 1-3 damage."
+	description : "Melee weapon deals additional 0-2 damage."
 },
 {
 	item_id : BATTERY_INUMBER,
@@ -119,7 +119,7 @@ item_description = [
 {
 	item_id : REFRACTOR_INUMBER,
 	item_name : "Refresher",
-	description : "Something about hp and bullets."
+	description : "Whenever you kill an enemy, restore some HP and Energy."
 },
 {
 	item_id : INFINITYGUN_INUMBER,
