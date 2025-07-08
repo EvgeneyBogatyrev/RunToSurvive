@@ -23,7 +23,7 @@ for (var i = 0; i < number_of_players; ++i)
 		case InputTypes.KEYBOARD:
 			var _left = keyboard_check_pressed(vk_left);
 			var _right = keyboard_check_pressed(vk_right);
-			var _OK = keyboard_check_pressed(ord("Z"));
+			var _OK = keyboard_check_pressed(ord("Z")) or keyboard_check_pressed(vk_space);
 			_global_OK |= keyboard_check_pressed(vk_enter);
 		break;
 		default:

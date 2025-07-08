@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.724002,
+  "duration":0.71900225,
   "name":"soRocketShoot",
   "parent":{
     "name":"Sounds",

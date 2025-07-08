@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.12763,
+  "duration":0.12263039,
   "name":"soSelect",
   "parent":{
     "name":"Sounds",

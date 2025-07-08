@@ -11,4 +11,8 @@ hit_an_enemy = false;
 
 trail = undefined;
 
+image_index = 0;
+image_speed = 0;
+
 on_fire = 0;
+

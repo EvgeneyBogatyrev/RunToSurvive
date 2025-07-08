@@ -178,6 +178,36 @@ if (trail != undefined)
 
 event_inherited();
 
-if (image_index == 1)  image_speed = 0;
+if lifespan >= 0
+{
+	lifespan --
+}
+else
+{
+	instance_destroy(id, false);
+	with(Create(x, y, oSparkle, row))
+	{
+		if (other.sprite_index == sPellet)
+		{
+			sprite_index = sPellet;	
+		}
+		else if other.sprite_index == sBullet 
+		{
+			sprite_index = sSparkle;	
+		}
+		else if other.sprite_index = sBlast
+		{
+			sprite_index = sBlastDiffuse;
+		}
+		else
+		{
+			sprite_index = sSparkleBeam;
+		}
+		dir = other.dir;
+		scale = other.scale;
+		depth = other.depth;
+		image_xscale = dir;
+	}
+}
 
-
+image_xscale = abs(image_xscale)

@@ -175,7 +175,7 @@ switch (state)
 		break;
 }
 
-if (state != PlayerStates.NON_CONTROL || state != PlayerStates.TRAPPED)
+if (state != PlayerStates.NON_CONTROL)
 {
 	PlayerMove();
 	PlayerCheckDying();
