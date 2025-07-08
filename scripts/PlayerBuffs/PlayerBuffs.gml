@@ -31,6 +31,9 @@ function PlayerBuffs() {
 		case BURN_INUMBER:
 			break;
 			
+		case REFRACTOR_INUMBER:
+			break;
+			
 		case INFINITYGUN_INUMBER:
 			break;
 			

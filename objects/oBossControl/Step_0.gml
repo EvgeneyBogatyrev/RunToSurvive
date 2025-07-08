@@ -30,7 +30,7 @@ if (timer == 0 && oRoomControl.gamestate == GameState.NORMAL)
 	//} until (_new_boss != last_boss);
 	if (global.DEBUG)
 	{
-		_new_boss = "WallOfFlesh";
+		//_new_boss = "WallOfFlesh";
 	}
 	var _boss_summoned = true;
 	switch (_new_boss)

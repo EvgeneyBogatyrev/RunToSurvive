@@ -1,4 +1,20 @@
 // Inherit the parent event
+var _player = noone;
+for (var i = 0; i < instance_number(oPlayer); ++i)
+{
+	var _tmp = instance_find(oPlayer, i);
+	if (_tmp.pocket[1] == REFRACTOR_INUMBER)
+	{
+		_player = _tmp;
+		break;
+	}
+}
+if (_player != noone && hp <= 0 && _player.pocket[1] == REFRACTOR_INUMBER && !refreshed)
+{
+	_player.hp += 5;
+	_player.bullets += 3;
+	refreshed = true;
+}
 event_inherited();
 
 if (on_fire > 0)
@@ -19,3 +35,4 @@ if (on_fire > 0)
 	}
 	on_fire -= 1;
 }
+

@@ -32,13 +32,13 @@ function KnockbackForce(_victim, _force_x, _force_y) {
 		{
 				if (!knockbacked)
 				{
-					xspeed = _force_x;
-					yspeed = _force_y;
-					knockbacked = true;
 					if (object_index == oPlayer)
 					{
 						state = PlayerStates.NON_CONTROL;
 					}
+					xspeed = _force_x;
+					yspeed = _force_y;
+					knockbacked = true;
 				}
 		}
 	}
