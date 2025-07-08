@@ -79,7 +79,7 @@ pocket = [0, 0, 0, 0, 0];
 pocket[0] = STDGUN_INUMBER;
 if (global.DEBUG)
 {
-	pocket[1] = BURN_INUMBER;
+	//pocket[1] = REFRACTOR_INUMBER;
 }
 
 damageBoost = 0;

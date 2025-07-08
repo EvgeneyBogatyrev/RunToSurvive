@@ -117,6 +117,11 @@ item_description = [
 	description : "Your bullets causes burn."
 },
 {
+	item_id : REFRACTOR_INUMBER,
+	item_name : "Refresher",
+	description : "Something about hp and bullets."
+},
+{
 	item_id : INFINITYGUN_INUMBER,
 	item_name : "Gun configurator",
 	description : "Whenever you are out of energy, take 20 damage and equip a random half-charged gun."

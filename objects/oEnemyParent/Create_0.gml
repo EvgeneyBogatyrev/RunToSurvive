@@ -12,3 +12,6 @@ hit_flash = 0;
 on_fire = 0;
 fire_x_shift = 0;
 fire_y_shift = 0;
+
+// HP & BULLETS gain
+refreshed = false;
