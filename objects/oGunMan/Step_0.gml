@@ -464,7 +464,7 @@ event_inherited();
 
 if (state != UniversalStates.INTRO)
 {
-	scale = GetScale(row) * 1.2;
+	scale = GetScale(row);// * 1.2;
 }
 
 PlayerSprite();

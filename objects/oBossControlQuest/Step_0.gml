@@ -26,7 +26,7 @@ if ((timer == 0) && oRoomControl.gamestate == GameState.NORMAL)
 	//} until (_new_boss != last_boss);
 	if (global.DEBUG)
 	{
-		_new_boss = "Spamton";
+		_new_boss = "GunMan";
 	}
 	var _boss_summoned = true;
 	switch (_new_boss)

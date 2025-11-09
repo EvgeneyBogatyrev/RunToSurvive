@@ -92,4 +92,6 @@ function Shoot(_projectile, _sprite, _damage, _speed, _recoil, _direction=undefi
 	{
 		_bullet.on_fire = 180;
 	}
+	
+	return _bullet;
 }

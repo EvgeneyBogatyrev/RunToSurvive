@@ -78,9 +78,13 @@ switch(current_gun)
 			var _speed = 40;
 			if (instance_exists(host) && host.object_index == oGunMan)
 			{
-				_speed = 20;	
+				_speed = 20;
 			}
-			Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, _speed, 8);
+			var _bullet = Shoot(oProjectile, sBulletBeam, _damage + host.damageBoost, _speed, 8);
+			if (instance_exists(host) && host.object_index == oGunMan)
+			{
+				scale -= 0.2;	
+			}
 		}
 		shoot = false;
 		shoot_hold = false;
