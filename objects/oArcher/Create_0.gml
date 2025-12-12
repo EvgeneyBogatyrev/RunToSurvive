@@ -5,7 +5,7 @@ notice_player = PlayerVisible;
 walkspeed = irandom_range(1, 3);
 walk_timer = irandom_range(25, 75);
 
-action_timer = 0;
+action_timer = 60;
 action_timer_max = 60;
 
 arrow_speed = 17;

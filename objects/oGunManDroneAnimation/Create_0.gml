@@ -23,10 +23,14 @@ arm_length_increase = 10;
 
 // Pulling players
 pull_speed = 0.1;
-close_distance = 150;
+close_distance = 85;
+close_distance_close = 100;
+
+image_speed = 0;
+image_index = 0;
 
 
-pull_players = function()
+function pull_players(smooth)
 {
 	var _change_state = true;
 	var _player_count = instance_number(oPlayer);
@@ -39,12 +43,25 @@ pull_players = function()
 		{
 			var _distance_to_player = point_distance(x, y, _player_object.x, _player_object.y);
 				
-			_player_object.x = lerp(_player_object.x, x + 100, pull_speed);
-			_player_object.y = lerp(_player_object.y, y + 100, pull_speed);
+			if (smooth)
+			{
+				_player_object.x = lerp(_player_object.x, x, pull_speed);
+				_player_object.y = lerp(_player_object.y, y + sprite_height / 2, pull_speed);
+			}
+			else
+			{
+				_player_object.x = x;
+				_player_object.y = y + sprite_height / 2;
+			}
 			
 			if (_distance_to_player >= close_distance)
 			{
 				_change_state = false;	
+			}
+			
+			if (_distance_to_player <= close_distance_close)
+			{
+				image_index = 0;
 			}
 		}
 	}	
@@ -55,4 +72,6 @@ pull_players = function()
 // where to fly in the end
 fly_position_x = 0;
 fly_position_y = 0;
+
+row = 0;
 

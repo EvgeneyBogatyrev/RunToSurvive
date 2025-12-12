@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sArcherStand",
   "bboxMode":2,
   "bbox_bottom":78,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"647e4bfc-3ed7-4028-83c1-931770833b5a","name":"647e4bfc-3ed7-4028-83c1-931770833b5a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"647e4bfc-3ed7-4028-83c1-931770833b5a","name":"647e4bfc-3ed7-4028-83c1-931770833b5a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

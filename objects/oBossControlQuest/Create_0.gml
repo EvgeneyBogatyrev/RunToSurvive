@@ -4,7 +4,7 @@ timer = 5 * 60 * 60;
 
 if (global.DEBUG)
 {
-	timer = 5 * 60 * 60;	
+	timer = 5// 5 * 60 * 60;	
 	max_timer = 5 * 60;
 }
 

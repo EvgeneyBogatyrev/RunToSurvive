@@ -26,7 +26,7 @@ for (var _player_count = 0; _player_count < instance_number(oPlayer); ++_player_
 	{
 		if (item_index == BATTERY_INUMBER)
 		{
-			var _bullet_gain = irandom_range(10, 15);
+			var _bullet_gain = 100;
 			host.bullets += _bullet_gain;
 			if (host.pocket[1] == ENERGYFIST_INUMBER)
 			{
@@ -38,7 +38,7 @@ for (var _player_count = 0; _player_count < instance_number(oPlayer); ++_player_
 		}
 		else if (item_index == HEARTH_INUMBER)
 		{	
-			var _healing_amount = irandom_range(20, 35);
+			var _healing_amount = 50;
 			if (host.pocket[1] == DOUBLEHEART_INUMBER)
 			{
 				host.hp += _healing_amount * 1.5;	

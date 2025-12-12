@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sRoboOutOfScreen",
   "bboxMode":0,
   "bbox_bottom":59,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7eacf426-0e11-409b-9f9a-5b9b8dcccc85","name":"7eacf426-0e11-409b-9f9a-5b9b8dcccc85","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7eacf426-0e11-409b-9f9a-5b9b8dcccc85","name":"7eacf426-0e11-409b-9f9a-5b9b8dcccc85","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

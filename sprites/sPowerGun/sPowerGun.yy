@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sPowerGun",
   "bboxMode":0,
   "bbox_bottom":15,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4a7a24f2-65e2-45a5-b7c0-2cd2d69a6d4a","name":"4a7a24f2-65e2-45a5-b7c0-2cd2d69a6d4a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4a7a24f2-65e2-45a5-b7c0-2cd2d69a6d4a","name":"4a7a24f2-65e2-45a5-b7c0-2cd2d69a6d4a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -1,22 +1,23 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sDrone",
   "bboxMode":0,
-  "bbox_bottom":536,
-  "bbox_left":20,
-  "bbox_right":492,
-  "bbox_top":28,
+  "bbox_bottom":132,
+  "bbox_left":7,
+  "bbox_right":192,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"9d715e89-09c9-4767-ac57-ab4052c58109","name":"9d715e89-09c9-4767-ac57-ab4052c58109","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7b8c9814-ef07-456f-8bc6-31330217b5d5","name":"7b8c9814-ef07-456f-8bc6-31330217b5d5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ed4972a9-52e8-4dc1-a75e-0e3c3e68cfef","name":"ed4972a9-52e8-4dc1-a75e-0e3c3e68cfef","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":550,
+  "height":138,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"f940928a-a5e1-45e4-8b10-29dab0441245","blendMode":0,"displayName":"default","isLocked":false,"name":"f940928a-a5e1-45e4-8b10-29dab0441245","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -49,7 +50,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":2.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -71,14 +72,17 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9d715e89-09c9-4767-ac57-ab4052c58109","path":"sprites/sDrone/sDrone.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1468ef12-bed5-4986-b8f9-39481a3291f6","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7b8c9814-ef07-456f-8bc6-31330217b5d5","path":"sprites/sDrone/sDrone.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"5e1a45c7-edeb-4e45-ad08-1692a1da536b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ed4972a9-52e8-4dc1-a75e-0e3c3e68cfef","path":"sprites/sDrone/sDrone.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"a1132962-5598-421a-adba-794097701111","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":256,
-    "yorigin":68,
+    "xorigin":100,
+    "yorigin":16,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -88,5 +92,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":500,
+  "width":200,
 }

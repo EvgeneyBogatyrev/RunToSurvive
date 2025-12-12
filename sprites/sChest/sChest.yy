@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sChest",
   "bboxMode":0,
   "bbox_bottom":36,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7301f3c5-0445-49c1-b90d-47ca8c6c43e1","name":"7301f3c5-0445-49c1-b90d-47ca8c6c43e1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7301f3c5-0445-49c1-b90d-47ca8c6c43e1","name":"7301f3c5-0445-49c1-b90d-47ca8c6c43e1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"soSelect",
   "audioGroupId":{
     "name":"SoundEffects",
     "path":"audiogroups/SoundEffects",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":0.12263039,
+  "exportDir":"",
   "name":"soSelect",
   "parent":{
     "name":"Sounds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"soSelect",
-  "type":0,
   "volume":0.69,
 }

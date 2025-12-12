@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sLongHairImage",
   "bboxMode":0,
   "bbox_bottom":233,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0822881b-1027-4371-aa82-854c78930eaf","name":"0822881b-1027-4371-aa82-854c78930eaf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0822881b-1027-4371-aa82-854c78930eaf","name":"0822881b-1027-4371-aa82-854c78930eaf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

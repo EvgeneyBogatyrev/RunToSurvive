@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sKyronJump",
   "bboxMode":2,
   "bbox_bottom":59,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b51a782f-13b1-4e78-83d3-9ca2bed61e3e","name":"b51a782f-13b1-4e78-83d3-9ca2bed61e3e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0490bee8-1bbb-4da8-826a-734c55ae4ab4","name":"0490bee8-1bbb-4da8-826a-734c55ae4ab4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b51a782f-13b1-4e78-83d3-9ca2bed61e3e","name":"b51a782f-13b1-4e78-83d3-9ca2bed61e3e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0490bee8-1bbb-4da8-826a-734c55ae4ab4","name":"0490bee8-1bbb-4da8-826a-734c55ae4ab4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

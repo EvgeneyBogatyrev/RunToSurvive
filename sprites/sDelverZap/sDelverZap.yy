@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sDelverZap",
   "bboxMode":0,
   "bbox_bottom":42,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"fee4d37b-0e94-48b0-b827-9606ce2966fb","name":"fee4d37b-0e94-48b0-b827-9606ce2966fb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fee4d37b-0e94-48b0-b827-9606ce2966fb","name":"fee4d37b-0e94-48b0-b827-9606ce2966fb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

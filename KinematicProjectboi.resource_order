@@ -280,6 +280,7 @@
     {"name":"sDelverInsectAttack","order":8,"path":"sprites/sDelverInsectAttack/sDelverInsectAttack.yy",},
     {"name":"sDelverTransform","order":3,"path":"sprites/sDelverTransform/sDelverTransform.yy",},
     {"name":"sDelverZap","order":6,"path":"sprites/sDelverZap/sDelverZap.yy",},
+    {"name":"sDroneAnimation","order":1,"path":"sprites/sDroneAnimation/sDroneAnimation.yy",},
     {"name":"sDryTree","order":6,"path":"sprites/sDryTree/sDryTree.yy",},
     {"name":"sElectricGun","order":16,"path":"sprites/sElectricGun/sElectricGun.yy",},
     {"name":"sElectricity","order":12,"path":"sprites/sElectricity/sElectricity.yy",},

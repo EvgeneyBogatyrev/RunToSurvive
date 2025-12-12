@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sPandoraGauntlet",
   "bboxMode":2,
   "bbox_bottom":117,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"44ada2d4-be66-4fcd-9a7d-be7992dfe9eb","name":"44ada2d4-be66-4fcd-9a7d-be7992dfe9eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"44ada2d4-be66-4fcd-9a7d-be7992dfe9eb","name":"44ada2d4-be66-4fcd-9a7d-be7992dfe9eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

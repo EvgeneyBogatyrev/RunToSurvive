@@ -15,10 +15,10 @@ hp = maxhp;
 
 slowspeed = 3;
 walkspeed = 6;
-fastspeed = 8;
+fastspeed = 7;
 jumpspeed = 12;
 
-fast_timer_max = 200;
+fast_timer_max = 150;
 fast_timer = 0;
 
 current_speed = walkspeed;

@@ -7,7 +7,7 @@ enum GameState
 };
 
 roomspeed = -2;
-acc = 0.000125;
+acc = 0.00005;
 roomspeed_limit = GetStats("Max roomspeed");
 gamestate = GameState.NORMAL;
 

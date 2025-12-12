@@ -9,6 +9,8 @@ stand_spacing = 240; // Pixels between stands
 item_stands = array_create(stand_count); // Array to hold stand instances
 created_reward = false;
 
+stopped_room = false;
+
 
 player2reward = ds_map_create();
 player_keys = [];
@@ -21,7 +23,7 @@ for (var i = 0; i < instance_number(oPlayer); ++i)
 
 function can_player_get_reward(_player_id)
 {
-	return !player2reward[_player_id];
+	return stopped_room && !player2reward[_player_id];
 }
 
 function all_done()

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sStone",
   "bboxMode":0,
   "bbox_bottom":63,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d9ab3eeb-4bb4-4c8c-be7a-1b94b579c8da","name":"d9ab3eeb-4bb4-4c8c-be7a-1b94b579c8da","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6d0c8f9f-e0dd-4740-b3d7-bfdfbb9c9780","name":"6d0c8f9f-e0dd-4740-b3d7-bfdfbb9c9780","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d9ab3eeb-4bb4-4c8c-be7a-1b94b579c8da","name":"d9ab3eeb-4bb4-4c8c-be7a-1b94b579c8da","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6d0c8f9f-e0dd-4740-b3d7-bfdfbb9c9780","name":"6d0c8f9f-e0dd-4740-b3d7-bfdfbb9c9780","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

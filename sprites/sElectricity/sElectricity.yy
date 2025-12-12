@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sElectricity",
   "bboxMode":1,
   "bbox_bottom":39,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"38674207-fe3b-47db-a78a-639b8a0f2d0a","name":"38674207-fe3b-47db-a78a-639b8a0f2d0a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"38674207-fe3b-47db-a78a-639b8a0f2d0a","name":"38674207-fe3b-47db-a78a-639b8a0f2d0a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

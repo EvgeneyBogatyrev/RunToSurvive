@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"soConfirm",
   "audioGroupId":{
     "name":"SoundEffects",
     "path":"audiogroups/SoundEffects",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":0.26875284,
+  "exportDir":"",
   "name":"soConfirm",
   "parent":{
     "name":"Sounds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"soConfirm",
-  "type":0,
   "volume":0.69,
 }

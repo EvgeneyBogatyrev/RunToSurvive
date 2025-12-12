@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sShootingRobot",
   "bboxMode":1,
   "bbox_bottom":52,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b44e11d6-a110-4c59-bfa1-a9b713b929e2","name":"b44e11d6-a110-4c59-bfa1-a9b713b929e2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"85d61f1b-ce49-4b8e-8847-20151bc24408","name":"85d61f1b-ce49-4b8e-8847-20151bc24408","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b44e11d6-a110-4c59-bfa1-a9b713b929e2","name":"b44e11d6-a110-4c59-bfa1-a9b713b929e2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"85d61f1b-ce49-4b8e-8847-20151bc24408","name":"85d61f1b-ce49-4b8e-8847-20151bc24408","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

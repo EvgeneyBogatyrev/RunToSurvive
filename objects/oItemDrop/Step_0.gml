@@ -24,7 +24,7 @@ if (state == ItemDropStates.SPIN)
 		switch (image) 
 		{
 			case BATTERY_INUMBER:
-				var _bullet_gain = irandom_range(5, 10);
+				var _bullet_gain = 10;
 				if (instance_exists(oStumpTree))
 				{
 					_bullet_gain = irandom_range(1, 4)	
@@ -38,7 +38,7 @@ if (state == ItemDropStates.SPIN)
 			
 			case HEARTH_INUMBER:
 				
-				var _healing_amount = irandom_range(5, 15);
+				var _healing_amount = 20;
 				if (_player.pocket[1] == DOUBLEHEART_INUMBER)
 				{
 					_player.hp += _healing_amount * 1.5;	

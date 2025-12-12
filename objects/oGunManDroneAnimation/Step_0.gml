@@ -4,6 +4,7 @@ event_inherited();
 switch (state)
 {
 	case GunManDroneStates.FLY_DOWN:
+		image_index = 0;
 		y += fly_speed;
 		Print(y);
 		if (y >= y_position)
@@ -13,14 +14,19 @@ switch (state)
 		break;
 	
 	case GunManDroneStates.CATCH_PLAYERS:
+		GetScale(0);
+		depth -= 10;
+		image_index = 1;
 		y = y_position;
 		max_arm_length += arm_length_increase;
 		break;
 		
 	case GunManDroneStates.PULL_PLAYERS:
+		GetScale(0);
+		depth -= 19;
 		y = y_position;
 		
-		var _change_state = pull_players();
+		var _change_state = pull_players(true);
 	
 		if (_change_state)
 		{
@@ -30,7 +36,8 @@ switch (state)
 		break;
 		
 	case GunManDroneStates.FLY_UP:
-		pull_players();
+		pull_players(false);
+		image_index = 0;
 		
 		row = 0;
 		x = lerp(x, fly_position_x, 0.1);		

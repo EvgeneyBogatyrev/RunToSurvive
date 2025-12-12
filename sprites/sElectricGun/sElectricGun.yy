@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sElectricGun",
   "bboxMode":0,
   "bbox_bottom":9,
@@ -17,7 +17,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"92862639-f8be-484c-a1b5-1b22639500b5","name":"92862639-f8be-484c-a1b5-1b22639500b5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"92862639-f8be-484c-a1b5-1b22639500b5","name":"92862639-f8be-484c-a1b5-1b22639500b5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

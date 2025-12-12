@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sKyronStand",
   "bboxMode":2,
   "bbox_bottom":59,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"cca91791-214e-44dc-af12-8bd480cb8661","name":"cca91791-214e-44dc-af12-8bd480cb8661","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cca91791-214e-44dc-af12-8bd480cb8661","name":"cca91791-214e-44dc-af12-8bd480cb8661","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

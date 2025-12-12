@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sCyberDying",
   "bboxMode":2,
   "bbox_bottom":59,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3e9f538c-c133-4f0e-bb89-3fd577abc70e","name":"3e9f538c-c133-4f0e-bb89-3fd577abc70e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3e9f538c-c133-4f0e-bb89-3fd577abc70e","name":"3e9f538c-c133-4f0e-bb89-3fd577abc70e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

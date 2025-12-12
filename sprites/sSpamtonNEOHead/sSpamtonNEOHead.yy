@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sSpamtonNEOHead",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"1b2ffff8-a36c-4da5-84ca-b255a62eb703","name":"1b2ffff8-a36c-4da5-84ca-b255a62eb703","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1b2ffff8-a36c-4da5-84ca-b255a62eb703","name":"1b2ffff8-a36c-4da5-84ca-b255a62eb703","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

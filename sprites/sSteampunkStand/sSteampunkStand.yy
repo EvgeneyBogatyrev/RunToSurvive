@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sSteampunkStand",
   "bboxMode":2,
   "bbox_bottom":65,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4a399e85-e4e2-477b-9d99-f6ab3b390af7","name":"4a399e85-e4e2-477b-9d99-f6ab3b390af7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4a399e85-e4e2-477b-9d99-f6ab3b390af7","name":"4a399e85-e4e2-477b-9d99-f6ab3b390af7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

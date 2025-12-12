@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sGrassBlockBig1",
   "bboxMode":0,
   "bbox_bottom":104,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a51e16f6-e349-427e-9270-db386301dcf7","name":"a51e16f6-e349-427e-9270-db386301dcf7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a51e16f6-e349-427e-9270-db386301dcf7","name":"a51e16f6-e349-427e-9270-db386301dcf7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

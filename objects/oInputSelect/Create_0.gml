@@ -18,7 +18,7 @@ button[2] = dbutton[2];
 button[3] = dbutton[3];
 button[4] = dbutton[4];
 
-_length = array_length_1d(button);
+_length = array_length(button);
 
 //Set gamepad
 allowed_array = [];

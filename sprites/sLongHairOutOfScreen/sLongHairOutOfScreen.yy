@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sLongHairOutOfScreen",
   "bboxMode":0,
   "bbox_bottom":59,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"cd7cf2a9-13bc-4c97-bbec-ca4fd29f70fe","name":"cd7cf2a9-13bc-4c97-bbec-ca4fd29f70fe","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cd7cf2a9-13bc-4c97-bbec-ca4fd29f70fe","name":"cd7cf2a9-13bc-4c97-bbec-ca4fd29f70fe","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

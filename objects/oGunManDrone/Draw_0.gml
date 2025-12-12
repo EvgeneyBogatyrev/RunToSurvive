@@ -1,6 +1,3 @@
-image_xscale = 0.25;
-image_yscale = 0.25;
-
 for (var player_idx = 0; player_idx < len(stored_players); ++player_idx)
 {
 	var xshift = 0;

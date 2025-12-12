@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sKyronImage",
   "bboxMode":0,
   "bbox_bottom":227,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d8de8a88-662d-42a6-963a-9259cec07966","name":"d8de8a88-662d-42a6-963a-9259cec07966","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d8de8a88-662d-42a6-963a-9259cec07966","name":"d8de8a88-662d-42a6-963a-9259cec07966","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

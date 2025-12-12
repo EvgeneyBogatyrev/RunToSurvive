@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sGravestone",
   "bboxMode":2,
   "bbox_bottom":133,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"9713f497-de21-4ea4-93e3-a7a094ee4bd2","name":"9713f497-de21-4ea4-93e3-a7a094ee4bd2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"027d737a-340b-47ba-87a3-aacb4b28c444","name":"027d737a-340b-47ba-87a3-aacb4b28c444","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9713f497-de21-4ea4-93e3-a7a094ee4bd2","name":"9713f497-de21-4ea4-93e3-a7a094ee4bd2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"027d737a-340b-47ba-87a3-aacb4b28c444","name":"027d737a-340b-47ba-87a3-aacb4b28c444","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

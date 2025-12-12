@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sRocketLauncher",
   "bboxMode":0,
   "bbox_bottom":26,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e89524f0-1e70-459c-a2b1-05d3e3a202f3","name":"e89524f0-1e70-459c-a2b1-05d3e3a202f3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e89524f0-1e70-459c-a2b1-05d3e3a202f3","name":"e89524f0-1e70-459c-a2b1-05d3e3a202f3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

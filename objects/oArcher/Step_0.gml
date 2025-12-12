@@ -42,7 +42,7 @@ switch (state)
 				xspeed = 0;
 				dir = sign(player.x - x);
 				
-				if (y - player.y >= BLOCKSIZE * scale)  
+				if (true || y - player.y >= BLOCKSIZE * scale)  
 				{
 					sprite_index = sArcherSuperAttack;
 				}

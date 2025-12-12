@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sCyberImage",
   "bboxMode":0,
   "bbox_bottom":219,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"75355514-70a8-4ed3-be6f-36318f6db0cd","name":"75355514-70a8-4ed3-be6f-36318f6db0cd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"75355514-70a8-4ed3-be6f-36318f6db0cd","name":"75355514-70a8-4ed3-be6f-36318f6db0cd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

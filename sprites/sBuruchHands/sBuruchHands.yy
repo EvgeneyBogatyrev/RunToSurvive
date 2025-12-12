@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sBuruchHands",
   "bboxMode":0,
   "bbox_bottom":0,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"bbc39012-e492-4b4e-b168-ee2c13abcbb9","name":"bbc39012-e492-4b4e-b168-ee2c13abcbb9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f9b6675b-bec5-4499-9926-ddf46b50e6d8","name":"f9b6675b-bec5-4499-9926-ddf46b50e6d8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bbc39012-e492-4b4e-b168-ee2c13abcbb9","name":"bbc39012-e492-4b4e-b168-ee2c13abcbb9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f9b6675b-bec5-4499-9926-ddf46b50e6d8","name":"f9b6675b-bec5-4499-9926-ddf46b50e6d8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

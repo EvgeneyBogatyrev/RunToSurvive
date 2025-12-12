@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sSpamtonNEOLeg",
   "bboxMode":0,
   "bbox_bottom":72,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"c47be1f7-638a-442c-a418-fa50564397e3","name":"c47be1f7-638a-442c-a418-fa50564397e3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c47be1f7-638a-442c-a418-fa50564397e3","name":"c47be1f7-638a-442c-a418-fa50564397e3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

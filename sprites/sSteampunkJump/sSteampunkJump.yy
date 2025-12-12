@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sSteampunkJump",
   "bboxMode":2,
   "bbox_bottom":65,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7d153f34-95a3-4493-a620-11e4233858eb","name":"7d153f34-95a3-4493-a620-11e4233858eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"db203b74-5141-4fb2-826d-ccfda08800b8","name":"db203b74-5141-4fb2-826d-ccfda08800b8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7d153f34-95a3-4493-a620-11e4233858eb","name":"7d153f34-95a3-4493-a620-11e4233858eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"db203b74-5141-4fb2-826d-ccfda08800b8","name":"db203b74-5141-4fb2-826d-ccfda08800b8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -306,7 +306,7 @@ switch(current_gun)
 		if (shoot && (recoil <= 0))
 		{
 			x -= host.dir * host.scale * 14
-			Shoot(oProjectile, sBlast, 1, 12, 30, undefined, true, 20)
+			Shoot(oProjectile, sBlast, 1, 16, 30, undefined, true, 20)
 			x += host.dir * host.scale * 14
 		}
 		
