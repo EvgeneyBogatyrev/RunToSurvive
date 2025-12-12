@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sItemTimer",
   "bboxMode":0,
   "bbox_bottom":45,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"eb2bc4b4-47c0-43a9-9969-8b541969f6d1","name":"eb2bc4b4-47c0-43a9-9969-8b541969f6d1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"eb2bc4b4-47c0-43a9-9969-8b541969f6d1","name":"eb2bc4b4-47c0-43a9-9969-8b541969f6d1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

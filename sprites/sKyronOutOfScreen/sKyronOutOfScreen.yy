@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sKyronOutOfScreen",
   "bboxMode":0,
   "bbox_bottom":59,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4060fa7d-39b1-4f43-9eee-f0247c68f5c3","name":"4060fa7d-39b1-4f43-9eee-f0247c68f5c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4060fa7d-39b1-4f43-9eee-f0247c68f5c3","name":"4060fa7d-39b1-4f43-9eee-f0247c68f5c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

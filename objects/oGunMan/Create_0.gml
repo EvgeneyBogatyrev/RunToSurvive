@@ -126,6 +126,9 @@ with(hands)	 host = other.id;
 
 explotion_speed = 6;
 
+gun_cooldown_max = 45;
+gun_cooldown = gun_cooldown_max;
+
 
 drone_position_offset_x = -100;
 drone_position_offset_y = -200;

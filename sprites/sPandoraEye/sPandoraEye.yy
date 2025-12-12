@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sPandoraEye",
   "bboxMode":2,
   "bbox_bottom":86,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b82c852d-bf59-435e-8ef6-4190b8bf4cf9","name":"b82c852d-bf59-435e-8ef6-4190b8bf4cf9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b82c852d-bf59-435e-8ef6-4190b8bf4cf9","name":"b82c852d-bf59-435e-8ef6-4190b8bf4cf9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

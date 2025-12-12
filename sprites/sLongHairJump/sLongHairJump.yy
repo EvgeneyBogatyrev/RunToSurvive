@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sLongHairJump",
   "bboxMode":2,
   "bbox_bottom":59,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"58488ab6-6934-4e7d-9a5d-7282f30b54e1","name":"58488ab6-6934-4e7d-9a5d-7282f30b54e1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f06f204a-84c6-47d5-8dd2-8177d403aa10","name":"f06f204a-84c6-47d5-8dd2-8177d403aa10","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"58488ab6-6934-4e7d-9a5d-7282f30b54e1","name":"58488ab6-6934-4e7d-9a5d-7282f30b54e1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f06f204a-84c6-47d5-8dd2-8177d403aa10","name":"f06f204a-84c6-47d5-8dd2-8177d403aa10","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

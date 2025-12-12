@@ -1,13 +1,14 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"musNowsYourShot",
   "audioGroupId":{
     "name":"BackGroundMusic",
     "path":"audiogroups/BackGroundMusic",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "ConfigValues":{
     "DEBUG":{
       "audioGroupId":"{\"name\":\"BackGroundMusic\",\"path\":\"audiogroups/BackGroundMusic\"}",
@@ -15,6 +16,7 @@
   },
   "conversionMode":0,
   "duration":139.18304,
+  "exportDir":"",
   "name":"musNowsYourShot",
   "parent":{
     "name":"Music",
@@ -25,6 +27,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"musNowsYourShot.wav",
-  "type":0,
   "volume":1.0,
 }

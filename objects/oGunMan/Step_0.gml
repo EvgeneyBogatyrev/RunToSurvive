@@ -95,6 +95,13 @@ switch (state)
 		break;
 	
 	case GunManStates.FIGHT:
+	
+		//Cooldown
+		if (gun_cooldown > 0)
+		{
+			gun_cooldown -= 1;
+		}
+	
 		// Follow player
 		desired_row = opponent.row;
 		if (abs(opponent.x - oCamera.left) < abs(opponent.x - oCamera.right))
@@ -130,12 +137,20 @@ switch (state)
 				if (row == 1)
 				{
 					jump_counter = 10;
-					gun.shoot = true;
+					if (gun_cooldown == 0)
+					{
+						gun.shoot = true;
+						gun_cooldown = gun_cooldown_max;
+					}
 				}
 			}
 			else
 			{
-				gun.shoot = true;
+				if (gun_cooldown == 0)
+				{
+					gun.shoot = true;
+					gun_cooldown = gun_cooldown_max;
+				}
 			}
 		}
 		break;
@@ -257,13 +272,14 @@ if (charge_reload_timer <= 0)
 
 if (state != UniversalStates.DEAD && state != UniversalStates.INTRO && state != UniversalStates.VICTORY)
 {
+	
 	#region state change
 	if (charging_station.image_index == 0 && bullets <= 10)
 	{
 		if (next_state != GunManStates.RECHARGE)
 		{
 			next_state = GunManStates.RECHARGE;
-			state_change_timer = state_change_timer_max / 10;
+			state_change_timer = 1;
 		}
 	}
 	else if (opponent.damaged || bullets <= 3)
@@ -271,11 +287,7 @@ if (state != UniversalStates.DEAD && state != UniversalStates.INTRO && state != 
 		if (next_state != GunManStates.FLEE)
 		{
 			next_state = GunManStates.FLEE;
-			state_change_timer = state_change_timer_max;
-			if (state == GunManStates.RECHARGE)
-			{
-				state_change_timer = 10;	
-			}
+			state_change_timer = 1;
 		}
 	}
 	else
@@ -283,16 +295,12 @@ if (state != UniversalStates.DEAD && state != UniversalStates.INTRO && state != 
 		if (next_state != GunManStates.FIGHT)
 		{
 			next_state = GunManStates.FIGHT;
-			state_change_timer = state_change_timer_max;
-			if (state == GunManStates.RECHARGE)
-			{
-				state_change_timer = 10;	
-			}
+			state_change_timer = 2 * 60;
 		}
 	}
 
 	state_change_timer--;
-	if (state_change_timer == 0)
+	if (state_change_timer <= 0)
 	{
 		state = next_state;	
 	}
@@ -462,10 +470,10 @@ if (state != UniversalStates.DEAD && x < oCamera.right)
 event_inherited();
 
 
-if (state != UniversalStates.INTRO)
-{
-	scale = GetScale(row) * 1.2;
-}
+//if (state != UniversalStates.INTRO)
+//{
+//	scale = GetScale(row) * 1.2;
+//}
 
 PlayerSprite();
 

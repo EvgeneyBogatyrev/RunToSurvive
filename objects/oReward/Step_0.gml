@@ -37,6 +37,7 @@ if (!created_reward)
 if (x < oCamera.x)
 {
 	StopRoom();
+	stopped_room = true;
 	oCamera.follow = id;
 }
 

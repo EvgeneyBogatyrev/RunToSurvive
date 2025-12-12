@@ -22,7 +22,6 @@ function GetScale() {
 		default:
 			Print("Cannot find scale for the row number " + string(_row) + "\n");
 			return SCALE_ZERO;
-			break;
 	}
 
 

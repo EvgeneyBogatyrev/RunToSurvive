@@ -2,9 +2,9 @@
   "$GMProject":"v1",
   "%Name":"KinematicProjectboi",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMAudioGroup":"","%Name":"SoundEffects","name":"SoundEffects","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMAudioGroup":"","%Name":"BackGroundMusic","name":"BackGroundMusic","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"SoundEffects","exportDir":"","name":"SoundEffects","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"BackGroundMusic","exportDir":"","name":"BackGroundMusic","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[
@@ -81,14 +81,16 @@
     {"$GMFolder":"","%Name":"Textures","folderPath":"folders/Sprites/Textures.yy","name":"Textures","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Dark","folderPath":"folders/Sprites/Textures/Dark.yy","name":"Dark","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "ForcedPrefabProjectReferences":[],
+  "ForcedPrefabProjectReferences":[
+    {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
+  ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"RunToSurvive_difficulty.csv","CopyToMask":-1,"filePath":"datafiles","name":"RunToSurvive_difficulty.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.14.1.210",
   },
   "name":"KinematicProjectboi",
   "resources":[
@@ -351,6 +353,7 @@
     {"id":{"name":"sDelverZap","path":"sprites/sDelverZap/sDelverZap.yy",},},
     {"id":{"name":"sDrill","path":"sprites/sDrill/sDrill.yy",},},
     {"id":{"name":"sDrone","path":"sprites/sDrone/sDrone.yy",},},
+    {"id":{"name":"sDroneAnimation","path":"sprites/sDroneAnimation/sDroneAnimation.yy",},},
     {"id":{"name":"sDryTree","path":"sprites/sDryTree/sDryTree.yy",},},
     {"id":{"name":"sElectricGun","path":"sprites/sElectricGun/sElectricGun.yy",},},
     {"id":{"name":"sElectricity","path":"sprites/sElectricity/sElectricity.yy",},},

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sSteampunkOutOfScreen",
   "bboxMode":0,
   "bbox_bottom":59,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"ebe674ca-ac16-4179-b07c-08b2a51bfdb1","name":"ebe674ca-ac16-4179-b07c-08b2a51bfdb1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ebe674ca-ac16-4179-b07c-08b2a51bfdb1","name":"ebe674ca-ac16-4179-b07c-08b2a51bfdb1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

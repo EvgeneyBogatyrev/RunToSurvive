@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sGraveyardBack",
   "bboxMode":0,
   "bbox_bottom":495,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7c1ea24b-5689-4b3a-90f6-a9c47fff55bc","name":"7c1ea24b-5689-4b3a-90f6-a9c47fff55bc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7c1ea24b-5689-4b3a-90f6-a9c47fff55bc","name":"7c1ea24b-5689-4b3a-90f6-a9c47fff55bc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

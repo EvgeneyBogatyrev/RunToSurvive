@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sRoboImage",
   "bboxMode":0,
   "bbox_bottom":219,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3664f5a9-2799-4f0b-9bfe-9c2674d83f72","name":"3664f5a9-2799-4f0b-9bfe-9c2674d83f72","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3664f5a9-2799-4f0b-9bfe-9c2674d83f72","name":"3664f5a9-2799-4f0b-9bfe-9c2674d83f72","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

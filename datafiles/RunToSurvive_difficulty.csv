@@ -1,28 +1,28 @@
 Attack/Mode,EASY,NORMAL,HARD,EXTREME
 Increase hp,0,1,1,1
-Max roomspeed,5,6,6,7
-Delver's lightning,10,20,30,60
-Delver's slash,10,20,25,50
-Pandora's eye,5,15,20,30
-Pandora's contact,15,30,60,90
-Chasing stump,10,15,25,50
-Tree boss,1,10,20,25
-Running stump ,5,15,25,50
-Wildvine,5,15,30,60
-Tall robot ,10,20,35,50
-Shooting robot contact,1,10,20,30
-Shooting robot fire,10,20,35,50
-Drone,10,20,35,50
-Robot boss 2nd phase,15,25,40,60
-Robot boss 3rd phase,20,30,60,90
+Max roomspeed,4,5,6,7
+Delver's lightning,5,15,30,60
+Delver's slash,5,15,30,50
+Pandora's eye,3,7,15,30
+Pandora's contact,10,25,50,80
+Chasing stump,5,10,25,50
+Tree boss,5,10,25,30
+Running stump,5,10,25,30
+Wildvine,5,15,25,30
+Tall robot,7,15,30,50
+Shooting robot contact,1,5,15,30
+Shooting robot fire,5,10,20,50
+Drone,5,10,20,50
+Robot boss 2nd phase,10,25,40,50
+Robot boss 3rd phase,15,30,50,80
 Obstacle,1,10,20,25
-Stump,10,20,30,40
-Archer,5,15,20,30
-Billy,15,25,35,45
-SpamtonShard,5,10,15,25
-SpamtonPipis,5,10,15,25
-SpamtonClone,10,20,30,50
-GunMan,5,15,30,40
+Stump,5,15,25,40
+Archer,3,7,15,25
+Billy,10,20,30,45
+SpamtonShard,3,7,15,25
+SpamtonPipis,3,7,15,25
+SpamtonClone,3,7,15,25
+GunMan,5,10,25,30
 WallOfFleshBlock,1,5,10,15
-WallOfFleshBeam,5,10,15,20
-WallOfFleshLeech,5,15,20,25
+WallOfFleshBeam,5,10,20,30
+WallOfFleshLeech,5,10,20,30

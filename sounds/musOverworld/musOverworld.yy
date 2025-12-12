@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"musOverworld",
   "audioGroupId":{
     "name":"BackGroundMusic",
     "path":"audiogroups/BackGroundMusic",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":35.753628,
+  "exportDir":"",
   "name":"musOverworld",
   "parent":{
     "name":"Music",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"musOverworld",
-  "type":0,
   "volume":0.8,
 }

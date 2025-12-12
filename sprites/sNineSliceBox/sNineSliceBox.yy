@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sNineSliceBox",
   "bboxMode":0,
   "bbox_bottom":23,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"dc7dc767-0f58-4145-ad9a-c128a29aa4d1","name":"dc7dc767-0f58-4145-ad9a-c128a29aa4d1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"dc7dc767-0f58-4145-ad9a-c128a29aa4d1","name":"dc7dc767-0f58-4145-ad9a-c128a29aa4d1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":8,
   "gridY":8,

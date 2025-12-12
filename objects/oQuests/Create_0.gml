@@ -29,7 +29,7 @@ function SetNewQuest()
 	ClearBuffers();
 	
 	quest = choose(QuestType.STUMPS, QuestType.ARCHERS, QuestType.BILLY, QuestType.VARIES);
-	max_kills = choose(3, 4, 5);
+	max_kills = choose(1, 2, 3);
 	
 	if (global.DEBUG)
 	{
@@ -38,7 +38,7 @@ function SetNewQuest()
 	
 	if (quest == QuestType.BILLY || quest == QuestType.VARIES)
 	{
-		max_kills = 3;	
+		max_kills = choose(1, 2);	
 	}
 }
 

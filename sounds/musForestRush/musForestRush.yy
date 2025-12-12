@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"musForestRush",
   "audioGroupId":{
     "name":"BackGroundMusic",
     "path":"audiogroups/BackGroundMusic",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":29.94356,
+  "exportDir":"",
   "name":"musForestRush",
   "parent":{
     "name":"Music",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"musForestRush",
-  "type":0,
   "volume":0.85,
 }

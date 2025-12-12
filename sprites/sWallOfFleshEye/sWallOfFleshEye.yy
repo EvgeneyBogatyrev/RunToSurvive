@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sWallOfFleshEye",
   "bboxMode":0,
   "bbox_bottom":61,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"5cedb302-72ba-4a0c-8adf-5d77a7fa3a4b","name":"5cedb302-72ba-4a0c-8adf-5d77a7fa3a4b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5cedb302-72ba-4a0c-8adf-5d77a7fa3a4b","name":"5cedb302-72ba-4a0c-8adf-5d77a7fa3a4b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

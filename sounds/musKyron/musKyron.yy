@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"musKyron",
   "audioGroupId":{
     "name":"BackGroundMusic",
     "path":"audiogroups/BackGroundMusic",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":64.86107,
+  "exportDir":"",
   "name":"musKyron",
   "parent":{
     "name":"Music",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"musKyron",
-  "type":0,
   "volume":0.78,
 }

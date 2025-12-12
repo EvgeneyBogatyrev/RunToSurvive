@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sSpamtonShard",
   "bboxMode":1,
   "bbox_bottom":15,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2162c4a1-15d6-47ee-9f1e-5fb33ae21f2a","name":"2162c4a1-15d6-47ee-9f1e-5fb33ae21f2a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2162c4a1-15d6-47ee-9f1e-5fb33ae21f2a","name":"2162c4a1-15d6-47ee-9f1e-5fb33ae21f2a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

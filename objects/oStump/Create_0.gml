@@ -1,6 +1,6 @@
 event_inherited();
 
-walkspeed_charged = irandom_range(3, 5);
+walkspeed_charged = 4;//irandom_range(3);
 walkspeed_normal = walkspeed_charged - 2;
 xspeed = -walkspeed_normal;
 walkspeed = walkspeed_normal;

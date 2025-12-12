@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sShotgun",
   "bboxMode":0,
   "bbox_bottom":9,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"1c0ea3f7-2e06-451a-893a-b3ae9c6149c3","name":"1c0ea3f7-2e06-451a-893a-b3ae9c6149c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1c0ea3f7-2e06-451a-893a-b3ae9c6149c3","name":"1c0ea3f7-2e06-451a-893a-b3ae9c6149c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"bPineForest",
   "bboxMode":0,
   "bbox_bottom":466,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f0225277-1769-4264-b3f0-0cdf1257e97b","name":"f0225277-1769-4264-b3f0-0cdf1257e97b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f0225277-1769-4264-b3f0-0cdf1257e97b","name":"f0225277-1769-4264-b3f0-0cdf1257e97b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

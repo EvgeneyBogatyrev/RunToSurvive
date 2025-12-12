@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sRobotMagnet",
   "bboxMode":1,
   "bbox_bottom":35,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d5f72161-005e-43ab-86d7-8a2b20fd983f","name":"d5f72161-005e-43ab-86d7-8a2b20fd983f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d5f72161-005e-43ab-86d7-8a2b20fd983f","name":"d5f72161-005e-43ab-86d7-8a2b20fd983f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

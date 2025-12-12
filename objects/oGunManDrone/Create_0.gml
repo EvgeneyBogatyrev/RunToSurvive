@@ -1,5 +1,8 @@
 stored_players = [];
 
+image_speed = 0;
+image_index = 0;
+
 remove_player = function(player_id) {
 	var _new_stored_players = [];
 	for (var _i = 0; _i < len(stored_players); ++_i)
