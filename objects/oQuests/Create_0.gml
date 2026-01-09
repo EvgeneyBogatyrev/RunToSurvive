@@ -36,9 +36,14 @@ function SetNewQuest()
 		max_kills = 1;	
 	}
 	
-	if (quest == QuestType.BILLY || quest == QuestType.VARIES)
+	if (quest == QuestType.BILLY)
 	{
 		max_kills = choose(1, 2);	
+	}
+	
+	if (quest == QuestType.VARIES)
+	{
+		max_kills = 3;	
 	}
 }
 

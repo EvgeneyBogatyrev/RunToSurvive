@@ -80,7 +80,7 @@ function SpawnPlayerCharacter(_player_id, _name, _x, _y, _row)
 	_player_instance._input_type = input_type[_player_id];
 	_player_instance.name = _name;
 	_player_instance.player_index = _player_id;
-	
+		
 	return _player_instance;
 	
 }

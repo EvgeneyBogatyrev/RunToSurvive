@@ -62,6 +62,15 @@ if (current_gun != Gun.ELECTRIC_GUN)
 	electricity_obj	= undefined;	
 }
 
+if (current_gun != Gun.FLAMETHROWER)
+{
+	if (flame_obj != undefined)
+	{
+		instance_destroy(flame_obj);
+	}
+	flame_obj	= undefined;	
+}
+
 switch(current_gun)
 {
 	case Gun.STANDART_GUN:
@@ -93,8 +102,10 @@ switch(current_gun)
 		image_index = 0;
 		image_xscale *= 1.3;
 		image_yscale *= 1.3;
+		
+		cost = GetCost(current_gun);
 	
-		damage = 3 + host.drill_damage;
+		damage = 1 + host.drill_damage;
 		
 		switch (hammer_state)
 		{
@@ -209,34 +220,31 @@ switch(current_gun)
 					for (var i = 0; i < _amount; ++i)
 					{
 						var _enemy = _colliding_enemies[| i];
-					
-						if (_enemy.object_index == oDelver)
+						
+						if (_enemy.row != row && !(_enemy.object_index == oDelver && _enemy.state == DelverStates.INSECT))
 						{
-							if (_enemy.state != DelverStates.INSECT)
-							{
-								continue;	
-							}
+							continue;	
 						}
-						else if (_enemy.row != row)  continue;
 					
 						if (ds_list_find_index(hit_by_attack, _enemy) == -1 && _enemy.active && _enemy.hp > 0)
 						{
+							KnockbackForce(_enemy, 4 * dir_lock * scale, -10 * scale);
 							ds_list_add(hit_by_attack, _enemy);	
 							_enemy.hp -= damage;
 							_enemy.hit_flash = 3;
 						
-							/*
+							
 							hit_events = [];
 							for (var _i = 0; _i < ds_list_size(host.inventory); _i++)
 							{
 								var _item = ds_list_find_value(host.inventory, _i);
-								var hit_event = struct_exists(_item, "on_hit") ? struct_get(_item, "on_hit") : undefined;
+								var hit_event = struct_exists(_item, "on_hit_meele") ? struct_get(_item, "on_hit_meele") : undefined;
 								if (hit_event != undefined)
 								{
 									hit_event(id, 82 * sign(image_xscale));
 								}
 							}
-							*/
+							
 
 						
 							if (object_is_ancestor(_enemy.object_index, oBossParent))
@@ -268,7 +276,7 @@ switch(current_gun)
 		
 		break;
 	case Gun.BASIC_REPEATER:
-	
+		cost = GetCost(current_gun);
 	
 		var _reload_time = 30;
 		sprite_index = sRusty;
@@ -297,6 +305,7 @@ switch(current_gun)
 		break;
 	
 	case Gun.SHORTRANGE_BLASTER:
+		cost = GetCost(current_gun);
 		sprite_index = sBlaster;
 		image_speed = 0;
 		image_index = 0;
@@ -343,14 +352,10 @@ switch(current_gun)
 				{
 					var _enemy = _colliding_enemies[| i];
 					
-					if (_enemy.object_index == oDelver)
+					if (_enemy.row != row && !(_enemy.object_index == oDelver && _enemy.state == DelverStates.INSECT))
 					{
-						if (_enemy.state != DelverStates.INSECT)
-						{
-							continue;	
-						}
+						continue;	
 					}
-					else if (_enemy.row != row)  continue;
 					
 					if (ds_list_find_index(hit_by_attack, _enemy) == -1 && _enemy.active && _enemy.hp > 0)
 					{
@@ -358,18 +363,18 @@ switch(current_gun)
 						_enemy.hp -= damage;
 						_enemy.hit_flash = 3;
 						
-						/*
+						
 						hit_events = [];
 						for (var _i = 0; _i < ds_list_size(host.inventory); _i++)
 						{
 							var _item = ds_list_find_value(host.inventory, _i);
-							var hit_event = struct_exists(_item, "on_hit") ? struct_get(_item, "on_hit") : undefined;
+							var hit_event = struct_exists(_item, "on_hit_meele") ? struct_get(_item, "on_hit_meele") : undefined;
 							if (hit_event != undefined)
 							{
 								hit_event(id, 82 * sign(image_xscale));
 							}
 						}
-						*/
+						
 
 						
 						if (object_is_ancestor(_enemy.object_index, oBossParent))
@@ -598,6 +603,40 @@ switch(current_gun)
 		shoot_hold = false;
 		break;
 		
+	case Gun.FLAMETHROWER:
+		sprite_index = GetGunSprite(Gun.FLAMETHROWER);
+		if (shoot_hold)
+		{
+			host.bullets -= GetCost(current_gun);	
+			if (flame_obj == undefined)
+			{
+				flame_obj = Create(x, y, oFlameProjectile, row);
+				flame_obj.image_index_cur = irandom_range(0, 6);
+			}
+			flame_obj.x = x + 60 * host.dir * host.scale;
+			flame_obj.y = y - 4 * host.scale;
+			flame_obj.row = row;
+			flame_obj.scale = scale;	
+			flame_obj.dir = dir;
+			flame_obj.depth = depth - 1;
+			flame_obj.image_xscale = image_xscale;
+			flame_obj.image_yscale = image_yscale * 2;			
+			flame_obj.image_angle = dir < 0? 90 : -90;
+
+			flame_obj.host = host;
+		}
+		else
+		{
+			if (flame_obj != undefined)
+			{
+				instance_destroy(flame_obj);
+			}
+			flame_obj	= undefined;
+		}
+		
+		shoot_hold = false;
+		break;
+		
 	default:
 		break;
 		
@@ -675,14 +714,10 @@ switch(current_gun)
 				{
 					var _enemy = _colliding_enemies[| i];
 					
-					if (_enemy.object_index == oDelver)
+					if (_enemy.row != row && !(_enemy.object_index == oDelver && _enemy.state == DelverStates.INSECT))
 					{
-						if (_enemy.state != DelverStates.INSECT)
-						{
-							//continue;	
-						}
+						continue;	
 					}
-					else if (_enemy.row != row)  continue;
 					
 					if (ds_list_find_index(hit_by_attack, _enemy) == -1 && _enemy.active && _enemy.hp > 0)
 					{
@@ -691,18 +726,18 @@ switch(current_gun)
 						_enemy.hp -= damage;
 						_enemy.hit_flash = 3;
 						
-						/*
+						
 						hit_events = [];
 						for (var _i = 0; _i < ds_list_size(host.inventory); _i++)
 						{
 							var _item = ds_list_find_value(host.inventory, _i);
-							var hit_event = struct_exists(_item, "on_hit") ? struct_get(_item, "on_hit") : undefined;
+							var hit_event = struct_exists(_item, "on_hit_meele") ? struct_get(_item, "on_hit_meele") : undefined;
 							if (hit_event != undefined)
 							{
 								hit_event(id, 82 * sign(image_xscale));
 							}
 						}
-						*/
+						
 
 						
 						if (object_is_ancestor(_enemy.object_index, oBossParent))

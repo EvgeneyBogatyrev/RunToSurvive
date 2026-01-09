@@ -34,6 +34,9 @@ function GetCost(argument0) {
 		case Gun.ELECTRIC_GUN:
 			return 0.01;
 			
+		case Gun.FLAMETHROWER:
+			return 0.05
+			
 		case Gun.CHARGING_GUN:
 			return 3;
 		case Gun.SHIELD_MELEE:

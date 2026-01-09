@@ -9,7 +9,7 @@ if (abs(shown_hp - cum_hp) >= 1)
 
 if (state == UniversalStates.DEAD && !loot_dropped)
 {
-	var loot_profile_id = loot_profile_ids[random_range(0, len(loot_profile_ids) - 1)];
+	var loot_profile_id = loot_profile_ids[random_range(0, len(loot_profile_ids))];
 	if (loot_profile_id != -1)
 	{
 		with (Create(x, y - 50, oBossLoot, row))

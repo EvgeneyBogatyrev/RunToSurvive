@@ -89,6 +89,17 @@ if (hit_timer <= 0)
 				damage = other.damage;
 				depth = other.depth - 2;
 			}
+			
+			hit_events = [];
+			for (var _i = 0; _i < ds_list_size(host.inventory); _i++)
+			{
+				var _item = ds_list_find_value(host.inventory, _i);
+				var hit_event = struct_exists(_item, "on_hit_meele") ? struct_get(_item, "on_hit_meele") : undefined;
+				if (hit_event != undefined)
+				{
+					hit_event(id, 82 * sign(image_xscale));
+				}
+			}
 	
 			if (object_is_ancestor(_victim.object_index, oHalfBossParent) && _victim.state != UniversalStates.DEAD)  StartBattle(row, host, _victim);
 		}
@@ -106,8 +117,6 @@ if (hit_timer <= 0)
 			depth = other.depth - 2;
 		}
 	}
-
-
 		
 	
 

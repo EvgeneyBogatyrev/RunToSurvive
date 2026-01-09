@@ -56,7 +56,7 @@ passive_items_profiles =
 	{
 		name : "Suspicious Eye",
 		icon_index : PANDORA_LOOT_INUMBER,
-		on_hurt : function(_host)
+		on_hurt : function(_host, _diff)
 		{
 			CreateOrbital(_host, 3, 32, oSuspiciousEye);
 		},
@@ -73,7 +73,7 @@ passive_items_profiles =
 		description : "Your maximum energy is increased by 5."
 	},
 	
-	{
+	/*{
 		name : "Mater sprout",
 		icon_index : TREE_LOOT_INUMBER,
 		on_jump : function(_host)
@@ -90,6 +90,16 @@ passive_items_profiles =
 			}
 		},
 		description : "Whenever you jump, you have a 10% chance to heal by 3."
+	},*/
+	
+	{
+		name : "Leaf Boots",
+		icon_index : TREE_LOOT_INUMBER,
+		on_pickup : function(_host)
+		{
+			_host.double_jump = true;	
+		},
+		description : "You can double jump."
 	},
 	
 	{
@@ -129,6 +139,43 @@ passive_items_profiles =
 			_host.base_drill_damage += 1;	
 		},
 		description : "Damage from your meele attecks is increased by 1."
+	},
+	
+	{
+		name : "Tumble",
+		icon_index : TUMBLE_LOOT_INUMBER,
+		on_hit_meele : function(_host, _x_offset = 0)
+		{
+			var _chance = random(1);
+			if (_chance < 0.5)
+			{
+				var _damage = 3;
+				ShakeScreen(12, 12);
+				with(oEnemyParent)
+				{
+					hp -= _damage;
+					if (object_is_ancestor(object_index, oBossParent))
+					{
+						cum_hp -= _damage;
+					}
+					with (Create(x, y + 10 * scale, oDamageNumber, row))
+					{
+						damage = _damage;
+					}				
+				}
+			}
+		},
+		description : "Your meele hits have 50% chance to cause an earthquake"
+	},
+	
+	{
+		name : "FARBAS",
+		icon_index : FARBAS_LOOT_INUMBER,
+		on_hurt : function(_host, _diff)
+		{
+			_host.damage_to_restore = _diff;
+		},
+		description : "Whenever you take a hit, launch a FARBAS protocol that will recover this damage."
 	},
 ]
 

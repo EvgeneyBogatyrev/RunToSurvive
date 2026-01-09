@@ -1,4 +1,4 @@
-if keyboard_check_pressed(192) || keyboard_check_pressed(vk_alt)
+if keyboard_check_pressed(192) || keyboard_check_pressed(vk_alt) || (enabled && keyboard_check_pressed(vk_escape))
 {
 	enabled = !enabled;
 
@@ -58,9 +58,27 @@ if keyboard_check_pressed(192) || keyboard_check_pressed(vk_alt)
 if !enabled return;
 
 
+if keyboard_check_pressed(vk_up)
+{
+	cmd_offset += 1;
+	cmd_offset = min(cmd_offset, ds_list_size(cmd_history) - 1);
+	keyboard_string = cmd_history[|cmd_offset];
+}
+
+if keyboard_check_pressed(vk_down)
+{
+	cmd_offset -= 1;
+	cmd_offset = max(cmd_offset, -1);
+	if cmd_offset == -1
+		keyboard_string = "";
+	else
+		keyboard_string = cmd_history[|cmd_offset];
+}
+
 
 if keyboard_check_pressed(vk_enter)
 {
+	cmd_offset = -1;
 	if (keyboard_string != "")
 	{
 		

@@ -93,6 +93,8 @@ for (var i = 0; i < ds_list_size(list_of_players); i++)
 	draw_set_color(c_white);
 	draw_set_font(CstmFntOutline);
 	
+	if (cur_player.damage_to_restore > 0)
+		draw_sprite_ext(sHealthBar, 1, cur_x, cur_y + 1, min(cur_player.hp + cur_player.damage_to_restore, cur_player.maxhp) / cur_player.maxhp, 1, 0, c_purple, 1);
 	draw_sprite_ext(sHealthBar, 1, cur_x, cur_y + 1, (cur_player.shown_hp / cur_player.maxhp), 1, 0, c_red, 1);
 	draw_sprite(sHealthBar, 0, cur_x, cur_y);
 	

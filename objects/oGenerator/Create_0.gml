@@ -1,6 +1,6 @@
 if (global.DEBUG)
 {
-	additional_num_players = 1
+	additional_num_players = 0
 	number_of_players += additional_num_players;	
 }
 
@@ -72,9 +72,9 @@ for (var i = 0; i < number_of_players; ++i)
 if (global.DEBUG)
 {
 	number_of_players += additional_num_players;
-	input_type[1] = InputTypes.KEYBOARD;
-	input_type[2] = InputTypes.KEYBOARD;
-	SpawnPlayerCharacter(1, "Steampunk", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
+	//input_type[1] = InputTypes.KEYBOARD;
+	//input_type[2] = InputTypes.KEYBOARD;
+	//SpawnPlayerCharacter(1, "Steampunk", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
 	//SpawnPlayerCharacter(1, "Cyber", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
 	//SpawnPlayerCharacter(1, "Kyron", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
 }

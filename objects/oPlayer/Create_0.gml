@@ -83,6 +83,7 @@ if (global.DEBUG)
 }
 
 damageBoost = 0;
+elemental_damage_boost = 0;
 
 item_picked_up = false;
 inventory = ds_list_create();
@@ -105,11 +106,19 @@ for (var i = 0; i < 5; ++i)
 
 protected = false;
 
+double_jump = false;
+second_jump = true;
+
 //Events
 
 onHitEvent = []; //our damage!!!!! to monsters
 onHurtEvent = [];
 onJumpEvent = [];
+
+damage_to_restore = 0;
+
+damage_to_restore_timer_max = 120;
+damage_to_restore_timer = 0;
 
 if (global.DEBUG)
 {
@@ -125,3 +134,4 @@ if (global.DEBUG)
 }
 
 
+init_cyber = false;

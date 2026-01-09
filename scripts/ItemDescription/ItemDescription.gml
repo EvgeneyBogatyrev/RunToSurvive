@@ -126,6 +126,17 @@ item_description = [
 	item_name : "Gun configurator",
 	description : "Whenever you are out of energy, take 20 damage and equip a random half-charged gun."
 },
+{
+	item_id : HAMMER_TIME_INUMBER,
+	item_name : "Hammer Time",
+	description : "Your melee weapons deal +1 damage."
+},
+{
+	item_id : FLAMETHROWER_INUMBER,
+	item_name : "Flamethrower",
+	description : "Hold shoot to burn enemies.",
+	gun_state: Gun.FLAMETHROWER,
+},
 ];
 
 function GetGunStateFromID(_INUMBER)

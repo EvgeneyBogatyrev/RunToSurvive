@@ -27,8 +27,16 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 			other.resurected_player = _respawned_player;
 			
 			other.resurected_player.inventory = _player_inventory;
-			if (!ds_list_empty(other.resurected_player.inventory))
-				other.resurected_player.item_picked_up = true;
+			//if (!ds_list_empty(other.resurected_player.inventory))
+			//	other.resurected_player.item_picked_up = true;
+			
+			_respawned_player.onHurtEvent = GetItemActions(_respawned_player, "on_hurt");	
+			_respawned_player.onJumpEvent = GetItemActions(_respawned_player, "on_jump");
+			var _pickup_event = GetItemActions(_respawned_player, "on_pickup");
+			for (var i = 0; i < array_length(_pickup_event); i++)
+			{
+				_pickup_event[i](_respawned_player);
+			}
 			
 			for (var i = 0; i < revival_number - 1; ++i)
 			{
@@ -43,6 +51,11 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 			
 			other.image_speed = other.im_speed;
 			other.image_index = 1;
+			
+			with (oReward)
+			{
+				need_to_update_players = true;	
+			}
 			
 			
 		}

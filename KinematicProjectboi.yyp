@@ -90,7 +90,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.1.210",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"KinematicProjectboi",
   "resources":[
@@ -129,6 +129,7 @@
     {"id":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},},
     {"id":{"name":"oEssence","path":"objects/oEssence/oEssence.yy",},},
     {"id":{"name":"oExplosion","path":"objects/oExplosion/oExplosion.yy",},},
+    {"id":{"name":"oFlameProjectile","path":"objects/oFlameProjectile/oFlameProjectile.yy",},},
     {"id":{"name":"oFloatingEye","path":"objects/oFloatingEye/oFloatingEye.yy",},},
     {"id":{"name":"oFlyingRobot","path":"objects/oFlyingRobot/oFlyingRobot.yy",},},
     {"id":{"name":"oFollow","path":"objects/oFollow/oFollow.yy",},},
@@ -362,6 +363,7 @@
     {"id":{"name":"sExplosion","path":"sprites/sExplosion/sExplosion.yy",},},
     {"id":{"name":"sEyeball","path":"sprites/sEyeball/sEyeball.yy",},},
     {"id":{"name":"sFire","path":"sprites/sFire/sFire.yy",},},
+    {"id":{"name":"sFlamethrower","path":"sprites/sFlamethrower/sFlamethrower.yy",},},
     {"id":{"name":"sFloatingEye","path":"sprites/sFloatingEye/sFloatingEye.yy",},},
     {"id":{"name":"sFloatingEyeDie","path":"sprites/sFloatingEyeDie/sFloatingEyeDie.yy",},},
     {"id":{"name":"sFlyingRobot","path":"sprites/sFlyingRobot/sFlyingRobot.yy",},},
@@ -494,7 +496,6 @@
     {"id":{"name":"sWildvine","path":"sprites/sWildvine/sWildvine.yy",},},
     {"id":{"name":"sWoF_border","path":"sprites/sWoF_border/sWoF_border.yy",},},
     {"id":{"name":"sWoF","path":"sprites/sWoF/sWoF.yy",},},
-    {"id":{"name":"Timeline1","path":"timelines/Timeline1/Timeline1.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

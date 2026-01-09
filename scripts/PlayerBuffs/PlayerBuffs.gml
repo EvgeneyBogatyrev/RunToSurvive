@@ -49,8 +49,17 @@ function PlayerBuffs() {
 	for (var _i = 0; _i < ds_list_size(inventory); ++_i)
 	{
 		var _item_index = ds_list_find_value(inventory, _i);
-		
-		
+	}
+	
+	if (damage_to_restore > 0)
+	{
+		damage_to_restore_timer--;
+		if (damage_to_restore_timer <= 0)
+		{
+			damage_to_restore_timer = damage_to_restore_timer_max;
+			hp += 1;
+			damage_to_restore -= 1;
+		}
 	}
 	
 }

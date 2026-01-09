@@ -14,6 +14,7 @@ enum Gun
 	ELECTRIC_GUN,
 	CHARGING_GUN,
 	SHIELD_MELEE,
+	FLAMETHROWER,
 };
 
 
@@ -31,7 +32,7 @@ current_gun = Gun.STANDART_GUN;
 if (global.DEBUG)
 {
 
-	current_gun = Gun.ROCKET_LAUNCHER;
+	current_gun = Gun.FLAMETHROWER;
 }
 
 secondary = false;
@@ -44,6 +45,7 @@ damage = 0;
 
 //Combo Punch
 
+
 //Shield
 shield_state = MeleeStates.IDLE;
 hit_by_attack = ds_list_create();
@@ -53,7 +55,7 @@ hit_by_attack = ds_list_create();
 hammer_state = MeleeStates.IDLE;
 dir_lock = 0;
 swing_dir = 1;
-swing_time = 40;
+swing_time = 30;
 
 //Drill
 drill_state = MeleeStates.IDLE;
@@ -76,6 +78,10 @@ launcher_timer = launcher_timer_max;
 
 //electricity
 electricity_obj = undefined;
+
+// flamethrower
+flame_obj = undefined;
+
 
 //CHARGING Gun
 charge_timer = 0;

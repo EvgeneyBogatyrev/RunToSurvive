@@ -15,7 +15,37 @@ if (_player != noone && hp <= 0 && _player.pocket[1] == REFRACTOR_INUMBER && !re
 	_player.bullets += 3;
 	refreshed = true;
 }
+
+if (wildvines_timer > 0)
+{
+	
+	if (wildvines_timer % 60 == 0)
+	{
+		hp -= 3;
+		if object_is_ancestor(object_index, oBossParent)
+		{
+			cum_hp -= 3;	
+		}
+		with(Create(x, y - 50, oDamageNumber, row))
+		{
+			damage = 3;
+			depth = other.depth - 2;
+		}
+		hit_flash = 3;
+	}
+	
+	if !object_is_ancestor(object_index, oBossParent)
+	{
+		xspeed = 0;
+		yspeed = 0;
+	}
+	
+	wildvines_timer -= 1;
+}
+
+
 event_inherited();
+
 
 if (on_fire > 0)
 {
@@ -35,4 +65,5 @@ if (on_fire > 0)
 	}
 	on_fire -= 1;
 }
+
 

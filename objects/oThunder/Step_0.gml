@@ -62,10 +62,10 @@ if (!done && instance_exists(oWormEnemy))
 		if (_collision_found)
 		{
 			//Print("Found collision");
-			_worm_enemy.hp -= damage;
+			_worm_enemy.hp -= (damage + host.elemental_damage_boost);
 			if object_is_ancestor(_worm_enemy.object_index, oBossParent)
 			{
-				_worm_enemy.cum_hp -= damage;	
+				_worm_enemy.cum_hp -= (damage + host.elemental_damage_boost);	
 			}
 			display = true;
 			_worm_enemy.hit_flash = 3;
@@ -83,10 +83,10 @@ if (!done && CheckCollisions(x, y, oEnemyParent, row))
 
 	if (_victim.state != UniversalStates.DEAD && _victim.state != HalfBossStates.INACTIVE && _victim.hp > 0) 
 	{
-		_victim.hp -= damage;
+		_victim.hp -= (damage + host.elemental_damage_boost);
 		if object_is_ancestor(_victim.object_index, oBossParent)
 		{
-			_victim.cum_hp -= damage;	
+			_victim.cum_hp -= (damage + host.elemental_damage_boost);	
 		}
 		_victim.hit_flash = 3;
 	

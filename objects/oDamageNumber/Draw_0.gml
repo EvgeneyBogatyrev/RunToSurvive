@@ -1,3 +1,9 @@
+if (damage == 0)
+{
+	instance_destroy();
+	exit;	
+}
+
 draw_set_font(FntDamage);
 draw_set_color(c_white);
 draw_set_alpha(image_alpha);

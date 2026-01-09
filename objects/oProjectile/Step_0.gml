@@ -99,6 +99,7 @@ if (CheckCollisions(x + xspeed, y + yspeed, oEnemyParent, row))
 	if (_victim.state != UniversalStates.DEAD && _victim.state != HalfBossStates.INACTIVE && _victim.hp > 0) 
 	{
 		_victim.on_fire = on_fire;
+		//_victim.wildvines_timer = 180;
 		_victim.hp -= damage;
 		if object_is_ancestor(_victim.object_index, oBossParent)
 		{

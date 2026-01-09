@@ -13,3 +13,22 @@ if (_input_type != InputTypes.KEYBOARD and _input_type != InputTypes.ANY)
 	}
 }
 
+
+if (name == "Cyber" && !init_cyber)
+{
+	init_cyber = true;
+	bullets = max(hp, bullets);
+	hp = bullets;
+	maxbullets = max(maxhp, maxbullets);
+	maxhp = maxbullets;
+}
+
+
+if (name == "Cyber")
+{
+	previous_bullets = min(bullets, maxbullets);
+	previous_hp = min(hp, maxhp);
+	
+	previous_maxhp = maxhp;	
+	previous_maxbullets = maxbullets;
+}

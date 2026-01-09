@@ -4,7 +4,7 @@ if (!created_reward)
 	created_reward = true;
 	for (var i = 0; i < stand_count; i++) {
 		item_stands[i] = Create(
-			x + (i - 1.5) * stand_spacing,
+			x + (i - index_shift) * stand_spacing,
 			y,
 			oRewardStand,
 			0
@@ -20,18 +20,46 @@ if (!created_reward)
 					break;	
 				}
 			}
-			if (i == 2)
+			if (i == 1)
 			{
-				item_index = BATTERY_INUMBER;	
+				var _create_hammer = false;
+				with (oPlayer)
+				{
+					if (name == "Steampunk")
+					{
+						_create_hammer = true;	
+					}
+				}
+				
+				if (_create_hammer)
+				{
+					item_index = HAMMER_TIME_INUMBER;	
+				}
 			}
-			if (i == 3)
+			if (i == other.stand_count - 1)
 			{
-				item_index = HEARTH_INUMBER;	
+				item_index =choose(HEARTH_INUMBER, BATTERY_INUMBER);	
 			}
 			array_push(_prev_index, item_index);
 			setup_item();
 		}
 	}
+	
+	
+	var _need_to_create_revival = false;
+	with (oPlayer)
+	{
+		if (revival_number > 0)
+		{
+			_need_to_create_revival = true;	
+		}
+	}
+	
+	if (_need_to_create_revival)
+	{
+		Create(oCamera.right - 200 + x - oCamera.x, oGenerator.ground[2], oCloningStation, 2);	
+	}
+	
 }
 
 if (x < oCamera.x)

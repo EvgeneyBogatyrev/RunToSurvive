@@ -15,3 +15,7 @@ fire_y_shift = 0;
 
 // HP & BULLETS gain
 refreshed = false;
+
+
+// Wildvines
+wildvines_timer = 0;

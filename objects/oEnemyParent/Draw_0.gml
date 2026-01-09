@@ -16,3 +16,12 @@ if (on_fire && state != UniversalStates.DEAD)
 {
 	draw_sprite(sFire, int64(get_timer() / 125000), x + fire_x_shift, y - 30 + fire_y_shift);	
 }
+
+if (wildvines_timer > 0)
+{
+	draw_sprite(sWildvine, image_index, x, bbox_top);	
+	draw_sprite(sWildvine, image_index + 1, x - sprite_width / 3, bbox_top);	
+	draw_sprite(sWildvine, image_index + 2, x + sprite_width / 3, bbox_top);	
+	
+	
+}

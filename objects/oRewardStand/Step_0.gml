@@ -51,6 +51,13 @@ for (var _player_count = 0; _player_count < instance_number(oPlayer); ++_player_
 			instance_destroy();
 			exit;
 		}
+		else if (item_index == HAMMER_TIME_INUMBER)
+		{
+			host.base_drill_damage += 1;
+			oReward.player2reward[host] = true;
+			instance_destroy();
+			exit;
+		}
 		
 		var _pocket_index;
 		if (item_index < ROCKETBOOTS_INUMBER)

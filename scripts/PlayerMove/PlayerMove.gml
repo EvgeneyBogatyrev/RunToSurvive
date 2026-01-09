@@ -87,10 +87,15 @@ function PlayerMove() {
 		jump_counter = 10;
 	}
 
-	if (grounded_counter > 0 and jump_counter > 0)   // attempting to jump
+	if ((grounded_counter > 0 || (double_jump && second_jump && !changing_row)) and jump_counter > 0)   // attempting to jump
 	{
-		if (changing_row && row_der > 0)  yspeed = -jumpspeed / 2;
-		else                              yspeed = -jumpspeed;
+		if (grounded_counter == 0 && double_jump && second_jump)
+		{
+			second_jump = false;	
+		}
+		
+		if (changing_row && row_der > 0 && second_jump)  yspeed = -jumpspeed / 2;
+		else											yspeed = -jumpspeed;
 		jump_counter = 0;
 		grounded_counter = 0;
 		
@@ -114,6 +119,7 @@ function PlayerMove() {
 		
 		yspeed            =  0;
 		grounded_counter  = 10;
+		second_jump       = true;
 		if (jump_counter == 0) changing_row = false;
 		if (knockbacked and state = PlayerStates.NON_CONTROL)
 		{

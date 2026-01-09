@@ -42,7 +42,7 @@ switch (state)
 				xspeed = 0;
 				dir = sign(player.x - x);
 				
-				if (true || y - player.y >= BLOCKSIZE * scale)  
+				if (y - player.y >= BLOCKSIZE * scale)  
 				{
 					sprite_index = sArcherSuperAttack;
 				}
@@ -86,6 +86,7 @@ if (image_index + image_speed >= shoot_index && !already_attacked)  //if its tim
 	else if (sprite_index == sArcherSuperAttack)
 	{
 		var _angle = 60 - 15 * (choose(1, 2, 3) - 1);
+		
 		with (Create(x + 21 * dir * scale, y - 60 * scale, oArrow, row))
 		{
 			depth -= 2;

@@ -4,13 +4,23 @@ oRoomControl.gamestate = GameState.LOOT;
 ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 1, 1, 1]);
 
 
-stand_count = 4; // Number of item stands
+stand_count = max(3, number_of_players); // Number of item stands
 stand_spacing = 240; // Pixels between stands
+if (stand_count == 4)
+{
+	index_shift = 1.5;	
+}
+else
+{
+	index_shift = 1;	
+}
 item_stands = array_create(stand_count); // Array to hold stand instances
 created_reward = false;
 
 stopped_room = false;
 
+
+need_to_update_players = false;
 
 player2reward = ds_map_create();
 player_keys = [];

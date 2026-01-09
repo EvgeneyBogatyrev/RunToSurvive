@@ -29,6 +29,9 @@ function GetGunSprite(gun_type){
 			
 		case Gun.ELECTRIC_GUN:
 			return sElectricGun;
+			
+		case Gun.FLAMETHROWER:
+			return sFlamethrower;
 	}
 
 }
