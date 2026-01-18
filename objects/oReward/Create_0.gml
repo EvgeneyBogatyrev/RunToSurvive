@@ -5,7 +5,7 @@ ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 1, 
 
 
 stand_count = max(3, number_of_players); // Number of item stands
-stand_spacing = 240; // Pixels between stands
+stand_spacing = 540; // Pixels between stands
 if (stand_count == 4)
 {
 	index_shift = 1.5;	

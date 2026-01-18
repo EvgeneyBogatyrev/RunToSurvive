@@ -6,7 +6,7 @@ draw_self();
 
 draw_set_color(c_white);
 draw_set_alpha(0.3);
-draw_circle(x, y - 80, 56, false); // Adjust radius as needed
+draw_circle(x, y - 160, 112, false); // Adjust radius as needed
 draw_set_alpha(1);
 
 
@@ -16,8 +16,8 @@ draw_sprite_ext(
     sItems, 
     item_index, 
     x, 
-    y - 80, 
-    1, 1, 
+    y - 160, 
+    2, 2, 
     0, 
     c_white, 
     0.7 + 0.3 * abs(sin(current_time * 0.0025)) // Smoother pulse
@@ -73,7 +73,7 @@ var _y_offset = 10;
 var _text_width = 200;
 var _text_height = string_height_ext(item_desc, 16, _text_width);
 
-var _y_point = y - 160
+var _y_point = y - 320;
 
 
 draw_rectangle(x - (_text_width / 2 + _x_offset), _y_point - _text_height / 2 - _y_offset, x + _text_width / 2 + _x_offset, _y_point + _text_height / 2 + _y_offset, false);
@@ -90,7 +90,7 @@ draw_text_ext_transformed(x, _y_point, item_desc, 16, _text_width, 1, 1, 0);
 if (place_meeting(x, y, oPlayer)) {
     draw_set_color(c_yellow);
     draw_set_alpha(0.2);
-    draw_circle(x, y - 80, 56, false); // Glow effect
+    draw_circle(x, y - 160, 112, false); // Glow effect
     draw_set_alpha(1);
     draw_set_color(c_white);
 }

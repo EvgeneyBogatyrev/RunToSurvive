@@ -6,7 +6,6 @@ switch (state)
 	case GunManDroneStates.FLY_DOWN:
 		image_index = 0;
 		y += fly_speed;
-		Print(y);
 		if (y >= y_position)
 		{
 			state = GunManDroneStates.CATCH_PLAYERS;	

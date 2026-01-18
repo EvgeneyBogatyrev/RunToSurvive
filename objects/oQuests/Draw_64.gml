@@ -18,7 +18,7 @@ if (!quest_completed && oRoomControl.gamestate != GameState.BOSS)
 			break;
 	}
 	str += "/" + string(max_kills);
-	str += "\n" + string(int64(oBossControlQuest.timer / 60));
+	str += "\n" + SecondsToString(oBossControlQuest.timer / 60, false);
 	
 	draw_set_font(fntItemDescription);
 	draw_set_color(c_black);

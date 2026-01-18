@@ -1,10 +1,10 @@
 function Macros() {
-#macro SCALE_ZERO 1
-#macro SCALE_ONE 1.2
-#macro SCALE_TWO 1.4
-#macro CAMERA_BOUNDS 200
-#macro CAMERA_OFFSET 1000
-#macro BLOCKSIZE 35
+#macro SCALE_ZERO 1 * 1.5
+#macro SCALE_ONE 1.2 * 1.5
+#macro SCALE_TWO 1.4 * 1.5
+#macro CAMERA_BOUNDS 200 * 1.5
+#macro CAMERA_OFFSET 1000 * 1.5
+#macro BLOCKSIZE 35 
 #macro INACTIVE_ALPHA 0.3
 
     //Items

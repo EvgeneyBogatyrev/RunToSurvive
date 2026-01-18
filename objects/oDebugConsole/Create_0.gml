@@ -85,5 +85,9 @@ commands =
 				hp = 0
 			}
 		}
+	},
+	
+	"perf" : function(_args) {
+		show_debug_overlay(	! is_debug_overlay_open())
 	}
 }

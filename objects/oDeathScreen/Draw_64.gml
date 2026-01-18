@@ -24,18 +24,10 @@ if (is_highscore)
 draw_text(128, 168, "Score: " + string(global.score) + _add);
 
 //Time calculation
-var _full_time_in_seconds = floor(time_of_the_run / 1000000);
 
-var _sec = _full_time_in_seconds % 60;
-var _time_in_min = floor(_full_time_in_seconds / 60);
-var _min = _time_in_min % 60;
-var _hrs = floor(_time_in_min / 60);
-
-var _hrs_str = string(_hrs);
-_hrs_str = string_length(_hrs_str) > 1 ? _hrs_str : "0" + _hrs_str;
 
 //Time result
-var _s = _hrs_str + ":" + string_replace_all(string_format(_min, 2, 0) + ":" + string_format(_sec, 2, 0), " ", "0");   
+var _s = SecondsToString(time_of_the_run / 1000000);
 draw_text(128, 208, "Time: " + _s);
 
 

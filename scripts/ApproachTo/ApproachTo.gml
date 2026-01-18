@@ -7,3 +7,17 @@ function ApproachTo(argument0, argument1) {
 
 
 }
+
+function Approach(_from, _to, _speed)
+{
+	var _diff = sign(_to - _from);
+	
+	var _res = _from + _diff * _speed;
+	
+	if (_diff > 0)
+		_res = min(_to, _res);
+	else
+		_res = max(_to, _res);
+	
+	return _res;
+}

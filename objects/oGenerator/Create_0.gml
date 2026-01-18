@@ -28,8 +28,8 @@ for (var _i = 0; _i < 3; ++_i)
 
 global.level_started = true;
 
-gap = 120;
-ground[0] = 444;
+gap = 132;
+ground[0] = 600;
 ground[1] = ground[0] + 4/5 * gap;
 ground[2] = ground[1] + gap;
 
@@ -65,7 +65,7 @@ if (global.DEBUG)
 
 for (var i = 0; i < number_of_players; ++i)
 {
-	SpawnPlayerCharacter(i, names[i], 500 + ((i == 3)? 100 : 0), ground[i % 3], i % 3);
+	SpawnPlayerCharacter(i, names[i], 500 + ((i == 3)? 100 : 0), ground[i % 3] - 1, i % 3);
 	ds_map_add(times_resurrected, names[i], 0);
 }
 

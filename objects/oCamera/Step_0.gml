@@ -42,25 +42,24 @@ x += random_range(-shake_remain, shake_remain);
 y += random_range(-shake_remain, shake_remain);
 shake_remain = max(0, shake_remain - ((1/shake_lenght)*shake_magnitude));
 	
+var _w = global.display_width;
+var _h = global.display_height;
+
+var _speed_x = 5;
+var _speed_y = 45/16;
+
+var _w_to = cam_widths[focus];
+var _h_to = cam_heights[focus];
+
+var _cam_w = Approach(2 * view_w_half, _w_to, _speed_x);
+var _cam_h = Approach(2 * view_h_half, _h_to, _speed_y);
+
+
+camera_set_view_size(cam, _cam_w, _cam_h);	
+
+Assert(focus <= CameraFocus.TARGET_ZOOM && focus >= CameraFocus.ROW0, "Wrong camera focus >:(\n") 
+
 //Focus
-switch (focus)
-{
-	case CameraFocus.ROW0:
-		camera_set_view_size(cam, max(2 * view_w_half - 5/2, 800), max(2 * view_h_half - 45/32, 450));	
-		break;
-	case CameraFocus.ROW1:
-		camera_set_view_size(cam, max(2 * view_w_half - 5/2, 900), max(2 * view_h_half - 45/32, 506.25));	
-		break;
-	case CameraFocus.ROW2:
-		camera_set_view_size(cam, min(2 * view_w_half + 5/2, 1024), min(2 * view_h_half + 45/32, 576));	
-		break;
-	case CameraFocus.TARGET_ZOOM:
-		camera_set_view_size(cam, 2 * view_w_half - 5/2, 2 * view_h_half - 45/32);	
-		break;
-	default:
-		Raise("Wrong camera focus\n");
-		break;
-}
 
 camera_set_view_pos(cam, x - view_w_half, y - view_h_half);
 

@@ -220,6 +220,7 @@
     {"name":"SummonRobot","order":3,"path":"scripts/SummonRobot/SummonRobot.yy",},
     {"name":"SummonSpamton","order":4,"path":"scripts/SummonSpamton/SummonSpamton.yy",},
     {"name":"SummonWallOfFlesh","order":6,"path":"scripts/SummonWallOfFlesh/SummonWallOfFlesh.yy",},
+    {"name":"TimeFormatting","order":9,"path":"scripts/TimeFormatting/TimeFormatting.yy",},
     {"name":"shdBloom","order":3,"path":"shaders/shdBloom/shdBloom.yy",},
     {"name":"shdExtra","order":4,"path":"shaders/shdExtra/shdExtra.yy",},
     {"name":"shdHit","order":1,"path":"shaders/shdHit/shdHit.yy",},

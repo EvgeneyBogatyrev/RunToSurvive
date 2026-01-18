@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"TimeFormatting",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TimeFormatting",
+  "parent":{
+    "name":"Functional",
+    "path":"folders/Scripts/Functional.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

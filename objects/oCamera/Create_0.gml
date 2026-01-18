@@ -46,3 +46,5 @@ refocus_position_x = 0;
 refocus_position_y = 0;
 
 
+cam_widths = [1376, 1632, 1920, 0];
+cam_heights = [774, 918, 1080, 0];

@@ -8,6 +8,6 @@ if (!quest_completed && oRoomControl.gamestate == GameState.NORMAL)
 	
 	if (quest_completed)
 	{
-		Create(oCamera.x + 2500, oGenerator.ground[0], oReward, 0);	
+		Create(oCamera.x + 3500, oGenerator.ground[0], oReward, 0);	
 	}
 }

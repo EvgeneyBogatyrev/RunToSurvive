@@ -130,3 +130,10 @@ if (center_timer == 0)
 	window_center();
 }
 #endregion
+
+
+
+if (keyboard_check(vk_escape))
+{
+	game_end()
+};

@@ -63,7 +63,6 @@ if (shoot_timer <= 0  && instance_exists(oWallOfFleshController) && oWallOfFlesh
 				with (Create(_eye_x, _eye_y, oWallOfFleshBullet, row))
 				{
 					var direction_to_shoot = point_direction(_eye_x, _eye_y, _player_x - _player_xspeed, _player_y - _player_sprite_height / 2 * _player_scale);
-					Print(direction_to_shoot);
 					xspeed = lengthdir_x(15, direction_to_shoot);	
 					yspeed = lengthdir_y(15, direction_to_shoot);
 					depth = GetScale(other.row) - 2;

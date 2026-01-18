@@ -105,7 +105,6 @@ switch (state)
 		{
 			heart_hp -= (prev_hp - hp);
 			
-			Print(heart_hp);
 			
 			if (heart_hp <= 0)
 			{

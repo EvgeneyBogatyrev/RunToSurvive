@@ -100,7 +100,7 @@ switch (state)
 
 }
 
-if (state != UniversalStates.DEAD)  if (player != noone && !player.changing_row && ContactDamage(damage, 0))  
+if (state != UniversalStates.DEAD)  if (instance_exists(player) && player != noone && !player.changing_row && ContactDamage(damage, 0))  
 {
 	state = UniversalStates.DEAD;
 	sprite_index = sFloatingEyeDie;
