@@ -6,6 +6,7 @@ if keyboard_check_pressed(192) || keyboard_check_pressed(vk_alt) || (enabled && 
 	{
 		instance_deactivate_all(true);
 		instance_activate_object(oDrawer);
+		cmd_offset = -1;
 	}
 	else
 	{
@@ -19,32 +20,6 @@ if keyboard_check_pressed(192) || keyboard_check_pressed(vk_alt) || (enabled && 
 				array_copy(_args, 0, _cmd, 1, array_length(_cmd) - 1)
 				
 				commands[$ _cmd[0]](_args);
-				
-				//switch (_cmd[0])
-				//{
-				//	case "hp":
-				//		oPlayer.hp = int64(_cmd[1]);
-				//		break;
-				//	case "ammo":
-				//		oPlayer.bullets = int64(_cmd[1]);
-				//		break;
-				//	case "gun":
-				//		oPlayer.gun.current_gun = int64(_cmd[1]);
-				//		break;
-				//	case "boss":
-				//		array_insert(oBossControl.tmp_bosses_array, 0, _cmd[1]);		
-				//		break;
-				//	case "bossbegin":
-				//		oBossControl.timer = 0;
-				//		break;
-				//	case "spawnitem":
-				//		with (Create(oCamera.right, oGenerator.ground[0] - 100, oItemDrop, 0))
-				//		{
-				//			depth -= 2;
-				//			image = int64(_cmd[1]);
-				//		}
-				//		break;
-				//}
 			}
 			ds_list_clear(cmd_queue);
 		}
@@ -84,24 +59,20 @@ if keyboard_check_pressed(vk_enter)
 		
 		var _parse = string_split(keyboard_string, " ");
 		
-		//switch _parse[0]
-		//{
-		//	default:
-		//		ds_list_add(history, "Unknown command.");
-		//	break;
-		//	case "gun":
-		//	case "boss":
-		//	case "bossbegin":
-		//	case "spawnitem":
-		//	case "hp":
-		//	case "ammo":
-		//		ds_list_add(cmd_queue, _parse);
-		//	break;
-
-				
-		//}
 		ds_list_insert(history, 0, keyboard_string);
-		ds_list_insert(cmd_history, 0, keyboard_string);
+		
+		// Do not copy the command if it repeats the previous one
+		var _cur_history_size = ds_list_size(cmd_history);
+		if (_cur_history_size == 0 || keyboard_string != ds_list_find_value(cmd_history, 0))
+		{
+			ds_list_insert(cmd_history, 0, keyboard_string);
+		}
+		
+		// Store only the first 100 entries
+		while (ds_list_size(cmd_history) > history_size_limit)
+		{
+			ds_list_delete(cmd_history, ds_list_size(cmd_history) - 1);
+		}
 
 		if struct_exists(commands, _parse[0])
 		{
