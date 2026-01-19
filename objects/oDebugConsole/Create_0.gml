@@ -89,5 +89,39 @@ commands =
 	
 	"perf" : function(_args) {
 		show_debug_overlay(	! is_debug_overlay_open())
+	},
+	
+	"bb" : function(_args) { array_insert(oBossControlQuest.bosses_array, 0, _args[0]); oBossControlQuest.timer = 0; },
+}
+
+
+
+// Load history
+
+filename = "console_history"; // Filename to save history to
+key_name = "history"; // The key in saved ds map where history is stored
+
+history_size_limit = 100; // max number of entries in history
+
+if (file_exists(filename))
+{
+	var _saved_history = ds_map_secure_load(filename);
+	if (_saved_history != -1)
+	{
+		cmd_history = ds_map_find_value(_saved_history, key_name);
 	}
 }
+
+
+
+// Save history
+save_history = function()
+{
+	var _ds_map_for_saving = ds_map_create();
+	
+	ds_map_add_list(_ds_map_for_saving, key_name, cmd_history);
+	ds_map_secure_save(_ds_map_for_saving, filename);
+	
+	ds_map_destroy(_ds_map_for_saving);
+}
+
