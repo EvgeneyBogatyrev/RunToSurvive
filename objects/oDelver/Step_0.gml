@@ -4,7 +4,7 @@ switch (state)
 {
 	case UniversalStates.INTRO:
 		y = ystart + sin((get_timer() - phase) / 250000) * magnitude;
-		x = lerp(x, oCamera.right - CAMERA_BOUNDS / 3, acceleration);
+		x = lerp(x, oCamera.right - CAMERA_BOUNDS / 3, acceleration_mage);
 		xspeed = -0.001;
 		
 		hp = mage_hp;
@@ -40,7 +40,7 @@ switch (state)
 	
 	
 		y = ystart + sin((get_timer() - phase) / 250000) * magnitude;
-		x = lerp(x, oCamera.right - CAMERA_BOUNDS / 3, acceleration);
+		x = lerp(x, oCamera.right - CAMERA_BOUNDS / 3, acceleration_mage);
 		xspeed = -0.001;
 		
 		if (sprite_index == sDelverStand)
@@ -212,7 +212,7 @@ switch (state)
 				y = lerp(y, ystart, acceleration);
 				dir = -1;
 				row = 0;
-				scale = lerp(scale, GetScale(1, false), 0.1);
+				scale = lerp(scale, GetScale(0, false), 0.1);
 			}
 			
 			rest_timer--;
@@ -251,6 +251,11 @@ switch (state)
 	case UniversalStates.VICTORY:
 		xspeed = insect_speed * scale;
 		yspeed = 0;
+		
+		if (sprite_index == sDelverInsectAttack && AnimationEnd())
+		{
+			sprite_index = sDelverInsect;	
+		}
 		break;
 	
 	default:

@@ -14,7 +14,7 @@ spd = lerp(spd, max_speed, acc);
 if (y <= bound)
 {
 	
-	for (var _offset = -1; _offset <= 1; ++_offset) 
+	for (var _offset = -3; _offset <= 3; ++_offset) 
 	{
 		with (Create(x, y, oThunderDelver, row)) 
 		{
