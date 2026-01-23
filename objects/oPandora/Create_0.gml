@@ -46,10 +46,11 @@ magnitude = 50;
 phase = get_timer();
 
 //Gauntlet state
+first_time = true;
 designation = -1;
 acceleration = 0.05;
 gauntlet_speed = 15;
-y_offset = 20 + BLOCKSIZE;
+y_offset = 24 + BLOCKSIZE;
 direction_changed = false;
 spawn_counter_max = 3; //Must be odd
 spawn_counter = spawn_counter_max;

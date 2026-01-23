@@ -43,7 +43,8 @@ switch (state)
 			state = UniversalStates.VICTORY;
 			exit;
 		}
-		if (current_speed != slowspeed)
+		
+		/*if (current_speed != slowspeed)
 		{
 			if (fast_timer == 0) 
 			{ 
@@ -63,8 +64,11 @@ switch (state)
 			{
 				x = oCamera.left - 40;	
 			}
+		}*/
+		if (current_speed != slowspeed)
+		{
+			current_speed = max(abs(target.x - x) / 1000 * fastspeed, walkspeed);
 		}
-			
 		
 		if (abs(target.x - x) > 180)
 			xspeed = current_speed * sign(target.x - x);

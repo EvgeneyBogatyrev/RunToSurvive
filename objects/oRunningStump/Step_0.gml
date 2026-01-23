@@ -59,6 +59,7 @@ if (!CheckCollisions(x, y + 1, oSolidParent, row) && can_be_knockbacked)
 			y += sign(yspeed);
 		}
 		yspeed = 0;
+		xspeed = 0;
 	}
 }
 

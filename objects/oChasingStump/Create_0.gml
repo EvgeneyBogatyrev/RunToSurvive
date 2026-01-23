@@ -14,8 +14,8 @@ maxhp = 100 + 5 * oDifficultyController.bosses_defeated * GetStats("Increase hp"
 hp = maxhp;
 
 slowspeed = 3;
-walkspeed = 6;
-fastspeed = 7;
+walkspeed = 6.5;
+fastspeed = 12;
 jumpspeed = 12;
 
 fast_timer_max = 150;

@@ -28,6 +28,9 @@ commands =
 			profile = passive_items_profiles[int64(_args[0])];
 		}
 	},
+	"roomspeed" : function(_args) {
+		oRoomControl.roomspeed = real(_args[0]);	
+	},
 	"revive" : function(_args) {
 		with (oPlayer)
 		{
