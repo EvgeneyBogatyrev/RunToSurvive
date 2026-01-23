@@ -30,7 +30,6 @@ switch (state)
 			global.score += 100;
 			oRoomControl.gamestate = GameState.LOOT;
 			oGenerator.preprocess_forbidden_obstacles = false;
-			GetStandartRoomProperties();
 		}
 		break;
 		

@@ -7,7 +7,9 @@ function SummonPandora() {
 	//Background
 	ds_map_replace(oRoomControl.room_properties, "BackgroundFront", "bGraveyardTrees");
 	ds_map_replace(oRoomControl.room_properties, "BackgroundBack", "bGraveyard");
-
+	
+	ds_map_replace(oRoomControl.room_properties, "BackgroundLayers", [bGraveyard])
+	
 	//Blocks
 	ds_map_replace(oRoomControl.room_properties, "BlockSprite", sGrassBlock1);
 	ds_map_replace(oRoomControl.room_properties, "BlockEmptySprite", sGrassBlockEmpty1);

@@ -92,6 +92,14 @@ commands =
 	},
 	
 	"bb" : function(_args) { array_insert(oBossControlQuest.bosses_array, 0, _args[0]); oBossControlQuest.timer = 0; },
+	"killboss" : function(_args)
+	{
+		with (oBossParent)
+		{
+			hp = 0;
+			cum_hp = 0;
+		}
+	}
 }
 
 

@@ -243,7 +243,6 @@ switch (state)
 		{
 			global.score += 100;
 			oRoomControl.gamestate = GameState.LOOT;
-			GetStandartRoomProperties();
 			instance_destroy();			
 		}
 		break;
