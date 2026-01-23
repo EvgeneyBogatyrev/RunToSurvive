@@ -121,6 +121,9 @@ function CreateEnvironment(argument0, argument1, argument2) {
 
 
 function CreateConstruct(_start, _row, _shape, _only_update=false) {
+	var _nearest_block = instance_nearest(_start, oGenerator.ground[_row] - 1, oBlock);
+	_start = _nearest_block.x;
+	
 	var _scale = GetScale(_row);
 	for (var _height = array_length(_shape) - 1; _height >= 0; --_height)
 	{

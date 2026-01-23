@@ -1,4 +1,3 @@
-/// !!! IN PROGRESS !!!
 function SummonChasingStump() 
 {
 	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 0, 0, 0, 0, 0]);

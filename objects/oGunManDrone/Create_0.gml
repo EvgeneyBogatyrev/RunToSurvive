@@ -33,4 +33,4 @@ hp = 0;
 float_magnitude = 0.7;
 
 // the shift of position when drawing a player
-player_position_shift = 100;
+player_position_shift = 150;

@@ -23,8 +23,8 @@ arm_length_increase = 10;
 
 // Pulling players
 pull_speed = 0.1;
-close_distance = 85;
-close_distance_close = 100;
+close_distance = 85 * 1.5;
+close_distance_close = 100 * 1.5;
 
 image_speed = 0;
 image_index = 0;
@@ -53,6 +53,8 @@ function pull_players(smooth)
 				_player_object.x = x;
 				_player_object.y = y + sprite_height / 2;
 			}
+			
+			Print(_distance_to_player, close_distance);
 			
 			if (_distance_to_player >= close_distance)
 			{

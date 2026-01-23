@@ -55,8 +55,8 @@ switch (state)
 						&& _player_object.state != UniversalStates.DEAD
 						&& _player_object != player_not_to_catch)
 					{
-						_player_object.x = oCamera.right + 300;
-						_player_object.y = -10;
+						_player_object.x = oCamera.right + 400;
+						_player_object.y = -20;
 						
 						array_push(oGunMan.drone.stored_players, _player_object);
 					}

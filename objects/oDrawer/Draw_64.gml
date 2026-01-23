@@ -43,7 +43,7 @@ with(oPlayer)
 }
 
 
-var cur_y = y + 2*offset;
+var cur_y = ystart + 2*offset;
 
 
 
@@ -52,7 +52,7 @@ for (var i = 0; i < ds_list_size(list_of_players); i++)
 	pl_timer[i]--;
 	
 	
-	var cur_x = x + 2 * offset;	
+	var cur_x = xstart + 2 * offset;	
 	var _circle_x = cur_x - soul_radius - 2;
 	var _circle_y = cur_y + soul_radius + 4;
 	//draw_set_color(merge_color(c_yellow, c_black, 0.3));
@@ -103,7 +103,7 @@ for (var i = 0; i < ds_list_size(list_of_players); i++)
 	
 	
 	cur_y += (rectangle_size + offset)/2;
-	cur_x = x + 3*offset + rectangle_size;
+	cur_x = xstart + 3*offset + rectangle_size;
 
 	
 	
@@ -134,7 +134,7 @@ for (var i = 0; i < ds_list_size(list_of_players); i++)
 	
 	if (_pl._show_inv)
 	{
-		var _inventory_x = x + 370; // not correct, please look into
+		var _inventory_x = xstart + 370; // not correct, please look into
 		for (var j = 0; j < ds_list_size(_pl.inventory); j++)
 		{
 		

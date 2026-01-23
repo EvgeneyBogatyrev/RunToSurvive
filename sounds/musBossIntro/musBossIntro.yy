@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":6.234376,
+  "duration":6.2343764,
   "exportDir":"",
   "name":"musBossIntro",
   "parent":{

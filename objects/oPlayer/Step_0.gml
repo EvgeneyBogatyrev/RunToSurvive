@@ -50,9 +50,11 @@ switch (state)
 		//x = oCamera.right + 300;
 		//y = -10;
 		yspeed = 0;
+		xspeed = sign(_right - _left);
 		row_der = 0;
 		row = 0;
 		PlayerSprite();
+		xspeed = 0;
 		//PlayerMove();
 		break;
 	
@@ -177,9 +179,12 @@ switch (state)
 
 if (state != PlayerStates.NON_CONTROL)
 {
-	PlayerMove();
+	if (state != PlayerStates.TRAPPED) 
+	{
+		PlayerMove();
+		PlayerSprite();
+	}
 	PlayerCheckDying();
-	PlayerSprite();
 }
 
 if (damaged)

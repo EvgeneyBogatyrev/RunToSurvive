@@ -38,3 +38,12 @@ if (gamestate == GameState.NORMAL)
 }
 
 run_timer += delta_time;
+
+
+//if (oPlayer.x > 10000)
+//{
+//	with (all)
+//	{
+//		x -= 10000;	
+//	}
+//}

@@ -19,13 +19,13 @@ for (var player_idx = 0; player_idx < len(stored_players); ++player_idx)
 		switch (stored_player.gun.current_gun)
 		{
 			case Gun.ROCKET_LAUNCHER:
-				var _gun_shift = 100 - 34 * stored_player.scale;
+				var _gun_shift = 150 - 34 * stored_player.scale;
 				_gunx = x + _gun_shift * dsin(image_angle);
 				_guny = y +_gun_shift * dcos(image_angle);
 				break;
 	
 			default:
-				var _gun_shift = 100 - 22 * stored_player.scale;
+				var _gun_shift = 150 - 22 * stored_player.scale;
 				_gunx = x + _gun_shift * dsin(image_angle);
 				_guny = y +_gun_shift * dcos(image_angle);
 				break;

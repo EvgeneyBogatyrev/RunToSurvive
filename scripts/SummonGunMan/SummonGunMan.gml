@@ -19,7 +19,7 @@ function SummonGunMan() {
 	//Forbidden
 	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 1, 1, 1]);
 
-	with (Create(oCamera.right + 1750, oGenerator.ground[0] - 10, oGunMan, 0))  depth -= 2;
+	with (Create(oCamera.right + 3500, oGenerator.ground[0] - 10, oGunMan, 0))  depth -= 2;
 	
 
 

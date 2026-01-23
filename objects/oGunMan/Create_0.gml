@@ -93,7 +93,9 @@ state_change_timer = -1;
 state_change_timer_max = 1.5 * 60;
 next_state = GunManStates.FIGHT;
 
-charging_station = Create(x - 430, y - 165, oChargeStation, 0);
+//charging_station = Create(x - 430 * 1.5, y - 165 * 1.5, oChargeStation, 0);
+charging_station = undefined;
+
 
 hp_state = GunManHpState.FIRST;
 
@@ -129,9 +131,15 @@ explotion_speed = 6;
 gun_cooldown_max = 45;
 gun_cooldown = gun_cooldown_max;
 
+station_offset_x = 120;
+charge_offset_x = 4;
+charge_offset_y = 10;
 
-drone_position_offset_x = -100;
-drone_position_offset_y = -200;
+pixel_x_create_station_offset = 3000;
+
+
+drone_position_offset_x = -80;
+drone_position_offset_y = -250;
 
 
 drone_animation = undefined;

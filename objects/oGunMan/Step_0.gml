@@ -33,17 +33,29 @@ switch (state)
 {
 	case UniversalStates.INTRO:
 		//scale = GetScale(row);
-		if (!area_created && abs(x - oCamera.x) < 1400)
+		if (!area_created && abs(x - oCamera.x) < pixel_x_create_station_offset)
 		{
 			area_created = true;
-			CreateConstruct(x - 800, 0, _charge_tower_shape);			
-			CreateConstruct(x - 400, 1, _middle);
+			
+			var _length_in_blocks = array_length(_charge_tower_shape[0]);
+			var _length_in_pixels = BLOCKSIZE * _length_in_blocks * GetScale(0);
+			
+			var _height_in_blocks = array_length(_charge_tower_shape);
+			var _height_in_pixels = BLOCKSIZE * _height_in_blocks * GetScale(0);
+			
+			CreateConstruct(x - _length_in_pixels - station_offset_x * GetScale(0), 0, _charge_tower_shape);			
+			CreateConstruct(x - _length_in_pixels / 2 - station_offset_x * GetScale(1) / 2 - BLOCKSIZE, 1, _middle);
+			
+			charging_station = Create(x - _length_in_pixels / 2 - station_offset_x * GetScale(1) + charge_offset_x, y - _height_in_pixels + charge_offset_y, oChargeStation, 0)
 		}
 		
-		if (!area_updated && abs(x - oCamera.x) < 800)
+		if (!area_updated && abs(x - oCamera.x) < 1500 * 1.5)
 		{
 			area_updated = true;
-			CreateConstruct(x - 800, 0, _charge_tower_shape, true);			
+			var _length_in_blocks = array_length(_charge_tower_shape[0]);
+			var _length_in_pixels = BLOCKSIZE * _length_in_blocks * GetScale(0);
+						
+			CreateConstruct(x - _length_in_pixels - station_offset_x * GetScale(0), 0, _charge_tower_shape, true);			
 		}
 		//scale = GetScale(row) * 1.2;
 		
