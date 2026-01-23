@@ -100,7 +100,7 @@ switch (state)
 				designation *= -1;
 				row = choose(0, 1, 2);
 				scale = GetScale(row, true);
-				y = oGenerator.ground[row] - y_offset * scale;
+				if (!first_time) y = oGenerator.ground[row] - y_offset * scale;
 				direction_changed = true;
 				
 				if (spawn_counter == 0 && instance_number(oFloatingEye) < eyes_amount)
@@ -109,6 +109,8 @@ switch (state)
 					spawn_counter = spawn_counter_max;
 				}
 				else spawn_counter--;
+				
+				first_time = false;
 			}
 		}
 		else  direction_changed = false;
@@ -129,10 +131,15 @@ switch (state)
 			cum_hp = eye_hp;
 		}
 		
+		if (!first_time)
+		{
+			y = oGenerator.ground[row] - y_offset * scale + sin((get_timer() - phase) / 250000) * 10;
+		}
+		
 		break;
 	
 	case PandoraStates.EYE:
-		PandoraBoxMovement(200);
+		PandoraBoxMovement(250);
 			
 		if (sprite_index == sPandoraTransform && AnimationEnd())
 		{

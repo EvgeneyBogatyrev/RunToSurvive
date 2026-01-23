@@ -3,7 +3,7 @@ function PandoraBoxMovement(argument0) {
 
 		
 	if (x < oCamera.right - room_width / 2)  xspeed = (flyspeed - oRoomControl.roomspeed) * GetScale(row);
-	else if (x > oCamera.right - 100)        xspeed = -oRoomControl.roomspeed * GetScale(row);
+	else if (x > oCamera.right - CAMERA_BOUNDS)        xspeed = -oRoomControl.roomspeed;
 
 
 

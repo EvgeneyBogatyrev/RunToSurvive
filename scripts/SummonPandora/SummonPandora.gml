@@ -19,7 +19,7 @@ function SummonPandora() {
 	//Forbidden
 	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 0, 0, 1, 1, 0]);
 
-	with (Create(oCamera.right - 120, oGenerator.ground[0] - 150, oPandora, 0))  depth -= 2;
+	with (Create(oCamera.left - 120, oGenerator.ground[0] - 200, oPandora, 0))  depth -= 0;
 
 
 
