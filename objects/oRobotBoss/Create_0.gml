@@ -45,8 +45,8 @@ screen_image_tick = 0;
 screen_image_offset = 6;
 screen_image_change_counter_max = 45;
 screen_image_change_counter = screen_image_change_counter_max;
-screen_image_offset_x = 28 - 62;
-screen_image_offset_y = 22 - 39;
+screen_image_offset_x = (28 - 62) * GetScale(0);
+screen_image_offset_y = (22 - 39) * GetScale(0);
 draw_screen = true;
 
 trail = undefined;

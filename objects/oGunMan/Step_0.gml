@@ -75,7 +75,7 @@ switch (state)
 			follow_object = Create(oCamera.x, oGenerator.ground[1], oFollow, 0);
 			with (oCamera) follow = other.follow_object;
 			
-			drone_animation = Create(follow_object.x, -50, oGunManDroneAnimation, 1);
+			drone_animation = Create(follow_object.x, -150, oGunManDroneAnimation, 1);
 			drone_animation.player_not_to_catch = opponent;
 			drone_animation.fly_position_x = x + drone_position_offset_x;
 			drone_animation.fly_position_y = y + drone_position_offset_y;

@@ -5,6 +5,7 @@ function PlayerSprite() {
 
 	if (grounded || state == PlayerStates.TRAPPED)
 	{
+		Print(grounded, state, PlayerStates.TRAPPED, xspeed);
 		if (abs(xspeed) > 1)
 		{
 			image_speed = 1;

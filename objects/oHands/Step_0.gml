@@ -15,19 +15,22 @@ else
 			x = host.xprevious + (12 * host.dir * host.scale);
 			y = host.yprevious - 22 * host.scale;
 			image_index = 2;
+			enabled = true;
 			break;
 		case Gun.SHORTRANGE_BLASTER:
 			depth = host.gun.depth - 1;
 			x = host.xprevious + (12 * host.dir * host.scale);
 			y = host.yprevious - 22 * host.scale;
 			image_index = 2;
+			enabled = true;
 			break;
 		case Gun.ROCKET_LAUNCHER:
-			depth = host.depth + 1;
+			depth = host.gun.depth - 1;
 			x = host.x - (4 + host.gun.recoil) * host.dir * host.scale;
 			y = host.yprevious - 22 * host.scale;
 			image_index = 1;
 			enabled = true;
+			Print(x, y, host.x, host.y);
 			break;
 		case Gun.STEAMPUNK_HAMMER:
 		case Gun.KICKS_N_PUNCHES:

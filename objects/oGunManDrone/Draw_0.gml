@@ -8,7 +8,7 @@ for (var player_idx = 0; player_idx < len(stored_players); ++player_idx)
 	else if (player_idx == 2)
 	{
 		xshift = 10;	
-	}
+	}	
 	var stored_player = stored_players[player_idx];
 	if (stored_player != noone && instance_exists(stored_player))
 	{
@@ -31,9 +31,9 @@ for (var player_idx = 0; player_idx < len(stored_players); ++player_idx)
 				break;
 		}
 	
-		// Draw gun
+		// Draw gun and hands
 		draw_sprite_ext(stored_player.gun.sprite_index, 0, _gunx + xshift, _guny, stored_player.dir * stored_player.scale, stored_player.scale, image_angle, c_white, 1);
-	
+		draw_sprite_ext(stored_player.hands.sprite_index, stored_player.hands.image_index, _gunx + xshift, _guny, stored_player.dir * stored_player.scale, stored_player.scale, image_angle, c_white, 1);
 	}
 }
 

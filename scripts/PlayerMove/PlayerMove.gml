@@ -45,7 +45,7 @@ function PlayerMove() {
 		
 		}
 		
-		if (knockbacked and state = PlayerStates.NON_CONTROL)
+		if (knockbacked && state == PlayerStates.NON_CONTROL)
 		{
 			state = PlayerStates.NORMAL;
 			knockbacked = false;
@@ -121,7 +121,7 @@ function PlayerMove() {
 		grounded_counter  = 10;
 		second_jump       = true;
 		if (jump_counter == 0) changing_row = false;
-		if (knockbacked and state = PlayerStates.NON_CONTROL)
+		if (knockbacked && state = PlayerStates.NON_CONTROL)
 		{
 			state = PlayerStates.NORMAL;
 			knockbacked = false;

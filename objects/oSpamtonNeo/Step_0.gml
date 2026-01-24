@@ -6,7 +6,7 @@
 switch (state)
 {
 	case UniversalStates.INTRO:
-		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.1);
+		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.03);
 			
 		y_to_go = oGenerator.ground[row] - 100 * GetScale(row);
 		draw_y = lerp(draw_y, y_to_go, 0.01);
@@ -27,7 +27,7 @@ switch (state)
 		sprite_index = sSpamtonNEOHeart;
 		first_pipis = true;
 		ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 1, 1, 0]);
-		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.1);
+		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.025 * GetScale(row) / 2);
 		// Changing rows
 		change_row_timer--;
 		if (change_row_timer <= 0)
@@ -120,7 +120,7 @@ switch (state)
 	case SpamtonStates.PIPIS:
 		sprite_index = sDelverCasting;
 		ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 0, 1, 0]);
-		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.1);
+		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.025 * GetScale(row) / 2);
 		
 		change_row_timer--;
 		if (change_row_timer <= 0)
@@ -193,7 +193,7 @@ switch (state)
 			instance_destroy();	
 		}
 		y_to_go = -100;
-		draw_y = lerp(draw_y, y_to_go, 0.01);
+		draw_y = lerp(draw_y, y_to_go, 0.1);
 		oRoomControl.gamestate = GameState.LOOT;
 		GetStandartRoomProperties();
 		instance_destroy();	

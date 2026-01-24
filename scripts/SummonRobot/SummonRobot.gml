@@ -10,7 +10,7 @@ function SummonRobot() {
 	//Forbidden
 	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 1, 1, 0]);
 
-	with (Create(oCamera.left - 20, oGenerator.ground[0] - 250, oRobotBoss, 0)) {}
+	with (Create(oCamera.left - 20, oGenerator.ground[0] - 400, oRobotBoss, 0)) {}
 
 	//with (oStructureBlock)
 	//{

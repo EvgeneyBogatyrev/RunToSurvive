@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-for (var _i = 0; _i < 60; _i++)
+for (var _i = 0; _i < 100; _i++)
 {
 	
 	var _x = ((_i mod 5) * 64) - 64 * 4;
@@ -18,7 +18,7 @@ for (var _i = 0; _i < 60; _i++)
 
 }
 
-for (var _i = 0; _i < 24; _i++)
+for (var _i = 0; _i < 36; _i++)
 {
 	var _x = ((_i mod 2) * 64) - 64 * 5;
 	var _y = (_i div 2) * 64;

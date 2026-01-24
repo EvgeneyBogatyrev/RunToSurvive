@@ -23,8 +23,8 @@ arm_length_increase = 10;
 
 // Pulling players
 pull_speed = 0.1;
-close_distance = 85 * 1.5;
-close_distance_close = 100 * 1.5;
+close_distance = 150;
+close_distance_close = 200;
 
 image_speed = 0;
 image_index = 0;

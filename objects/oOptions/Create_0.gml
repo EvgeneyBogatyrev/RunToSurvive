@@ -34,7 +34,7 @@ switch(global.display_width)
 		switcher_position = 2;
 		break;	
 	
-	case STANDART_DEFINITION_WIDTH :
+	case STANDART_DEFINITION_WIDTH +1  : //Fix this shit
 		switcher_position = 1;
 		break;	
 	

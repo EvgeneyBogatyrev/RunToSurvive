@@ -5,7 +5,7 @@ if (last_block[2].x <= oCamera.right + oCamera.view_w_half * GetScale(2))
 	{
 		var _start_point = last_block[i].x;
 		var _count = 0;
-		while (last_block[i].x <=  oCamera.right + 2 * oCamera.view_w_half * GetScale(i))
+		while (last_block[i].x <=  oCamera.right + 1.5 * oCamera.view_w_half * GetScale(i))
 		{
 			var _x = last_block[i].x + (BLOCKSIZE - 1) * GetScale(i);
 			last_block[i] = Create(_x, ground[i], oGroundBlock, i);

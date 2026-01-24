@@ -17,6 +17,7 @@ switch (state)
 		PlayerControl();
 		if (force_down > 0)
 		{
+			// Tumble from GunMan Drone
 			if (row == 0)	
 			{
 				_down = true;
@@ -29,7 +30,12 @@ switch (state)
 		if (_shoot && instance_exists(gun))       gun.shoot = true;
 		if (_shoot_hold && instance_exists(gun))  gun.shoot_hold = true;
 		
+		PlayerSprite();
+		PlayerCheckDying();
+		PlayerMove();
+		
 		break;
+	
 	case PlayerStates.KNOCKBACKED:
 		PlayerControl();
 		if (_left || _right)
@@ -40,22 +46,22 @@ switch (state)
 		
 	case PlayerStates.TRAPPED:
 		PlayerControl();
-		//_left =  false;
-		//_right =  false;
+		// Disallow everything except left and right
 		_up =  false;
 		_down =  false;
 		_shoot =  false;
 		_shoot_hold = false;
 		_jump = false;
-		//x = oCamera.right + 300;
-		//y = -10;
+
 		yspeed = 0;
-		xspeed = sign(_right - _left);
+		xspeed = sign(_right - _left) * walkspeed;
+		dir = sign(xspeed) != 0 ? sign(xspeed) : dir;
+		//PlayerMove()
 		row_der = 0;
 		row = 0;
 		PlayerSprite();
 		xspeed = 0;
-		//PlayerMove();
+		//;
 		break;
 	
 	case UniversalStates.DEAD:
@@ -81,61 +87,6 @@ switch (state)
 		{
 			death_alpha -= 0.02;
 		}
-		/*
-		if (name == "Robo")
-		{
-			var _flag = true;
-			for (var i = 1; i < 6; ++i)
-			{
-				if (instance_exists(body_parts[i]) && body_parts[i].image_alpha > 0)
-				{
-					_flag = false;
-					break;
-				}
-			}
-			
-			if (_flag)
-			{
-			
-				for (var i = 1; i < 6; ++i)  instance_destroy(body_parts[i]);
-				
-				var _flag_dead = true;
-				if (instance_number(object_index) > 1)  with (oPlayer) 
-				{ 
-					if (id != other.id) 
-					{ 
-						if (state != UniversalStates.DEAD)  
-						{
-							_flag_dead = false; 
-							break;
-						}
-					} 
-				} 
-				else  LevelEnd();
-				if (_flag_dead)  LevelEnd();
-				else             instance_destroy();
-			}
-		}
-	
-		else if (AnimationEnd()) 
-		{ 
-			var _flag_dead = true;
-			if (instance_number(object_index) > 1)  with (oPlayer) 
-			{ 
-				if (id != other.id) 
-				{ 
-					if (state != UniversalStates.DEAD)  
-					{
-						_flag_dead = false; 
-						break;
-					}
-				} 
-			} 
-			else  LevelEnd();
-			if (_flag_dead)  LevelEnd();
-			else             instance_destroy();
-		}
-		*/
 		_left =  false;
 		_right =  false;
 		_up =  false;
@@ -143,6 +94,9 @@ switch (state)
 		_shoot =  false;
 		_jump = false;
 		_shoot_hold = false;
+		
+		PlayerMove();
+		PlayerSprite();
 		break;
 	
 	case PlayerStates.NON_CONTROL:
@@ -170,21 +124,12 @@ switch (state)
 			if (_shoot_hold && instance_exists(gun))  gun.shoot_hold = true;
 		}
 		PlayerSprite();
+		PlayerCheckDying();
 		break;
 	
 	default:
 		Raise("Invalid player state\n");
 		break;
-}
-
-if (state != PlayerStates.NON_CONTROL)
-{
-	if (state != PlayerStates.TRAPPED) 
-	{
-		PlayerMove();
-		PlayerSprite();
-	}
-	PlayerCheckDying();
 }
 
 if (damaged)
@@ -196,8 +141,7 @@ if (damaged)
 
 event_inherited();
 
-//if (state == UniversalStates.DEAD && name == "Robo")  image_alpha = 0;
-
+// Debug stuff
 if (global.DEBUG)
 {
 	if (keyboard_check_pressed(ord("G")))
