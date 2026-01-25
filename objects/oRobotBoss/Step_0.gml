@@ -218,7 +218,6 @@ switch (state)
 			global.score += 100;
 			oRoomControl.gamestate = GameState.LOOT;
 			oRoomControl.roomspeed += roomspeed_acc;
-			GetStandartRoomProperties();
 			instance_destroy(oRobotSpawner);	
 			state = UniversalStates.DEAD;
 			

@@ -18,6 +18,7 @@ if (state == UniversalStates.DEAD && !loot_dropped)
 			profile = passive_items_profiles[loot_profile_id];
 		}
 	}
-	
+	GetStandartRoomProperties();
+	ChangeBackgrounds()
 	loot_dropped = true;
 }

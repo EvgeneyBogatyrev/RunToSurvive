@@ -57,6 +57,9 @@ if ((timer == 0) && oRoomControl.gamestate == GameState.NORMAL)
 			_boss_summoned = false;
 			break;
 	}
+	
+	ChangeBackgrounds();
+	
 	last_boss = _new_boss;
 	
 	timer = int64(max_timer * random_range(0.95, 1.05));

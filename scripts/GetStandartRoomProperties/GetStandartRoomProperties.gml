@@ -19,7 +19,8 @@ function GetStandartRoomProperties() {
 	//Background
 	ds_map_add(oRoomControl.room_properties, "BackgroundFront", "bPineForest");
 	ds_map_add(oRoomControl.room_properties, "BackgroundBack", "bMountains");
-
+	ds_map_add(oRoomControl.room_properties, "BackgroundLayers", [bPineForest, bMountains]);
+	
 	//Obstacles
 	ds_map_add(oRoomControl.room_properties, "ForbiddenObstacles", [0, 0, 0, 0, 0, 0]);
 

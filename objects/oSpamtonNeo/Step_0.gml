@@ -195,7 +195,6 @@ switch (state)
 		y_to_go = -100;
 		draw_y = lerp(draw_y, y_to_go, 0.1);
 		oRoomControl.gamestate = GameState.LOOT;
-		GetStandartRoomProperties();
 		instance_destroy();	
 		break;
 		

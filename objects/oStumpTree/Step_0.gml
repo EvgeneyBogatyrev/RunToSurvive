@@ -37,7 +37,6 @@ switch (state)
 		{
 			global.score += 125;
 			oRoomControl.gamestate = GameState.LOOT;
-			GetStandartRoomProperties();
 			ShakeScreen(12, 120);
 			ResumeRoom();
 			with (oCamera)  follow = oPlayer;

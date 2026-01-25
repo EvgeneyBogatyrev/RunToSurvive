@@ -226,7 +226,6 @@ switch (state)
 		}
 		global.score += 100;
 		oRoomControl.gamestate = GameState.LOOT;
-		GetStandartRoomProperties();
 		
 		var _counter = 0;
 		for (var i = 0; i < 4; ++i)

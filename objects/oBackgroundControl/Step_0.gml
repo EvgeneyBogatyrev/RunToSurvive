@@ -1,5 +1,28 @@
 ///description Move layers.
 
+Parallax(layers);
+
+if fade
+{
+	Parallax(new_layers);
+	var _done_fading = FadeLayers(layers, new_layers, fade_speed);
+	if _done_fading
+	{
+		fade = false;
+		for (var _i = 0; _i < array_length(layers); _i++)
+		{
+			layer_destroy(layers[_i]);
+		}
+	
+		layers = new_layers;
+		new_layers = [];
+	}
+}
+
+position += oRoomControl.roomspeed * (GetScale(0) - 0.2);
+
+/*
+
 if layer_exists(oRoomControl.room_properties[? "BackgroundFront"])  layer_x(oRoomControl.room_properties[? "BackgroundFront"], position);	
 if layer_exists(oRoomControl.room_properties[? "BackgroundBack"])   layer_x(oRoomControl.room_properties[? "BackgroundBack"], position / 2);
 
@@ -35,4 +58,3 @@ if (oRoomControl.room_properties[? "BackgroundBack"] != cur_back_layer)
 	if (layer_background_get_alpha(_back_from) == 0)  cur_back_layer = oRoomControl.room_properties[? "BackgroundBack"];
 }
 
-position += oRoomControl.roomspeed * (GetScale(0) - 0.2);

@@ -15,6 +15,8 @@ function SummonSpamton(){
 	ds_map_replace(oRoomControl.room_properties, "BackgroundBack", "bSpamCity");
 	ds_map_replace(oRoomControl.room_properties, "BackgroundFront", "bGraveyardTrees");
 	
+	ds_map_replace(oRoomControl.room_properties, "BackgroundLayers", [bSpamCity])
+	
 	//Forbidden
 	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 1, 1, 0]);
 

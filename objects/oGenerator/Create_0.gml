@@ -33,7 +33,11 @@ ground[0] = 600;
 ground[1] = ground[0] + 4/5 * gap;
 ground[2] = ground[1] + gap;
 
+oBackgroundControl.layers = NewBackround(GetCurrrentBgSprites(), true)
+
+
 obstacles = array_create(3, 0);
+
 
 for (var j = 0; j < 3; ++j) 
 {

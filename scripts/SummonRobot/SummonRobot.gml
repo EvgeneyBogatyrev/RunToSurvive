@@ -6,6 +6,8 @@ function SummonRobot() {
 
 	ds_map_replace(oRoomControl.room_properties, "BackgroundFront", "bGraveyardTrees");
 	//ds_map_replace(oRoomControl.room_properties, "BackgroundBack", "bGraveyard");
+	
+	ds_map_replace(oRoomControl.room_properties, "BackgroundLayers", [sEmpty, bMountains]);
 
 	//Forbidden
 	ds_map_replace(oRoomControl.room_properties, "ForbiddenObstacles", [0, 1, 1, 1, 1, 0]);
