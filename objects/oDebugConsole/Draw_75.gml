@@ -1,3 +1,13 @@
+if (!enabled && perf_check)
+{
+	draw_set_colour(c_black);
+	draw_set_alpha(1);
+	draw_set_halign(fa_right);
+	draw_text(window_get_width() - 200, 200, "Instances: " + string(instance_count));
+	draw_set_halign(fa_left);
+}
+
+
 if !enabled return;
 
 draw_set_color(c_black);

@@ -1,5 +1,7 @@
 enabled = false;
 
+perf_check = false;
+
 history = ds_list_create();
 cmd_history = ds_list_create();
 
@@ -91,10 +93,14 @@ commands =
 	},
 	
 	"perf" : function(_args) {
-		show_debug_overlay(	! is_debug_overlay_open())
+		oDebugConsole.perf_check = !oDebugConsole.perf_check
+		//show_debug_overlay(perf_check)
 	},
 	
-	"bb" : function(_args) { array_insert(oBossControlQuest.bosses_array, 0, _args[0]); oBossControlQuest.timer = 0; },
+	"bb" : function(_args) {
+		array_insert(oBossControlQuest.bosses_array, 0, _args[0]);
+		oBossControlQuest.timer = 0;
+	},
 	"killboss" : function(_args)
 	{
 		with (oBossParent)

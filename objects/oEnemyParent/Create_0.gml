@@ -8,6 +8,8 @@ can_be_knockbacked = false;
 
 hit_flash = 0;
 
+is_invincible = false;
+
 // Fire
 on_fire = 0;
 fire_x_shift = 0;

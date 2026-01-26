@@ -30,7 +30,6 @@ else
 			y = host.yprevious - 22 * host.scale;
 			image_index = 1;
 			enabled = true;
-			Print(x, y, host.x, host.y);
 			break;
 		case Gun.STEAMPUNK_HAMMER:
 		case Gun.KICKS_N_PUNCHES:
