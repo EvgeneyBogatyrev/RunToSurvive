@@ -54,8 +54,6 @@ function pull_players(smooth)
 				_player_object.y = y + sprite_height / 2;
 			}
 			
-			Print(_distance_to_player, close_distance);
-			
 			if (_distance_to_player >= close_distance)
 			{
 				_change_state = false;	

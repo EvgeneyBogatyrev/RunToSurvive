@@ -1,9 +1,9 @@
 /// @description
 event_inherited();
 
-if (x > oCamera.right && state != PlayerStates.TRAPPED)
+if (x > oCamera.right + CAMERA_BOUNDS && state != PlayerStates.TRAPPED)
 {
-	x = oCamera.right;	
+	x = oCamera.right + CAMERA_BOUNDS;	
 }
 
 if (item_picked_up)

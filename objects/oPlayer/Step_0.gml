@@ -15,6 +15,7 @@ switch (state)
 {
 	case PlayerStates.NORMAL:
 		PlayerControl();
+		
 		if (force_down > 0)
 		{
 			// Tumble from GunMan Drone
@@ -42,6 +43,7 @@ switch (state)
 		{
 			state = PlayerStates.NORMAL;
 		}
+		break;
 		
 		
 	case PlayerStates.TRAPPED:
@@ -58,7 +60,6 @@ switch (state)
 		dir = sign(xspeed) != 0 ? sign(xspeed) : dir;
 		//PlayerMove()
 		row_der = 0;
-		row = 0;
 		PlayerSprite();
 		xspeed = 0;
 		//;

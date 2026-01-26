@@ -2,7 +2,8 @@ if (!created_reward)
 {
 	var _prev_index = [];
 	created_reward = true;
-	for (var i = 0; i < stand_count; i++) {
+	for (var i = 0; i < stand_count; i++) 
+	{
 		item_stands[i] = Create(
 			x + (i - index_shift) * stand_spacing,
 			y,
@@ -10,7 +11,8 @@ if (!created_reward)
 			0
 		);
     
-		with (item_stands[i]) {
+		with (item_stands[i]) 
+		{
 			var _all_items = GetAllDropItems();
 			while (true)
 			{
@@ -62,20 +64,61 @@ if (!created_reward)
 	
 }
 
-if (x < oCamera.x)
+if (x < oCamera.x && !stopped_room)
 {
 	StopRoom();
 	stopped_room = true;
 	oCamera.follow = id;
 }
 
-if (x < oCamera.left - CAMERA_OFFSET || all_done())
+// All selected/declined rewards
+if (all_done())
 {
-	ResumeRoom();
-	oBossControlQuest.timer = 3 * 60;
-	oRoomControl.gamestate = GameState.NORMAL;
-	oCamera.follow = oPlayer;
-	instance_destroy(id);
+	
+	if (instance_exists(oPlayer))
+	{
+		ResumeRoom();
+		oBossControlQuest.timer = 3 * 60;
+		oRoomControl.gamestate = GameState.NORMAL;
+		oCamera.follow = oPlayer;
+		
+		for (var _i = 0; _i < instance_number(oPlayer); ++_i)
+		{
+			var _current_player = instance_find(oPlayer, _i);
+			if (instance_exists(_current_player) && _current_player.state != UniversalStates.DEAD)
+			{
+				_current_player.state = PlayerStates.NORMAL;
+			}
+		}
+		
+		instance_destroy(id);
+		//exit;
+	}
+	else
+	{
+		oCamera.follow = oCamera;
+	}
+	
 }
+else
+{
+	// Decline reward
+	for (var _i = 0; _i < instance_number(oPlayer); ++_i)
+	{
+		var _current_player = instance_find(oPlayer, _i);
+		if (instance_exists(_current_player) && _current_player.state == PlayerStates.NORMAL)
+		{
+			if (_current_player.x > oCamera.right + CAMERA_BOUNDS / 2 && player2reward[_current_player] == false)
+			{
+				_current_player.state = PlayerStates.TRAPPED;
+				_current_player.y -= 10;
+				player2reward[_current_player] = true;
+			}
+		}
+	}
+}
+
+
+
 
 event_inherited();
