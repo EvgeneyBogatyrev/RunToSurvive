@@ -58,7 +58,7 @@ function PlayerMove() {
 	}
 
 
-	if (x <= oCamera.right && x + xspeed * scale > oCamera.right)  xspeed = 0;
+	if (x <= oCamera.right + CAMERA_BOUNDS && x + xspeed * scale > oCamera.right + CAMERA_BOUNDS)  xspeed = 0;
 	x += xspeed * scale;  // Horizontal movement
 
 

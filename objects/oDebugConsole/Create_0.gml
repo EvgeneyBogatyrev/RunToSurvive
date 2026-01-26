@@ -102,7 +102,14 @@ commands =
 			hp = 0;
 			cum_hp = 0;
 		}
-	}
+	},
+	"rew" : function(_args)
+	{
+		with (oQuests)
+		{
+			max_kills = 0;
+		}
+	},
 }
 
 
