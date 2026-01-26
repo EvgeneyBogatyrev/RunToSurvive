@@ -30,3 +30,4 @@ u_blur_vector = shader_get_uniform(shdExtra, "blur_vector")
 //application_surface_draw_enable(false);
 
 
+instance_create_layer(0, 0, layer, oBossHealthbar);

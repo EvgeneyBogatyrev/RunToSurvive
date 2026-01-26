@@ -12,3 +12,5 @@ healthbar_alpha = 0;
 loot_profile_ids = [-1];
 loot_dropped = false;
 can_be_knockbacked = false;
+
+oBossHealthbar.boss = id;

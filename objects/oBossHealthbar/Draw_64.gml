@@ -1,12 +1,42 @@
+var _health_percentage;
+if (instance_exists(boss))
+{
+	_health_percentage = hp_visual / boss.cum_hp_max;
+}
+else
+{
+	_health_percentage = 0;
+}
 
-if (state != BossHBStates.HIDDEN) exit;
+if (state == BossHBStates.HIDDEN) exit;
 
 
-//draw_rectangle()
 
-draw_sprite(sBossHealthBar, 0, display_get_gui_width() / 2, display_get_gui_height() - y_offset);
+var _sprite = sBossHealthBar;
+
+var _sprite_width = sprite_get_width(_sprite);
+var _sprite_height = sprite_get_height(_sprite);
+
+var _border_width = 8;
+
+var _x = display_get_gui_width() / 2;
+var _y = display_get_gui_height() - y_offset;
+
+var _top = _y + _border_width;
+var _bottom = _y + _sprite_height - _border_width;
+
+var _left = _x - _sprite_width/2 + _border_width;
+var _right = _left + ((_sprite_width - _border_width * 2) * _health_percentage)
 
 
+
+draw_set_colour(c_red);
+
+draw_rectangle(_left, _top, _right, _bottom, false);
+
+draw_set_colour(c_white);
+
+draw_sprite(sBossHealthBar, 0, _x, _y);
 
 /*
 
