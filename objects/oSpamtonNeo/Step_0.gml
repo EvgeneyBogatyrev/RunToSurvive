@@ -6,6 +6,7 @@
 switch (state)
 {
 	case UniversalStates.INTRO:
+		is_invincible = true;
 		draw_x = lerp(draw_x, oCamera.right - CAMERA_BOUNDS / 3, 0.03);
 			
 		y_to_go = oGenerator.ground[row] - 100 * GetScale(row);
@@ -18,6 +19,7 @@ switch (state)
 		intro_timer--;
 		if (intro_timer == 0)
 		{
+			is_invincible = false;
 			state = choose(SpamtonStates.PIPIS, SpamtonStates.HEART);	
 		}
 		

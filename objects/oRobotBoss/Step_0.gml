@@ -21,13 +21,14 @@ switch (state)
 		y = ystart + sin((get_timer() - phase) / 250000) * magnitude;
 		x = lerp(x, oCamera.center + sin((get_timer() - phase) / 500000) * magnitude, _acc);
 		xspeed = 0.001;
-	
+		is_invincible = true;
 		hp = maxhp;
 		cum_hp = cum_hp_max;
 		
 		intro_timer--;
 		if (intro_timer == 0)
 		{
+			is_invincible = false;
 			state = RobotBossStates.IDLE;	
 			Create(x, y, oRobotSpawner, 0);
 		}
@@ -40,7 +41,8 @@ switch (state)
 		xspeed = 0.001;
 		
 		if (hp <= 0)
-		{
+		{	
+			is_invincible = true;
 			ShakeScreen(5, 30);
 			hp = robot_hp;
 			state = RobotBossStates.WAIT_FOR_ROBOT;
@@ -89,6 +91,7 @@ switch (state)
 				image_angle = chosen_robot.image_angle;
 				instance_destroy(chosen_robot);
 				state = RobotBossStates.ROBOT;
+				is_invincible = false;
 			}
 		}
 		else
@@ -152,6 +155,7 @@ switch (state)
 			ShakeScreen(20, 50);
 			hp = ship_hp;
 			state = RobotBossStates.SHIP;
+			is_invincible = true;
 		}	
 		
 		var _desired_image_angle = -30 * sign(xspeed);
@@ -170,6 +174,7 @@ switch (state)
 			
 			if (x < oCamera.left - CAMERA_OFFSET)
 			{
+				is_invincible = false;
 				sprite_index = sRobotShip;
 				row = 1;
 				scale = GetScale(row);

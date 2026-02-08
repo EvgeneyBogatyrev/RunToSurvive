@@ -13,8 +13,10 @@ switch (state)
 		cum_hp = cum_hp_max;
 		
 		intro_timer--;
+		is_invincible = true;
 		if (intro_timer == 0)
 		{
+			is_invincible = false;
 			state = WallOfFleshStates.BATTLE;	
 		}
 		x = oWallOfFleshMouth.x;

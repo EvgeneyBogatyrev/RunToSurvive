@@ -3,6 +3,7 @@
 switch (state)
 {
 	case UniversalStates.INTRO:
+		is_invincible = true;
 		y = ystart + sin((get_timer() - phase) / 250000) * magnitude;
 		x = lerp(x, oCamera.right - CAMERA_BOUNDS / 3, acceleration_mage);
 		xspeed = -0.001;
@@ -15,6 +16,7 @@ switch (state)
 		{
 			state = DelverStates.MAGE;	
 			attack_timer = 5;
+			is_invincible = false;
 		}
 		
 		break;
@@ -85,6 +87,7 @@ switch (state)
 		if (hp <= 0)
 		{
 			state = DelverStates.INSECT;
+			is_invincible = true;
 			image_index = 0;
 			sprite_index = sDelverTransform;
 			maxhp = insect_hp;
@@ -107,6 +110,7 @@ switch (state)
 				ShakeScreen(10, 60);
 				image_index = 0;
 				sprite_index = sDelverInsect;
+				is_invincible = false;
 				hp = maxhp;
 			}	
 		}

@@ -32,6 +32,7 @@ if (opponent == undefined || !instance_exists(opponent) || opponent.state == Uni
 switch (state)
 {
 	case UniversalStates.INTRO:
+		is_invincible = true;
 		//scale = GetScale(row);
 		if (!area_created && abs(x - oCamera.x) < pixel_x_create_station_offset)
 		{
@@ -65,6 +66,7 @@ switch (state)
 		intro_timer--;
 		if (intro_timer <= 0 && oRoomControl.roomspeed == 0 && drone_animation != undefined && !instance_exists(drone_animation))
 		{
+			is_invincible = false;
 			state = GunManStates.FIGHT;
 		}
 		

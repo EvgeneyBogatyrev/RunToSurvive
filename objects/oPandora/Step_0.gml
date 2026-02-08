@@ -5,7 +5,7 @@ switch (state)
 	case UniversalStates.INTRO:
 		
 		PandoraBoxMovement(ystart);
-		
+		is_invincible = true;
 		maxhp = box_hp;
 		hp = maxhp;
 		cum_hp = cum_hp_max;
@@ -30,6 +30,7 @@ switch (state)
 		
 		if (AnimationEnd() && sprite_index == sPandoraBoxSpawn) 
 		{
+			is_invincible = false;
 			state = PandoraStates.BOX;
 			sprite_index = sPandoraBoxBlink;
 		}

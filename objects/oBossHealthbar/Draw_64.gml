@@ -1,7 +1,9 @@
 var _health_percentage;
+var _bar_colour = c_red;
 if (instance_exists(boss))
 {
 	_health_percentage = hp_visual / boss.cum_hp_max;
+	if boss.is_invincible _bar_colour = c_gray;
 }
 else
 {
@@ -29,8 +31,7 @@ var _left = _x - _sprite_width/2 + _border_width;
 var _right = _left + ((_sprite_width - _border_width * 2) * _health_percentage)
 
 
-
-draw_set_colour(c_red);
+draw_set_colour(_bar_colour);
 
 draw_rectangle(_left, _top, _right, _bottom, false);
 
