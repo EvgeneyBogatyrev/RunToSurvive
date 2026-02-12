@@ -1,25 +1,24 @@
 // Inherit the parent event
-var _player = noone;
-for (var i = 0; i < instance_number(oPlayer); ++i)
+
+
+
+if (last_inflictor != undefined && instance_exists(last_inflictor) && last_inflictor.state != UniversalStates.DEAD && state == UniversalStates.DEAD && !on_kill_events_done)
 {
-	var _tmp = instance_find(oPlayer, i);
-	if (_tmp.pocket[1] == REFRACTOR_INUMBER)
+	on_kill_events_done = true;
+	
+	
+	var _events = last_inflictor.onKillEvent;
+	Print(len(_events));
+	for (var i = 0; i < array_length(_events); i++)
 	{
-		_player = _tmp;
-		break;
+		_events[i](id, last_inflictor);
 	}
-}
-if (_player != noone && hp <= 0 && _player.pocket[1] == REFRACTOR_INUMBER && !refreshed)
-{
-	_player.hp += 5;
-	_player.bullets += 3;
-	refreshed = true;
 }
 
 if (wildvines_timer > 0)
 {
 	
-	if (wildvines_timer % 60 == 0)
+	if (wildvines_timer % game_get_speed(gamespeed_fps) == 0)
 	{
 		hp -= 3;
 		if object_is_ancestor(object_index, oBossParent)
@@ -49,7 +48,7 @@ event_inherited();
 
 if (on_fire > 0)
 {
-	if (on_fire % 60 == 0)
+	if (on_fire % game_get_speed(gamespeed_fps) == 0)
 	{
 		hp -= 1;
 		if object_is_ancestor(object_index, oBossParent)

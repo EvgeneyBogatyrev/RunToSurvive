@@ -101,6 +101,8 @@ if (CheckCollisions(x + xspeed, y + yspeed, oEnemyParent, row))
 		_victim.on_fire = on_fire;
 		//_victim.wildvines_timer = 180;
 		_victim.hp -= damage;
+		_victim.last_inflictor = host;
+		
 		if object_is_ancestor(_victim.object_index, oBossParent)
 		{
 			_victim.cum_hp -= damage;	
@@ -135,26 +137,6 @@ if (CheckCollisions(x + xspeed, y + yspeed, oSolidParent, row) || CheckCollision
 	}
 
 	instance_destroy();
-}
-
-if (place_meeting(x + xspeed, y + yspeed, oDelver) && oDelver.state == DelverStates.INSECT)
-{
-	repeat (abs(xspeed))
-	{
-		if (place_meeting(x + sign(xspeed), y + sign(yspeed) * yspeed / xspeed, oDelver))  break;
-		
-		x += sign(xspeed);		
-		y += sign(yspeed) * yspeed / xspeed;
-		
-	}
-	oDelver.on_fire = on_fire;
-	oDelver.hp -= damage;
-	oDelver.cum_hp -= damage;
-	oDelver.hit_flash = 3;
-	display = true;
-	
-	hit_an_enemy = true;
-	instance_destroy();	
 }
 
 if (instance_exists(host) && host.object_index != oPlayer)

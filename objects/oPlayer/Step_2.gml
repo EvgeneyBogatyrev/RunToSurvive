@@ -6,22 +6,6 @@ if (x > oCamera.right + CAMERA_BOUNDS && state != PlayerStates.TRAPPED)
 	x = oCamera.right + CAMERA_BOUNDS;	
 }
 
-if (item_picked_up)
-{
-	onHurtEvent = GetItemActions(id, "on_hurt");	
-	onJumpEvent = GetItemActions(id, "on_jump");
-
-	
-	var _item = inventory[| ds_list_size(inventory) - 1];
-	var _action = struct_exists(_item, "on_pickup") ? struct_get(_item, "on_pickup") : undefined;
-	
-	if (_action != undefined)
-	{
-		_action(id);
-	}
-	
-	item_picked_up = false;
-}
 
 if (should_update_orbitals)
 {

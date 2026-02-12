@@ -1,7 +1,8 @@
 function Scale() {
 
 	var _scale = scale;
-	image_blend = make_color_hsv(0, 0, abs(_scale) * (255 / (SCALE_TWO + 0.05)));
+	var _hue = colour_get_hue(c_blue);
+	image_blend = make_color_hsv(_hue, 0, abs(_scale) * (255 / (SCALE_TWO + 0.05)));
 	switch (sprite_index)
 	{
 		case sDryTree:

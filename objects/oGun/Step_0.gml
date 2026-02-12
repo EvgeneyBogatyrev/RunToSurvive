@@ -105,7 +105,7 @@ switch(current_gun)
 		
 		cost = GetCost(current_gun);
 	
-		damage = 1 + host.drill_damage;
+		damage = 1 + host.melee_damage;
 		
 		switch (hammer_state)
 		{
@@ -327,7 +327,7 @@ switch(current_gun)
 		sprite_index = sDrill;
 		image_speed = 1;
 		
-		damage = host.drill_damage;
+		damage = host.melee_damage;
 		
 		switch (drill_state)
 		{
@@ -688,7 +688,7 @@ switch(current_gun)
 		sprite_index = sShield;
 		image_speed = 1;
 		
-		damage = 1 + host.drill_damage;
+		damage = 1 + host.melee_damage;
 	
 		
 		switch (shield_state)

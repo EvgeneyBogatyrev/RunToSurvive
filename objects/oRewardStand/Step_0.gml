@@ -53,7 +53,7 @@ for (var _player_count = 0; _player_count < instance_number(oPlayer); ++_player_
 		}
 		else if (item_index == HAMMER_TIME_INUMBER)
 		{
-			host.base_drill_damage += 1;
+			host.base_melee_damage += 1;
 			oReward.player2reward[host] = true;
 			instance_destroy();
 			exit;

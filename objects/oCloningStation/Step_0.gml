@@ -30,13 +30,8 @@ if (CheckCollisions(x, y, oPlayer, row) && image_index == 0 && sprite_index == s
 			//if (!ds_list_empty(other.resurected_player.inventory))
 			//	other.resurected_player.item_picked_up = true;
 			
-			_respawned_player.onHurtEvent = GetItemActions(_respawned_player, "on_hurt");	
-			_respawned_player.onJumpEvent = GetItemActions(_respawned_player, "on_jump");
-			var _pickup_event = GetItemActions(_respawned_player, "on_pickup");
-			for (var i = 0; i < array_length(_pickup_event); i++)
-			{
-				_pickup_event[i](_respawned_player);
-			}
+			
+			
 			
 			for (var i = 0; i < revival_number - 1; ++i)
 			{

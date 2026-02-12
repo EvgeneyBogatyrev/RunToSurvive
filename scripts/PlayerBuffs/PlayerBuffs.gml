@@ -2,8 +2,12 @@ function PlayerBuffs() {
 	jumpspeed = 12;
 	protected = false;
 	walkspeed = 8;
-	drill_damage = base_drill_damage;
-
+	melee_damage = base_melee_damage;
+	
+	double_jump = false;
+	maxbullets = 20;
+	damageBoost = 0;
+	
 	switch (pocket[1])
 	{
 		case ROCKETBOOTS_INUMBER:
@@ -38,7 +42,7 @@ function PlayerBuffs() {
 			break;
 			
 		case CRUSH_INUMBER:
-			drill_damage = base_drill_damage + irandom_range(1, 3);
+			melee_damage += irandom_range(1, 3);
 			break;
 	
 		default:
@@ -46,9 +50,16 @@ function PlayerBuffs() {
 	}	
 	
 	
-	for (var _i = 0; _i < ds_list_size(inventory); ++_i)
+	onHurtEvent = GetItemActions(id, "on_hurt");	
+	onJumpEvent = GetItemActions(id, "on_jump");
+	onBulletHitEvent  = GetItemActions(id, "on_hit");
+	onShootEvent = GetItemActions(id, "on_shoot");
+	onKillEvent = GetItemActions(id, "on_kill");
+
+	var _pickup_event = GetItemActions(id, "on_pickup");
+	for (var i = 0; i < array_length(_pickup_event); i++)
 	{
-		var _item_index = ds_list_find_value(inventory, _i);
+		_pickup_event[i](id);
 	}
 	
 	if (damage_to_restore > 0)

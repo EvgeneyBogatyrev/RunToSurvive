@@ -40,7 +40,7 @@ function Shoot(_projectile, _sprite, _damage, _speed, _recoil, _direction=undefi
 		dir = host.dir;
 		if (host.object_index == oPlayer) 
 		{
-			hit_events = GetItemActions(host, "on_hit");
+			hit_events = host.onBulletHitEvent
 		}
 		else
 		{

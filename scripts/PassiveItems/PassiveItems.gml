@@ -19,6 +19,32 @@ function GiveItemToPlayer(_player, _item)
 function GetItemActions(_host, _event)
 {
 	var _actions = [];
+	
+	var _item_icon = pocket[1];
+	
+	var _trink = undefined
+	var _trink_keys = struct_get_names(trinkets_profiles);
+	for (var _i = 0; _i < len(_trink_keys); _i++)
+	{
+		var _key = _trink_keys[_i];
+		var _value = struct_exists(trinkets_profiles, _key) ? struct_get(trinkets_profiles, _key) : undefined;
+		
+		if _value != undefined
+		{
+			if (_value.icon_index == _item_icon)
+			{
+				var _action = struct_exists(_value, _event) ? struct_get(_value, _event) : undefined;
+		
+				if (_action != undefined)
+				{
+					_actions[array_length(_actions)] = _action;
+				}
+				break;
+			}
+		}
+		
+	}
+	
 	for (var _i = 0; _i < ds_list_size(_host.inventory); _i++)
 	{
 		var _item = ds_list_find_value(_host.inventory, _i);
@@ -33,18 +59,120 @@ function GetItemActions(_host, _event)
 	return _actions;
 }
 
+globalvar trinkets_profiles;
+
+trinkets_profiles =
+{
+	rocket_boots : 
+	{
+		name : "Rocket boots",
+		description : "Jump height increases.",
+		icon_index : ROCKETBOOTS_INUMBER,
+		on_pickup : function(_host)
+		{
+			_host.jump *= 1.2;
+		}
+	},
+	lightning_boots :
+	{
+		item_name : "Lightninig boots",
+		description : "Run speed increases.",
+		icon_index : LIGHTNINGBOOTS_INUMBER,
+		on_pickup : function(_host)
+		{
+			walkspeed = 10;
+		}
+	},
+	forcefield :
+	{	
+		item_name : "Force field headphones",
+		description : "Prevents the next hit you take.",
+		icon_index : FORCEFIELD_INUMBER,
+		on_pickup : function(_host)
+		{
+			_host.protected = true;
+		}
+	},
+	energy_fist :
+	{
+		item_name : "Energy fist",
+		description : "Increases energy gain from Charging Stations.",
+		icon_index : ENERGYFIST_INUMBER,
+		on_pickup : function(_host)
+		{
+			//??
+		}
+	},
+	second_heart :
+	{
+		item_name : "Second heart",
+		description : "Your healing is increased by 50%.",
+		icon_index : DOUBLEHEART_INUMBER,
+		on_pickup : function(_host)
+		{
+			//??
+		}
+	},
+	random_melee :
+	{
+		item_name : "Crush",
+		description : "Melee weapon deals additional 0-2 damage.",
+		icon_index : CRUSH_INUMBER,
+		on_pickup : function(_host)
+		{
+			_host.melee_damage += irandom_range(1, 3);
+		}
+	},
+	extra_rocket : 
+	{
+		item_name : "Rocket Drone",
+		description : "While shooting you can fire an aditional missile.",
+		icon_index : DRONE_INUMBER,
+		on_shoot : function(_host)
+		{
+			var _rnd_val = random_range(0, 100);
+			if (_rnd_val < 33)
+			{	
+				Shoot(oAimProjectile, sRocket, 1 + host.damageBoost, 20, 8);
+			}
+		}
+
+	},
+	burn_bullets : 
+	{
+		item_name : "Incendium",
+		description : "Your bullets causes burn.",
+		icon_index : BURN_INUMBER,
+		on_hit : function(_host, _victim)
+		{
+			//??
+		}
+	},
+	refresher : 
+	{
+		item_name : "Refresher",
+		description : "Whenever you kill an enemy, restore some HP and Energy.",
+		icon_index : REFRACTOR_INUMBER,
+		on_kill : function(_host, _player)
+		{
+			_player.hp += 5;
+			_player.bullets += 3;
+		}
+	}
+}
+
 globalvar passive_items_profiles;
 passive_items_profiles = 
 [
 	{
 		name : "Lightning Strike",
 		icon_index : DELVER_LOOT_INUMBER,
-		on_hit : function(_host, _x_offset = 0)
+		on_hit : function(_host, _victim)
 		{
 			var _chance = random(1);
 			if (_chance < 0.2)
 			{
-				with(Create(_host.x + _x_offset, _host.y, oThunder, _host.row))
+				with(Create(_host.x, _host.y, oThunder, _host.row))
 				{
 					host = _host.host;
 				}
@@ -111,11 +239,13 @@ passive_items_profiles =
 		},
 		description : "Damage from your bullets is increased by 1."
 	},
+	
 	{
 		name : "Elite weapon",
 		icon_index : GUNMAN_LOOT_INUMBER,
 		on_pickup : function(_host)
 		{
+			/*
 			var _guns = GetEliteGuns();			
 			var _gun_images = GetEliteGunsImages();
 
@@ -128,6 +258,8 @@ passive_items_profiles =
 			_host.pocket[0] = _new_gun_image;
 			_host.bullets = _host.maxbullets;
 			_host.shoot_hold = false;
+			*/
+			
 		},
 		description : "Equip a random fully-charged unique weapon when you pick this up or revive."
 	},
@@ -136,7 +268,7 @@ passive_items_profiles =
 		icon_index : WALL_LOOT_INUMBER,
 		on_pickup : function(_host)
 		{
-			_host.base_drill_damage += 1;	
+			_host.melee_damage += 1;	
 		},
 		description : "Damage from your meele attecks is increased by 1."
 	},

@@ -10,6 +10,9 @@ hit_flash = 0;
 
 is_invincible = false;
 
+last_inflictor = undefined;
+on_kill_events_done = false;
+
 // Fire
 on_fire = 0;
 fire_x_shift = 0;

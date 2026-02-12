@@ -43,8 +43,8 @@ death_alpha = 1;
 maxbullets = 20;
 shown_bullets = maxbullets;
 bullets = maxbullets;
-drill_damage = 1;
-base_drill_damage = 1;
+melee_damage = 1;
+base_melee_damage = 1;
 
 state = PlayerStates.NORMAL;
 
@@ -111,9 +111,13 @@ second_jump = true;
 
 //Events
 
-onHitEvent = []; //our damage!!!!! to monsters
+onBulletHitEvent = []; //our damage!!!!! to monsters
+onMeleeHitEvent = []; //our damage!!!!! to monsters!! but with melee
 onHurtEvent = [];
 onJumpEvent = [];
+onShootEvent = [];
+onKillEvent = [];
+
 
 damage_to_restore = 0;
 

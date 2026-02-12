@@ -37,4 +37,4 @@ switch state
 	break;
 }
 
-Print(state, boss)
+//Print(state, boss)
