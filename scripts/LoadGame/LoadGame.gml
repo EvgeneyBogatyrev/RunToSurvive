@@ -4,6 +4,7 @@ function LoadGame() {
 		save_map = ds_map_create();
 		ds_map_add(save_map, "Resolution_width", 1024);
 		ds_map_add(save_map, "Resolution_height", 768);
+		ds_map_add(save_map, "Fullscreen", global.fullscreeen);
 		ds_map_add(save_map, "Music gain", global.music_gain);
 		ds_map_add(save_map, "Sound gain", global.sound_gain);
 		ds_map_add(save_map, "Character", global.character);		
@@ -33,6 +34,7 @@ function LoadGame() {
 		save_map = ds_map_secure_load(global.filename);
 		global.display_width = ds_map_find_value(save_map, "Resolution_width");
 		global.display_height = ds_map_find_value(save_map, "Resolution_height");
+		global.fullscreeen = ds_map_find_value(save_map, "Fullscreen");
 		global.music_gain = ds_map_find_value(save_map, "Music gain");
 		global.sound_gain = ds_map_find_value(save_map, "Sound gain");
 		global.character = ds_map_find_value(save_map, "Character");		

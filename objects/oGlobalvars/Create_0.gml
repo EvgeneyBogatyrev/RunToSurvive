@@ -23,6 +23,8 @@ global.sound_gain = 0.5;
 global.display_width = 1280;
 global.display_height = 720;
 
+global.fullscreeen = false;
+
 global.score = 0;
 global.highscore = 0;
 global.difficulty = 1;
@@ -38,6 +40,8 @@ display_set_gui_size(global.display_width, global.display_height);
 window_set_size(global.display_width, global.display_height);
 surface_resize(application_surface, global.display_width, global.display_height);
 
+window_enable_borderless_fullscreen(global.fullscreeen);
+window_set_fullscreen(global.fullscreeen);
 
 globalvar grav;
 grav = -0.7;

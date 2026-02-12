@@ -2,8 +2,8 @@
 
 if (!loaded)  exit;
 
-audio_group_set_gain(BackGroundMusic, global.music_gain, 1);
-audio_group_set_gain(SoundEffects, global.sound_gain/2, 1);
+audio_group_set_gain(BackGroundMusic, global.music_gain);
+audio_group_set_gain(SoundEffects, global.sound_gain/2);
 
 
 if (!audio_group_is_loaded(SoundEffects) || !audio_group_is_loaded(BackGroundMusic))  music_set = false;

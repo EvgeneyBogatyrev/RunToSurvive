@@ -11,6 +11,7 @@ function SaveGame() {
 	ds_map_replace(save_map, "Sound gain", global.sound_gain);
 	ds_map_replace(save_map, "Resolution_width", global.display_width);
 	ds_map_replace(save_map, "Resolution_height", global.display_height);
+	ds_map_replace(save_map, "Fullscreen", global.fullscreeen);
 	ds_map_replace(save_map, "Character", global.character);	
 	ds_map_replace(save_map, "Highscore", global.highscore);	
 	ds_map_replace(save_map, "Difficulty", global.difficulty);

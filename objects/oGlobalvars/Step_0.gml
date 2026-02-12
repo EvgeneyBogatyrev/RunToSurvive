@@ -22,3 +22,14 @@ else
 	//if (number_of_players > 1)   global.multiplayer = true;	
 	//else                         global.multiplayer = false;
 }
+
+if (keyboard_check_pressed(vk_f4))
+{
+	global.fullscreeen = !global.fullscreeen;
+
+	window_enable_borderless_fullscreen(global.fullscreeen);
+	window_set_fullscreen(global.fullscreeen);
+	
+	if (room == rMenu) SaveGame();
+	
+}
