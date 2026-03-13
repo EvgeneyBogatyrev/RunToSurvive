@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ProfileStructPost",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ProfileStructPost",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

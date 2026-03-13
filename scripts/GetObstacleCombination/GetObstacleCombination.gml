@@ -1,17 +1,8 @@
 ///@desk GetObstacleCombination(forbidden[0...5])
 ///@argc forbidden[0...5]
-function GetObstacleCombination(argument0, argument1) {
+function GetObstacleCombination(_forbidden, _previous, _preprocess_forbidden = false) {
 
 	///Get one possible combination of obstacles.
-
-	var _forbidden = argument0;
-	var _previous  = argument1;
-	
-	var _preprocess_forbidden = false;
-	if (argument_count > 2)
-	{
-		_preprocess_forbidden = argument[2];
-	}
 
 	Assert(_forbidden[0] == 0, "Cannot forbid an empty space\n");
 

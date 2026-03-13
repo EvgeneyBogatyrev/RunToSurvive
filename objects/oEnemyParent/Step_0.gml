@@ -43,6 +43,24 @@ if (wildvines_timer > 0)
 }
 
 
+var _effect_names = struct_get_names(status_effects)
+
+for (var _i = 0; _i < len(_effect_names); _i++)
+{
+	var _effect = struct_get(status_effects, _effect_names[_i]);
+	if (_effect.time_remaining <= 0)
+	{
+		struct_remove(status_effects, _effect_names[_i]);
+		_i--;
+		continue;
+	}
+	
+	_effect.profile.update(id, _effect.time_applied, _effect.time_remaining);
+	
+	_effect.time_remaining -= 1;
+	
+}
+
 event_inherited();
 
 

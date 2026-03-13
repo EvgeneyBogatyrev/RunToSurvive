@@ -54,7 +54,7 @@ if (hp <= 0)
 	with (Create(x, y, oItemDrop, row))
 	{
 		depth -= 2;
-		image = choose(BATTERY_INUMBER);
+		image = BATTERY_INUMBER;
 	}
 	var _counter = 0;
 	for (var i = 0; i < 6; ++i)

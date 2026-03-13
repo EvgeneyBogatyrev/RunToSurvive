@@ -13,6 +13,8 @@ is_invincible = false;
 last_inflictor = undefined;
 on_kill_events_done = false;
 
+status_effects = {}
+
 // Fire
 on_fire = 0;
 fire_x_shift = 0;

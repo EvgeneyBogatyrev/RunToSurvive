@@ -62,4 +62,6 @@ CstmFntOutline = font_add_sprite_ext(sFontOutline, mapstring, false, 0);
 
 FntDamage = font_add_sprite_ext(sDamageIndicator, CF_DIGITS, false, 0);
 
+
+
 room_goto(rMenu);

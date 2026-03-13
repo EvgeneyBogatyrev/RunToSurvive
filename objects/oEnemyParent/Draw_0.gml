@@ -11,6 +11,18 @@ if (hit_flash > 0)
 	shader_reset();
 }
 
+if (state != UniversalStates.DEAD)
+{
+	var _effect_names = struct_get_names(status_effects)
+
+	for (var _i = 0; _i < len(_effect_names); _i++)
+	{
+		var _effect = struct_get(status_effects, _effect_names[_i]);
+	
+		_effect.profile.draw(id);
+	}
+}
+
 
 if (on_fire && state != UniversalStates.DEAD)
 {

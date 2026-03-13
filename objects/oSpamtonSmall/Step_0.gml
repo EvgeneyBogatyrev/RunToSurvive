@@ -28,7 +28,7 @@ if (hp <= 0)
 	with (Create(x, y, oItemDrop, row))
 	{
 		depth -= 2;
-		image = choose(HEARTH_INUMBER);
+		image = HEARTH_INUMBER;
 	}
 	
 	instance_destroy();	
