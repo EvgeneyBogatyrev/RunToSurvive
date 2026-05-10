@@ -23,5 +23,18 @@ block_score = false;
 
 run_timer = 0;
 
+global.last_death_player = "";
+global.last_death_reason = "was defeated";
+global.last_death_damage = 0;
+global.last_death_time = 0;
+global.last_death_score = 0;
+global.last_death_row = 0;
+global.last_death_inventory = undefined;
+global.last_death_gun = 0;
+global.last_death_powerup = 0;
+global.last_death_player_index = -1;
+global.last_death_sprite = noone;
+global.last_death_image = 0;
+
 room_properties = ds_map_create();
 GetStandartRoomProperties();

@@ -182,6 +182,24 @@ else
 	escape_direction = 0;	
 }
 
+if (knockbacked && can_be_knockbacked && xspeed != 0)
+{
+	var _move_x = xspeed * scale;
+	var _solid_check_y = max(y - 1, oGenerator.ground[row] - 1);
+	if (CheckCollisions(x + _move_x, _solid_check_y, oSolidParent, row))
+	{
+		repeat(abs(_move_x))
+		{
+			if (CheckCollisions(x + sign(_move_x), _solid_check_y, oSolidParent, row))
+			{
+				break;
+			}
+			x += sign(_move_x);
+		}
+		xspeed = 0;
+	}
+}
+
 //Gravity
 if (!CheckCollisions(x, y + 1, oSolidParent, row) && can_be_knockbacked)
 {

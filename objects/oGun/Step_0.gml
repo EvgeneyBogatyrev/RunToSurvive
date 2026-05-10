@@ -786,6 +786,14 @@ if (host.bullets < GetCost(current_gun) && host.pocket[1] == INFINITYGUN_INUMBER
 	host.shoot_hold = false;	
 	host.shoot = false;
 	
+	if (host.object_index == oPlayer)
+	{
+		host.last_damage_reason = "overloaded the Gun configurator";
+		host.last_damage_amount = 20;
+		host.last_damage_time = oRoomControl.run_timer;
+		host.last_damage_sprite = sItems;
+		host.last_damage_image = INFINITYGUN_INUMBER;
+	}
 	host.hp -= 20;
 	
 }

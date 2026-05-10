@@ -2,7 +2,7 @@ var _health_percentage;
 var _bar_colour = c_red;
 if (instance_exists(boss))
 {
-	_health_percentage = hp_visual / boss.cum_hp_max;
+	_health_percentage = BoundBetween(hp_visual / max(1, boss.cum_hp_max), 0, 1);
 	if boss.is_invincible _bar_colour = c_gray;
 }
 else

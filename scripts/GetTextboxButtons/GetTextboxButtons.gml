@@ -10,6 +10,10 @@ function GetTextboxButtons(argument0) {
 		{
 			case InputTypes.KEYBOARD:
 				return "  A             S            D \n"
+			case InputTypes.DEBUG_KEYBOARD_WASD:
+				return "        E                    Q \n"
+			case InputTypes.DEBUG_KEYBOARD_IJKL:
+				return "        Y                    H \n"
 			default:
 				return "Shldr L       Shldr R        B \n";
 		}
@@ -20,6 +24,10 @@ function GetTextboxButtons(argument0) {
 		{
 			case InputTypes.KEYBOARD:
 				return "        A/S           D        \n";
+			case InputTypes.DEBUG_KEYBOARD_WASD:
+				return "         E            Q        \n";
+			case InputTypes.DEBUG_KEYBOARD_IJKL:
+				return "         Y            H        \n";
 			default:
 				return "   Shldr L/Shldr R     B       \n";
 		}

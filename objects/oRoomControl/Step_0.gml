@@ -4,6 +4,16 @@ if (global.DEBUG)
 		oPlayer.bullets += 2000;
 	if (keyboard_check_pressed(ord("H")))
 		oPlayer.hp += 2000;
+	if (keyboard_check_pressed(vk_f8))
+	{
+		global.debug_keyboard_players = floor(BoundBetween(global.debug_keyboard_players - 1, 1, 3));
+		room_restart();
+	}
+	if (keyboard_check_pressed(vk_f9))
+	{
+		global.debug_keyboard_players = floor(BoundBetween(global.debug_keyboard_players + 1, 1, 3));
+		room_restart();
+	}
 }
 if (keyboard_check_pressed(ord("R")))
 	room_restart();

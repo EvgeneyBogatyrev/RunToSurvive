@@ -1,6 +1,7 @@
 /// @description Initialize global variables.
 
 global.DEBUG = (os_get_config() == "DEBUG");
+global.debug_keyboard_players = 2;
 
 global.multiplayer = false;
 	

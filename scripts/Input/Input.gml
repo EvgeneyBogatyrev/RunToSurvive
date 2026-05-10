@@ -40,6 +40,42 @@ function Input(argument0) {
 		
 			return [_left, _right, _up, _down, _jump, _shoot, _press_shoot, _accept, _cancel, _pause, _show_inv, _left_press, _right_press];
 			break;	
+
+		case InputTypes.DEBUG_KEYBOARD_WASD:
+			_left = keyboard_check(ord("A"));
+			_right = keyboard_check(ord("D"));
+			_up = keyboard_check_pressed(ord("W"));
+			_down = keyboard_check_pressed(ord("S"));
+			_jump = keyboard_check_pressed(ord("F"));
+			_shoot = keyboard_check_pressed(ord("G"));
+			_press_shoot = keyboard_check(ord("G"));
+			_accept = keyboard_check_pressed(ord("E"));
+			_cancel = keyboard_check_pressed(ord("Q"));
+			_pause = keyboard_check_pressed(vk_escape);
+			_show_inv = keyboard_check(ord("C"));
+			_left_press = keyboard_check_pressed(ord("A"));
+			_right_press = keyboard_check_pressed(ord("D"));
+
+			return [_left, _right, _up, _down, _jump, _shoot, _press_shoot, _accept, _cancel, _pause, _show_inv, _left_press, _right_press];
+			break;
+
+		case InputTypes.DEBUG_KEYBOARD_IJKL:
+			_left = keyboard_check(ord("J"));
+			_right = keyboard_check(ord("L"));
+			_up = keyboard_check_pressed(ord("I"));
+			_down = keyboard_check_pressed(ord("K"));
+			_jump = keyboard_check_pressed(ord("U"));
+			_shoot = keyboard_check_pressed(ord("O"));
+			_press_shoot = keyboard_check(ord("O"));
+			_accept = keyboard_check_pressed(ord("Y"));
+			_cancel = keyboard_check_pressed(ord("H"));
+			_pause = keyboard_check_pressed(vk_escape);
+			_show_inv = keyboard_check(ord("P"));
+			_left_press = keyboard_check_pressed(ord("J"));
+			_right_press = keyboard_check_pressed(ord("L"));
+
+			return [_left, _right, _up, _down, _jump, _shoot, _press_shoot, _accept, _cancel, _pause, _show_inv, _left_press, _right_press];
+			break;
 	
 		case InputTypes.GAMEPAD0 : 
 		case InputTypes.GAMEPAD1 :

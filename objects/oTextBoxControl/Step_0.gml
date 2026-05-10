@@ -22,23 +22,32 @@ cancel = 0;
 switch (player._input_type)
 {
 	case InputTypes.KEYBOARD:
-		
+
 		eq_left = keyboard_check_pressed(ord("A"));
 		eq_right = keyboard_check_pressed(ord("S"));
 		cancel = keyboard_check_pressed(ord("D"));
-		
+
 		break;
-		
+
+	case InputTypes.DEBUG_KEYBOARD_WASD:
+	case InputTypes.DEBUG_KEYBOARD_IJKL:
+
+		var _keys = Input(player._input_type);
+		eq_left = _keys[7];
+		cancel = _keys[8];
+
+		break;
+
 	default:
 		var _device = SelectGamepad(player._input_type - InputTypes.GAMEPAD0);
-		
+
 		eq_left = gamepad_button_check_pressed(_device, gp_shoulderlb) || gamepad_button_check_pressed(_device, gp_shoulderl);
 		eq_right = gamepad_button_check_pressed(_device, gp_shoulderrb) || gamepad_button_check_pressed(_device, gp_shoulderr);
 		cancel = gamepad_button_check_pressed(_device, gp_face2);
-		 
+
 		 break;
-		
-	
+
+
 }
 
 if (eq_left || eq_right)

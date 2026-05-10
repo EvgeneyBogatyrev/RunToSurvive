@@ -15,6 +15,12 @@ function StateToText(argument0) {
 		case InputTypes.GAMEPAD1 : 
 			return "gamepad1";
 
+		case InputTypes.DEBUG_KEYBOARD_WASD:
+			return "debug keyboard WASD";
+
+		case InputTypes.DEBUG_KEYBOARD_IJKL:
+			return "debug keyboard IJKL";
+
 		default : 
 			Raise("Invalid input type\n");
 			break;

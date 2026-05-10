@@ -20,9 +20,14 @@ if (opponent == undefined || !instance_exists(opponent) || opponent.state == Uni
 	}
 	else
 	{
+		var _station_x = x;
+		if (instance_exists(charging_station))
+		{
+			_station_x = charging_station.x;
+		}
 		opponent.state = PlayerStates.NORMAL;	
 		opponent.row = 0;
-		opponent.x = charging_station.x;
+		opponent.x = _station_x;
 		opponent.y = -10;
 		opponent.scale = GetScale(opponent.row);
 	}
@@ -172,7 +177,7 @@ switch (state)
 	case GunManStates.RECHARGE:
 		if (row == 0)
 		{
-			desired_x_position = charging_station.x;
+			desired_x_position = instance_exists(charging_station) ? charging_station.x : x;
 			desired_row = 0;
 		}
 		else
@@ -212,7 +217,12 @@ switch (state)
 			{
 				state = PlayerStates.NORMAL;	
 				row = 0;
-				x = other.charging_station.x + random_range(-20, 20);
+				var _respawn_x = other.x;
+				if (instance_exists(other.charging_station))
+				{
+					_respawn_x = other.charging_station.x;
+				}
+				x = _respawn_x + random_range(-20, 20);
 				y = -10;
 				scale = GetScale(row);
 			}
@@ -287,7 +297,7 @@ if (state != UniversalStates.DEAD && state != UniversalStates.INTRO && state != 
 {
 	
 	#region state change
-	if (charging_station.image_index == 0 && bullets <= 10)
+	if (instance_exists(charging_station) && charging_station.image_index == 0 && bullets <= 10)
 	{
 		if (next_state != GunManStates.RECHARGE)
 		{

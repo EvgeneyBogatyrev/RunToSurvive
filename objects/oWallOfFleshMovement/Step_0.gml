@@ -29,18 +29,7 @@ for (var _i = 0; _i < instance_number(oPlayer); ++_i)
 	{
 		if (!_player.damaged)
 		{
-			_player.damaged = true;	
-			_player.damage_timer = 5*30;
-		
-			if (!_player.protected)  _player.hp -= contact_damage;
-			else                    
-			{
-				_player.protected = false;
-				if (_player.pocket[1] == FORCEFIELD_INUMBER)
-				{
-					_player.pocket[1] = 0;	
-				}
-			}
+			DamageSpecificPlayer(_player, contact_damage, false, "the Wall of Flesh");
 		}
 		
 		

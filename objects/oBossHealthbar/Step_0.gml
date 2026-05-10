@@ -21,8 +21,9 @@ switch state
 			state = BossHBStates.SLIDE_OUT;
 			exit;
 		}
-		if (abs(hp_visual - boss.cum_hp) >= 1)	
-			hp_visual = ApproachTo(hp_visual, boss.cum_hp);
+		var _target_hp = max(0, boss.cum_hp);
+		if (abs(hp_visual - _target_hp) >= 1)
+			hp_visual = ApproachTo(hp_visual, _target_hp);
 	break;
 	case BossHBStates.LOCKED:
 		//NOTHING

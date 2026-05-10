@@ -1,7 +1,23 @@
 if (global.DEBUG)
 {
-	additional_num_players = 0;
-	number_of_players += additional_num_players;	
+	var _debug_players = floor(BoundBetween(global.debug_keyboard_players, 1, 3));
+	if (number_of_players < _debug_players)  number_of_players = _debug_players;
+
+	if (number_of_players > 1 && input_type[0] == InputTypes.ANY)
+	{
+		input_type[0] = InputTypes.KEYBOARD;
+	}
+
+	var _debug_names = ["Kyron", "Steampunk", "Cyber"];
+	var _debug_inputs = [InputTypes.KEYBOARD, InputTypes.DEBUG_KEYBOARD_WASD, InputTypes.DEBUG_KEYBOARD_IJKL];
+	for (var _debug_i = 0; _debug_i < min(number_of_players, array_length(_debug_inputs)); _debug_i++)
+	{
+		if (array_length(names) <= _debug_i || names[_debug_i] == undefined || names[_debug_i] == "")
+		{
+			names[_debug_i] = _debug_names[_debug_i];
+		}
+		input_type[_debug_i] = _debug_inputs[_debug_i];
+	}
 }
 
 instance_create_layer(0, 0, "Controllers", oDifficultyController);
@@ -62,27 +78,10 @@ for (var j = 0; j < 3; ++j)
 
 times_resurrected = ds_map_create();
 
-if (global.DEBUG)
-{
-	number_of_players -= additional_num_players;
-}
-
 for (var i = 0; i < number_of_players; ++i)
 {
 	SpawnPlayerCharacter(i, names[i], 500 + ((i == 3)? 100 : 0), ground[i % 3] - 1, i % 3);
 	ds_map_add(times_resurrected, names[i], 0);
-}
-
-if (global.DEBUG)
-{
-	number_of_players += additional_num_players;
-	//input_type[1] = InputTypes.KEYBOARD;
-	//input_type[2] = InputTypes.KEYBOARD;	
-	//input_type[3] = InputTypes.KEYBOARD;
-
-	//SpawnPlayerCharacter(1, "Steampunk", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
-	//SpawnPlayerCharacter(1, "Cyber", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
-	//SpawnPlayerCharacter(1, "Kyron", 500 + ((1 == 3)? 100 : 0), ground[1 % 3], 1 % 3);
 }
 
 

@@ -1,11 +1,19 @@
 /// @description
 
-if (_input_type != InputTypes.KEYBOARD and _input_type != InputTypes.ANY)
+var _keyboard_input = _input_type == InputTypes.KEYBOARD
+	|| _input_type == InputTypes.ANY
+	|| _input_type == InputTypes.DEBUG_KEYBOARD_WASD
+	|| _input_type == InputTypes.DEBUG_KEYBOARD_IJKL;
+
+if (!_keyboard_input)
 {
 	if (!gamepad_is_connected(SelectGamepad(_input_type - InputTypes.GAMEPAD0)))  
 	{
 		if (instance_number(oPlayer) == 1)
 		{
+			last_damage_sprite = GetSpritesFromName(name).icon;
+			last_damage_image = 0;
+			RecordPlayerDeath(id, "lost connection to their controller", 0);
 			LevelEnd();	
 		}
 		instance_destroy();	

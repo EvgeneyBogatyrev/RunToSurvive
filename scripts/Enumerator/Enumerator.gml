@@ -9,7 +9,9 @@ function Enumerator() {
 		GAMEPAD2,
 		GAMEPAD3,
 		MENU,
-		ANY
+		ANY,
+		DEBUG_KEYBOARD_WASD,
+		DEBUG_KEYBOARD_IJKL
 	};
 
 	enum UniversalStates

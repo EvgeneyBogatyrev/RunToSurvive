@@ -39,6 +39,11 @@ hp = maxhp;
 prev_hp = hp;
 
 death_alpha = 1;
+last_damage_reason = "ran out of HP";
+last_damage_amount = 0;
+last_damage_time = 0;
+last_damage_sprite = noone;
+last_damage_image = 0;
 
 maxbullets = 20;
 shown_bullets = maxbullets;
