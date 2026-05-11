@@ -4,7 +4,7 @@ event_inherited();
 for (var _player_count = 0; _player_count < instance_number(oPlayer); ++_player_count)
 {
 	var host = instance_find(oPlayer, _player_count);
-	if (!CheckCollisions(x, y, host, row))
+	if (!player_in_pickup_zone(host))
 	{
 		continue;	
 	}

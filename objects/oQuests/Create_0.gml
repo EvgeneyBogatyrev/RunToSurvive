@@ -79,3 +79,65 @@ function CheckQuest()
 			break;
 	}
 }
+
+function QuestTarget(_sprite, _done)
+{
+	return {
+		sprite : _sprite,
+		image : 0,
+		done : _done
+	};
+}
+
+function GetQuestTargets()
+{
+	var _targets = [];
+	
+	switch (quest)
+	{
+		case QuestType.STUMPS:
+			for (var _i = 0; _i < max_kills; ++_i)
+			{
+				array_push(_targets, QuestTarget(sStumpRun, _i < stumps_killed));	
+			}
+			break;
+		case QuestType.ARCHERS:
+			for (var _i = 0; _i < max_kills; ++_i)
+			{
+				array_push(_targets, QuestTarget(sArcherStand, _i < archers_killed));	
+			}
+			break;
+		case QuestType.BILLY:
+			for (var _i = 0; _i < max_kills; ++_i)
+			{
+				array_push(_targets, QuestTarget(sBillyWalk, _i < billys_killed));	
+			}
+			break;
+		case QuestType.VARIES:
+			array_push(_targets, QuestTarget(sStumpRun, stumps_killed > 0));
+			array_push(_targets, QuestTarget(sArcherStand, archers_killed > 0));
+			array_push(_targets, QuestTarget(sBillyWalk, billys_killed > 0));
+			break;
+		default:
+			break;
+	}
+	
+	return _targets;
+}
+
+function GetQuestTitle()
+{
+	switch (quest)
+	{
+		case QuestType.STUMPS:
+			return "Destroy Stumps";
+		case QuestType.ARCHERS:
+			return "Destroy Archers";
+		case QuestType.BILLY:
+			return "Destroy Billys";
+		case QuestType.VARIES:
+			return "Destroy one of each";
+		default:
+			return "Destroy enemies";
+	}
+}

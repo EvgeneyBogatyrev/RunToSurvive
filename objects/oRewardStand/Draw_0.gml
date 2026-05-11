@@ -1,4 +1,23 @@
 // obj_shop_stand - Draw Event
+var _player_near = any_player_in_pickup_zone();
+var _zone_half_width = reward_pickup_half_width * scale;
+var _marker_y = y - 4 * scale;
+var _marker_height = 24 * scale;
+var _marker_tip = 34 * scale;
+var _marker_width = 4;
+
+if (_player_near)
+{
+	draw_set_alpha(0.65);
+	draw_set_color(c_yellow);
+	draw_line_width(x - _zone_half_width, _marker_y, x - _zone_half_width + _marker_tip, _marker_y, _marker_width);
+	draw_line_width(x - _zone_half_width, _marker_y, x - _zone_half_width, _marker_y - _marker_height, _marker_width);
+	draw_line_width(x + _zone_half_width - _marker_tip, _marker_y, x + _zone_half_width, _marker_y, _marker_width);
+	draw_line_width(x + _zone_half_width, _marker_y, x + _zone_half_width, _marker_y - _marker_height, _marker_width);
+}
+draw_set_alpha(1);
+draw_set_color(c_white);
+
 // Draw stand base (if you have a sprite)
 draw_self();
 
@@ -65,32 +84,48 @@ draw_set_valign(fa_middle);
 */
 
 draw_set_font(fntItemDescription);
-draw_set_alpha(0.5);
+draw_set_alpha(0.58);
 draw_set_color(c_black);
 var _x_offset = 10;
-var _y_offset = 10;
+var _y_offset = 12;
 
-var _text_width = 200;
-var _text_height = string_height_ext(item_desc, 16, _text_width);
+var _text_scale = 1.55;
+var _text_width = 285;
+var _text_sep = 20;
+var _text_height = string_height_ext(item_desc, _text_sep, _text_width);
+draw_set_font(fntMenu);
+var _title_height = string_height(item_name);
+draw_set_font(fntItemDescription);
 
 var _y_point = y - 320;
+var _title_y = _y_point - (_text_height * _text_scale) / 2 - 34;
+var _box_half_width = (_text_width * _text_scale) / 2 + _x_offset;
+var _box_half_height = (_text_height * _text_scale) / 2 + _y_offset;
 
-
-draw_rectangle(x - (_text_width / 2 + _x_offset), _y_point - _text_height / 2 - _y_offset, x + _text_width / 2 + _x_offset, _y_point + _text_height / 2 + _y_offset, false);
+draw_rectangle(x - _box_half_width, _title_y - _title_height - 8, x + _box_half_width, _y_point + _box_half_height, false);
 
 draw_set_alpha(1);
 draw_set_color(c_white);
 draw_set_valign(fa_middle);
 draw_set_halign(fa_center);
 
-draw_text_ext_transformed(x, _y_point, item_desc, 16, _text_width, 1, 1, 0);
+draw_set_font(fntMenu);
+draw_text(x, _title_y, item_name);
+
+draw_set_font(fntItemDescription);
+draw_text_ext_transformed(x, _y_point, item_desc, _text_sep, _text_width, _text_scale, _text_scale, 0);
 
 // ... (rest of your draw code) ...
 // --- Highlight if player is nearby ---
-if (place_meeting(x, y, oPlayer)) {
+if (_player_near) {
     draw_set_color(c_yellow);
-    draw_set_alpha(0.2);
+    draw_set_alpha(0.22);
     draw_circle(x, y - 160, 112, false); // Glow effect
     draw_set_alpha(1);
     draw_set_color(c_white);
 }
+
+draw_set_alpha(1);
+draw_set_color(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);

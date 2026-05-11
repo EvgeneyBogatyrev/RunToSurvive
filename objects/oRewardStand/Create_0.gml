@@ -40,6 +40,51 @@ function string_wrap(text, max_width) {
 
 font_shop_small = fntItemDescription;
 
+reward_pickup_half_width = 140;
+reward_pickup_top = 90;
+reward_pickup_bottom = 28;
+
+function player_in_pickup_zone(_player_id)
+{
+	if (!instance_exists(_player_id))
+	{
+		return false;	
+	}
+	if (_player_id.row != row || _player_id.state == UniversalStates.DEAD)
+	{
+		return false;	
+	}
+	
+	var _left = x - reward_pickup_half_width * scale;
+	var _right = x + reward_pickup_half_width * scale;
+	var _top = y - reward_pickup_top * scale;
+	var _bottom = y + reward_pickup_bottom * scale;
+	
+	return _player_id.bbox_right >= _left
+		&& _player_id.bbox_left <= _right
+		&& _player_id.bbox_bottom >= _top
+		&& _player_id.bbox_top <= _bottom;
+}
+
+function any_player_in_pickup_zone()
+{
+	if (!instance_exists(oReward))
+	{
+		return false;	
+	}
+	
+	for (var _player_count = 0; _player_count < instance_number(oPlayer); ++_player_count)
+	{
+		var _player_id = instance_find(oPlayer, _player_count);
+		if (player_in_pickup_zone(_player_id) && oReward.can_player_get_reward(_player_id))
+		{
+			return true;	
+		}
+	}
+	
+	return false;
+}
+
 
 allowed_to_move = true;
 allowed_to_move_hor = true;
