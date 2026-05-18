@@ -1,2 +1,9 @@
 //Draw buttons
-DrawMenu(dbutton, cursor_position);
+if (items_mode)
+{
+	ItemsMenuDraw();
+}
+else
+{
+	DrawMenu(dbutton, cursor_position);
+}

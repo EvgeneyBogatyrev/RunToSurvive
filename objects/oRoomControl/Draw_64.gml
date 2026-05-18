@@ -35,7 +35,21 @@ draw_set_font(fntMenu);
 draw_set_colour(c_white);
 draw_text(_panel_x1 + _padding_x + _label_width + _gap, _score_y, _score);
 
-if (gamestate == GameState.LOOT)
+var _reward_stands_visible = false;
+if (instance_exists(oRewardStand) && instance_exists(oCamera))
+{
+	for (var _stand_i = 0; _stand_i < instance_number(oRewardStand); ++_stand_i)
+	{
+		var _stand = instance_find(oRewardStand, _stand_i);
+		if (_stand.x > oCamera.left - 96 && _stand.x < oCamera.right + 96)
+		{
+			_reward_stands_visible = true;
+			break;
+		}
+	}
+}
+
+if (gamestate == GameState.LOOT && _reward_stands_visible && !instance_exists(oDeathScreen))
 {
 	var _guide = "Stand on a reward and press A / Y";
 	draw_set_font(fntItemDescription);
@@ -61,3 +75,4 @@ draw_set_alpha(1);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_colour(c_white);
+draw_set_font(CstmFntOutline);

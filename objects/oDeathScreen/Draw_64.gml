@@ -1,5 +1,6 @@
 draw_set_alpha(0.92);
 draw_set_color(c_black);
+draw_set_font(CstmFntOutline);
 
 var _w = display_get_gui_width();
 var _h = display_get_gui_height();
